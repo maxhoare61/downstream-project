@@ -23,7 +23,7 @@
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-border);
     gap: 1rem;
-    min-height: var(--spacing-7);
+    min-height: var(--spacing-8);
     margin-bottom: 1rem;
     width: 100vw;
   }

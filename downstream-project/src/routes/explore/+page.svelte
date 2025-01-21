@@ -1,5 +1,4 @@
 <script>
-	import Header from '$lib/components/Header.svelte';
 	import SubHeader from '$lib/components/SubHeader.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
@@ -84,8 +83,6 @@
 		</div>
 	</section>
 </div>
-
-<Footer />
 
 <style>
 	.Project-Container {

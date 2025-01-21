@@ -1,16 +1,12 @@
 <script>
-  import Header from "$lib/components/Header.svelte";
   import Hero from "$lib/components/Hero.svelte";
   import Preamble from "$lib/components/Preamble.svelte";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
-  import Footer from "$lib/components/Footer.svelte";
-	import WhatWeDo from "$lib/components/WhatWeDo.svelte";
 </script>
 
 <div class="content-container">
   <Hero />
   <Preamble />
-  <WhatWeDo />
 
   <section class="projects">
     <h2 class="current-projects">Current Projects</h2>

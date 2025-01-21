@@ -48,17 +48,20 @@
       padding-top: 2rem;
       padding-bottom: 2rem;
       min-height: 100vh;
+      margin-top: 2rem;
+      border-top: solid 1px var(--color-border)
     }
   
     .title-group {
       gap: 2rem;
-      min-width: 33%;
+      min-width: 50%;
+      border-right: 1px solid #9B9B9B;
     }
 
     .item-group {
       display: flex;
       flex-direction: column;
-      max-width: 66%;
+      max-width: 50%;
       justify-content: space-between;
     }
   
@@ -69,11 +72,11 @@
       align-items: left;
       text-align: left;
       gap: 1rem;
-      border-top: 1px solid #9B9B9B;
       padding: 2rem 0rem;
+      padding-left: 2rem;
     }
-  
-    .item:last-child {
+
+    .item {
       border-bottom: 1px solid #9B9B9B;
     }
 

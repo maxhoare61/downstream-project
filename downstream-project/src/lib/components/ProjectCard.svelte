@@ -5,17 +5,20 @@
   export let col = "";
   export let type = "";
   export let link = "";
-  $: flexDirection = type === 'row' ? 'row' : 'column';
+  $: flexDirection = type === "row" ? "row" : "column";
 </script>
 
 <a href={link} class="project-card-link">
-  <div style="--color: {col}; flex-direction: {flexDirection};" class="project-card">
+  <div
+    style="--color: {col}; flex-direction: {flexDirection};"
+    class="project-card"
+  >
     <div class="project-display"></div>
     <div class="project-text">
-    <div class="category">{cat}</div>
-    <h4>{title}</h4>
-    <p>{description}</p>
-  </div>
+      <div class="category">{cat}</div>
+      <h4>{title}</h4>
+      <p>{description}</p>
+    </div>
   </div>
 </a>
 
@@ -38,6 +41,7 @@
     max-width: 50vw;
     flex-grow: 1;
     gap: 2rem;
+    transition: opacity 0.5s ease-out;
   }
 
   .project-text {
@@ -59,10 +63,7 @@
 
   @media (max-width: 768px) {
     .project-card p {
-    font-size: 12px;
+      font-size: 12px;
+    }
   }
-  }
-
-  
-
 </style>
