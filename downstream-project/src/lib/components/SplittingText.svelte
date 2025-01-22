@@ -11,7 +11,7 @@ onMount(() => {
     const elemData = document.getElementById('public-data');
     const elemAnd = document.getElementById('and');
 
-    const thresholds = Array.from({ length: 200 }, (_, i) => (i / 200));
+    const thresholds = Array.from({ length: 500 }, (_, i) => (i / 500));
 
     function fractionMod(x) {
     return -5 * x * x + 5 * x;
@@ -61,7 +61,7 @@ onMount(() => {
 <div id="scrolly-container">
     <div class="lead">When people can't get access to information, this creates a gap between</div>
     <h4 id="public-data">public data</h4>
-    <div class="lead" id="and">and</div>
+    <h4 id="and">and</h4>
     <h4 id="public-understanding">public understanding</h4>
 </div>
 <div id="text-container">
@@ -92,9 +92,9 @@ onMount(() => {
         height: 50vh; /* Provide enough vertical space for scrolling */
     }
 
-    #public-understanding, #public-data {
-    transition: right 0.4s ease-out, left 0.4s ease-out; /* Apply easing transition */
-}
+    /*#public-understanding, #public-data {
+    transition: right 0.4s ease-out, left 0.4s ease-out; /* Apply easing transition 
+    }*/
 
     #public-understanding {
         position: absolute;
@@ -102,7 +102,7 @@ onMount(() => {
         right: 50%;
         padding: 0.2rem 1rem;
         color: var(--color-white);
-        background-color: var(--accent-primary);
+        background-color: var(--color-bright-blue);
         text-align: center;
     }
 
@@ -112,14 +112,16 @@ onMount(() => {
         left: 50%;
         padding: 0.2rem 1rem;
         color: var(--color-white);
-        background-color: var(--accent-primary);
+        background-color: var(--color-bright-pink);
         text-align: center;
     }
 
     #and {
         position: absolute;
         top: 50%;
-        left: calc((100% / 2) - 21px);
+        left: calc(50% - 43.3px);
+        padding: 0.2rem 1rem;
         text-align: center;
+        color: var(--color-dark-text);
     }
 </style>

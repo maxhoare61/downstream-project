@@ -5,11 +5,11 @@
 <h1>Explore Our Projects</h1>
 <div class="sub-header-container">
     <nav>
-        <a class="all" href="/all">All</a>
+        <a class="all" href="#">All</a>
         {#each links as link}
           <a href={link.href}>{link.text}</a>
         {/each}
-        <a class="filter" href="/filter">Filter</a>
+        <a class="filter" href="#">Filter</a>
       </nav>
 </div>
 

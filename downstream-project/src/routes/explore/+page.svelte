@@ -1,6 +1,5 @@
 <script>
 	import SubHeader from '$lib/components/SubHeader.svelte';
-	import Footer from '$lib/components/Footer.svelte';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 </script>
 

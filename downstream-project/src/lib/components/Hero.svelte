@@ -46,7 +46,7 @@
     <div class="hero-right-container">
       <div class="hero">Less spreadsheets,<br> more <span class="glow">stories.</span></div>
       <p class="lead">{subtitle}</p>
-      <a href="about.html" class="btn-1">about us</a>
+      <a href="/about-us" class="btn-1">about us</a>
     </div>
   </div>
 </section>
