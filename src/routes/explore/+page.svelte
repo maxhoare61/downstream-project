@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import SubHeader from '$lib/components/SubHeader.svelte';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 </script>
@@ -6,8 +7,8 @@
 <div class="content-container">
 	<SubHeader
 		links={[
-			{ href: '/explore', text: 'Carbon Emissions' },
-			{ href: '/about-us', text: 'Political Donations' }
+			{ href: "{base}/explore", text: 'Carbon Emissions' },
+			{ href: "{base}/about-us", text: 'Political Donations' }
 		]}
 	/>
 

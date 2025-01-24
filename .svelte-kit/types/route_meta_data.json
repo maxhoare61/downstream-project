@@ -1,0 +1,11 @@
+{
+	"/": [
+		"src/routes/+page.server.js"
+	],
+	"/about-us": [
+		"src/routes/about-us/+page.server.js"
+	],
+	"/explore": [
+		"src/routes/explore/+page.server.js"
+	]
+}

@@ -1,16 +1,17 @@
 <script>
+  import { base } from '$app/paths';
 </script>
 
 <header class="header">
   <div class="logo">
-    <a href="/" class="logo-link">
+    <a href="{base}/" class="logo-link">
     <img src="/mocklogo1.png" alt="logo" class="logo-image" />
     <div>Downstream<br>Project</div>
   </a>
   </div>
   <nav>
-      <a class="btn-1" href="/explore">explore</a>
-      <a class="btn-1" href="/about-us">about us</a>
+      <a class="btn-1" href="{base}/explore">explore</a>
+      <a class="btn-1" href="{base}/about-us">about us</a>
   </nav>
 </header>
 

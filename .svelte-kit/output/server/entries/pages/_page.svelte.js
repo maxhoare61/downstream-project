@@ -1,0 +1,81 @@
+import "clsx";
+import { f as bind_props, d as stringify, c as pop, p as push } from "../../chunks/index.js";
+import { b as base } from "../../chunks/paths.js";
+import { f as fallback } from "../../chunks/utils.js";
+import { e as escape_html } from "../../chunks/escaping.js";
+import { a as attr } from "../../chunks/attributes.js";
+import { P as ProjectCard } from "../../chunks/ProjectCard.js";
+function Hero($$payload, $$props) {
+  let subtitle = fallback($$props["subtitle"], "because public data deserves public understanding");
+  function getNextInterval(t) {
+    const a = 1e-3;
+    const b = -0.5;
+    const c = 90;
+    return Math.max(a * t * t + b * t + c, 0);
+  }
+  function startUpdatingWords() {
+    let t = 0;
+    function update() {
+      t += getNextInterval(t);
+      if (t < 1500) {
+        setTimeout(update, getNextInterval(t));
+      }
+    }
+    update();
+  }
+  if (typeof window !== "undefined") {
+    startUpdatingWords();
+  }
+  $$payload.out += `<section class="hero-landing svelte-e97qx"><div class="hero-left svelte-e97qx"><div class="diagram-backdrop svelte-e97qx"></div></div> <div class="hero-right svelte-e97qx"><div class="hero-right-container svelte-e97qx"><div class="hero svelte-e97qx">Less spreadsheets,<br> more <span class="glow svelte-e97qx">stories.</span></div> <p class="lead">${escape_html(subtitle)}</p> <a${attr("href", `${stringify(base)}/about-us`)} class="btn-1 svelte-e97qx">about us</a></div></div></section> <section class="insight-banner svelte-e97qx"><div class="lead"><strong>Downstream</strong> ensures the important insights flow to you</div></section>`;
+  bind_props($$props, { subtitle });
+}
+function Preamble($$payload, $$props) {
+  push();
+  let heading1 = fallback($$props["heading1"], "The Problem");
+  let text1 = fallback($$props["text1"], "Public data isn’t always publicly accessible. Key insights from government data are often  scattered across PDFs,  spreadsheets, and fragmented databases. While technically publicly available, understanding it requires expertise, and a lot of time.");
+  let heading2 = fallback($$props["heading2"], "Our Approach");
+  let text2 = fallback($$props["text2"], "At Downstream, we believe public data should be truly public. We transform dense datasets into clear, interactive visuals and scrollable narratives. We handle the data cleaning, analysis, and visualisations - you explore the insights.");
+  let heading3 = fallback($$props["heading3"], "Our Work");
+  let text3 = fallback($$props["text3"], "We're starting small but focusing on what matters—making carbon emissions and political donation data accessible to everyone through interactive storytelling. These are the stories we care about, and we believe you should be able to understand them too.");
+  $$payload.out += `<section class="section svelte-qcgjhv"><div class="section-left svelte-qcgjhv"><div class="section-left-child svelte-qcgjhv"><h2>${escape_html(heading1)}</h2> <div class="lead">${escape_html(text1)}</div></div> <div class="section-left-child svelte-qcgjhv"><h2>${escape_html(heading2)}</h2> <div class="lead">${escape_html(text2)}</div></div> <div class="section-left-child svelte-qcgjhv"><h2>${escape_html(heading3)}</h2> <div class="lead">${escape_html(text3)}</div></div></div> <div class="section-right svelte-qcgjhv"><div class="backdrop-right svelte-qcgjhv"><div class="lottie-container svelte-qcgjhv"></div></div></div></section>`;
+  bind_props($$props, {
+    heading1,
+    text1,
+    heading2,
+    text2,
+    heading3,
+    text3
+  });
+  pop();
+}
+function _page($$payload) {
+  $$payload.out += `<div class="content-container svelte-1lufbkj">`;
+  Hero($$payload, {});
+  $$payload.out += `<!----> `;
+  Preamble($$payload, {});
+  $$payload.out += `<!----> <section class="projects svelte-1lufbkj"><h2 class="current-projects svelte-1lufbkj">Current Projects</h2> <div class="project-grid svelte-1lufbkj">`;
+  ProjectCard($$payload, {
+    col: "var(--accent-secondary)",
+    cat: "Project",
+    title: "Carbon Emissions in Perspective",
+    description: "An in-depth analysis of carbon emissions across various industries and their impact on the environment."
+  });
+  $$payload.out += `<!----> `;
+  ProjectCard($$payload, {
+    col: "var(--accent-primary)",
+    cat: "Article",
+    title: "Political Donations Revealed",
+    description: "A comprehensive report uncovering the sources and amounts of political donations in recent elections."
+  });
+  $$payload.out += `<!----> `;
+  ProjectCard($$payload, {
+    col: "var(--accent-tertiary)",
+    cat: "Project",
+    title: "Minister and Senator Interests",
+    description: "A detailed investigation into the financial interests and holdings of current ministers and senators."
+  });
+  $$payload.out += `<!----></div></section></div>`;
+}
+export {
+  _page as default
+};

@@ -8,5 +8,4 @@
 
 <Header />
 <slot></slot>
-<!-- This is where the child route content will be rendered -->
 <Footer />

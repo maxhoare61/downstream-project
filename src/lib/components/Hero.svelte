@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   export let subtitle = "because public data deserves public understanding";
 
   let words = ["stories.", "insights.", "knowledge.", "understanding.", "thoughtful."];
@@ -8,7 +9,7 @@
   // Function to update the word
   function updateWord() {
     currentWordIndex = (currentWordIndex + 1) % words.length;
-    document.querySelector(".glow").textContent = words[currentWordIndex];
+    //document.querySelector(".glow").textContent = words[currentWordIndex];
   }
 
   // Function to calculate the next interval based on an upside-down quadratic function
@@ -46,7 +47,7 @@
     <div class="hero-right-container">
       <div class="hero">Less spreadsheets,<br> more <span class="glow">stories.</span></div>
       <p class="lead">{subtitle}</p>
-      <a href="/about-us" class="btn-1">about us</a>
+      <a href="{base}/about-us" class="btn-1">about us</a>
     </div>
   </div>
 </section>
