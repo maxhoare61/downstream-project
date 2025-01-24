@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&display=swap");
+:root {
+
+    /* ------- DEFAULTS -------- */
+    --default-font-size: 16px;
+
+
+    /* ------- COLORS -------- */
+    /* Accent colors */
+    --color-blue: #2A5DC2;
+    --color-green: #26B790;
+    --color-aqua: #5CBDAF;
+    --color-lime: #DCFF4F;
+
+    --color-bright-pink: #DB32A4;
+    --color-bright-blue: #04CDF8;
+    --color-bright-orange: #FF7300;
+
+
+    /* Colour Design elements */
+    --color-background: #ede9e5;
+    --color-border: #9B9B9B;
+    --color-white: #FCFBFB;
+    --accent-primary: var(--color-blue);
+    --accent-secondary: var(--color-green);
+    --accent-tertiary: var(--color-aqua);
+    --color-dark-text: #4E4E4E;
+    --color-black-text: #000000;
+    --color-black: #000000;
+
+
+    /* ------- DESIGN ELEMENT SPACINGS -------- */
+    --spacing-0: 0;
+    --spacing-2: 16px;
+    --spacing-3: 24px;
+    --spacing-4: 48px;
+    --spacing-5: 32px;
+    --spacing-6: 64px;
+
+    --spacing-7: 6rem;
+    --spacing-8: 56px;
+
+    /* Radius */
+    --box-corner-radius: 2rem;
+
+
+    /* ------- FONTS -------- */
+    /* Body Text */
+    --body-font-family: 'DM Sans';
+    --body-font-style: normal;
+    --body-font-weight: 300;
+    --body-font-size: 1rem;
+    --body-line-height: 2;
+
+    /* H1 Text */
+    --h1-font-family: 'Bai Jamjuree';
+    --h1-font-style: normal;
+    --h1-font-weight: 600;
+    --h1-font-size: 3rem;
+    --h1-line-height: 1;
+
+    /* H2 Text */
+    --h2-font-family: 'Bai Jamjuree';
+    --h2-font-style: normal;
+    --h2-font-weight: 600;
+    --h2-font-size: 2.5rem;
+    --h2-line-height: 2;
+
+    /* H3 Text */
+    --h3-font-family: 'Bai Jamjuree';
+    --h3-font-style: normal;
+    --h3-font-weight: 500;
+    --h3-font-size: 1.5rem;
+    --h3-line-height: 3.34;
+
+    /* H4 Text */
+    --h4-font-family: 'Bai Jamjuree';
+    --h4-font-style: normal;
+    --h4-font-weight: 400;
+    --h4-font-size: 2rem;
+    --h4-line-height: 1.5;
+
+    /* Highlight Text */
+    --highlight-font-family: 'Bai Jamjuree';
+    --highlight-font-style: normal;
+    --highlight-font-weight: 700;
+    --highlight-font-size: 1rem;
+    --highlight-line-height: 20px;
+
+    /* Hero Text */
+    --hero-font-family: 'Bai Jamjuree';
+    --hero-font-style: normal;
+    --hero-font-weight: 600;
+    --hero-font-size: 4rem;
+    --hero-line-height: 1.25;
+
+    /* Lead Text */
+    --lead-font-family: 'DM Sans';
+    --lead-font-style: normal;
+    --lead-font-weight: 200;
+    --lead-font-size: 1.5rem;
+    --lead-line-height: 2;
+
+    /* Logo Text */
+    --logo-font-family: 'Bai Jamjuree';
+    --logo-font-style: bold;
+    --logo-font-weight: 700;
+    --logo-font-size: 1.25rem;
+    --logo-line-height: 1.25;
+}
