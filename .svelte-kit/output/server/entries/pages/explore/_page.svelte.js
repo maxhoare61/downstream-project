@@ -1,5 +1,5 @@
 import "clsx";
-import { h as ensure_array_like, f as bind_props } from "../../../chunks/index.js";
+import { i as ensure_array_like, f as bind_props } from "../../../chunks/index.js";
 import { f as fallback } from "../../../chunks/utils.js";
 import { a as attr } from "../../../chunks/attributes.js";
 import { e as escape_html } from "../../../chunks/escaping.js";
@@ -19,14 +19,8 @@ function _page($$payload) {
   $$payload.out += `<div class="content-container">`;
   SubHeader($$payload, {
     links: [
-      {
-        href: "{base}/explore",
-        text: "Carbon Emissions"
-      },
-      {
-        href: "{base}/about-us",
-        text: "Political Donations"
-      }
+      { href: "#", text: "Carbon Emissions" },
+      { href: "#", text: "Political Donations" }
     ]
   });
   $$payload.out += `<!----> <section class="Project-Container svelte-5tt9gp"><div class="project-grid svelte-5tt9gp"><div class="text-container left svelte-5tt9gp"><h4>Carbon Emissions in Perspective</h4> <p class="svelte-5tt9gp">A collection of articles, interactive stories and data on carbon emissions and the notion of our ‘carbon footprint’.</p></div> `;

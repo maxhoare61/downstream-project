@@ -7,10 +7,10 @@ function __memo(fn) {
 return {
 	appDir: "_app",
 	appPath: "downstream-project/_app",
-	assets: new Set([".nojekyll","favicon.png","mocklogo1.png","preamble_lottie.json"]),
-	mimeTypes: {".png":"image/png",".json":"application/json"},
+	assets: new Set([".nojekyll","favicon.png","mocklogo1.png","preamble_lottie.json","styles/global.css","styles/tokens.css"]),
+	mimeTypes: {".png":"image/png",".json":"application/json",".css":"text/css"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.BgMv0wf-.js","app":"_app/immutable/entry/app.DbhBF1Op.js","imports":["_app/immutable/entry/start.BgMv0wf-.js","_app/immutable/chunks/BJlWzzWB.js","_app/immutable/chunks/CXh6Pbic.js","_app/immutable/chunks/CCYeOIUp.js","_app/immutable/chunks/Dbf8PGUb.js","_app/immutable/entry/app.DbhBF1Op.js","_app/immutable/chunks/k_m1u21n.js","_app/immutable/chunks/CXh6Pbic.js","_app/immutable/chunks/CZoHumtT.js","_app/immutable/chunks/BSoORELv.js","_app/immutable/chunks/CFSNHIOO.js","_app/immutable/chunks/Dbf8PGUb.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.CvGwl4Ob.js","app":"_app/immutable/entry/app.C3n-T9Kk.js","imports":["_app/immutable/entry/start.CvGwl4Ob.js","_app/immutable/chunks/CiGS7CaU.js","_app/immutable/chunks/DzWE_ddi.js","_app/immutable/chunks/DdcpUOxD.js","_app/immutable/chunks/CKksi7zM.js","_app/immutable/entry/app.C3n-T9Kk.js","_app/immutable/chunks/CkPax-wO.js","_app/immutable/chunks/DzWE_ddi.js","_app/immutable/chunks/B1PbRolo.js","_app/immutable/chunks/CoGNq-27.js","_app/immutable/chunks/XHkML9iF.js","_app/immutable/chunks/Chl_3Gad.js","_app/immutable/chunks/CKksi7zM.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),

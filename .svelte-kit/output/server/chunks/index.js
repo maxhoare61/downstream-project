@@ -70,15 +70,21 @@ function render(component, options = {}) {
   payload.out += BLOCK_CLOSE;
   for (const cleanup of on_destroy) cleanup();
   on_destroy = prev_on_destroy;
-  let head = payload.head.out + payload.head.title;
+  let head2 = payload.head.out + payload.head.title;
   for (const { hash, code } of payload.css) {
-    head += `<style id="${hash}">${code}</style>`;
+    head2 += `<style id="${hash}">${code}</style>`;
   }
   return {
-    head,
+    head: head2,
     html: payload.out,
     body: payload.out
   };
+}
+function head(payload, fn) {
+  const head_payload = payload.head;
+  head_payload.out += BLOCK_OPEN;
+  fn(head_payload);
+  head_payload.out += BLOCK_CLOSE;
 }
 function stringify(value) {
   return typeof value === "string" ? value : value == null ? "" : value + "";
@@ -116,7 +122,8 @@ export {
   slot as e,
   bind_props as f,
   getContext as g,
-  ensure_array_like as h,
+  head as h,
+  ensure_array_like as i,
   push as p,
   render as r,
   setContext as s

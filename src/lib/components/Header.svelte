@@ -5,7 +5,7 @@
 <header class="header">
   <div class="logo">
     <a href="{base}/" class="logo-link">
-    <img src="/mocklogo1.png" alt="logo" class="logo-image" />
+    <img src="{base}/mocklogo1.png" alt="logo" class="logo-image" />
     <div>Downstream<br>Project</div>
   </a>
   </div>

@@ -6,6 +6,7 @@
   export let heading3 = "Our Work";
   export let text3 = "We're starting small but focusing on what matters—making carbon emissions and political donation data accessible to everyone through interactive storytelling. These are the stories we care about, and we believe you should be able to understand them too.";
   
+
   import { onMount } from 'svelte';
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";

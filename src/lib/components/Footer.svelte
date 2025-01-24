@@ -1,6 +1,10 @@
+<script>
+  import { base } from '$app/paths';
+</script>
+
 <footer class="footer">
   <div class="logo">
-    <img src="/mocklogo1.png" alt="logo" class="logo-image" />
+    <img src="{base}/mocklogo1.png" alt="logo" class="logo-image" />
     <div>Downstream<br>Project</div>
   </div>
   <div class="footer-text">
