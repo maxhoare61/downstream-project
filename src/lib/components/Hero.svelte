@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { base } from '$app/paths';
   export let subtitle = "because public data deserves public understanding";
 
@@ -9,11 +9,10 @@
   // Function to update the word
   function updateWord() {
     currentWordIndex = (currentWordIndex + 1) % words.length;
-    //document.querySelector(".glow").textContent = words[currentWordIndex];
   }
 
   // Function to calculate the next interval based on an upside-down quadratic function
-  function getNextInterval(t) {
+  function getNextInterval(t: number): number {
     const a = 0.001; // Coefficient for the quadratic function
     const b = -0.5; // Coefficient for the linear term
     const c = 90; // Initial interval in milliseconds

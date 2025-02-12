@@ -1,11 +1,14 @@
 {
 	"/": [
-		"src/routes/+page.server.js"
+		"src/routes/+page.server.ts"
 	],
 	"/about-us": [
-		"src/routes/about-us/+page.server.js"
+		"src/routes/about-us/+page.server.ts"
+	],
+	"/articles/article-one": [
+		"src/routes/articles/article-one/+page.server.ts"
 	],
 	"/explore": [
-		"src/routes/explore/+page.server.js"
+		"src/routes/explore/+page.server.ts"
 	]
 }

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   export let heading1 = "The Problem";
   export let text1 = "Public data isn’t always publicly accessible. Key insights from government data are often  scattered across PDFs,  spreadsheets, and fragmented databases. While technically publicly available, understanding it requires expertise, and a lot of time.";
   export let heading2 = "Our Approach";
@@ -6,14 +6,12 @@
   export let heading3 = "Our Work";
   export let text3 = "We're starting small but focusing on what matters—making carbon emissions and political donation data accessible to everyone through interactive storytelling. These are the stories we care about, and we believe you should be able to understand them too.";
   
-
   import { onMount } from 'svelte';
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   
-  let lottieContainer;
-  let animation;
-  let playedSegments = new Set();
+  let lottieContainer: HTMLElement;
+  let animation: any = null;
 
   onMount(async () => {
     if (typeof window !== 'undefined') {
@@ -23,7 +21,7 @@
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        path: '/preamble_lottie.json' 
+        path: './preamble_lottie.json'
       });
 
       animation.setSpeed(0.5); // Change the speed to 1.5x

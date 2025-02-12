@@ -7,12 +7,19 @@ function ProjectCard($$payload, $$props) {
   let title = fallback($$props["title"], "");
   let description = fallback($$props["description"], "");
   let cat = fallback($$props["cat"], "");
-  let col = fallback($$props["col"], "");
+  let imgUrl = fallback($$props["imgUrl"], "");
   let type = fallback($$props["type"], "");
   let link = fallback($$props["link"], "");
   flexDirection = type === "row" ? "row" : "column";
-  $$payload.out += `<a${attr("href", link)} class="project-card-link"><div${attr("style", `--color: ${stringify(col)}; flex-direction: ${stringify(flexDirection)};`)} class="project-card svelte-keh2g"><div class="project-display svelte-keh2g"></div> <div class="project-text svelte-keh2g"><div class="category svelte-keh2g">${escape_html(cat)}</div> <h4 class="svelte-keh2g">${escape_html(title)}</h4> <p class="svelte-keh2g">${escape_html(description)}</p></div></div></a>`;
-  bind_props($$props, { title, description, cat, col, type, link });
+  $$payload.out += `<a${attr("href", link)} class="project-card-link"><div${attr("style", `flex-direction: ${stringify(flexDirection)};`)} class="project-card svelte-k5ghv"><div class="project-display svelte-k5ghv"${attr("style", `background-image: url(${stringify(imgUrl)});`)}></div> <div class="project-text svelte-k5ghv"><div class="category svelte-k5ghv">${escape_html(cat)}</div> <h4 class="svelte-k5ghv">${escape_html(title)}</h4> <p class="svelte-k5ghv">${escape_html(description)}</p></div></div></a>`;
+  bind_props($$props, {
+    title,
+    description,
+    cat,
+    imgUrl,
+    type,
+    link
+  });
 }
 export {
   ProjectCard as P

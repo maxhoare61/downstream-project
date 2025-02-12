@@ -1,15 +1,20 @@
-<script>
-    export let links = [];
+<script lang="ts">
+    interface Link {
+    href: string;
+    text: string;
+    }
+    export let links: Link[] = [];
+    import { base } from '$app/paths';
 </script>
 
 <h1>Explore Our Projects</h1>
 <div class="sub-header-container">
     <nav>
-        <a class="all" href="#">All</a>
+        <a class="all" href="{base}/">All</a>
         {#each links as link}
           <a href={link.href}>{link.text}</a>
         {/each}
-        <a class="filter" href="#">Filter</a>
+        <a class="filter" href="{base}/">Filter</a>
       </nav>
 </div>
 
@@ -30,19 +35,24 @@ h1{
 }
 
 .sub-header-container nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    min-width: 35vw;
+    display: grid;
+    grid-template-columns: repeat(4, 25%); 
+    gap: 2rem; /* Space between grid items */
+    justify-content: start;
+    min-width: 50%;
+    text-align: center;
 }
 
-.sub-header-container nav a {
-    margin-left: 1rem;
-    justify-content: space-between;
+nav a:hover {
+    text-shadow: 1px 0 0 black;
 }
 
 .all{
     color: var(--accent-primary);
+}
+
+.all:hover {
+    text-shadow: 1px 0 0 var(--accent-primary);
 }
 
 .filter{
