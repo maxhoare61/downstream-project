@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
 
     /* ------- DEFAULTS -------- */
@@ -36,13 +37,14 @@
     --spacing-4: 48px;
     --spacing-5: 32px;
     --spacing-6: 64px;
-
     --spacing-7: 6rem;
     --spacing-8: 56px;
 
     /* Radius */
     --box-corner-radius: 2rem;
 
+    /* Borders */
+    --border-weight: 2px;
 
     /* ------- FONTS -------- */
     /* Body Text */
@@ -100,6 +102,13 @@
     --lead-font-weight: 200;
     --lead-font-size: 1.5rem;
     --lead-line-height: 2;
+
+    /* Caption Text */
+    --caption-font-family: 'DM Sans';
+    --caption-font-style: light;
+    --caption-font-weight: 200;
+    --caption-font-size: 0.825rem;
+    --caption-line-height: auto;
 
     /* Logo Text */
     --logo-font-family: 'Bai Jamjuree';

@@ -125,6 +125,14 @@ h4 {
   font-weight: var(--lead-font-weight);
 }
 
+figcaption {
+  color: var(--color-border);
+  font-family: var(--caption-font-family);
+  font-style: var(--caption-font-style);;
+  font-size: var(--caption-font-size);
+  font-weight: var(--caption-font-weight);
+}
+
 .btn-1 {
   text-decoration: none;
   font-size: var(--highlight-font-size);
