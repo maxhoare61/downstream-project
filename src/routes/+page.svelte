@@ -2,6 +2,7 @@
   import Hero from "$lib/components/Hero.svelte";
   import Preamble from "$lib/components/Preamble.svelte";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
+  import { base } from '$app/paths';
 </script>
 
 <div class="content-container">
@@ -11,9 +12,9 @@
   <section class="projects">
     <h2 class="current-projects">Current Projects</h2>
     <div class="project-grid">
-      <ProjectCard col=var(--accent-secondary) cat="Project" title="Carbon Emissions in Perspective" description="An in-depth analysis of carbon emissions across various industries and their impact on the environment." />
-      <ProjectCard col=var(--accent-primary) cat="Article" title="Political Donations Revealed" description="A comprehensive report uncovering the sources and amounts of political donations in recent elections." />
-      <ProjectCard col=var(--accent-tertiary) cat="Project" title="Minister and Senator Interests" description="A detailed investigation into the financial interests and holdings of current ministers and senators." />
+      <ProjectCard link="{base}/articles/article-one" imgUrl="{base}/smoke-stack-extended.jpg" cat="Project" title="Carbon Emissions in Perspective" description="An in-depth analysis of carbon emissions across various industries and their impact on the environment." />
+      <ProjectCard imgUrl="{base}/political-donations.jpg" cat="Article" title="Political Donations Revealed" description="A comprehensive report uncovering the sources and amounts of political donations in recent elections." />
+      <ProjectCard cat="Project" title="Minister and Senator Interests" description="A detailed investigation into the financial interests and holdings of current ministers and senators." />
     </div>
   </section>
 </div>

@@ -15,11 +15,11 @@
 	<section class="Project-Container">
 		<div class="project-grid">
       <div class="text-container left">
-        <h4>Carbon Emissions in Perspective</h4>
+        <h2>Carbon Emissions in Perspective</h2>
         <p>A project to shed light on how data is often misrepresented to paint consumers as the cause of emissions.</p>
       </div>
       <ProjectCard
-	  			imgUrl="{base}/emissions-in-perspective.jpg"
+	  			imgUrl="{base}/smoke-stack-extended.jpg"
 				type="column"
 				cat="Project"
 				title="The Carbon Footprint Story"
@@ -41,7 +41,7 @@
 			/>
 			<ProjectCard
 				cat="Project"
-				title="Miniwster and Senator Interests"
+				title="Minister and Senator Interests"
 				description="A detailed investigation into the financial interests and holdings of current ministers and senators."
 			/>
 		</div>
@@ -49,32 +49,28 @@
 	<section class="Project-Container">
 		<div class="project-grid">
       <ProjectCard
-				col="var(--accent-primary)"
 				type="column"
 				cat="Project"
 				title="Carbon Emissions in Perspective"
 				description="An in-depth analysis of carbon emissions across various industries and their impact on the environment."
 			/>
 		<div class="text-container right">
-			<h4>Political Donations Revealed</h4>
+			<h2>Political Donations Revealed</h2>
 			<p>A collection of articles, interactive stories and data on carbon emissions and the notion of our ‘carbon footprint’.</p>
 		</div>
 		</div>
 		<div class="project-grid">
 			<ProjectCard
-				col="var(--accent-primary)"
 				cat="Project"
 				title="Carbon Emissions in Perspective"
 				description="An in-depth analysis of carbon emissions across various industries and their impact on the environment."
 			/>
 			<ProjectCard
-				col="var(--accent-primary)"
 				cat="Article"
 				title="Political Donations Revealed"
 				description="A comprehensive report uncovering the sources and amounts of political donations in recent elections."
 			/>
 			<ProjectCard
-				col="var(--accent-primary)"
 				cat="Project"
 				title="Minister and Senator Interests"
 				description="A detailed investigation into the financial interests and holdings of current ministers and senators."

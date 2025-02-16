@@ -101,6 +101,7 @@ h2 {
   font-style: var(--h2-font-style);;
   font-size: var(--h2-font-size);
   font-weight: var(--h2-font-weight);
+  line-height: var(--h2-line-height);
 }
 
 h3 {
@@ -123,6 +124,14 @@ h4 {
   font-style: var(--lead-font-style);;
   font-size: var(--lead-font-size);
   font-weight: var(--lead-font-weight);
+}
+
+figcaption {
+  color: var(--color-border);
+  font-family: var(--caption-font-family);
+  font-style: var(--caption-font-style);;
+  font-size: var(--caption-font-size);
+  font-weight: var(--caption-font-weight);
 }
 
 .btn-1 {

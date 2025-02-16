@@ -23,9 +23,9 @@ function _page($$payload) {
       { href: "#", text: "Political Donations" }
     ]
   });
-  $$payload.out += `<!----> <section class="Project-Container svelte-5tt9gp"><div class="project-grid svelte-5tt9gp"><div class="text-container left svelte-5tt9gp"><h4>Carbon Emissions in Perspective</h4> <p class="svelte-5tt9gp">A project to shed light on how data is often misrepresented to paint consumers as the cause of emissions.</p></div> `;
+  $$payload.out += `<!----> <section class="Project-Container svelte-5tt9gp"><div class="project-grid svelte-5tt9gp"><div class="text-container left svelte-5tt9gp"><h2>Carbon Emissions in Perspective</h2> <p class="svelte-5tt9gp">A project to shed light on how data is often misrepresented to paint consumers as the cause of emissions.</p></div> `;
   ProjectCard($$payload, {
-    imgUrl: `${stringify(base)}/emissions-in-perspective.jpg`,
+    imgUrl: `${stringify(base)}/smoke-stack-extended.jpg`,
     type: "column",
     cat: "Project",
     title: "The Carbon Footprint Story",
@@ -48,7 +48,7 @@ function _page($$payload) {
   $$payload.out += `<!----> `;
   ProjectCard($$payload, {
     cat: "Project",
-    title: "Miniwster and Senator Interests",
+    title: "Minister and Senator Interests",
     description: "A detailed investigation into the financial interests and holdings of current ministers and senators."
   });
   $$payload.out += `<!----></div></section> <section class="Project-Container svelte-5tt9gp"><div class="project-grid svelte-5tt9gp">`;
@@ -59,7 +59,7 @@ function _page($$payload) {
     title: "Carbon Emissions in Perspective",
     description: "An in-depth analysis of carbon emissions across various industries and their impact on the environment."
   });
-  $$payload.out += `<!----> <div class="text-container right svelte-5tt9gp"><h4>Political Donations Revealed</h4> <p class="svelte-5tt9gp">A collection of articles, interactive stories and data on carbon emissions and the notion of our ‘carbon footprint’.</p></div></div> <div class="project-grid svelte-5tt9gp">`;
+  $$payload.out += `<!----> <div class="text-container right svelte-5tt9gp"><h2>Political Donations Revealed</h2> <p class="svelte-5tt9gp">A collection of articles, interactive stories and data on carbon emissions and the notion of our ‘carbon footprint’.</p></div></div> <div class="project-grid svelte-5tt9gp">`;
   ProjectCard($$payload, {
     col: "var(--accent-primary)",
     cat: "Project",

@@ -12,10 +12,15 @@
     --color-green: #26B790;
     --color-aqua: #5CBDAF;
     --color-lime: #DCFF4F;
+    --color-deep-green: #013725;
 
     --color-bright-pink: #DB32A4;
     --color-bright-blue: #04CDF8;
     --color-bright-orange: #FF7300;
+
+    --color-pale-orange: #FFA43B;
+    --color-pale-pink: #E773C3;
+    --color-pale-salmon: #F4B5A5;
 
 
     /* Colour Design elements */
@@ -59,14 +64,14 @@
     --h1-font-style: normal;
     --h1-font-weight: 600;
     --h1-font-size: 3rem;
-    --h1-line-height: 1;
+    --h1-line-height: 4.5rem;
 
     /* H2 Text */
     --h2-font-family: 'Bai Jamjuree';
     --h2-font-style: normal;
     --h2-font-weight: 600;
     --h2-font-size: 2.5rem;
-    --h2-line-height: 2;
+    --h2-line-height: 3.75rem;
 
     /* H3 Text */
     --h3-font-family: 'Bai Jamjuree';

@@ -101,7 +101,7 @@
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.DYu4Tzch.css"
+      "_app/immutable/assets/_layout.CJwh9qne.css"
     ]
   },
   "src/routes/+page.server.ts": {
@@ -154,10 +154,12 @@
     "src": "src/routes/articles/article-one/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js"
+      "_index.js",
+      "_paths.js",
+      "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.BYgBz9NZ.css"
+      "_app/immutable/assets/_page.DDKqVxVh.css"
     ]
   },
   "src/routes/explore/+page.server.ts": {

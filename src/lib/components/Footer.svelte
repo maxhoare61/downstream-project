@@ -22,7 +22,6 @@
     background-color: var(--color-white);
     border-top: 1px solid var(--color-border);
     min-height: var(--spacing-7);
-    margin-top: 2rem;
   }
   .footer-text {
     display: flex;
