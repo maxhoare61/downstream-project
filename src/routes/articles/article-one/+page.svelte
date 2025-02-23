@@ -21,6 +21,7 @@
 	});
 
 	let container: Element | null = null;
+	let animationCompleted = false;
 	let lottieAnimation: { loadAnimation: any; play?: (name?: string) => void; pause?: (name?: string) => void; stop?: (name?: string) => void; setSpeed?: (speed: number, name?: string) => void; setDirection?: (direction: AnimationDirection, name?: string) => void; searchAnimations?: (animationData?: any, standalone?: boolean, renderer?: string) => void; destroy?: (name?: string) => void; registerAnimation?: (element: Element, animationData?: any) => void; setQuality?: (quality: string | number) => void; setLocationHref?: (href: string) => void; setIDPrefix?: (prefix: string) => void; updateDocumentData?: (path: (string | number)[], documentData: TextDocumentData, index: number) => void; };
 
 	onMount(async () => {
@@ -41,10 +42,7 @@
         container.addEventListener('click', () => {
             if (animation.isPaused || animation.currentFrame === 0) {
                 animation.play();
-			} else {
-                animation.stop();
-                animation.play();
-            }
+			}
         });
 
 		//animation.addEventListener('enterFrame', () => {
@@ -52,9 +50,13 @@
 		//});
 
 		animation.addEventListener('complete', () => {
-    	//console.log("Animation completed. Forcing last frame.");
-    	animation.goToAndStop(animation.totalFrames, true);
-});
+			if(animation.playDirection === 1){
+				animation.goToAndStop(animation.totalFrames, true);
+				animation.setDirection(-1);
+			}else if(animation.playDirection === -1){
+				animation.setDirection(1);
+			}
+		});
 
     }
 });
@@ -65,7 +67,7 @@
 		<div class="hero-animation">
 			<div class="invertible">
 				<div class="content-container">
-					<div class="title">The Carbon Footprint Story</div>
+					<div class="title">The Carbon <br> Footprint <br> Story</div>
 					<img
 						src="{base}/footprints-transparent.png"
 						alt="Footprints"
@@ -216,7 +218,7 @@
 				<figure>
 					<div bind:this={container} id="lottie-animation" style="width: 100%; height: 500px;"></div>
 					<div class="caption-1">
-						Click on the chart to see your <br /> emissions in perspective.
+						Click on the chart to see your <br /> emissions in perspective. Click again to <br /> show your individual emissions breakdown.
 					</div>
 				</figure>
 			</div>
@@ -234,20 +236,21 @@
 	}
 
 	.title {
-		margin: 4rem 0rem;
 		padding: 3rem 0rem;
+		margin-left: 3rem;
 		font-family: "Work Sans", sans-serif;
-		font-size: 13.469387755vw;
+		font-size: 12rem;
 		font-weight: 600;
-		line-height: 9.795918367vw;
-		letter-spacing: auto;
+		line-height: 10.5rem;
 		color: white;
-		max-width: 90%;
+		overflow: hidden;
+		white-space: nowrap;
 	}
 
 	#lottie-animation {
 		background-color: var(--color-background);
 		border-radius: var(--box-corner-radius);
+
 	}
 
 	.black-rectangle {
@@ -263,7 +266,8 @@
 		position: absolute;
 		top: 0;
 		right: 0rem;
-		max-width: 40%;
+		width: 550px;
+		overflow: hidden;
 	}
 
 	#campaign {
@@ -331,7 +335,9 @@
 
 	.lead {
 		padding-bottom: 1rem;
-		width: 50%;
+		min-width: 735px;
+		width: 735px;
+		overflow: hidden;
 	}
 
 	.paragraph-1 {

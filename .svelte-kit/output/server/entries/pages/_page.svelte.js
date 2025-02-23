@@ -1,4 +1,3 @@
-import "clsx";
 import { f as bind_props, d as stringify, c as pop, p as push } from "../../chunks/index.js";
 import { b as base } from "../../chunks/paths.js";
 import { f as fallback } from "../../chunks/utils.js";
@@ -55,21 +54,21 @@ function _page($$payload) {
   Preamble($$payload, {});
   $$payload.out += `<!----> <section class="projects svelte-1lufbkj"><h2 class="current-projects svelte-1lufbkj">Current Projects</h2> <div class="project-grid svelte-1lufbkj">`;
   ProjectCard($$payload, {
-    col: "var(--accent-secondary)",
+    link: `${stringify(base)}/articles/article-one`,
+    imgUrl: `${stringify(base)}/smoke-stack-extended.jpg`,
     cat: "Project",
     title: "Carbon Emissions in Perspective",
     description: "An in-depth analysis of carbon emissions across various industries and their impact on the environment."
   });
   $$payload.out += `<!----> `;
   ProjectCard($$payload, {
-    col: "var(--accent-primary)",
+    imgUrl: `${stringify(base)}/political-donations.jpg`,
     cat: "Article",
     title: "Political Donations Revealed",
     description: "A comprehensive report uncovering the sources and amounts of political donations in recent elections."
   });
   $$payload.out += `<!----> `;
   ProjectCard($$payload, {
-    col: "var(--accent-tertiary)",
     cat: "Project",
     title: "Minister and Senator Interests",
     description: "A detailed investigation into the financial interests and holdings of current ministers and senators."

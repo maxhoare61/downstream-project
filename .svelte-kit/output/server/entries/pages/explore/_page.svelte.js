@@ -53,7 +53,6 @@ function _page($$payload) {
   });
   $$payload.out += `<!----></div></section> <section class="Project-Container svelte-5tt9gp"><div class="project-grid svelte-5tt9gp">`;
   ProjectCard($$payload, {
-    col: "var(--accent-primary)",
     type: "column",
     cat: "Project",
     title: "Carbon Emissions in Perspective",
@@ -61,21 +60,18 @@ function _page($$payload) {
   });
   $$payload.out += `<!----> <div class="text-container right svelte-5tt9gp"><h2>Political Donations Revealed</h2> <p class="svelte-5tt9gp">A collection of articles, interactive stories and data on carbon emissions and the notion of our ‘carbon footprint’.</p></div></div> <div class="project-grid svelte-5tt9gp">`;
   ProjectCard($$payload, {
-    col: "var(--accent-primary)",
     cat: "Project",
     title: "Carbon Emissions in Perspective",
     description: "An in-depth analysis of carbon emissions across various industries and their impact on the environment."
   });
   $$payload.out += `<!----> `;
   ProjectCard($$payload, {
-    col: "var(--accent-primary)",
     cat: "Article",
     title: "Political Donations Revealed",
     description: "A comprehensive report uncovering the sources and amounts of political donations in recent elections."
   });
   $$payload.out += `<!----> `;
   ProjectCard($$payload, {
-    col: "var(--accent-primary)",
     cat: "Project",
     title: "Minister and Senator Interests",
     description: "A detailed investigation into the financial interests and holdings of current ministers and senators."
