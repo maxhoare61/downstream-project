@@ -3,7 +3,7 @@ import { s as safe_equals, e as equals } from "./equality.js";
 import { H as HYDRATION_ERROR, a as HYDRATION_START, b as HYDRATION_END, r as render, p as push$1, s as setContext, c as pop$1 } from "./index.js";
 import "clsx";
 import "./paths.js";
-const BROWSER = false;
+const DEV = false;
 let public_env = {};
 let safe_public_env = {};
 function set_private_env(environment) {
@@ -718,8 +718,8 @@ function update_effect(effect2) {
     effect2.wv = write_version;
     var deps = effect2.deps;
     var dep;
-    if (BROWSER && tracing_mode_flag && (effect2.f & DIRTY) !== 0 && deps !== null) ;
-    if (BROWSER) ;
+    if (DEV && tracing_mode_flag && (effect2.f & DIRTY) !== 0 && deps !== null) ;
+    if (DEV) ;
   } catch (error) {
     handle_error(error, effect2, previous_effect, previous_component_context || effect2.ctx);
   } finally {
@@ -889,7 +889,7 @@ function flush_sync(fn) {
     }
     flush_count = 0;
     last_scheduled_effect = null;
-    if (BROWSER) ;
+    if (DEV) ;
     return result;
   } finally {
     scheduler_mode = previous_scheduler_mode;
@@ -1508,7 +1508,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "temrnf"
+  version_hash: "aj91e8"
 };
 async function get_hooks() {
   let handle;
@@ -1527,7 +1527,7 @@ async function get_hooks() {
   };
 }
 export {
-  BROWSER as B,
+  DEV as D,
   set_private_env as a,
   prerendering as b,
   set_public_env as c,

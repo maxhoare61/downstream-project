@@ -2,19 +2,24 @@
 	import { base } from "$app/paths";
 	import type { AnimationDirection, TextDocumentData } from "lottie-web";
 	import { onMount } from "svelte";
+	import ProjectCard from "$lib/components/ProjectCard.svelte";
 
 	onMount(() => {
 		document.addEventListener("scroll", function () {
 			const scrollAmount = window.scrollY;
 			const windowHeight = window.innerHeight;
-			const heroHeight = document.getElementById('hero')?.offsetHeight ?? 0;
+			const heroHeight =
+				document.getElementById("hero")?.offsetHeight ?? 0;
 			const blackRectangle = document.querySelector(
 				".black-rectangle",
 			) as HTMLElement;
 			// Calculate the new bottom position based on the scroll amount
-			let newBottomPosition = windowHeight - 100 - (scrollAmount / windowHeight) * 1000; // Maps scroll to percentage movement
+			let newBottomPosition =
+				windowHeight - 100 - (scrollAmount / windowHeight) * 1000; // Maps scroll to percentage movement
 			// Limit the rectangle's movement to not go below its initial position
-			if (newBottomPosition < 0) {newBottomPosition = 0};
+			if (newBottomPosition < 0) {
+				newBottomPosition = 0;
+			}
 
 			blackRectangle.style.top = newBottomPosition + "px";
 		});
@@ -22,44 +27,62 @@
 
 	let container: Element | null = null;
 	let animationCompleted = false;
-	let lottieAnimation: { loadAnimation: any; play?: (name?: string) => void; pause?: (name?: string) => void; stop?: (name?: string) => void; setSpeed?: (speed: number, name?: string) => void; setDirection?: (direction: AnimationDirection, name?: string) => void; searchAnimations?: (animationData?: any, standalone?: boolean, renderer?: string) => void; destroy?: (name?: string) => void; registerAnimation?: (element: Element, animationData?: any) => void; setQuality?: (quality: string | number) => void; setLocationHref?: (href: string) => void; setIDPrefix?: (prefix: string) => void; updateDocumentData?: (path: (string | number)[], documentData: TextDocumentData, index: number) => void; };
+	let lottieAnimation: {
+		loadAnimation: any;
+		play?: (name?: string) => void;
+		pause?: (name?: string) => void;
+		stop?: (name?: string) => void;
+		setSpeed?: (speed: number, name?: string) => void;
+		setDirection?: (direction: AnimationDirection, name?: string) => void;
+		searchAnimations?: (
+			animationData?: any,
+			standalone?: boolean,
+			renderer?: string,
+		) => void;
+		destroy?: (name?: string) => void;
+		registerAnimation?: (element: Element, animationData?: any) => void;
+		setQuality?: (quality: string | number) => void;
+		setLocationHref?: (href: string) => void;
+		setIDPrefix?: (prefix: string) => void;
+		updateDocumentData?: (
+			path: (string | number)[],
+			documentData: TextDocumentData,
+			index: number,
+		) => void;
+	};
 
 	onMount(async () => {
-    if (typeof window !== 'undefined') {
-        const lottieModule = await import('lottie-web');
-        lottieAnimation = lottieModule.default; // Ensure we get the default export
-    }
-	if (lottieAnimation && container) {  // Ensure both are defined
-        const animation = lottieAnimation.loadAnimation({
-            container: container,
-            renderer: 'svg',
-            loop: false,
-            autoplay: false,
-            path: '/perspective-v2.json'
-        });
-		animation.setSpeed(0.6);
+		if (typeof window !== "undefined") {
+			const lottieModule = await import("lottie-web");
+			lottieAnimation = lottieModule.default; // Ensure we get the default export
+		}
+		if (lottieAnimation && container) {
+			// Ensure both are defined
+			const animation = lottieAnimation.loadAnimation({
+				container: container,
+				renderer: "svg",
+				loop: false,
+				autoplay: false,
+				path: `${base}/perspective-v2.json`,
+			});
+			animation.setSpeed(0.6);
 
-        container.addEventListener('click', () => {
-            if (animation.isPaused || animation.currentFrame === 0) {
-                animation.play();
-			}
-        });
+			container.addEventListener("click", () => {
+				if (animation.isPaused || animation.currentFrame === 0) {
+					animation.play();
+				}
+			});
 
-		//animation.addEventListener('enterFrame', () => {
-    	//console.log("Current Frame:", animation.currentFrame);
-		//});
-
-		animation.addEventListener('complete', () => {
-			if(animation.playDirection === 1){
-				animation.goToAndStop(animation.totalFrames, true);
-				animation.setDirection(-1);
-			}else if(animation.playDirection === -1){
-				animation.setDirection(1);
-			}
-		});
-
-    }
-});
+			animation.addEventListener("complete", () => {
+				if (animation.playDirection === 1) {
+					animation.goToAndStop(animation.totalFrames, true);
+					animation.setDirection(-1);
+				} else if (animation.playDirection === -1) {
+					animation.setDirection(1);
+				}
+			});
+		}
+	});
 </script>
 
 <section id="hero">
@@ -67,7 +90,9 @@
 		<div class="hero-animation">
 			<div class="invertible">
 				<div class="content-container">
-					<div class="title">The Carbon <br> Footprint <br> Story</div>
+					<div class="title">
+						The Carbon <br /> Footprint <br /> Story
+					</div>
 					<img
 						src="{base}/footprints-transparent.png"
 						alt="Footprints"
@@ -86,8 +111,9 @@
 						</p>
 						<p class="lead">
 							In 2004, British Petroleum hired public relations
-							experts to promote the idea that climate change is not the fault of large
-							corporations, but that of individuals.
+							experts to promote the idea that climate change is
+							not the fault of large corporations, but that of
+							individuals.
 						</p>
 						<p class="lead">
 							This initiative proved wildly successful, altering
@@ -196,35 +222,64 @@
 					produced at damaging levels?
 				</p>
 			</div>
-			<div class="pictures-2">
-			</div>
+			<div class="pictures-2"></div>
 		</div>
 		<div class="content-box-2">
 			<div class="paragraph-2 light">
 				<h2>The Reverse Carbon Calculator</h2>
 				<p>
-					Downstream aims to advocate for a more grounded perspective of individual emissions by providing tools to understand them in context. 
-					The reverse carbon calculator is a tool which calculates your carbon footprint much like other carbon footprint calculators except with a key difference.
-					While many carbon footprint calculators aim to emphasise your impact on the planet, our tool compares your individual emissions to those produced by several corporations.
+					Downstream aims to advocate for a more grounded perspective
+					of individual emissions by providing tools to understand
+					them in context. The reverse carbon calculator is a tool
+					which calculates your carbon footprint much like other
+					carbon footprint calculators except with a key difference.
+					While many carbon footprint calculators aim to emphasise
+					your impact on the planet, our tool compares your individual
+					emissions to those produced by several corporations.
 				</p>
 				<p>
-					The purpose of this is to help 'zoom out' our idea of which actions will really make a difference to the climate in the long run. 
-					Our personal actions are big on the scale of our day to day lives which can lead us to believe they have an outsided impact compared to their actually significance.
-					For instance, while it can be beneficial to cycle to a destination instead of driving, the effort required to do this may be better directed toward pushing for change in 
-					business and politics, since decisions in these spaces can have consequences on a large scale.
+					The purpose of this is to help 'zoom out' our idea of which
+					actions will really make a difference to the climate in the
+					long run. Our personal actions are big on the scale of our
+					day to day lives which can lead us to believe they have an
+					outsided impact compared to their actually significance. For
+					instance, while it can be beneficial to cycle to a
+					destination instead of driving, the effort required to do
+					this may be better directed toward pushing for change in
+					business and politics, since decisions in these spaces can
+					have consequences on a large scale.
 				</p>
 			</div>
 			<div class="pictures-2 chart">
 				<figure>
-					<div bind:this={container} id="lottie-animation" style="width: 100%; height: 500px;"></div>
+					<div
+						bind:this={container}
+						id="lottie-animation"
+						style="width: 100%; height: 500px;"
+					></div>
 					<div class="caption-1">
-						Click on the chart to see your <br /> emissions in perspective. Click again to <br /> show your individual emissions breakdown.
+						Click on the chart to see your <br /> emissions in
+						perspective. Click again to <br /> show your individual emissions
+						breakdown.
 					</div>
 				</figure>
 			</div>
 		</div>
 	</div>
 </section>
+
+<div class="content-container">
+	<div class="project-grid">
+		<ProjectCard
+			link="{base}/articles/article-two"
+			type="row"
+			imgUrl="{base}/smoke-stack-extended.jpg"
+			cat="Project"
+			title="Explore the Reverse Carbon Calculator"
+			description="An in-depth analysis of carbon emissions across various industries and their impact on the environment."
+		/>
+	</div>
+</div>
 
 <style>
 	.text-box {
@@ -250,7 +305,6 @@
 	#lottie-animation {
 		background-color: var(--color-background);
 		border-radius: var(--box-corner-radius);
-
 	}
 
 	.black-rectangle {
@@ -295,7 +349,8 @@
 		margin-right: 2rem;
 		max-width: 100%;
 		line-height: 120px;
-		color: var(--color-deep-green);
+		color: var(--color-pale-pink);
+		mix-blend-mode: difference;
 	}
 
 	#campaign h2 {
@@ -395,4 +450,7 @@
 		padding-top: 2rem;
 	}
 
+	.project-grid{
+		padding: 4rem 0rem;
+	}
 </style>

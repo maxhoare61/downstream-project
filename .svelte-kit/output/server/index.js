@@ -1,4 +1,4 @@
-import { p as public_env, s as safe_public_env, B as BROWSER, r as read_implementation, o as options, a as set_private_env, b as prerendering, c as set_public_env, g as get_hooks, d as set_safe_public_env, e as set_read_implementation } from "./chunks/internal.js";
+import { p as public_env, s as safe_public_env, D as DEV, r as read_implementation, o as options, a as set_private_env, b as prerendering, c as set_public_env, g as get_hooks, d as set_safe_public_env, e as set_read_implementation } from "./chunks/internal.js";
 import { b as base, a as assets, o as override, r as reset } from "./chunks/paths.js";
 import { m as make_trackable, d as disable_search, w as writable, r as readable, n as normalize_path, a as add_data_suffix, b as resolve, h as has_data_suffix, s as strip_data_suffix, c as decode_pathname, e as decode_params, v as validate_layout_server_exports, f as validate_layout_exports, g as validate_page_server_exports, i as validate_page_exports, j as validate_server_exports } from "./chunks/exports.js";
 import * as devalue from "devalue";
@@ -2048,7 +2048,7 @@ async function render_page(event, page, options2, manifest, state, resolve_opts)
     state.prerender_default = should_prerender;
     const fetched = [];
     if (get_option(nodes, "ssr") === false && !(state.prerendering && should_prerender_data)) {
-      if (BROWSER && action_result && !event.request.headers.has("x-sveltekit-action")) ;
+      if (DEV && action_result && !event.request.headers.has("x-sveltekit-action")) ;
       return await render_response({
         branch: [],
         fetched,
@@ -2665,12 +2665,12 @@ async function respond(request, options2, manifest, state) {
         trailing_slash = "always";
       } else if (route.page) {
         const nodes = await load_page_nodes(route.page, manifest);
-        if (BROWSER) ;
+        if (DEV) ;
         trailing_slash = get_option(nodes, "trailingSlash");
       } else if (route.endpoint) {
         const node = await route.endpoint();
         trailing_slash = node.trailingSlash;
-        if (BROWSER) ;
+        if (DEV) ;
       }
       if (!is_data_request) {
         const normalized = normalize_path(url.pathname, trailing_slash ?? "never");

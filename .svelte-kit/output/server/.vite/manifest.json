@@ -19,7 +19,7 @@
       "_escaping.js"
     ],
     "css": [
-      "_app/immutable/assets/ProjectCard.WYIme-5i.css"
+      "_app/immutable/assets/ProjectCard.BjHMg7Mf.css"
     ]
   },
   "_attributes.js": {
@@ -156,10 +156,32 @@
     "imports": [
       "_index.js",
       "_paths.js",
+      "_ProjectCard.js",
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.TTFuM-8O.css"
+      "_app/immutable/assets/_page.QMI4Si8b.css"
+    ]
+  },
+  "src/routes/articles/article-two/+page.server.ts": {
+    "file": "entries/pages/articles/article-two/_page.server.ts.js",
+    "name": "entries/pages/articles/article-two/_page.server.ts",
+    "src": "src/routes/articles/article-two/+page.server.ts",
+    "isEntry": true
+  },
+  "src/routes/articles/article-two/+page.svelte": {
+    "file": "entries/pages/articles/article-two/_page.svelte.js",
+    "name": "entries/pages/articles/article-two/_page.svelte",
+    "src": "src/routes/articles/article-two/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_paths.js",
+      "_escaping.js",
+      "_attributes.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.VzWnAArS.css"
     ]
   },
   "src/routes/explore/+page.server.ts": {

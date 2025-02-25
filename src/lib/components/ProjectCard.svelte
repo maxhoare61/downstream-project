@@ -37,9 +37,9 @@
     background-size: cover; /* Ensures the image covers the entire div */
     background-position: center; /* Centers the image in the div */
     border-radius: 16px;
-    min-height: 20vw;
-    min-width: 20vw;
-    max-width: 50vw;
+    min-height: 294px;
+    min-width: 294px;
+    max-width: 735px;
     flex-grow: 1;
     gap: 2rem;
 }
