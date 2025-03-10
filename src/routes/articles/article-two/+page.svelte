@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { base } from "$app/paths";
-	import type { AnimationDirection, TextDocumentData } from "lottie-web";
 	import { onMount } from "svelte";
 	import Calculator from "$lib/components/Calculator.svelte";
-
+    import AnimatedHeader from "$lib/components/AnimatedHeader2.svelte";
+    import { isQuestionnaireComplete } from '$lib/stores/store';
+    
     onMount(() => {
 		document.addEventListener("scroll", function () {
 			const scrollAmount = window.scrollY;
@@ -23,31 +24,16 @@
                 newLeftPosition = 16;
             }
 
-            console.log('newleftpos',newLeftPosition)
+            //console.log('newleftpos',newLeftPosition)
 
-			titletext.style.left = newLeftPosition + "px";
+			//titletext.style.left = newLeftPosition + "px";
 		});
 	});
-
-    let selectedTransport = '';
-    let currentQuestion = 1;
-    const totalQuestions = 2; // Adjust based on the number of questions
-
-    function selectTransport(transport) {
-        selectedTransport = transport;
-        if (currentQuestion < totalQuestions) {
-            currentQuestion += 1; // Move to the next question
-        }
-    }
 </script>
 
 <section id="hero">
-    <div class="content-container">
-        <div class="title-container">
-            <div class="title t1">Reverse <br> Carbon <br> Footprint <br> Calculator</div>
-            <div class="title t2">Reverse <br> Carbon <br> Footprint <br> Calculator</div>
-        </div>
-    </div>
+    <div class="title t2">Reverse <br> Carbon <br> Footprint <br> Calculator</div>
+    <AnimatedHeader/>
 </section>
 <section id="calculator">
     <div class="content-container">
@@ -74,43 +60,32 @@
     </div>
 </section>
 <section id="balloon">
-    <img
-		src="{base}/blue-sky.jpg"
-		alt="Bright blue sky"
-		class="sky-image"
-	/>
-    <img
-		src="{base}/balloon.png"
-		alt="Red hot air balloon"
-		class="balloon-png"
-	/>
-    <div class="ur-impact">Your <br> impact:</div>
+
 </section>
 
 <style>
 
-    .title-container{
-        min-height: 610px;
+    #hero{
+        position: relative;
+        height: 100vh;
     }
 
     .title{
         position: absolute;
-        padding: 3rem 0rem;
+        margin: 3rem 2rem;
+        padding: 1rem;
+        bottom: 2rem;
 		font-family: "Work Sans", sans-serif;
 		font-size: 9.375rem;
 		font-weight: 600;
 		line-height: 8rem;
 		overflow: hidden;
 		white-space: nowrap;
-        mix-blend-mode: difference;
-    }
-
-    .t1{
-        color: #CCBE6D;
+        z-index: 1;
     }
 
     .t2{
-        color: #00339A;
+        color: white;
         left: 15px;
     }
 
@@ -128,20 +103,9 @@
     .paragraph.p1{
         border-top: 1px solid var(--color-border);
     }
-
-    .ur-impact{
-        position: absolute;
-        top: 4rem;
-        left: 4rem;
-        font-family: 'Work Sans';
-        font-size: 150px;
-        font-weight: 500;
-        line-height: 130px;
-    }
-    .balloon-png{
-        position: absolute;
-        top: -4rem;
-        right: 15%;
-        max-height: 90vh;
+    #balloon{
+        height: 100vh;
+        width: 100%;
+        background-size: cover; 
     }
 </style>

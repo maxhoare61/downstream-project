@@ -14,7 +14,7 @@
     <div class="project-grid">
       <ProjectCard link="{base}/articles/article-one" imgUrl="{base}/smoke-stack-extended.jpg" cat="Project" title="Carbon Emissions in Perspective" description="An in-depth analysis of carbon emissions across various industries and their impact on the environment." />
       <ProjectCard imgUrl="{base}/political-donations.jpg" cat="Article" title="Political Donations Revealed" description="A comprehensive report uncovering the sources and amounts of political donations in recent elections." />
-      <ProjectCard cat="Project" title="Minister and Senator Interests" description="A detailed investigation into the financial interests and holdings of current ministers and senators." />
+      <ProjectCard link="{base}/articles/article-two" imgUrl="{base}/calculator-thumbnail.png" cat="Project" title="Reverse Carbon Footprint Calculator" description="A detailed investigation into ..." />
     </div>
   </section>
 </div>

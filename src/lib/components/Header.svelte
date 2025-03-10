@@ -25,7 +25,6 @@
     border-bottom: 1px solid var(--color-border);
     gap: 1rem;
     min-height: var(--spacing-8);
-    margin-bottom: 1rem;
     width: 100vw;
   }
   .header nav a {

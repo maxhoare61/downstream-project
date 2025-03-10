@@ -23,7 +23,8 @@ function _page($$payload) {
       { href: "#", text: "Political Donations" }
     ]
   });
-  $$payload.out += `<!----> <section class="Project-Container svelte-5tt9gp"><div class="project-grid svelte-5tt9gp"><div class="text-container left svelte-5tt9gp"><h2>Carbon Emissions in Perspective</h2> <p class="svelte-5tt9gp">A project to shed light on how data is often misrepresented to paint consumers as the cause of emissions.</p></div> `;
+  $$payload.out += `<!----> <section class="Project-Container svelte-jsdxag"><div class="project-grid svelte-jsdxag"><div class="text-container left svelte-jsdxag"><h2>Carbon Emissions in Perspective</h2> <p class="svelte-jsdxag">A project to shed light on how data is often misrepresented
+					to paint consumers as the cause of emissions.</p></div> `;
   ProjectCard($$payload, {
     imgUrl: `${stringify(base)}/smoke-stack-extended.jpg`,
     type: "column",
@@ -32,7 +33,15 @@ function _page($$payload) {
     description: "In this article we cover why carbon footprint exists and how it has been used to shape the public's perception of climate change.",
     link: `${stringify(base)}/articles/article-one`
   });
-  $$payload.out += `<!----></div> <div class="project-grid svelte-5tt9gp">`;
+  $$payload.out += `<!----></div> <div class="project-grid svelte-jsdxag">`;
+  ProjectCard($$payload, {
+    link: `${stringify(base)}/articles/article-two`,
+    imgUrl: `${stringify(base)}/calculator-thumbnail.png`,
+    cat: "Project",
+    title: "Reverse Carbon Footprint Calculator",
+    description: "A detailed investigation into ..."
+  });
+  $$payload.out += `<!----> `;
   ProjectCard($$payload, {
     cat: "Project",
     title: "Carbon Emissions in Perspective",
@@ -45,20 +54,15 @@ function _page($$payload) {
     title: "Un-masking Political Donations",
     description: "A comprehensive report uncovering the sources and amounts of political donations in recent elections."
   });
-  $$payload.out += `<!----> `;
-  ProjectCard($$payload, {
-    cat: "Project",
-    title: "Minister and Senator Interests",
-    description: "A detailed investigation into the financial interests and holdings of current ministers and senators."
-  });
-  $$payload.out += `<!----></div></section> <section class="Project-Container svelte-5tt9gp"><div class="project-grid svelte-5tt9gp">`;
+  $$payload.out += `<!----></div></section> <section class="Project-Container svelte-jsdxag"><div class="project-grid svelte-jsdxag">`;
   ProjectCard($$payload, {
     type: "column",
     cat: "Project",
     title: "Carbon Emissions in Perspective",
     description: "An in-depth analysis of carbon emissions across various industries and their impact on the environment."
   });
-  $$payload.out += `<!----> <div class="text-container right svelte-5tt9gp"><h2>Political Donations Revealed</h2> <p class="svelte-5tt9gp">A collection of articles, interactive stories and data on carbon emissions and the notion of our ‘carbon footprint’.</p></div></div> <div class="project-grid svelte-5tt9gp">`;
+  $$payload.out += `<!----> <div class="text-container right svelte-jsdxag"><h2>Political Donations Revealed</h2> <p class="svelte-jsdxag">A collection of articles, interactive stories and data on
+					carbon emissions and the notion of our ‘carbon footprint’.</p></div></div> <div class="project-grid svelte-jsdxag">`;
   ProjectCard($$payload, {
     cat: "Project",
     title: "Carbon Emissions in Perspective",

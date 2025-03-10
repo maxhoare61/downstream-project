@@ -69,9 +69,11 @@ function _page($$payload) {
   });
   $$payload.out += `<!----> `;
   ProjectCard($$payload, {
+    link: `${stringify(base)}/articles/article-two`,
+    imgUrl: `${stringify(base)}/calculator-thumbnail.png`,
     cat: "Project",
-    title: "Minister and Senator Interests",
-    description: "A detailed investigation into the financial interests and holdings of current ministers and senators."
+    title: "Reverse Carbon Footprint Calculator",
+    description: "A detailed investigation into ..."
   });
   $$payload.out += `<!----></div></section></div>`;
 }

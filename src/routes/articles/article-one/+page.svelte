@@ -3,6 +3,7 @@
 	import type { AnimationDirection, TextDocumentData } from "lottie-web";
 	import { onMount } from "svelte";
 	import ProjectCard from "$lib/components/ProjectCard.svelte";
+    import AnimatedHeader1 from "$lib/components/AnimatedHeader1.svelte";
 
 	onMount(() => {
 		document.addEventListener("scroll", function () {
@@ -21,7 +22,7 @@
 				newBottomPosition = 0;
 			}
 
-			blackRectangle.style.top = newBottomPosition + "px";
+			//blackRectangle.style.top = newBottomPosition + "px";
 		});
 	});
 
@@ -86,7 +87,35 @@
 </script>
 
 <section id="hero">
-	<div class="text-box">
+	<div class="animated-header">
+		<div class="title t2">The <br /> Carbon <br /> Footprint <br /> Story</div>
+	<div class="backdrop"></div>
+	<div class="ah1">
+		<AnimatedHeader1 />
+	</div>
+	</div>
+	<div class="content-container">
+		<div class="paragraph-1">
+			<p class="lead">
+				The idea of the Carbon footprint has put our
+				individual carbon producing behaviours under a
+				microscope. Have you ever wondered how the immense
+				focus on personal emissions came to be? Keep
+				scrolling to find out.
+			</p>
+			<p class="lead">
+				In 2004, British Petroleum hired public relations
+				experts to promote the idea that climate change is
+				not the fault of large corporations, but that of
+				individuals.
+			</p>
+			<p class="lead">
+				This initiative proved wildly successful, altering
+				the way we view climate change in the 21st century.
+			</p>
+		</div>
+	</div>
+	<!-- <div class="text-box">
 		<div class="hero-animation">
 			<div class="invertible">
 				<div class="content-container">
@@ -123,7 +152,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 </section>
 <div class="content-container">
 	<section id="campaign">
@@ -271,28 +300,28 @@
 <div class="content-container">
 	<div class="project-grid">
 		<ProjectCard
-			link="{base}/articles/article-two"
-			type="row"
-			imgUrl="{base}/smoke-stack-extended.jpg"
-			cat="Project"
-			title="Explore the Reverse Carbon Calculator"
-			description="An in-depth analysis of carbon emissions across various industries and their impact on the environment."
-		/>
+				link="{base}/articles/article-two"
+				imgUrl="{base}/calculator-thumbnail.png"
+				cat="Project"
+				title="Explore the Reverse Carbon Footprint Calculator"
+				description="A detailed investigation into ..."
+				type="row"
+			/>
 	</div>
 </div>
 
 <style>
-	.text-box {
+/* 	.text-box {
 		position: relative;
 	}
 
 	.invertible > * {
 		mix-blend-mode: difference;
-	}
+	} */
 
 	.title {
+		position: relative;
 		padding: 3rem 0rem;
-		margin-left: 3rem;
 		font-family: "Work Sans", sans-serif;
 		font-size: 12rem;
 		font-weight: 600;
@@ -302,27 +331,52 @@
 		white-space: nowrap;
 	}
 
+	.t2 {
+		font-size: 10rem;
+		padding: 4rem;
+		line-height: 8rem;
+		position: absolute;
+		z-index: 2;
+		color: black;
+		bottom: 0;
+	}
+
+	.ah1{
+		display: flex;
+		display: inline;
+		flex-direction: row-reverse;
+		width: 100%;
+		height: 100%;
+	}
+
+	.backdrop{
+		position: absolute;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
 	#lottie-animation {
 		background-color: var(--color-background);
 		border-radius: var(--box-corner-radius);
 	}
 
-	.black-rectangle {
+	/* .black-rectangle {
 		position: absolute;
-		top: 80vh; /* Start below the viewable area */
-		left: 0;
+		top: 80vh; 
 		width: 100vw;
-		height: 1200px; /* Adjust the height as needed */
+		height: 1200px; 
 		background-color: white;
-	}
+	} */
 
-	.footprints {
+	/*.footprints {
 		position: absolute;
 		top: 0;
 		right: 0rem;
 		width: 550px;
 		overflow: hidden;
-	}
+	} */
 
 	#campaign {
 		display: flex;
@@ -349,8 +403,7 @@
 		margin-right: 2rem;
 		max-width: 100%;
 		line-height: 120px;
-		color: var(--color-pale-pink);
-		mix-blend-mode: difference;
+		color: white;
 	}
 
 	#campaign h2 {
@@ -396,10 +449,12 @@
 	}
 
 	.paragraph-1 {
+		position: relative;
 		border-top: 1px solid var(--color-border);
+		width: 50%;
 		max-height: 897px;
 		padding: 4rem 0rem;
-		color: white;
+		margin-top: 2rem;
 	}
 
 	.paragraph-2 {
@@ -452,5 +507,6 @@
 
 	.project-grid{
 		padding: 4rem 0rem;
+		height: 440px;
 	}
 </style>

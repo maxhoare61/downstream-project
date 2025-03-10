@@ -1,25 +1,28 @@
 <script>
-	import SubHeader from '$lib/components/SubHeader.svelte';
-	import ProjectCard from '$lib/components/ProjectCard.svelte';
-	import { base } from '$app/paths';
+	import SubHeader from "$lib/components/SubHeader.svelte";
+	import ProjectCard from "$lib/components/ProjectCard.svelte";
+	import { base } from "$app/paths";
 </script>
 
 <div class="content-container">
 	<SubHeader
 		links={[
-			{ href: "#", text: 'Carbon Emissions' },
-			{ href: "#", text: 'Political Donations' }
+			{ href: "#", text: "Carbon Emissions" },
+			{ href: "#", text: "Political Donations" },
 		]}
 	/>
 
 	<section class="Project-Container">
 		<div class="project-grid">
-      <div class="text-container left">
-        <h2>Carbon Emissions in Perspective</h2>
-        <p>A project to shed light on how data is often misrepresented to paint consumers as the cause of emissions.</p>
-      </div>
-      <ProjectCard
-	  			imgUrl="{base}/smoke-stack-extended.jpg"
+			<div class="text-container left">
+				<h2>Carbon Emissions in Perspective</h2>
+				<p>
+					A project to shed light on how data is often misrepresented
+					to paint consumers as the cause of emissions.
+				</p>
+			</div>
+			<ProjectCard
+				imgUrl="{base}/smoke-stack-extended.jpg"
 				type="column"
 				cat="Project"
 				title="The Carbon Footprint Story"
@@ -28,6 +31,13 @@
 			/>
 		</div>
 		<div class="project-grid">
+			<ProjectCard
+				link="{base}/articles/article-two"
+				imgUrl="{base}/calculator-thumbnail.png"
+				cat="Project"
+				title="Reverse Carbon Footprint Calculator"
+				description="A detailed investigation into ..."
+			/>
 			<ProjectCard
 				cat="Project"
 				title="Carbon Emissions in Perspective"
@@ -39,25 +49,23 @@
 				title="Un-masking Political Donations"
 				description="A comprehensive report uncovering the sources and amounts of political donations in recent elections."
 			/>
-			<ProjectCard
-				cat="Project"
-				title="Minister and Senator Interests"
-				description="A detailed investigation into the financial interests and holdings of current ministers and senators."
-			/>
 		</div>
 	</section>
 	<section class="Project-Container">
 		<div class="project-grid">
-      <ProjectCard
+			<ProjectCard
 				type="column"
 				cat="Project"
 				title="Carbon Emissions in Perspective"
 				description="An in-depth analysis of carbon emissions across various industries and their impact on the environment."
 			/>
-		<div class="text-container right">
-			<h2>Political Donations Revealed</h2>
-			<p>A collection of articles, interactive stories and data on carbon emissions and the notion of our ‘carbon footprint’.</p>
-		</div>
+			<div class="text-container right">
+				<h2>Political Donations Revealed</h2>
+				<p>
+					A collection of articles, interactive stories and data on
+					carbon emissions and the notion of our ‘carbon footprint’.
+				</p>
+			</div>
 		</div>
 		<div class="project-grid">
 			<ProjectCard
@@ -92,35 +100,34 @@
 		gap: 4rem;
 	}
 
-  .project-grid:not(:last-child) {
-    margin-bottom: 2rem;
-  }
+	.project-grid:not(:last-child) {
+		margin-bottom: 2rem;
+	}
 
-  .text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-	padding: 1rem;
-	margin-bottom: 4rem;
-  }
+	.text-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1rem;
+		padding: 1rem;
+		margin-bottom: 4rem;
+	}
 
-  .left {
-	border-right: 1px solid var(--color-border);
-	padding-right: 3rem;
-  }
+	.left {
+		border-right: 1px solid var(--color-border);
+		padding-right: 3rem;
+	}
 
-  .right {
-	border-left: 1px solid var(--color-border);
-	padding-left: 3rem;
-  }
+	.right {
+		border-left: 1px solid var(--color-border);
+		padding-left: 3rem;
+	}
 
-  .text-container p {
-    max-width: 30vw;
-  }
+	.text-container p {
+		max-width: 30vw;
+	}
 
-  .Project-Container:last-child {
-	border-top: 1px solid var(--color-border);
-  }
-
+	.Project-Container:last-child {
+		border-top: 1px solid var(--color-border);
+	}
 </style>

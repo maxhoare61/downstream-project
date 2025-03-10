@@ -1,33 +1,34 @@
 <script lang="ts">
+    import { base } from "$app/paths";
     import { fade, fly } from "svelte/transition";
+    import { isQuestionnaireComplete } from '$lib/stores/store';
 
-    let answers = {};
+    type Answers = {
+        [key: number]: string;
+    };
+
+    let answers: Answers = {};
     let currentQuestion = 1;
     let q1answer = '';
-    const totalQuestions = 7; // Adjust based on the number of questions
+    const totalQuestions = 6; // Adjust based on the number of questions
+    let showQuestionnaire = true;
 
-    function selectAnswer(questionId, answer) {
+    function selectAnswer(questionId: number, answer: string) {
         answers[questionId] = answer;
+
         setTimeout(() => {
             if (currentQuestion < totalQuestions) {
                 if (questionId === 1) {
                     switch (answer) {
                         case "Drive":
-                            console.log(
-                                "Specific logic for Drive",
-                            );
                             q1answer = 'd'
                             currentQuestion = 1.5;
                             break;
                         case "Motorbike":
-                            console.log(
-                                "Specific logic for Motorbike",
-                            );
                             q1answer = 'mb'
                             currentQuestion = 1.5;
                             break;
                         default:
-                            console.log("Default case for other answers");
                             currentQuestion += 1;
                             break;
                     }
@@ -40,12 +41,10 @@
                                 currentQuestion = 1.75;
                                 break;
                             }else if(q1answer === 'mb'){
-                                console.log("skip to q2 cause mb");
                                 currentQuestion = 2;
                                 break;
                             }
                         default:
-                            console.log("Default case");
                             currentQuestion = 2;
                             break;
                     }
@@ -54,6 +53,9 @@
                 } else {
                     currentQuestion += 1; // Move to the next question
                 }
+            } else {
+                isQuestionnaireComplete.set(true);
+                showQuestionnaire = false;
             }
         }, 500);
     }
@@ -105,87 +107,134 @@
             text: "How do you like being asked all these questions?",
             answers: ["I like it", "I'm ok with it", "Not at all"],
         },
+        {
+            id: 7,
+            text: "",
+            answers: [],
+        },
     ];
 </script>
 
-<div class="questions-container">
-    <h1 class="preamble">Choose the option below that suits you best</h1>
-    {#each questions as question}
-        {#if question.id === currentQuestion}
-            <div class="question">
-                <h2
-                    in:fly={{ y: 50, duration: 500 }}
-                    out:fly={{ y: -50, duration: 500 }}
-                >
-                    {question.text}
-                </h2>
-            </div>
-            <div
-                class="buttons"
-                in:fade={{ duration: 300 }}
-                out:fade={{ duration: 300 }}
-            >
-                {#each question.answers as answer}
-                    <button
-                        on:click={() => selectAnswer(question.id, answer)}
-                        class:selected={answers[question.id] === answer}
-                    >
-                        {answer}
-                    </button>
+<section id="calc-section">
+    <div class="form-panel">
+        <div class="questions-container">
+            {#if showQuestionnaire}
+            <p out:fade={{duration: 500 }} class="preamble">Choose the option below that suits you best</p>
+                {#each questions as question}
+                    {#if question.id === currentQuestion}
+                        <div class="question">
+                            <p
+                                in:fly={{ y: 50, duration: 500 }}
+                                out:fly={{ y: -50, duration: 500 }}
+                            >
+                                {question.text}
+                        </p>
+                        </div>
+                        <div
+                            class="buttons"
+                            in:fade={{ duration: 300 }}
+                            out:fade={{ duration: 300 }}
+                        >
+                            {#each question.answers as answer}
+                                <button
+                                    on:click={() => selectAnswer(question.id, answer)}
+                                    class:selected={answers[question.id] === answer}
+                                >
+                                    {answer}
+                                </button>
+                            {/each}
+                        </div>
+                    {/if}
                 {/each}
-            </div>
-        {/if}
-    {/each}
-</div>
+            {:else}
+                <div class="conclusion-text" in:fade={{duration: 500 }}>
+                    <p>Thank you</p>
+                    <p class="lead">Keep scrolling to learn about your climate impact.</p>
+                    <!-- Additional paragraphs or dynamic content based on answers can go here -->
+                </div>
+            {/if}
+        </div>
+    </div>
+</section>
 
 <style>
-    .questions-container {
-        margin-top: 8rem;
+    #calc-section {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 700px;
+    }
+
+    .form-panel{
+        width: 1080px;
+        height: 450px;
+        border-radius: 2rem;
+        border: 1px solid #ffffff;
+    }
+
+    .questions-container {
+        display: flex;
         position: relative;
-        border-top: 1px solid #ffffff;
-        height: 600px;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+
+        font-size: 2rem;
+        font-family: 'Bai Jamjuree';
+    }
+
+    .preamble{
+        position: relative;
+        font-weight: 200;
+        border-bottom: solid 1px white;
+        padding: 2rem;
     }
 
     .question {
         position: absolute;
-        bottom: 20rem;
-    }
-
-    h1 {
-        color: #ffffff;
-    }
-
-    h2 {
-        font-style: normal;
+        height: 128px;
+        width: 100%;
+        display: flex;
+        align-items: center;
         font-weight: 400;
-        color: #ffffff;
+        bottom: -10rem;
+        margin-left: 2.5rem;
+    }
+
+    .conclusion-text {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 450px;
+        width: 1080px;
+        top: 0rem;
+        gap: 2rem;
     }
 
     .buttons {
         position: absolute;
-        height: 107px;
-        bottom: 11rem;
-        width: 70rem;
+        top: 16rem;
         display: flex;
+        height: 107px;
+        width: 100%;
+        padding: 2rem;
+        font-size: 1.5rem;
+        font-weight: 300;
     }
 
     .buttons button {
-        box-sizing: border-box;
-        width: calc(25% - 1px);
-        padding: 0rem 1rem;
-        height: 80px;
-        background: #000000;
-        border: 1px solid #ffffff;
-        font-family: "Bai Jamjuree", sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 1.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #ffffff;
+        box-sizing: border-box;
+        color: white;
+        height: 80px;
+        border: 1px solid #ffffff;
+        padding: 0;
         flex-basis: 0;
         flex-grow: 1;
         transition:
@@ -201,5 +250,15 @@
     .buttons button.selected {
         background-color: grey;
         flex-grow: 1;
+    }
+
+    .buttons button:last-child {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+
+    .buttons button:first-child {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
     }
 </style>

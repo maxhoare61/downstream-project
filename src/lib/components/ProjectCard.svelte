@@ -26,7 +26,6 @@
   .project-card {
     position: relative;
     display: flex;
-    min-height: 35vw;
     justify-content: space-between;
   }
 
