@@ -10,8 +10,8 @@
   </a>
   </div>
   <nav>
-      <a class="btn-1" href="{base}/explore">explore</a>
-      <a class="btn-1" href="{base}/about-us">about us</a>
+      <a class="btn-1" href="{base}/explore">Explore</a>
+      <a class="btn-1" href="{base}/about-us">About us</a>
   </nav>
 </header>
 

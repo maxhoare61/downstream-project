@@ -3,32 +3,8 @@
 	import { onMount } from "svelte";
 	import Calculator from "$lib/components/Calculator.svelte";
     import AnimatedHeader from "$lib/components/AnimatedHeader2.svelte";
-    import { isQuestionnaireComplete } from '$lib/stores/store';
-    
-    onMount(() => {
-		document.addEventListener("scroll", function () {
-			const scrollAmount = window.scrollY;
-			const windowWidth = window.innerWidth;
-			const heroWidth =
-				document.getElementById("hero")?.offsetWidth ?? 0;
-			const titletext = document.querySelector(
-				".t2",
-			) as HTMLElement;
-			// Calculate the new bottom position based on the scroll amount
-			let newLeftPosition =
-                15 - (scrollAmount / windowWidth) * 150; // Maps scroll to percentage movement
-			// Limit the rectangle's movement to not go below its initial position
-			if (newLeftPosition < -16) {
-				newLeftPosition = -16;
-			}else if(newLeftPosition > 16){
-                newLeftPosition = 16;
-            }
-
-            //console.log('newleftpos',newLeftPosition)
-
-			//titletext.style.left = newLeftPosition + "px";
-		});
-	});
+    let AnswerStore;
+    let isQuestionnaireComplete;
 </script>
 
 <section id="hero">
@@ -56,18 +32,25 @@
                 the way we view climate change in the 21st century.
             </p>
         </div>
-        <Calculator/>
+        <Calculator bind:AnswerStore bind:isQuestionnaireComplete />
     </div>
 </section>
 <section id="balloon">
-
+    <div class="content-container">
+        <h2>Your Answers</h2>
+        <ul> 
+        </ul>
+    </div>
 </section>
 
 <style>
 
     #hero{
         position: relative;
-        height: 100vh;
+        height: 200vh;
+        width: 100%;
+        max-width: 100vw;
+        background-color: black;
     }
 
     .title{

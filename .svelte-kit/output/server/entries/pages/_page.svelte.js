@@ -1,11 +1,29 @@
-import { f as bind_props, d as stringify, c as pop, p as push } from "../../chunks/index.js";
+import { c as pop, p as push, f as bind_props, d as stringify } from "../../chunks/index.js";
 import { b as base } from "../../chunks/paths.js";
+import { a as attr } from "../../chunks/attributes.js";
+import "d3";
 import { f as fallback } from "../../chunks/utils.js";
 import { e as escape_html } from "../../chunks/escaping.js";
-import { a as attr } from "../../chunks/attributes.js";
 import { P as ProjectCard } from "../../chunks/ProjectCard.js";
+function InteractiveGraph2($$payload, $$props) {
+  push();
+  const width = 600, height = 600;
+  $$payload.out += `<canvas${attr("width", width)}${attr("height", height)}></canvas>`;
+  pop();
+}
 function Hero($$payload, $$props) {
-  let subtitle = fallback($$props["subtitle"], "because public data deserves public understanding");
+  let subtitle = fallback($$props["subtitle"], "Because public data deserves public understanding.");
+  let words = [
+    "stories.",
+    "insights.",
+    "knowledge.",
+    "understanding.",
+    "thoughtful."
+  ];
+  let currentWordIndex = 0;
+  function updateWord() {
+    currentWordIndex = (currentWordIndex + 1) % words.length;
+  }
   function getNextInterval(t) {
     const a = 1e-3;
     const b = -0.5;
@@ -15,6 +33,7 @@ function Hero($$payload, $$props) {
   function startUpdatingWords() {
     let t = 0;
     function update() {
+      updateWord();
       t += getNextInterval(t);
       if (t < 1500) {
         setTimeout(update, getNextInterval(t));
@@ -25,7 +44,9 @@ function Hero($$payload, $$props) {
   if (typeof window !== "undefined") {
     startUpdatingWords();
   }
-  $$payload.out += `<section class="hero-landing svelte-e97qx"><div class="hero-left svelte-e97qx"><div class="diagram-backdrop svelte-e97qx"></div></div> <div class="hero-right svelte-e97qx"><div class="hero-right-container svelte-e97qx"><div class="hero svelte-e97qx">Less spreadsheets,<br> more <span class="glow svelte-e97qx">stories.</span></div> <p class="lead">${escape_html(subtitle)}</p> <a${attr("href", `${stringify(base)}/about-us`)} class="btn-1 svelte-e97qx">about us</a></div></div></section> <section class="insight-banner svelte-e97qx"><div class="lead"><strong>Downstream</strong> ensures the important insights flow to you</div></section>`;
+  $$payload.out += `<section class="hero-landing svelte-e90t80"><div class="hero-left svelte-e90t80"><div class="graph-overlay svelte-e90t80">`;
+  InteractiveGraph2($$payload);
+  $$payload.out += `<!----></div> <div class="diagram-backdrop svelte-e90t80"></div></div> <div class="hero-right svelte-e90t80"><div class="hero-right-container svelte-e90t80"><div class="hero svelte-e90t80">Less spreadsheets,<br> more <span class="glow svelte-e90t80">${escape_html(words[currentWordIndex])}</span></div> <p class="lead">${escape_html(subtitle)}</p> <a${attr("href", `${stringify(base)}/about-us`)} class="btn-1 svelte-e90t80">about us</a></div></div></section> <section class="insight-banner svelte-e90t80"><div class="lead"><strong>Downstream</strong> ensures the important insights flow to you</div></section>`;
   bind_props($$props, { subtitle });
 }
 function Preamble($$payload, $$props) {

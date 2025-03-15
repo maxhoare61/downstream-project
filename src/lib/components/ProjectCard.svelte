@@ -27,18 +27,22 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    background-color: white;
+    border-radius: var(--box-corner-radius);
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
   }
 
   .project-display {
     position: relative;
     display: flex;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-size: cover; /* Ensures the image covers the entire div */
     background-position: center; /* Centers the image in the div */
-    border-radius: 16px;
+    border-radius: calc(var(--box-corner-radius) / 1.5);
     min-height: 294px;
     min-width: 294px;
-    max-width: 735px;
     flex-grow: 1;
     gap: 2rem;
 }
@@ -47,11 +51,18 @@
     padding: 1rem;
     color: var(--color-dark-text);
     min-height: 15vw;
-    max-width: 50vw;
+    max-width: 735px;
+    gap: 0.5rem;
   }
 
   .project-card h4 {
-    font-size: 2vw;
+    font-size: 2rem;
+    line-height: 1.15;
+    padding-bottom: var(h4-padding-below);
+  }
+
+  .project-card p {
+    line-height: 1.75;
   }
 
   .category {

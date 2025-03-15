@@ -222,7 +222,7 @@
 		alt="Painting of a man's sillouette in smoke billowing from a smoke stack"
 		class="smokestack-image"
 	/>
-	<div class="perspective above">Putting Emissions Back in Perspective</div>
+	<div class="perspective above">Putting Emissions <br/> Back in Perspective</div>
 </figure>
 <section id="perspective">
 	<div class="content-container">
@@ -297,7 +297,7 @@
 	</div>
 </section>
 
-<div class="content-container">
+<!-- <div class="content-container">
 	<div class="project-grid">
 		<ProjectCard
 				link="{base}/articles/article-two"
@@ -308,7 +308,7 @@
 				type="row"
 			/>
 	</div>
-</div>
+</div> -->
 
 <style>
 /* 	.text-box {
@@ -338,23 +338,15 @@
 		position: absolute;
 		z-index: 2;
 		color: black;
-		bottom: 0;
+		bottom: 7rem;
 	}
 
 	.ah1{
-		display: flex;
-		display: inline;
-		flex-direction: row-reverse;
+		display: relative;
+		flex-direction: row;
+		justify-content: right;
 		width: 100%;
 		height: 100%;
-	}
-
-	.backdrop{
-		position: absolute;
-		display: flex;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
 	}
 
 	#lottie-animation {
@@ -392,22 +384,23 @@
 	}
 
 	.smokestack-image {
-		width: 100%;
+		min-width: 1470px;
 	}
 
 	.perspective.above {
 		position: absolute;
 		text-align: left;
-		bottom: 0;
-		right: 0;
-		margin-right: 2rem;
-		max-width: 100%;
 		line-height: 120px;
 		color: white;
+		overflow: hidden;
+		white-space: nowrap;
+		bottom: 0;
+		left: 0;
 	}
 
 	#campaign h2 {
 		border-bottom: 1px solid var(--color-border);
+		width: 735px;
 		padding: 2rem 0rem;
 	}
 
@@ -415,10 +408,6 @@
 		display: grid;
 		grid-template-columns: repeat(2, 50%);
 		gap: 2rem;
-	}
-
-	.content-box-2:last-child {
-		border-top: 1px solid white;
 	}
 
 	.pictures-2 {
@@ -443,8 +432,8 @@
 
 	.lead {
 		padding-bottom: 1rem;
-		min-width: 735px;
-		width: 735px;
+		min-width: 490px;
+		width: 490px;
 		overflow: hidden;
 	}
 

@@ -1,4 +1,5 @@
 import { f as bind_props, d as stringify } from "./index.js";
+/* empty css                                          */
 import { f as fallback } from "./utils.js";
 import { a as attr } from "./attributes.js";
 import { e as escape_html } from "./escaping.js";
@@ -11,7 +12,7 @@ function ProjectCard($$payload, $$props) {
   let type = fallback($$props["type"], "");
   let link = fallback($$props["link"], "");
   flexDirection = type === "row" ? "row" : "column";
-  $$payload.out += `<a${attr("href", link)} class="project-card-link"><div${attr("style", `flex-direction: ${stringify(flexDirection)};`)} class="project-card svelte-rbq1jm"><div class="project-display svelte-rbq1jm"${attr("style", `background-image: url(${stringify(imgUrl)});`)}></div> <div class="project-text svelte-rbq1jm"><div class="category svelte-rbq1jm">${escape_html(cat)}</div> <h4 class="svelte-rbq1jm">${escape_html(title)}</h4> <p class="svelte-rbq1jm">${escape_html(description)}</p></div></div></a>`;
+  $$payload.out += `<a${attr("href", link)} class="project-card-link"><div${attr("style", `flex-direction: ${stringify(flexDirection)};`)} class="project-card svelte-1qzil4t"><div class="project-display svelte-1qzil4t"${attr("style", `background-image: url(${stringify(imgUrl)});`)}></div> <div class="project-text svelte-1qzil4t"><div class="category svelte-1qzil4t">${escape_html(cat)}</div> <h4 class="svelte-1qzil4t">${escape_html(title)}</h4> <p class="svelte-1qzil4t">${escape_html(description)}</p></div></div></a>`;
   bind_props($$props, {
     title,
     description,

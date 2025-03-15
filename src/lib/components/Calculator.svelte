@@ -1,22 +1,27 @@
 <script lang="ts">
     import { base } from "$app/paths";
     import { fade, fly } from "svelte/transition";
-    import { isQuestionnaireComplete } from '$lib/stores/store';
+    let isQuestionnaireComplete = $state(false);
+    let AnswerStore = $derived<{ [key: number]: string }>({});
 
     type Answers = {
         [key: number]: string;
     };
 
     let answers: Answers = {};
-    let currentQuestion = 1;
+
+    let currentQuestion = $state(1);
     let q1answer = '';
     const totalQuestions = 6; // Adjust based on the number of questions
-    let showQuestionnaire = true;
+    let showQuestionnaire = $state(true);
 
     function selectAnswer(questionId: number, answer: string) {
         answers[questionId] = answer;
+        AnswerStore[questionId] = answer;
+        //console.log(AnswerStore);
 
         setTimeout(() => {
+            console.log(currentQuestion);
             if (currentQuestion < totalQuestions) {
                 if (questionId === 1) {
                     switch (answer) {
@@ -51,14 +56,16 @@
                 } else if (questionId === 1.75) {
                     currentQuestion = 2;
                 } else {
+                    console.log('next question');
                     currentQuestion += 1; // Move to the next question
                 }
             } else {
-                isQuestionnaireComplete.set(true);
+                isQuestionnaireComplete = true;
                 showQuestionnaire = false;
             }
         }, 500);
     }
+
 
     const questions = [
         {
@@ -113,6 +120,8 @@
             answers: [],
         },
     ];
+
+    export { AnswerStore, isQuestionnaireComplete };
 </script>
 
 <section id="calc-section">
@@ -137,8 +146,8 @@
                         >
                             {#each question.answers as answer}
                                 <button
-                                    on:click={() => selectAnswer(question.id, answer)}
-                                    class:selected={answers[question.id] === answer}
+                                    onclick={() => selectAnswer(question.id, answer)}
+                                    class:selected={answer[question.id] === answer}
                                 >
                                     {answer}
                                 </button>

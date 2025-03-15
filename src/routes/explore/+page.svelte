@@ -15,7 +15,7 @@
 	<section class="Project-Container">
 		<div class="project-grid">
 			<div class="text-container left">
-				<h2>Carbon Emissions in Perspective</h2>
+				<h3>Carbon Emissions in Perspective</h3>
 				<p>
 					A project to shed light on how data is often misrepresented
 					to paint consumers as the cause of emissions.
@@ -51,47 +51,13 @@
 			/>
 		</div>
 	</section>
-	<section class="Project-Container">
-		<div class="project-grid">
-			<ProjectCard
-				type="column"
-				cat="Project"
-				title="Carbon Emissions in Perspective"
-				description="An in-depth analysis of carbon emissions across various industries and their impact on the environment."
-			/>
-			<div class="text-container right">
-				<h2>Political Donations Revealed</h2>
-				<p>
-					A collection of articles, interactive stories and data on
-					carbon emissions and the notion of our ‘carbon footprint’.
-				</p>
-			</div>
-		</div>
-		<div class="project-grid">
-			<ProjectCard
-				cat="Project"
-				title="Carbon Emissions in Perspective"
-				description="An in-depth analysis of carbon emissions across various industries and their impact on the environment."
-			/>
-			<ProjectCard
-				cat="Article"
-				title="Political Donations Revealed"
-				description="A comprehensive report uncovering the sources and amounts of political donations in recent elections."
-			/>
-			<ProjectCard
-				cat="Project"
-				title="Minister and Senator Interests"
-				description="A detailed investigation into the financial interests and holdings of current ministers and senators."
-			/>
-		</div>
-	</section>
 </div>
 
 <style>
 	.Project-Container {
 		padding: 6rem 0rem;
 		min-height: 50vh;
-		gap: 2rem;
+		gap: 4rem;
 	}
 
 	.project-grid {
@@ -109,17 +75,17 @@
 		flex-direction: column;
 		justify-content: center;
 		gap: 1rem;
-		padding: 1rem;
-		margin-bottom: 4rem;
+		padding: 3rem;
+		background-color: white;
+		border-radius: var(--box-corner-radius);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	}
 
 	.left {
-		border-right: 1px solid var(--color-border);
 		padding-right: 3rem;
 	}
 
 	.right {
-		border-left: 1px solid var(--color-border);
 		padding-left: 3rem;
 	}
 
@@ -127,7 +93,7 @@
 		max-width: 30vw;
 	}
 
-	.Project-Container:last-child {
+	/*.Project-Container:last-child {
 		border-top: 1px solid var(--color-border);
-	}
+	}*/
 </style>

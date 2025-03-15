@@ -1,6 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths';
-  export let subtitle = "because public data deserves public understanding";
+  import InteractiveGraph2 from './InteractiveGraph2.svelte';
+  export let subtitle = "Because public data deserves public understanding.";
 
   let words = ["stories.", "insights.", "knowledge.", "understanding.", "thoughtful."];
   let currentWordIndex = 0;
@@ -40,11 +41,14 @@
 
 <section class="hero-landing">
   <div class="hero-left">
+  <div class="graph-overlay">
+    <InteractiveGraph2 />
+  </div>
     <div class="diagram-backdrop"></div>
   </div>
   <div class="hero-right">
     <div class="hero-right-container">
-      <div class="hero">Less spreadsheets,<br> more <span class="glow">stories.</span></div>
+      <div class="hero">Less spreadsheets,<br> more <span class="glow">{words[currentWordIndex]}</span></div>
       <p class="lead">{subtitle}</p>
       <a href="{base}/about-us" class="btn-1">about us</a>
     </div>
@@ -87,11 +91,26 @@
     align-content: center;
   }
   .diagram-backdrop {
-    background-color: var(--color-white);
-    width: 41vw;
-    height: 41vw;
-    border-radius: var(--box-corner-radius)
+    position: relative;
+    background-color: #ffffff;
+    width: 602px;
+    height: 602px;
+    border-radius: var(--box-corner-radius);
+    overflow: hidden;
   }
+
+  .graph-overlay {
+    position: absolute; /* ✅ Positions the graph inside backdrop */
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 602px;
+    height: 602px;
+    z-index: 1;
+    border: none;
+    border-radius: var(--box-corner-radius);
+}
+
   .hero-right {
     display: flex;
     flex: 1;
@@ -115,9 +134,8 @@
     margin-top: 1rem;
   }
   .hero {
-    white-space: normal; /* Allow text to wrap */
-    word-wrap: break-word; /* Break long words if necessary */
-    font-size: 5vw;
+    white-space: nowrap; /* Allow text to wrap */
+    font-size: 73.5px;
   }
   .glow {
     text-decoration: underline;

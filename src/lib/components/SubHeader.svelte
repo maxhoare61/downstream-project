@@ -14,7 +14,6 @@
         {#each links as link}
           <a href={link.href}>{link.text}</a>
         {/each}
-        <a class="filter" href="{base}/">Filter</a>
       </nav>
 </div>
 
@@ -44,7 +43,7 @@ h1{
 }
 
 nav a:hover {
-    text-shadow: 1px 0 0 black;
+    font-weight: 700;
 }
 
 .all{
@@ -52,12 +51,7 @@ nav a:hover {
 }
 
 .all:hover {
-    text-shadow: 1px 0 0 var(--accent-primary);
+    font-weight: 700;
 }
-
-.filter{
-    font-weight: bold;
-}
-
 </style>
 
