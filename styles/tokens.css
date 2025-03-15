@@ -30,7 +30,7 @@
     --accent-primary: var(--color-blue);
     --accent-secondary: var(--color-green);
     --accent-tertiary: var(--color-aqua);
-    --color-dark-text: #4E4E4E;
+    --color-dark-text: #303030;
     --color-black-text: #000000;
     --color-black: #000000;
 
@@ -62,14 +62,14 @@
     /* H1 Text */
     --h1-font-family: 'Bai Jamjuree';
     --h1-font-style: normal;
-    --h1-font-weight: 600;
+    --h1-font-weight: 500;
     --h1-font-size: 3rem;
     --h1-line-height: 4.5rem;
 
     /* H2 Text */
     --h2-font-family: 'Bai Jamjuree';
     --h2-font-style: normal;
-    --h2-font-weight: 600;
+    --h2-font-weight: 500;
     --h2-font-size: 3rem;
     --h2-line-height: 3.75rem;
 
@@ -77,20 +77,21 @@
     --h3-font-family: 'Bai Jamjuree';
     --h3-font-style: normal;
     --h3-font-weight: 500;
-    --h3-font-size: 1.5rem;
-    --h3-line-height: 3.34;
+    --h3-font-size: 2.5rem;
+    --h3-line-height: 1.15;
 
     /* H4 Text */
     --h4-font-family: 'Bai Jamjuree';
     --h4-font-style: normal;
-    --h4-font-weight: 400;
-    --h4-font-size: 2rem;
-    --h4-line-height: 1.5;
+    --h4-font-weight: 300;
+    --h4-font-size: 1.5rem;
+    --h4-line-height: 1.25;
+    --h4-heading-space: 1rem;
 
     /* Highlight Text */
     --highlight-font-family: 'Bai Jamjuree';
     --highlight-font-style: normal;
-    --highlight-font-weight: 700;
+    --highlight-font-weight: 500;
     --highlight-font-size: 1rem;
     --highlight-line-height: 20px;
 
