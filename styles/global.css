@@ -187,7 +187,7 @@ figcaption {
 
 .btn-1.inverse{
   color: var(--accent-primary);
-  background-color: var(--color-white);
+  background-color: rgba(100,100,100,0);
 }
 
 .btn-1.inverse:hover {
