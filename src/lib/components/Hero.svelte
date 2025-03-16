@@ -1,9 +1,15 @@
 <script lang="ts">
-  import { base } from '$app/paths';
-  import InteractiveGraph2 from './InteractiveGraph2.svelte';
+  import { base } from "$app/paths";
+  import InteractiveGraph2 from "./InteractiveGraph.svelte";
   export let subtitle = "Because public data deserves public understanding.";
 
-  let words = ["stories.", "insights.", "knowledge.", "understanding.", "thoughtful."];
+  let words = [
+    "stories.",
+    "insights.",
+    "knowledge.",
+    "understanding.",
+    "thoughtful.",
+  ];
   let currentWordIndex = 0;
   let intervalId;
 
@@ -26,7 +32,8 @@
     function update() {
       updateWord();
       t += getNextInterval(t);
-      if (t < 1500) { // Stop after 1.5 seconds
+      if (t < 1500) {
+        // Stop after 1.5 seconds
         intervalId = setTimeout(update, getNextInterval(t));
       }
     }
@@ -34,82 +41,116 @@
   }
 
   // Start the word update process if in the browser
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     startUpdatingWords();
   }
+
+  let graphOverlay: HTMLButtonElement | null = null;
+
+  function hideInstruct() {
+        const instructElement = graphOverlay?.querySelector(".instruct");
+        if (instructElement) {
+            instructElement.classList.remove("show");
+        }
+  }
+
 </script>
 
 <section class="hero-landing">
   <div class="hero-left">
-  <div class="graph-overlay">
-    <InteractiveGraph2 />
-  </div>
+    <button class="graph-overlay" bind:this={graphOverlay} on:click={hideInstruct}>
+      <div class="instruct show">Use the mouse to interact with the navigation graph. <br> Click on a node to reveal it's sub-nodes.</div>
+      <InteractiveGraph2 />
+    </button>
     <div class="diagram-backdrop"></div>
   </div>
   <div class="hero-right">
     <div class="hero-right-container">
-      <div class="hero">Less spreadsheets,<br> more <span class="glow">{words[currentWordIndex]}</span></div>
+      <div class="hero">
+        Less spreadsheets,<br /> more
+        <span class="glow">{words[currentWordIndex]}</span>
+      </div>
       <p class="lead">{subtitle}</p>
-      <a href="{base}/about-us" class="btn-1">about us</a>
+      <a href="{base}/about-us" class="btn-1">About us</a>
     </div>
   </div>
 </section>
 <section class="insight-banner">
-  <div class="lead"><strong>Downstream</strong> ensures the important insights flow to you</div>
+  <div class="lead">
+    <strong>Downstream</strong> ensures the important insights flow to you
+  </div>
 </section>
 
 <style>
   .hero-landing {
-    position: relative;
-    flex: 1;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 2rem; /* Space between columns */
+    align-items: center; 
+    justify-content: center;
     width: 100%;
-    min-height: calc(100vh - var(--spacing-7));
-    min-width: 100%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    gap: 3rem;
+    min-height: clamp(520px, 80vh, 958px);
   }
 
+  /* Stack the layout in portrait mode (mobile screens) */
   @media (max-width: 768px) {
     .hero-landing {
-    position: relative;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    gap: 1rem;
-  }
+      grid-template-columns: 1fr; /* Single column layout */
+      grid-template-rows: auto auto; /* Stack top to bottom */
+      gap: 1rem;
+      height: clamp(360px, 18.229vw, 600px);
+    }
   }
 
   .hero-left {
-    max-width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    overflow: hidden;
   }
+
   .diagram-backdrop {
     position: relative;
     background-color: #ffffff;
-    width: 602px;
-    height: 602px;
+    width: clamp(348px, 33.25vw, 602px);
+    aspect-ratio: 1/1;
+    height: auto;
     border-radius: var(--box-corner-radius);
     overflow: hidden;
   }
 
   .graph-overlay {
-    position: absolute; /* ✅ Positions the graph inside backdrop */
+    position: absolute;
     display: flex;
     align-items: center;
     justify-items: center;
-    width: 602px;
-    height: 602px;
+    width: clamp(348px, 31.25vw, 602px);
+    aspect-ratio: 1/1;
+    height: clamp(348px, 31.25vw, 602px);
     z-index: 1;
     border: none;
     border-radius: var(--box-corner-radius);
-}
+  }
+
+  .instruct{
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    width: 100%;
+    z-index: 2;
+    color: grey;
+    pointer-events: none;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    opacity: 0;
+  }
+
+
+  .instruct.show{
+    opacity: 1;
+    transform: translateY(60%);
+  }
 
   .hero-right {
     display: flex;
@@ -117,25 +158,24 @@
     flex-direction: column;
     justify-content: center;
     padding: 0rem 0rem;
-    min-height: 100%;
-    width: 45vw;
+    overflow: hidden;
   }
   .hero-right-container {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    gap: 1rem;
-    max-height: 65%;
+    justify-content: space-around;
+    min-height: clamp(200px, 18.229vw, 600px);
     width: 100%;
   }
+
   .hero-right-container a {
     margin-top: 1rem;
   }
   .hero {
     white-space: nowrap; /* Allow text to wrap */
-    font-size: 73.5px;
+    font-size: clamp(38px, 4vw, 73.5px);
   }
   .glow {
     text-decoration: underline;

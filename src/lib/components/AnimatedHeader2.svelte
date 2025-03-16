@@ -54,10 +54,10 @@
 <svg
     xmlns="http://www.w3.org/2000/svg"
     bind:this={paths}
-    width="100vh"
-    height="auto"
-    preserveAspectRatio="none"
-    viewBox="0 0 1470 740"
+     width="100%"
+     height="85vh"
+     preserveAspectRatio="xMidYMid meet"
+     viewBox="0 0 896 504"
 >
     <defs>
         <style>

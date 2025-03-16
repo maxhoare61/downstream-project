@@ -6,8 +6,8 @@
     // Function to update the viewBox dynamically to maintain aspect ratio
     function updateSVGSize() {
         if (paths) {
-            const width = 1470;
-            const height = (width / 16) * 9; // Maintain 16:9 aspect ratio (adjust as needed)
+            const width = window.innerWidth;
+            const height = (width / 16) * 9;
             paths.setAttribute("width", `${width}`);
             paths.setAttribute("height", `${height}`);
         }
@@ -54,7 +54,10 @@
 <svg
     xmlns="http://www.w3.org/2000/svg"
     bind:this={paths}
-    viewBox="0 0 1470 823"
+     width="100%"
+     height="100%"
+     preserveAspectRatio="xMidYMid meet"
+     viewBox="0 0 896 504"
 >
     <defs>
         <style>

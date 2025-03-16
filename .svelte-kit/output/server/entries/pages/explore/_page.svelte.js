@@ -18,41 +18,25 @@ function SubHeader($$payload, $$props) {
 function _page($$payload) {
   $$payload.out += `<div class="content-container">`;
   SubHeader($$payload, {
-    links: [
-      { href: "#", text: "Carbon Emissions" },
-      { href: "#", text: "Political Donations" }
-    ]
+    links: [{ href: "#", text: "Carbon Emissions" }]
   });
-  $$payload.out += `<!----> <section class="Project-Container svelte-5b9tkh"><div class="project-grid svelte-5b9tkh"><div class="text-container left svelte-5b9tkh"><h3>Carbon Emissions in Perspective</h3> <p class="svelte-5b9tkh">A project to shed light on how data is often misrepresented
+  $$payload.out += `<!----> <section class="Project-Container svelte-1m3iaqs"><div class="project-grid svelte-1m3iaqs"><div class="text-container left svelte-1m3iaqs"><h3>Carbon Emissions in Perspective</h3> <p class="tile-type svelte-1m3iaqs">Project</p> <p class="svelte-1m3iaqs">A project to shed light on how data is often misrepresented
 					to paint consumers as the cause of emissions.</p></div> `;
   ProjectCard($$payload, {
     imgUrl: `${stringify(base)}/smoke-stack-extended.jpg`,
     type: "column",
-    cat: "Project",
+    cat: "Article",
     title: "The Carbon Footprint Story",
-    description: "In this article we cover why carbon footprint exists and how it has been used to shape the public's perception of climate change.",
+    description: "In this article we cover the idea of the 'carbon footprint' and how it has shaped the public's perception of climate change.",
     link: `${stringify(base)}/articles/article-one`
   });
-  $$payload.out += `<!----></div> <div class="project-grid svelte-5b9tkh">`;
+  $$payload.out += `<!----></div> <div class="project-grid svelte-1m3iaqs">`;
   ProjectCard($$payload, {
     link: `${stringify(base)}/articles/article-two`,
     imgUrl: `${stringify(base)}/calculator-thumbnail.png`,
-    cat: "Project",
-    title: "Reverse Carbon Footprint Calculator",
-    description: "A detailed investigation into ..."
-  });
-  $$payload.out += `<!----> `;
-  ProjectCard($$payload, {
-    cat: "Project",
-    title: "Carbon Emissions in Perspective",
-    description: "An in-depth analysis of carbon emissions across various industries and their impact on the environment."
-  });
-  $$payload.out += `<!----> `;
-  ProjectCard($$payload, {
-    imgUrl: `${stringify(base)}/political-donations.jpg`,
     cat: "Article",
-    title: "Un-masking Political Donations",
-    description: "A comprehensive report uncovering the sources and amounts of political donations in recent elections."
+    title: "Reverse Carbon Footprint Calculator",
+    description: "This article introduces the Reverse Carbon Calculator, a tool to help contextualize individual carbon emissions."
   });
   $$payload.out += `<!----></div></section></div>`;
 }

@@ -15,9 +15,9 @@
   >
     <div class="project-display" style="background-image: url({imgUrl});"></div>
     <div class="project-text">
-      <div class="category">{cat}</div>
-      <h4>{title}</h4>
-      <p>{description}</p>
+      <div class="tile-type">{cat}</div>
+      <h5>{title}</h5>
+      <p class="tile-description">{description}</p>
     </div>
   </div>
 </a>
@@ -30,7 +30,7 @@
     background-color: white;
     border-radius: var(--box-corner-radius);
     height: 100%;
-    width: 100%;
+    width: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
   }
@@ -41,34 +41,33 @@
     background-size: cover; /* Ensures the image covers the entire div */
     background-position: center; /* Centers the image in the div */
     border-radius: calc(var(--box-corner-radius) / 1.5);
-    min-height: 294px;
-    min-width: 294px;
+    min-height: clamp(200px, 30vw, 294px); /* Dynamic height */
+    min-width: auto; 
     flex-grow: 1;
-    gap: 2rem;
-}
-
-  .project-text {
-    padding: 1rem;
-    color: var(--color-dark-text);
-    min-height: 15vw;
-    max-width: 735px;
-    gap: 0.5rem;
+    gap: clamp(1rem, 2vw, 2rem); 
   }
 
-  .project-card h4 {
-    font-size: 2rem;
-    line-height: 1.15;
-    padding-bottom: var(h4-padding-below);
+  @media (max-width: 768px) {
+    .project-display {
+        flex-direction: column; /* Stack items vertically */
+        min-height: clamp(180px, 40vw, 240px); /* Reduce size further */
+        min-width: auto; /* Ensure it adapts to screen width */
+        gap: 1rem; /* Reduce spacing */
+    }
+  }
+
+  .project-text {
+    flex-direction: column;
+    padding: 1rem;
+    height: 100%;
+    max-width: 735px;
+    gap: 0.5rem;
+    justify-content: space-around;
   }
 
   .project-card p {
     line-height: 1.75;
-  }
-
-  .category {
-    font-size: var(--highlight-font-size);
-    font-weight: var(--highlight-font-weight);
-    color: var(--accent-primary);
+    text-align: justify;
   }
 
   @media (max-width: 768px) {

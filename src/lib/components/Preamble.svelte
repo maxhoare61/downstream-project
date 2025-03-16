@@ -48,15 +48,15 @@
   <div class="section-left">
     <div class="section-left-child">
       <h2>{heading1}</h2>
-      <div class="lead">{text1}</div>
+      <div class="p">{text1}</div>
     </div>
     <div class="section-left-child">
       <h2>{heading2}</h2>
-      <div class="lead">{text2}</div>
+      <div class="p">{text2}</div>
     </div>
     <div class="section-left-child">
       <h2>{heading3}</h2>
-      <div class="lead">{text3}</div>
+      <div class="p">{text3}</div>
     </div>
   </div>
   <div class="section-right">
@@ -73,54 +73,59 @@
     flex: 1;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     width: 100%;
-    max-height: 300vh;
-    min-width: 100%;
+    height: 200vh;
     padding-top: 2rem;
     padding-bottom: 1rem;
-    gap: 2rem;
+    gap: clamp(1rem, 2.5vw, 2rem);
   }
+
   .section-left {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
     align-items: left;
     justify-content: center;
     text-align: left;
-    max-width: 50%;
   }
+
   .section-left-child {
     display: flex;
     flex-direction: column;
-    border-radius: 16px;
-    min-height: calc(100vh - 2rem);
+    min-height: clamp(400px, 60vh, 920px);
     align-items: left;
     justify-content: center;
+    gap: clamp(1rem, 2.5vw, 1.5rem);
     text-align: left;
+    width: clamp(136px, 42.153vw, 602px);
   }
+
   .section-right {
-    padding: 3rem 2rem;
-    min-width: calc(50vw - 2rem);
+    padding: clamp(0, 0.83333vw, 2rem);
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
+
   .backdrop-right {
     top: calc((100vh - 41vw) / 2);
     position: sticky;
     background-color: var(--color-white);
     border-radius: 2rem;
-    min-width: 41vw;
-    max-height: 41vw;
+    width: clamp(180px, 31.25vw, 602px);
+    height: clamp(180px, 31.25vw, 602px);
+    aspect-ratio: 1/1;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: clamp(10px, 1.25vw, 2rem);
   }
+
   .lottie-container {
     position: sticky;
     top: calc((100vh - 38vw) / 2);
-    width: 38vw;
-    height: 38vw;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;;
     margin-top: 1vw;
     margin-bottom: 1vw;
     border: none; 

@@ -7,8 +7,7 @@
 <div class="content-container">
 	<SubHeader
 		links={[
-			{ href: "#", text: "Carbon Emissions" },
-			{ href: "#", text: "Political Donations" },
+			{ href: "#", text: "Carbon Emissions" }
 		]}
 	/>
 
@@ -16,6 +15,7 @@
 		<div class="project-grid">
 			<div class="text-container left">
 				<h3>Carbon Emissions in Perspective</h3>
+				<p class="tile-type">Project</p>
 				<p>
 					A project to shed light on how data is often misrepresented
 					to paint consumers as the cause of emissions.
@@ -24,9 +24,9 @@
 			<ProjectCard
 				imgUrl="{base}/smoke-stack-extended.jpg"
 				type="column"
-				cat="Project"
+				cat="Article"
 				title="The Carbon Footprint Story"
-				description="In this article we cover why carbon footprint exists and how it has been used to shape the public's perception of climate change."
+				description="In this article we cover the idea of the 'carbon footprint' and how it has shaped the public's perception of climate change."
 				link="{base}/articles/article-one"
 			/>
 		</div>
@@ -34,20 +34,9 @@
 			<ProjectCard
 				link="{base}/articles/article-two"
 				imgUrl="{base}/calculator-thumbnail.png"
-				cat="Project"
-				title="Reverse Carbon Footprint Calculator"
-				description="A detailed investigation into ..."
-			/>
-			<ProjectCard
-				cat="Project"
-				title="Carbon Emissions in Perspective"
-				description="An in-depth analysis of carbon emissions across various industries and their impact on the environment."
-			/>
-			<ProjectCard
-				imgUrl="{base}/political-donations.jpg"
 				cat="Article"
-				title="Un-masking Political Donations"
-				description="A comprehensive report uncovering the sources and amounts of political donations in recent elections."
+				title="Reverse Carbon Footprint Calculator"
+				description="This article introduces the Reverse Carbon Calculator, a tool to help contextualize individual carbon emissions."
 			/>
 		</div>
 	</section>
@@ -63,7 +52,16 @@
 	.project-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
-		gap: 4rem;
+		align-items: stretch;
+		gap: 2rem;
+	}
+
+	@media (max-width: 768px) {
+		.project-grid {
+			grid-template-columns: 1fr; /* Single column */
+			grid-template-rows: auto; /* Allow natural row height */
+			gap: 1.5rem; /* Adjust spacing */
+		}
 	}
 
 	.project-grid:not(:last-child) {
@@ -73,20 +71,22 @@
 	.text-container {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		gap: 1rem;
+		justify-content: space-evenly;
+		gap: 0.25rem;
 		padding: 3rem;
 		background-color: white;
 		border-radius: var(--box-corner-radius);
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	}
 
-	.left {
-		padding-right: 3rem;
+	.tile-type {
+		padding-bottom: 0.75rem;
+		margin-bottom: 0.75rem;
+		border-bottom: solid 1px var(--color-border);
 	}
 
-	.right {
-		padding-left: 3rem;
+	.left {
+		padding-right: 3rem;
 	}
 
 	.text-container p {

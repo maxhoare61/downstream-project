@@ -53,20 +53,6 @@ function get_parent_context(component_context) {
 }
 const BLOCK_OPEN = `<!--${HYDRATION_START}-->`;
 const BLOCK_CLOSE = `<!--${HYDRATION_END}-->`;
-function copy_payload({ out, css, head: head2 }) {
-  return {
-    out,
-    css: new Set(css),
-    head: {
-      title: head2.title,
-      out: head2.out
-    }
-  };
-}
-function assign_payload(p1, p2) {
-  p1.out = p2.out;
-  p1.head = p2.head;
-}
 let on_destroy = [];
 function render(component, options = {}) {
   const payload = { out: "", css: /* @__PURE__ */ new Set(), head: { title: "", out: "" } };
@@ -138,8 +124,6 @@ export {
   getContext as g,
   head as h,
   ensure_array_like as i,
-  copy_payload as j,
-  assign_payload as k,
   push as p,
   render as r,
   setContext as s

@@ -57,8 +57,14 @@
 
 	.top-section {
 		display: grid;
-  		grid-template-columns: 1fr 1fr; /* Divides the section into two equal columns */
+  		grid-template-columns: 1fr; /* Divides the section into two equal columns */
   		gap: 2rem; /* Adds space between the text and image */
+	}
+
+	@media (min-width: 768px) {
+		.top-section {
+			grid-template-columns: 1fr 1fr; /* Two columns: left and right */
+		}
 	}
 
 	.section-left {
@@ -69,6 +75,12 @@
 	.section-right {
 		padding: 0rem 2rem;
 		align-items: center; /* Vertically centers the content */
+	}
+
+	.section-right img {
+		width: 100%; /* Make image responsive */
+		height: auto; /* Maintain aspect ratio */
+		border-radius: var(--box-corner-radius);
 	}
 
 </style>

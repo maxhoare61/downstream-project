@@ -37,21 +37,18 @@
     gap: 2rem;
   }
 
-  @media (min-width: 768px) {
-    .content-container {
-      margin: 0 2rem;
+  @media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column */
+        grid-template-rows: auto; /* Allow natural row height */
+        gap: 1.5rem; /* Adjust spacing */
     }
-
     .projects {
       padding: 2rem;
     }
   }
 
   @media (min-width: 1024px) {
-    .content-container {
-      margin: 0 3rem;
-    }
-
     .projects {
       padding: 2rem 3rem;
     }

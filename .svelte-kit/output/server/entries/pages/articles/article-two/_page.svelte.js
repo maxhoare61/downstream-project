@@ -1,96 +1,8 @@
-import { i as ensure_array_like, d as stringify, f as bind_props, c as pop, p as push, j as copy_payload, k as assign_payload } from "../../../../chunks/index.js";
-import { e as escape_html } from "../../../../chunks/escaping.js";
-import { a as attr } from "../../../../chunks/attributes.js";
 import "clsx";
-function Calculator($$payload, $$props) {
-  let isQuestionnaireComplete = false;
-  let AnswerStore = {};
-  let currentQuestion = 1;
-  const questions = [
-    {
-      id: 1,
-      text: "How do you travel to work or school?",
-      answers: [
-        "Drive",
-        "Public Transport",
-        "Cycle",
-        "Walk",
-        "Motorbike"
-      ]
-    },
-    {
-      id: 1.5,
-      text: "What year model was your vehicle made?",
-      answers: ["Pre-2005", "2005 - 2014", "After 2015"]
-    },
-    {
-      id: 1.75,
-      text: "What type of fuel do you put in your vehicle?",
-      answers: ["Petrol", "Diesel"]
-    },
-    {
-      id: 2,
-      text: "Has your house replaced most of it's appliances, insulation and lightbulbs in the past 15 years?",
-      answers: ["Yes", "No"]
-    },
-    {
-      id: 3,
-      text: "How many domestic flights do you take in a year?",
-      answers: ["0", "1", "2", "3", "4", "5+"]
-    },
-    {
-      id: 4,
-      text: "How many international flights do you take in a year?",
-      answers: ["0", "1", "2", "3", "4", "5+"]
-    },
-    {
-      id: 5,
-      text: "What is your usual diet?",
-      answers: [
-        "Omnivore",
-        "Pescatarian",
-        "Vegetarian",
-        "Vegan"
-      ]
-    },
-    {
-      id: 6,
-      text: "How do you like being asked all these questions?",
-      answers: ["I like it", "I'm ok with it", "Not at all"]
-    },
-    { id: 7, text: "", answers: [] }
-  ];
-  $$payload.out += `<section id="calc-section" class="svelte-zivco2"><div class="form-panel svelte-zivco2"><div class="questions-container svelte-zivco2">`;
-  {
-    $$payload.out += "<!--[-->";
-    const each_array = ensure_array_like(questions);
-    $$payload.out += `<p class="preamble svelte-zivco2">Choose the option below that suits you best</p> <!--[-->`;
-    for (let $$index_1 = 0, $$length = each_array.length; $$index_1 < $$length; $$index_1++) {
-      let question = each_array[$$index_1];
-      if (question.id === currentQuestion) {
-        $$payload.out += "<!--[-->";
-        const each_array_1 = ensure_array_like(question.answers);
-        $$payload.out += `<div class="question svelte-zivco2"><p>${escape_html(question.text)}</p></div> <div class="buttons svelte-zivco2"><!--[-->`;
-        for (let $$index = 0, $$length2 = each_array_1.length; $$index < $$length2; $$index++) {
-          let answer = each_array_1[$$index];
-          $$payload.out += `<button${attr("class", `svelte-zivco2 ${stringify([
-            answer[question.id] === answer ? "selected" : ""
-          ].filter(Boolean).join(" "))}`)}>${escape_html(answer)}</button>`;
-        }
-        $$payload.out += `<!--]--></div>`;
-      } else {
-        $$payload.out += "<!--[!-->";
-      }
-      $$payload.out += `<!--]-->`;
-    }
-    $$payload.out += `<!--]-->`;
-  }
-  $$payload.out += `<!--]--></div></div></section>`;
-  bind_props($$props, { AnswerStore, isQuestionnaireComplete });
-}
+import { c as pop, p as push } from "../../../../chunks/index.js";
 function AnimatedHeader2($$payload, $$props) {
   push();
-  $$payload.out += `<svg xmlns="http://www.w3.org/2000/svg" width="100vh" height="auto" preserveAspectRatio="none" viewBox="0 0 1470 740"><defs><style>
+  $$payload.out += `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="85vh" preserveAspectRatio="xMidYMid meet" viewBox="0 0 896 504"><defs><style>
             @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
             text {
                 font-family: "Space Grotesk", sans-serif;
@@ -2899,46 +2811,24 @@ function AnimatedHeader2($$payload, $$props) {
   pop();
 }
 function _page($$payload) {
-  let AnswerStore;
-  let isQuestionnaireComplete;
-  let $$settled = true;
-  let $$inner_payload;
-  function $$render_inner($$payload2) {
-    $$payload2.out += `<section id="hero" class="svelte-202lhb"><div class="title t2 svelte-202lhb">Reverse <br> Carbon <br> Footprint <br> Calculator</div> `;
-    AnimatedHeader2($$payload2);
-    $$payload2.out += `<!----></section> <section id="calculator" class="svelte-202lhb"><div class="content-container"><div class="paragraph p1 svelte-202lhb"><p class="lead">The idea of the Carbon footprint has put our
-                individual carbon producing behaviours under a
-                microscope. Have you ever wondered how the immense
-                focus on personal emissions came to be? Keep
-                scrolling to find out.</p> <p class="lead">In 2004, British Petroleum hired public relations
-                experts to promote the idea that climate change is
-                not the fault of large corporations, but that of
-                individuals.</p> <p class="lead">This initiative proved wildly successful, altering
-                the way we view climate change in the 21st century.</p></div> `;
-    Calculator($$payload2, {
-      get AnswerStore() {
-        return AnswerStore;
-      },
-      set AnswerStore($$value) {
-        AnswerStore = $$value;
-        $$settled = false;
-      },
-      get isQuestionnaireComplete() {
-        return isQuestionnaireComplete;
-      },
-      set isQuestionnaireComplete($$value) {
-        isQuestionnaireComplete = $$value;
-        $$settled = false;
-      }
-    });
-    $$payload2.out += `<!----></div></section> <section id="balloon" class="svelte-202lhb"><div class="content-container"><h2>Your Answers</h2> <ul></ul></div></section>`;
-  }
-  do {
-    $$settled = true;
-    $$inner_payload = copy_payload($$payload);
-    $$render_inner($$inner_payload);
-  } while (!$$settled);
-  assign_payload($$payload, $$inner_payload);
+  $$payload.out += `<section id="hero" class="svelte-yrdrln"><div class="title t2 svelte-yrdrln">Reverse <br> Carbon <br> Footprint <br> Calculator</div> `;
+  AnimatedHeader2($$payload);
+  $$payload.out += `<!----></section> <section id="calculator" class="svelte-yrdrln"><div class="content-container"><div class="paragraph p1 svelte-yrdrln"><p class="lead svelte-yrdrln">The second article in the Carbon Emissions in Perspective series
+                follows on from ‘The Carbon Footprint Story’, by introducing the
+                Reverse Carbon Calculator. This instalment seeks to recalibrate
+                our perspective of personal emissions by providing an
+                interactive way to compare personal emissions to those of major
+                polluters.</p> <p class="lead svelte-yrdrln">This tool helps contextualize individual carbon
+                footprints against the staggering scale of industrial emissions,
+                illustrating just how outsized corporate contributions are in
+                driving climate change. The goal is not to diminish personal
+                responsibility but to counter the prevailing narrative that
+                small consumer choices alone will solve the crisis.</p> <p class="lead svelte-yrdrln">By visualizing emissions on a structural scale, readers can better
+                grasp where their efforts—whether in activism, policy advocacy,
+                or industry reform—might have the greatest impact. The article
+                is a work in progress. As we continue developing this project,
+                our aim is to equip readers with not just data, but a renewed
+                sense of agency in how they engage with climate solutions.</p></div></div></section>`;
 }
 export {
   _page as default

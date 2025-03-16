@@ -5,6 +5,6 @@ let component_cache;
 export const component = async () => component_cache ??= (await import('../entries/pages/articles/article-two/_page.svelte.js')).default;
 export { server };
 export const server_id = "src/routes/articles/article-two/+page.server.ts";
-export const imports = ["_app/immutable/nodes/5.BPnPsMJk.js","_app/immutable/chunks/DMl8LHv4.js","_app/immutable/chunks/DzkEQQzb.js","_app/immutable/chunks/EOeWq-Np.js","_app/immutable/chunks/DNWvHczP.js","_app/immutable/chunks/B_enjVDI.js","_app/immutable/chunks/BdObXAAd.js","_app/immutable/chunks/Cq_vkV2p.js","_app/immutable/chunks/BvqbqQ8V.js","_app/immutable/chunks/Jhlp73W7.js","_app/immutable/chunks/3YygtruM.js","_app/immutable/chunks/C5HbSDIh.js","_app/immutable/chunks/D6STZdQV.js"];
-export const stylesheets = ["_app/immutable/assets/5.CnpyA_o2.css"];
+export const imports = ["_app/immutable/nodes/5.CRW0NZQh.js","_app/immutable/chunks/CAsUI1Vc.js","_app/immutable/chunks/N84nhSPx.js","_app/immutable/chunks/rndSF6aN.js","_app/immutable/chunks/BMwfVSHN.js","_app/immutable/chunks/mn9GTD1c.js","_app/immutable/chunks/lh6egGIj.js","_app/immutable/chunks/C7-q4PBh.js","_app/immutable/chunks/D-kdLbdY.js"];
+export const stylesheets = ["_app/immutable/assets/5.ChPRo5Im.css"];
 export const fonts = [];

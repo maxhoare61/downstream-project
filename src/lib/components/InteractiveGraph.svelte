@@ -1,549 +1,376 @@
 <script lang="ts">
-    var initialNodes = [
-        { name: "Central", shape: "circle", color: "#000" },
-        { name: "Projects", shape: "circle", color: "#26b790" },
-        { name: "Stories", shape: "triangle", color: "#4c95f6" },
-        { name: "About", shape: "square", color: "#ff8200" },
-    ];
+    import { onMount } from "svelte";
+    import { goto } from "$app/navigation";
+    import * as d3 from "d3";
 
-    var initialLinks = [
-        { source: "Projects", target: "Central" },
-        { source: "Stories", target: "Central" },
-        { source: "About", target: "Central" },
-    ];
+    let dragging = false;
+    let startX = 0,
+        startY = 0;
+    const dragThreshold = 5;
 
-    var allNodes = [
-        { name: "Central", shape: "circle", color: "#000" },
-        { name: "Projects", shape: "circle", color: "#26b790" },
-        { name: "Stories", shape: "triangle", color: "#26b790" },
-        { name: "About", shape: "square", color: "#ff8200" },
+    let canvas: HTMLCanvasElement | null = null;
+    let ctx: CanvasRenderingContext2D | null = null;
+    let simulation: d3.Simulation<
+        GraphNode,
+        d3.SimulationLinkDatum<GraphNode>
+    > | null = null;
 
-        { name: "Dirty Donations", shape: "pentagon", color: "#26b790" },
-        {
-            name: "Emissions in Perspective",
-            shape: "hexagon",
-            color: "#26b790",
-        },
-        { name: "Carbon Con", shape: "pentagon", color: "#26b790" },
-        { name: "Political Donations", shape: "hexagon", color: "#4c95f6" },
-        { name: "Data Transparency", shape: "pentagon", color: "#ff8200" },
-        { name: "What is Downstream?", shape: "hexagon", color: "#ff8200" },
-        { name: "Documentation", shape: "pentagon", color: "#26b790" },
-    ];
-
-    var allLinks = [
-        { source: "Projects", target: "Central" },
-        { source: "Stories", target: "Central" },
-        { source: "About", target: "Central" },
-
-        { source: "Dirty Donations", target: "Projects" },
-        { source: "Emissions in Perspective", target: "Projects" },
-        { source: "Carbon Con", target: "Stories" },
-        { source: "Political Donations", target: "Stories" },
-        { source: "Data Transparency", target: "Stories" },
-        { source: "What is Downstream?", target: "About" },
-        { source: "Documentation", target: "About" },
-    ];
-
-    var graph = {
-        nodes: initialNodes,
-        links: initialLinks,
-    };
-
-    // Adjust canvas resolution
-    function adjustCanvasResolution() {
-        const pixelRatio = window.devicePixelRatio || 1;
-        canvas
-            .attr("width", width * pixelRatio)
-            .attr("height", height * pixelRatio)
-            .style("width", `${width}px`)
-            .style("height", `${height}px`);
-        ctx.scale(pixelRatio, pixelRatio); // Scale the drawing context
+    interface GraphNode extends d3.SimulationNodeDatum {
+        name: string;
+        shape: string;
+        color: string;
+        x?: number;
+        y?: number;
+        url: string;
     }
 
-    var canvas = d3.select("#network"),
-        width = canvas.attr("width"),
-        height = canvas.attr("height"),
-        ctx = canvas.node().getContext("2d"),
-        r = 20; // Node radius,
-    simulation = d3
-        .forceSimulation()
-        .force("x", d3.forceX(width / 2))
-        .force("y", d3.forceY(height / 2))
-        .force("collide", d3.forceCollide(r + 5))
-        .force("charge", d3.forceManyBody().strength(-3000))
-        .force(
-            "link",
-            d3.forceLink().id((d) => d.name),
-        )
-        .force("bounding-box", () => {
-            // Constrain nodes within the container
-            graph.nodes.forEach((node) => {
-                node.x = Math.max(30, Math.min(width - 30, node.x));
-                node.y = Math.max(30, Math.min(height - 30, node.y));
-            });
-        })
-        .alphaDecay(0.07);
+    let draggingNode: GraphNode | null = null;
 
-    // Adjust resolution
-    adjustCanvasResolution();
+    let width = 600;
+    let height = 600;
 
-    var radius = 100; // Set the desired radius from the central node
-    var angleStep = (2 * Math.PI) / (graph.nodes.length - 1); // Calculate the angle step
+    let graph = {
+        nodes: [
+            { name: "Central", shape: "circle", color: "#000" },
+            { name: "Projects", shape: "circle", color: "#26b790" },
+            { name: "Stories", shape: "triangle", color: "#013725" },
+            { name: "About", shape: "square", color: "#DCFF4F" },
+        ] as GraphNode[],
+        links: [
+            { source: "Projects", target: "Central" },
+            { source: "Stories", target: "Central" },
+            { source: "About", target: "Central" },
+        ] as d3.SimulationLinkDatum<GraphNode>[], // Cast links properly
+    };
 
-    // Set initial positions of nodes
-    graph.nodes.forEach((node, index) => {
-        if (node.name === "Central") {
-            node.x = width / 2;
-            node.y = height / 2;
-        } else {
-            var angle = index * angleStep;
-            node.x = width / 2 + radius * Math.cos(angle);
-            node.y = height / 2 + radius * Math.sin(angle);
+    let allNodes = [
+    { name: "The Carbon Footprint Story", shape: "pentagon", color: "#26b790", url: "/articles/article-one" },
+    { name: "Reverse Carbon Calculator", shape: "hexagon", color: "#DCFF4F", url: "/articles/article-two" },
+    { name: "Emissions in Perspective", shape: "triangle", color: "#26b790", url: "/explore" },
+    { name: "Political Donations Uncovered", shape: "square", color: "#26b790", url: "/explore" },
+    { name: "What is Downstream?", shape: "hexagon", color: "#26b790", url: "/about-us" },
+    ];
+
+    let allLinks = [
+        { source: "The Carbon Footprint Story", target: "Stories" },
+        { source: "Reverse Carbon Calculator", target: "Stories" },
+        { source: "Emissions in Perspective", target: "Projects" },
+        { source: "Political Donations Uncovered", target: "Projects" },
+        { source: "What is Downstream?", target: "About" },
+    ];
+
+    let hoveredNode: {
+        name: string;
+        shape: string;
+        color: string;
+        x?: number;
+        y?: number;
+    } | null = null;
+
+    let nodeOpenedState: Record<string, boolean> = {
+        Projects: false,
+        Stories: false,
+        About: false,
+    };
+
+    function adjustCanvasResolution() {
+        if (!canvas) return;
+
+        const pixelratio = window.devicePixelRatio;
+        console.log(pixelratio);
+
+        const containerWidth = Math.min(692, Math.max(348, window.innerWidth * 0.3125));
+        const containerHeight = Math.min(692, Math.max(348, window.innerWidth * 0.3125));
+
+        canvas.width = containerWidth * pixelratio;
+        canvas.height = containerHeight * pixelratio;
+
+        canvas.style.width = `${containerWidth}px`;
+        canvas.style.height = `${containerHeight}px`;
+
+        if (ctx) {
+            ctx.setTransform(pixelratio, 0, 0, pixelratio, 0, 0); // Reset transforms before applying scale
         }
+    }
+
+    onMount(() => {
+        if (!canvas) return;
+        ctx = canvas.getContext("2d");
+        adjustCanvasResolution();
+        window.addEventListener("resize", adjustCanvasResolution);
+
+        const width = Math.min(602, Math.max(348, window.innerWidth * 0.3125)),
+            height = Math.min(602, Math.max(348, window.innerWidth * 0.3125)),
+            r = Math.min(18, Math.max(8, window.innerWidth * 0.01302083333));
+
+        simulation = d3
+            .forceSimulation<GraphNode>(graph.nodes)
+            .force("x", d3.forceX(width / 2))
+            .force("y", d3.forceY(height / 2))
+            .force("collide", d3.forceCollide(r + 5))
+            .force("charge", d3.forceManyBody().strength(r * -90))
+            .force(
+                "link",
+                d3
+                    .forceLink<GraphNode, d3.SimulationLinkDatum<GraphNode>>()
+                    .id((d) => d.name)
+                    .links(graph.links), // Ensure links are set properly
+            )
+            .alphaDecay(0.01
+            )
+            .alphaMin(0.01) // Allows the simulation to run longer before stopping
+            .velocityDecay(0.4)
+            .on("tick", update);
+
+
+        // Set initial positions
+        let angleStep = (2 * Math.PI) / (graph.nodes.length - 1);
+        graph.nodes.forEach((node, index) => {
+            if (node.name === "Central") {
+                node.x = width / 2;
+                node.y = height / 2;
+            } else {
+                let angle = index * angleStep;
+                node.x = width / 2 + 100 * Math.cos(angle);
+                node.y = height / 2 + 100 * Math.sin(angle);
+            }
+        });
+
+        // Handle events
+        canvas.addEventListener("click", onClick);
+        canvas.addEventListener("mousedown", onMouseDown);
+        canvas.addEventListener("mousemove", onMouseMove);
+        canvas.addEventListener("mouseup", onMouseUp);
+        canvas.addEventListener("mouseleave", onMouseLeave);
     });
 
-    simulation.nodes(graph.nodes);
-    simulation.force("link").links(graph.links);
-    simulation.on("tick", update);
-
-    // Add drag functionality
-    canvas.call(
-        d3
-            .drag()
-            .container(canvas.node())
-            .subject(dragsubject)
-            .on("start", dragstarted)
-            .on("drag", dragged)
-            .on("end", dragended),
-    );
-
-    let hoveredNode = null; // Track the currently hovered node
-
-    // Array to track the opened state of specific nodes
-    let nodeOpenedState = {
-        Projects: false,
-        Stories: false,
-        About: false,
-    };
-
-    // Array to track the opened state of specific nodes
-    let nodeOpenedAlready = {
-        Projects: false,
-        Stories: false,
-        About: false,
-    };
-
-    // Update function to render the graph
     function update() {
+        if (!ctx) return;
         ctx.clearRect(0, 0, width, height);
 
-        // Draw links
         ctx.beginPath();
-        ctx.globalAlpha = 0.9;
-        ctx.strokeStyle = "#aaa";
-        ctx.setLineDash([5, 5]); // Dashed lines
-        graph.links.forEach(drawLink);
-        ctx.stroke();
-        ctx.setLineDash([]); // Reset line style
+        ctx.setLineDash([5, 5]);
+        ctx.globalAlpha = 1;
+        ctx.strokeStyle = "#000";
+        ctx.lineWidth = 2;
 
-        // Draw nodes
-        ctx.globalAlpha = 1.0;
+        graph.links.forEach((l) => {
+            const source = l.source as GraphNode;
+            const target = l.target as GraphNode;
+
+            if (source?.x !== undefined && target?.x !== undefined) {
+                ctx?.moveTo(source.x ?? 0, source.y ?? 0);
+                ctx?.lineTo(target.x ?? 0, target.y ?? 0);
+            }
+        });
+
+        ctx.stroke();
+        ctx.setLineDash([]);
+
         graph.nodes.forEach(drawNode);
     }
 
-    // Dragging helpers
-    function dragsubject() {
-        return simulation.find(d3.event.x, d3.event.y);
-    }
+    function drawNode(d: GraphNode) {
+        if (!ctx) return;
+        const r = Math.min(18, Math.max(8, window.innerWidth * 0.01302083333));
 
-    function dragstarted() {
-        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-        d3.event.subject.fx = d3.event.subject.x;
-        d3.event.subject.fy = d3.event.subject.y;
-    }
+        const x = d.x ?? 0;
+        const y = d.y ?? 0;
 
-    function dragged() {
-        d3.event.subject.fx = d3.event.x;
-        d3.event.subject.fy = d3.event.y;
-    }
-
-    function dragended() {
-        if (!d3.event.active) simulation.alphaTarget(0);
-        d3.event.subject.fx = null;
-        d3.event.subject.fy = null;
-    }
-
-    // Draw nodes with hover functionality
-    function drawNode(d) {
-        ctx.beginPath();
-
-        // Set the fill color
-        if (d.name === "Central") {
-            ctx.fillStyle = "#9995eb"; // Central node is always black
-        } else if (d === hoveredNode) {
-            ctx.fillStyle = d.color; // Hovered node's original color
-        } else if (nodeOpenedState[d.name]) {
-            ctx.fillStyle = d.color; // Opened node's original color
-        } else {
-            ctx.fillStyle = "#fff"; // White by default
-        }
-
-        ctx.strokeStyle = "#000"; // Black outline
+        //ctx.fillStyle = d === hoveredNode ? d.color : "#ede9e5";
+        ctx.fillStyle = d.color;
+        ctx.strokeStyle = "#000";
         ctx.lineWidth = 2;
 
-        // Draw different shapes
-        if (d.shape === "circle" || !d.shape) {
-            ctx.arc(d.x, d.y, r, 0, Math.PI * 2);
+        if (d.shape === "circle") {
+            ctx.beginPath();
+            ctx.arc(x, y, r, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.stroke();
         } else if (d.shape === "square") {
-            ctx.rect(d.x - r, d.y - r, r * 2, r * 2);
+            ctx.rect(x - r, y - r, r * 2, r * 2);
+            ctx.fill();
+            ctx.stroke();
+        } else if (d.shape === "square") {
+            ctx.rect(x - r, y - r, r * 2, r * 2);
+            ctx.fill();
+            ctx.stroke();
         } else if (d.shape === "triangle") {
-            ctx.moveTo(d.x, d.y - r);
-            ctx.lineTo(d.x - r, d.y + r);
-            ctx.lineTo(d.x + r, d.y + r);
+            ctx.beginPath();
+            ctx.moveTo(x, y - r);
+            ctx.lineTo(x + r, y + r);
+            ctx.lineTo(x - r, y + r);
             ctx.closePath();
-        } else if (d.shape === "hexagon") {
-            drawPolygon(d.x, d.y, r, 6);
+            ctx.fill();
+            ctx.stroke();
         } else if (d.shape === "pentagon") {
-            drawPolygon(d.x, d.y, r, 5);
-        }
-
-        // Function to draw a polygon with a given number of sides
-        function drawPolygon(x, y, radius, sides) {
-            const angleStep = (2 * Math.PI) / sides;
-            ctx.moveTo(x + radius * Math.cos(0), y + radius * Math.sin(0));
-
-            for (let i = 1; i <= sides; i++) {
-                ctx.lineTo(
-                    x + radius * Math.cos(i * angleStep),
-                    y + radius * Math.sin(i * angleStep),
-                );
+            ctx.beginPath();
+            for (let i = 0; i < 5; i++) {
+                const angle = (Math.PI * 2 * i) / 5;
+                ctx.lineTo(x + r * Math.cos(angle), y + r * Math.sin(angle));
             }
             ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+        } else if (d.shape === "hexagon") {
+            ctx.beginPath();
+            for (let i = 0; i < 6; i++) {
+                const angle = (Math.PI * 2 * i) / 6;
+                ctx.lineTo(x + r * Math.cos(angle), y + r * Math.sin(angle));
+            }
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
         }
 
-        ctx.fill();
-        ctx.stroke();
-
-        // Draw the label
         drawLabel(d);
     }
 
-    // Function to draw labels
-    function drawLabel(d) {
-        if (d.name === "Central") return; // Skip label for the central node
+    function drawLabel(d: GraphNode) {
+        const r = Math.min(18, Math.max(8, window.innerWidth * 0.01302083333));
+        if (d.name === "Central") return;
+        if (!ctx) return;
 
-        // Find the central node's position
-        const centralNode = graph.nodes.find((node) => node.name === "Central");
+        const x = d.x ?? 0;
+        const y = d.y ?? 0;
 
-        // Calculate direction away from the central node
-        const dx = d.x - centralNode.x;
-        const dy = d.y - centralNode.y;
-
-        // Normalize the direction vector to position the label
-        const magnitude = Math.sqrt(dx * dx + dy * dy);
-        const offsetX = (dx / magnitude) * (r + 20); // Offset away from the node
-        const offsetY = (dy / magnitude) * (r + 20);
-
-        // Position the label
-        const labelX = d.x + offsetX;
-        const labelY = d.y + offsetY;
-
-        // Set font size and style
-        if (["Projects", "Stories", "About"].includes(d.name)) {
-            ctx.font = "bold 14px Bai Jamjuree"; // Bold font for specific nodes
-        } else {
-            ctx.font = "14px Bai Jamjuree"; // Regular font for other nodes
-        }
+        ctx.fillStyle = "#000";
+        ctx.font = "18px Bai Jamjuree";
         ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
+        ctx.fillText(d.name, x, y + r + 20);
+    }
 
-        // Measure the text width and height
-        const text = d.name;
-        const textWidth = ctx.measureText(text).width;
-        const textHeight = 6; // Approximate height for 16px font
+    function onMouseMove(event: MouseEvent) {
+        if (!draggingNode) return;
+        dragging = true;
+        const rect = canvas!.getBoundingClientRect();
+        const dx = Math.abs(event.clientX - rect.left - startX); // Distance moved in X
+        const dy = Math.abs(event.clientY - rect.top - startY); // Distance moved in Y
 
-        // Draw background rectangle
-        const padding = 4; // Smaller padding
-        ctx.fillStyle = "#f5f5f5"; // Background color (same as canvas background)
-        ctx.fillRect(
-            labelX - textWidth / 2 - padding,
-            labelY - textHeight / 2 - padding,
-            textWidth + 4,
-            textHeight + 4,
+        if (dx > dragThreshold || dy > dragThreshold) {
+            dragging = true; // Only set dragging to true if movement exceeds threshold
+        }
+        draggingNode.fx = event.clientX - rect.left - offsetX;
+        draggingNode.fy = event.clientY - rect.top - offsetY;
+
+        update();
+    }
+
+    function onMouseLeave() {
+        hoveredNode = null;
+        update();
+    }
+
+    function onClick(event: MouseEvent) {
+        if (!canvas || !simulation || dragging) return;
+        const r = Math.min(18, Math.max(8, window.innerWidth * 0.01302083333));
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        if (
+            Math.abs(x - startX) > dragThreshold ||
+            Math.abs(y - startY) > dragThreshold
+        )
+            return;
+        const clickedNode = simulation.find(x, y, r * 3);
+        if (clickedNode) {
+            // If the node has a URL, navigate to it
+            const nodeData = allNodes.find(n => n.name === clickedNode.name);
+            if (nodeData && nodeData.url) {
+                goto(nodeData.url);
+            }
+
+            // If it's a main category node, expand it
+            if (["Projects", "Stories", "About"].includes(clickedNode.name)) {
+                expandNode(clickedNode.name);
+            }
+        }
+    }
+
+    function expandNode(nodeName: string) {
+        if (!simulation) return;
+        const r = Math.min(18, Math.max(8, window.innerWidth * 0.01302083333));
+        let parentNode = graph.nodes.find((n) => n.name === nodeName);
+        let centralNode = graph.nodes.find((n) => n.name === "Central");
+
+        let subNodes = allNodes.filter((n) =>
+            allLinks.some((l) => l.source === n.name && l.target === nodeName),
         );
 
-        // Draw the label text
-        ctx.fillStyle = "#000"; // Label color
-        ctx.fillText(text, labelX, labelY);
-    }
+        if (!parentNode || !centralNode) return;
 
-    // Draw links
-    function drawLink(l) {
-        ctx.moveTo(l.source.x, l.source.y);
-        ctx.lineTo(l.target.x, l.target.y);
-    }
+        let dx = parentNode.x!;
+        let dy = parentNode.y! - centralNode.y!;
+        let magnitude = Math.sqrt(dx * dx + dy * dy);
 
-    canvas.on("mousemove", function () {
-        const [x, y] = d3.mouse(this); // Get mouse position
-        const node = simulation.find(x, y, r * 2); // Find node near the mouse
+        dx /= magnitude;
+        dy /= magnitude;
 
-        if (node !== hoveredNode) {
-            hoveredNode = node; // Update hovered node
-            update(); // Redraw the graph
-        }
-    });
-
-    canvas.on("mouseleave", function () {
-        hoveredNode = null; // Clear hovered node when the mouse leaves
-        update(); // Redraw the graph
-    });
-
-    canvas.on("click", function () {
-        const [x, y] = d3.mouse(this); // Get mouse position
-        const clickedNode = simulation.find(x, y, r * 3); // Find the clicked node
-
-        if (
-            clickedNode &&
-            ["Projects", "Stories", "About"].includes(clickedNode.name)
-        ) {
-            expandNode(clickedNode.name); // Expand the clicked node
-            update(); // Redraw the graph
-        }
-    });
-
-    // Create a function to find positions of the sub-nodes around their parent node at a set radius.
-    function positionSubNodes(parentNode, subNodes) {
-        const radius = 100; // Set the desired radius from the parent node
-        const angleStep = (2 * Math.PI) / subNodes.length; // Calculate the angle step
-
-        subNodes.forEach((node, index) => {
-            const angle = index * angleStep;
-            node.x = parentNode.x + radius * Math.cos(angle);
-            node.y = parentNode.y + radius * Math.sin(angle);
-        });
-    }
-
-    function expandNode(nodeName) {
-        // Find the parent node
-        const parentNode = graph.nodes.find((node) => node.name === nodeName);
-        let subNodes = [];
-        let subLinks = [];
-
-        if (nodeOpenedState[nodeName] === false) {
-            if (nodeOpenedAlready[nodeName] === false) {
-                // Find sub-nodes and links for the clicked node
-                subLinks = allLinks.filter((link) => link.target === nodeName);
-                subNodes = allNodes.filter((node) => {
-                    return subLinks.some(
-                        (link) =>
-                            link.source === node.name &&
-                            link.target == nodeName,
-                    );
-                });
-                nodeOpenedState[nodeName] = true; // Set the nodeOpened state to true
-                nodeOpenedAlready[nodeName] = true; // Set opened already to true
-            } else if (nodeOpenedAlready[nodeName] === true) {
-                // Find sub-nodes and links for the clicked node
-                subLinks = allLinks.filter(
-                    (link) => link.target.name === nodeName,
-                );
-                subNodes = allNodes.filter((node) => {
-                    return subLinks.some(
-                        (link) =>
-                            link.source.name === node.name &&
-                            link.target.name == nodeName,
-                    );
-                });
-                nodeOpenedState[nodeName] = true; // Set the nodeOpened state to true
-            }
+        if (!nodeOpenedState[nodeName]) {
+             subNodes = subNodes.map((node, index) => ({
+                 ...node,
+                url: node.url ?? "",
+                x: parentNode.x! + (index % 2 === 0 ? 10 : -10), // Small horizontal offset
+                y: parentNode.y! + (index % 2 === 0 ? 10 : -10), // Small vertical offset 
+             }));
+            graph.nodes.push(...subNodes);
+            graph.links.push(...allLinks.filter((l) => l.target === nodeName));
+            nodeOpenedState[nodeName] = true;
         } else {
-            // Remove sub-nodes and links of the previously opened node
-            prevSubLinks = allLinks.filter(
-                (link) => link.target.name === nodeName,
-            );
-            console.log(allLinks);
-            console.log("prev sublinks:", prevSubLinks);
-            prevSubNodes = allNodes.filter((node) => {
-                return prevSubLinks.some(
-                    (link) => link.source.name === node.name,
-                );
-            });
-            console.log("prev subnodes:", prevSubNodes);
-
-            // Remove sub-nodes and links from the graph
-            graph.nodes = graph.nodes.filter(
-                (node) => !prevSubNodes.includes(node),
-            );
-            graph.links = graph.links.filter(
-                (link) => !prevSubLinks.includes(link),
-            );
-            nodeOpenedState[nodeName] = false; // Set the nodeOpened state to false
+            graph.nodes = graph.nodes.filter((n) => !subNodes.includes(n));
+            graph.links = graph.links.map((l) => ({
+                source:
+                    graph.nodes.find((n) => n.name === l.source) ?? l.source, // Resolve object reference
+                target:
+                    graph.nodes.find((n) => n.name === l.target) ?? l.target, // Resolve object reference
+            }));
+            nodeOpenedState[nodeName] = false;
         }
 
-        console.log("already opened:", nodeOpenedAlready);
-        console.log("opened now:", nodeOpenedState);
-
-        // Position the sub-nodes around the parent node
-        positionSubNodes(parentNode, subNodes);
-
-        // Add sub-nodes and links to the graph
-        graph.nodes.push(...subNodes);
-        graph.links.push(...subLinks);
-
-        // Restart the simulation with updated nodes and links
         simulation.nodes(graph.nodes);
-        simulation.force("link").links(graph.links);
-        simulation.alpha(0.8).restart();
+        const linkForce = simulation?.force("link") as
+            | d3.ForceLink<GraphNode, d3.SimulationLinkDatum<GraphNode>>
+            | undefined;
+        linkForce?.links(graph.links);
+        simulation.restart();
     }
 
-    // Initialize the simulation with graph data
-    simulation.nodes(graph.nodes);
-    simulation.force("link").links(graph.links);
-    simulation.alpha(0.8).on("tick", update);
+    // Function to detect the node being clicked and start dragging
+    let offsetX = 0,
+        offsetY = 0;
+    function onMouseDown(event: MouseEvent) {
+        if (!canvas || !simulation) return;
+        const r = Math.min(18, Math.max(8, window.innerWidth * 0.01302083333));
 
-    // Add drag functionality
-    canvas.call(
-        d3
-            .drag()
-            .container(canvas.node())
-            .subject(dragsubject)
-            .on("start", dragstarted)
-            .on("drag", dragged)
-            .on("end", dragended),
-    );
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
 
-    // ------------------ BINARY ANIMATION CODE ------------------
+        // Find the node under the cursor
+        draggingNode = simulation.find(x, y, r * 2) as GraphNode | null;
+        dragging = false;
 
-    const animatedText = document.getElementById("animated-text");
-    const targetText = animatedText.textContent.trim(); // Get the text content from the HTML element
-    const binaryChars = ["0", "1"];
-    let currentText = targetText.replace(/./g, (char) => {
-        return char === " "
-            ? " "
-            : char === "\n"
-              ? "\n"
-              : binaryChars[Math.floor(Math.random() * 2)];
-    });
+        startX = x;
+        startY = y;
 
-    animatedText.innerHTML = formatText(currentText); // Set initial binary text
-
-    // Function to format text with different fonts
-    function formatText(text) {
-        return text
-            .split("")
-            .map((char, i) => {
-                if (char === " " || targetText[i] !== char) {
-                    return `<span style="font-family: 'Courier New', Courier, monospace; line-height: 1;">${char}</span>`;
-                } else if (char === "\n") {
-                    return "<br>"; // Handle line breaks
-                } else {
-                    return `<span style="font-family: 'Bai Jamjuree', sans-serif; line-height: 1;">${char}</span>`;
-                }
-            })
-            .join("");
+        if (draggingNode) {
+            offsetX = x - (draggingNode.x ?? 0); // Track the offset when clicking
+            offsetY = y - (draggingNode.y ?? 0);
+            draggingNode.fx = draggingNode.x;
+            draggingNode.fy = draggingNode.y;
+            simulation.alphaTarget(0.3).restart();
+        }
     }
 
-    // Randomly replace characters during binary oscillation
-    function randomBinaryTransition() {
-        currentText = currentText
-            .split("")
-            .map((_, i) => {
-                return targetText[i] === " " || Math.random() > 0.5
-                    ? targetText[i]
-                    : binaryChars[Math.floor(Math.random() * 2)];
-            })
-            .join("");
-
-        animatedText.innerHTML = formatText(currentText); // Update text content with mixed fonts
+    // Function to stop dragging
+    function onMouseUp() {
+        if (!draggingNode) return;
+        draggingNode.fx = null;
+        draggingNode.fy = null;
+        draggingNode = null;
+        dragging = false;
+        simulation?.alphaTarget(0);
     }
-
-    // Gradually reveal the final text
-    function finalReveal() {
-        let revealedText = currentText.split("");
-
-        // Reveal characters in order
-        targetText.split("").forEach((char, i) => {
-            setTimeout(() => {
-                revealedText[i] = char;
-                animatedText.innerHTML = formatText(revealedText.join(""));
-            }, i * 50); // Slight delay between reveals
-        });
-    }
-
-    // Main animation function
-    function animateText() {
-        const duration = 700; // Total animation duration in milliseconds
-        const stepTime = 150; // Time per binary oscillation step
-        let elapsed = 0;
-
-        const interval = setInterval(() => {
-            randomBinaryTransition();
-            elapsed += stepTime;
-
-            if (elapsed >= duration) {
-                clearInterval(interval); // Stop binary oscillation
-                finalReveal(); // Start the final reveal
-            }
-        }, stepTime);
-    }
-
-    // Trigger the animation on page load
-    window.onload = animateText;
-
-    // ------------------ NETWORK DIRECTIONS ------------------
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const rightSection = document.querySelector(".hero-half.right");
-        const messages = rightSection.querySelectorAll("p");
-        let clickCount = 0;
-
-        rightSection.addEventListener("click", function () {
-            if (clickCount < 3) {
-                messages[clickCount].classList.add("hidden");
-                if (clickCount < 2) {
-                    clickCount++;
-                    messages[clickCount].classList.remove("hidden");
-                }
-            }
-        });
-    });
-
-    // ------------------ INTERSECTION OBSERVER ------------------
-
-    // Function to start the simulation
-    function startSimulation() {
-        simulation.alpha(1).restart();
-    }
-
-    // Function to stop the simulation
-    function stopSimulation() {
-        simulation.stop();
-    }
-
-    // Existing Intersection Observer to handle visibility changes
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            console.log(entry);
-            if (entry.isIntersecting) {
-                if (entry.target.id === "network") {
-                    startSimulation();
-                } else {
-                    entry.target.classList.add("show-obs");
-                }
-            } else {
-                if (entry.target.id === "network") {
-                    stopSimulation();
-                }
-            }
-        });
-    });
-
-    // Observe the canvas element
-    const graphnetsim = document.getElementById("network");
-    observer.observe(graphnetsim);
-
-    // Observe elements with the class 'hidden-obs'
-    const hiddenElements = document.querySelectorAll(".hidden-obs");
-    hiddenElements.forEach((el) => observer.observe(el));
 </script>
+
+<canvas bind:this={canvas} {width} {height}></canvas>
