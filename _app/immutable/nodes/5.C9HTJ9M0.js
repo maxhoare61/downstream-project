@@ -1,40 +1,9 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
-		<link href="../_app/immutable/assets/0.Dma13lMt.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/5.DjjSdT1e.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.oXo85SxG.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/CeXrcLdP.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/BVSHJ-y8.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/Drik2wML.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/D_ZfKN9T.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.B1pkGIVe.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/C1FmrZbK.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/DtD7zFcI.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/B1PAqNeB.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/BDZwTbWl.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/B2gJ_yq7.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/D2QVXpMK.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/CetqHhin.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/DqHTukGx.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.DfwyZyYs.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/CS7kFJEk.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/DiG142HI.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/5.C9HTJ9M0.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/BbUp9njo.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/CsTMzUfk.js"><!--[--><link rel="stylesheet" href="../styles/tokens.css"> <link rel="stylesheet" href="../styles/global.css"><!--]-->
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents"><!--[--><!--[--><!----><header class="header svelte-bw6erp"><div class="logo svelte-bw6erp"><a href="../" class="logo-link"><img src="../mocklogo1.png" alt="logo" class="logo-image svelte-bw6erp"> <div>Downstream<br>Project</div></a></div> <nav class="svelte-bw6erp"><a class="btn-1 svelte-bw6erp" href="../explore">Explore</a> <a class="btn-1 svelte-bw6erp" href="../about-us">About us</a></nav></header><!----> <!----><!----><section id="hero" class="svelte-10kdqv8"><div class="title t2 svelte-10kdqv8">Reverse <br> Carbon <br> Footprint <br> Calculator</div> <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="85vh" preserveAspectRatio="xMidYMid meet" viewBox="0 0 896 504"><defs><style>
-            @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+import{a as x,t as E,c as c1,n as f1}from"../chunks/BDZwTbWl.js";import"../chunks/CS7kFJEk.js";import{E as u1,aH as h1,aI as L1,g as v1,u as m1,aJ as y1,N as K,aK as G1,q as M1,aL as $,aM as Z1,aN as _1,au as V,am as Y,Z as w1,w as d1,A as i1,o,F as M,aG as D,C as w,as as O,B as S,D as _,v as b1,z as U,G as g1,at as k1}from"../chunks/BVSHJ-y8.js";import"../chunks/Drik2wML.js";import{a as x1,d as A1,s as j}from"../chunks/DtD7zFcI.js";import{i as J}from"../chunks/B2gJ_yq7.js";import{e as X,i as e1}from"../chunks/BbUp9njo.js";import{p as T1}from"../chunks/D2QVXpMK.js";import{b as a1}from"../chunks/CetqHhin.js";import{i as C1}from"../chunks/CsTMzUfk.js";import{o as S1}from"../chunks/D_ZfKN9T.js";function E1(a,e,l){if(l){if(a.classList.contains(e))return;a.classList.add(e)}else{if(!a.classList.contains(e))return;a.classList.remove(e)}}const N1=()=>performance.now(),b={tick:a=>requestAnimationFrame(a),now:()=>N1(),tasks:new Set};function o1(){const a=b.now();b.tasks.forEach(e=>{e.c(a)||(b.tasks.delete(e),e.f())}),b.tasks.size!==0&&b.tick(o1)}function $1(a){let e;return b.tasks.size===0&&b.tick(o1),{promise:new Promise(l=>{b.tasks.add(e={c:a,f:l})}),abort(){b.tasks.delete(e)}}}function q(a,e){a.dispatchEvent(new CustomEvent(e))}function z1(a){if(a==="float")return"cssFloat";if(a==="offset")return"cssOffset";if(a.startsWith("--"))return a;const e=a.split("-");return e.length===1?e[0]:e[0]+e.slice(1).map(l=>l[0].toUpperCase()+l.slice(1)).join("")}function l1(a){const e={},l=a.split(";");for(const r of l){const[t,i]=r.split(":");if(!t||i===void 0)break;const c=z1(t.trim());e[c]=i.trim()}return e}const F1=a=>a;function C(a,e,l,r){var t=(a&y1)!==0,i=(a&Z1)!==0,c=t&&i,p=(a&_1)!==0,v=c?"both":t?"in":"out",f,u=e.inert,Z=e.style.overflow,n,s;function G(){var m=w1,A=K;V(null),Y(null);try{return f??(f=l()(e,(r==null?void 0:r())??{},{direction:v}))}finally{V(m),Y(A)}}var h={is_global:p,in(){var m;if(e.inert=u,!t){s==null||s.abort(),(m=s==null?void 0:s.reset)==null||m.call(s);return}i||n==null||n.abort(),q(e,"introstart"),n=Q(e,G(),s,1,()=>{q(e,"introend"),n==null||n.abort(),n=f=void 0,e.style.overflow=Z})},out(m){if(!i){m==null||m(),f=void 0;return}e.inert=!0,q(e,"outrostart"),s=Q(e,G(),n,0,()=>{q(e,"outroend"),m==null||m()})},stop:()=>{n==null||n.abort(),s==null||s.abort()}},d=K;if((d.transitions??(d.transitions=[])).push(h),t&&x1){var L=p;if(!L){for(var y=d.parent;y&&y.f&u1;)for(;(y=y.parent)&&!(y.f&h1););L=!y||(y.f&L1)!==0}L&&v1(()=>{m1(()=>h.in())})}}function Q(a,e,l,r,t){var i=r===1;if(G1(e)){var c,p=!1;return M1(()=>{if(!p){var d=e({direction:i?"in":"out"});c=Q(a,d,l,r,t)}}),{abort:()=>{p=!0,c==null||c.abort()},deactivate:()=>c.deactivate(),reset:()=>c.reset(),t:()=>c.t()}}if(l==null||l.deactivate(),!(e!=null&&e.duration))return t(),{abort:$,deactivate:$,reset:$,t:()=>r};const{delay:v=0,css:f,tick:u,easing:Z=F1}=e;var n=[];if(i&&l===void 0&&(u&&u(0,1),f)){var s=l1(f(0,1));n.push(s,s)}var G=()=>1-r,h=a.animate(n,{duration:v});return h.onfinish=()=>{var d=(l==null?void 0:l.t())??1-r;l==null||l.abort();var L=r-d,y=e.duration*Math.abs(L),m=[];if(y>0){var A=!1;if(f)for(var g=Math.ceil(y/16.666666666666668),T=0;T<=g;T+=1){var z=d+L*Z(T/g),F=l1(f(z,1-z));m.push(F),A||(A=F.overflow==="hidden")}A&&(a.style.overflow="hidden"),G=()=>{var k=h.currentTime;return d+L*Z(k/y)},u&&$1(()=>{if(h.playState!=="running")return!1;var k=G();return u(k,1-k),!0})}h=a.animate(m,{duration:y,fill:"forwards"}),h.onfinish=()=>{G=()=>r,u==null||u(r,1-r),t()}},{abort:()=>{h&&(h.cancel(),h.effect=null,h.onfinish=$)},deactivate:()=>{t=$},reset:()=>{r===0&&(u==null||u(1,0))},t:()=>G()}}const B1=a=>a;function I1(a){const e=a-1;return e*e*e+1}function t1(a){const e=typeof a=="string"&&a.match(/^\s*(-?[\d.]+)([^\s]*)\s*$/);return e?[parseFloat(e[1]),e[2]||"px"]:[a,"px"]}function H(a,{delay:e=0,duration:l=400,easing:r=B1}={}){const t=+getComputedStyle(a).opacity;return{delay:e,duration:l,easing:r,css:i=>`opacity: ${i*t}`}}function r1(a,{delay:e=0,duration:l=400,easing:r=I1,x:t=0,y:i=0,opacity:c=0}={}){const p=getComputedStyle(a),v=+p.opacity,f=p.transform==="none"?"":p.transform,u=v*(1-c),[Z,n]=t1(t),[s,G]=t1(i);return{delay:e,duration:l,easing:r,css:(h,d)=>`
+			transform: ${f} translate(${(1-h)*Z}${n}, ${(1-h)*s}${G});
+			opacity: ${v-u*d}`}}var R1=(a,e,l,r)=>e(o(l).id,o(r)),q1=E('<button class="svelte-zivco2"> </button>'),H1=E('<div class="question svelte-zivco2"><p> </p></div> <div class="buttons svelte-zivco2"></div>',1),O1=E('<p class="preamble svelte-zivco2">Choose the option below that suits you best</p> <!>',1),P1=E('<div class="conclusion-text svelte-zivco2"><p>Thank you</p> <p class="lead">Keep scrolling to learn about your climate impact.</p></div>'),D1=E('<section id="calc-section" class="svelte-zivco2"><div class="form-panel svelte-zivco2"><div class="questions-container svelte-zivco2"><!></div></div></section>');function Q1(a,e){d1(e,!0);let l=D(!1),r=b1(()=>({})),t=D(1),i="";const c=6;let p=D(!0);function v(d,L){o(r)[d]=L,setTimeout(()=>{if(console.log(o(t)),o(t)<c)if(d===1)switch(L){case"Drive":i="d",M(t,1.5);break;case"Motorbike":i="mb",M(t,1.5);break;default:M(t,o(t)+1);break}else if(d===1.5)switch(L){case"Pre-2005":case"2005 - 2014":case"After 2015":if(i==="d"){M(t,1.75);break}else if(i==="mb"){M(t,2);break}default:M(t,2);break}else d===1.75?M(t,2):(console.log("next question"),M(t,o(t)+1));else M(l,!0),M(p,!1)},500)}const f=[{id:1,text:"How do you travel to work or school?",answers:["Drive","Public Transport","Cycle","Walk","Motorbike"]},{id:1.5,text:"What year model was your vehicle made?",answers:["Pre-2005","2005 - 2014","After 2015"]},{id:1.75,text:"What type of fuel do you put in your vehicle?",answers:["Petrol","Diesel"]},{id:2,text:"Has your house replaced most of it's appliances, insulation and lightbulbs in the past 15 years?",answers:["Yes","No"]},{id:3,text:"How many domestic flights do you take in a year?",answers:["0","1","2","3","4","5+"]},{id:4,text:"How many international flights do you take in a year?",answers:["0","1","2","3","4","5+"]},{id:5,text:"What is your usual diet?",answers:["Omnivore","Pescatarian","Vegetarian","Vegan"]},{id:6,text:"How do you like being asked all these questions?",answers:["I like it","I'm ok with it","Not at all"]},{id:7,text:"",answers:[]}];var u=D1(),Z=w(u),n=w(Z),s=w(n);{var G=d=>{var L=O1(),y=O(L),m=S(y,2);X(m,17,()=>f,e1,(A,g)=>{var T=c1(),z=O(T);{var F=k=>{var W=H1(),P=O(W),B=w(P),n1=w(B,!0);_(B),_(P);var I=S(P,2);X(I,21,()=>o(g).answers,e1,(p1,R)=>{var N=q1();N.__click=[R1,v,g,R];var s1=w(N,!0);_(N),U(()=>{E1(N,"selected",o(R)[o(g).id]===o(R)),j(s1,o(R))}),x(p1,N)}),_(I),U(()=>j(n1,o(g).text)),C(1,B,()=>r1,()=>({y:50,duration:500})),C(2,B,()=>r1,()=>({y:-50,duration:500})),C(1,I,()=>H,()=>({duration:300})),C(2,I,()=>H,()=>({duration:300})),x(k,W)};J(z,k=>{o(g).id===o(t)&&k(F)})}x(A,T)}),C(2,y,()=>H,()=>({duration:500})),x(d,L)},h=d=>{var L=P1();C(1,L,()=>H,()=>({duration:500})),x(d,L)};J(s,d=>{o(p)?d(G):d(h,!1)})}return _(n),_(Z),_(u),x(a,u),i1({get AnswerStore(){return o(r)},get isQuestionnaireComplete(){return o(l)},set isQuestionnaireComplete(d){M(l,T1(d))}})}A1(["click"]);var W1=f1(`<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="85vh" preserveAspectRatio="xMidYMid meet" viewBox="0 0 896 504"><defs><style>@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
             text {
                 font-family: "Space Grotesk", sans-serif;
-            }
-        </style><linearGradient id="shapeGradient" gradientTransform="rotate(0)"><stop offset="0%" stop-color="#a8c0ff"></stop><stop offset="100%" stop-color="#3f2b96"></stop></linearGradient></defs><rect width="100%" height="100%" fill="#000000"></rect><g><filter id="blur-filter"><feGaussianBlur in="SourceGraphic" stdDeviation="5"></feGaussianBlur></filter><path fill="url(#shapeGradient)" opacity="1" transform="translate(0, 0) rotate(226.79010526315702, 0, 0) scale(1)" fill-rule="evenodd" clip-rule="evenodd" d="M3.628 4
+            }</style><linearGradient id="shapeGradient" gradientTransform="rotate(0)"><stop offset="0%" stop-color="#a8c0ff"></stop><stop offset="100%" stop-color="#3f2b96"></stop></linearGradient></defs><rect width="100%" height="100%" fill="#000000"></rect><g><filter id="blur-filter"><feGaussianBlur in="SourceGraphic" stdDeviation="5"></feGaussianBlur></filter><path fill="url(#shapeGradient)" opacity="1" transform="translate(0, 0) rotate(226.79010526315702, 0, 0) scale(1)" fill-rule="evenodd" clip-rule="evenodd" d="M3.628 4
         L0 0.37
         L0.37 0
         L4 3.628
@@ -2834,7 +2803,7 @@
         L884 494.7808531921848
         L884.7808531921848 494
         L892.4416561317275 501.6565821114769
-        Z"></path></g></svg><!----></section> <section id="calculator" class="svelte-10kdqv8"><div class="content-container"><div class="paragraph p1 svelte-10kdqv8"><p class="lead">The idea of the Carbon footprint has put our
+        Z"></path></g></svg>`);function K1(a,e){d1(e,!1);let l=g1();function r(){if(o(l)){const p=window.innerWidth,v=p/16*9;o(l).setAttribute("width",`${p}`),o(l).setAttribute("height",`${v}`)}}S1(()=>{if(r(),window.addEventListener("resize",r),o(l)){let p=o(l).querySelectorAll("path"),v=Date.now();p.forEach((f,u)=>{let Z=t(f);const n=f.getBBox(),s=n.x,G=n.y;setInterval(()=>{let h=(Date.now()-v)/26e3,d=200+(n.height-4)/26,L=(Z+h*d)%360;f.setAttribute("transform",`rotate(${L}, ${s}, ${G})`)},10)})}});function t(p){const v=p.getAttribute("transform"),f=v==null?void 0:v.match(/rotate\((-?\d+(\.\d+)?)/);return f?parseFloat(f[1]):0}C1();var i=W1(),c=S(w(i),2);a1(c,p=>M(l,p),()=>o(l)),_(i),a1(i,p=>M(l,p),()=>o(l)),x(a,i),i1()}var V1=E(`<section id="hero" class="svelte-10kdqv8"><div class="title t2 svelte-10kdqv8">Reverse <br> Carbon <br> Footprint <br> Calculator</div> <!></section> <section id="calculator" class="svelte-10kdqv8"><div class="content-container"><div class="paragraph p1 svelte-10kdqv8"><p class="lead">The idea of the Carbon footprint has put our
                 individual carbon producing behaviours under a
                 microscope. Have you ever wondered how the immense
                 focus on personal emissions came to be? Keep
@@ -2842,29 +2811,4 @@
                 experts to promote the idea that climate change is
                 not the fault of large corporations, but that of
                 individuals.</p> <p class="lead">This initiative proved wildly successful, altering
-                the way we view climate change in the 21st century.</p></div> <section id="calc-section" class="svelte-zivco2"><div class="form-panel svelte-zivco2"><div class="questions-container svelte-zivco2"><!--[--><p class="preamble svelte-zivco2">Choose the option below that suits you best</p> <!--[--><!--[--><div class="question svelte-zivco2"><p>How do you travel to work or school?</p></div> <div class="buttons svelte-zivco2"><!--[--><button class="svelte-zivco2 ">Drive</button><button class="svelte-zivco2 ">Public Transport</button><button class="svelte-zivco2 ">Cycle</button><button class="svelte-zivco2 ">Walk</button><button class="svelte-zivco2 ">Motorbike</button><!--]--></div><!--]--><!--[!--><!--]--><!--[!--><!--]--><!--[!--><!--]--><!--[!--><!--]--><!--[!--><!--]--><!--[!--><!--]--><!--[!--><!--]--><!--[!--><!--]--><!--]--><!--]--></div></div></section><!----></div></section> <section id="balloon" class="svelte-10kdqv8"><div class="content-container"><h2>Your Answers</h2> <ul></ul></div></section><!----><!----> <footer class="footer svelte-j6upov"><div class="logo"><img src="../mocklogo1.png" alt="logo" class="logo-image"> <div>Downstream<br>Project</div></div> <div class="footer-text svelte-j6upov"><p>2025 Downstream Project</p></div></footer><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
-			
-			<script>
-				{
-					__sveltekit_1uy2cf1 = {
-						base: new URL("..", location).pathname.slice(0, -1)
-					};
-
-					const element = document.currentScript.parentElement;
-
-					Promise.all([
-						import("../_app/immutable/entry/start.oXo85SxG.js"),
-						import("../_app/immutable/entry/app.B1pkGIVe.js")
-					]).then(([kit, app]) => {
-						kit.start(app, element, {
-							node_ids: [0, 5],
-							data: [null,{"type":"data","data":null,"uses":{}}],
-							form: null,
-							error: null
-						});
-					});
-				}
-			</script>
-		</div>
-	</body>
-</html>
+                the way we view climate change in the 21st century.</p></div> <!></div></section> <section id="balloon" class="svelte-10kdqv8"><div class="content-container"><h2>Your Answers</h2> <ul></ul></div></section>`,1);function ie(a){var e=V1(),l=O(e),r=S(w(l),2);K1(r,{}),_(l);var t=S(l,2),i=w(t),c=S(w(i),2);Q1(c,{}),_(i),_(t),k1(2),x(a,e)}export{ie as component};

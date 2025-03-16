@@ -1,6 +1,7 @@
 /* NORMALISING */
 html {
   box-sizing: border-box;
+  font-size: clamp(12px, 1.2vw, 16px);;
 }
 
 *,
@@ -49,7 +50,8 @@ body {
 }
 
 .content-container {
-  margin: 0 4rem;
+  margin-right: clamp(10px, 5vw, 64px);
+  margin-left: clamp(10px, 5vw, 64px);
 }
 
 .logo {
@@ -99,7 +101,7 @@ h2 {
   color: var(--color-dark-text);
   font-family: var(--h2-font-family);
   font-style: var(--h2-font-style);;
-  font-size: var(--h2-font-size);
+  font-size: clamp(1.5rem , 5vw, 3rem);
   font-weight: var(--h2-font-weight);
   line-height: var(--h2-line-height);
 }
@@ -120,11 +122,27 @@ h4 {
   font-weight: var(--h4-font-weight);
 }
 
+h5 {
+  font-family: var(--h5-font-family);
+  font-style: var(--h5-font-style);;
+  font-size: clamp(1.5rem, 1.16666vw ,1.75rem);
+  font-weight: var(--h5-font-weight);
+  line-height: var(--h5-line-height);
+  padding-bottom: 0.5rem;
+}
+
 .lead {
   font-family: var(--lead-font-family);
   font-style: var(--lead-font-style);;
-  font-size: var(--lead-font-size);
+  font-size: clamp(1.2rem, 1.16666vw ,1.4rem);
   font-weight: var(--lead-font-weight);
+}
+
+.tile-type {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  line-height: 1.2;
 }
 
 figcaption {
@@ -132,14 +150,25 @@ figcaption {
   font-family: var(--caption-font-family);
   font-style: var(--caption-font-style);;
   font-size: var(--caption-font-size);
+  line-height: var(--caption-line-height);
   font-weight: var(--caption-font-weight);
+}
+
+.tile-description {
+  font-family: var(--caption-font-family);
+  font-style: var(--caption-font-style);;
+  font-size: 1rem;
+  font-weight: var(--caption-font-weight);
+  line-height: var(--caption-line-height);
+  color: var(--color-border)
 }
 
 .btn-1 {
   text-decoration: none;
   font-size: var(--highlight-font-size);
   font-weight: var(--highlight-font-weight);
-  color: var(--accent-primary);
+  color: var(--color-white);
+  background-color: var(--accent-primary);
   border: 1px solid var(--accent-primary);
   border-radius: var(--box-corner-radius);
   padding: 0.5rem 1.5rem;
@@ -150,6 +179,6 @@ figcaption {
 }
 
 .btn-1:hover {
-  background-color: var(--accent-primary);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--accent-primary);
 }
