@@ -152,6 +152,8 @@ figcaption {
   font-size: var(--caption-font-size);
   line-height: var(--caption-line-height);
   font-weight: var(--caption-font-weight);
+  padding-top: 1rem;
+  width: 75%;
 }
 
 .tile-description {
