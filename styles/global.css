@@ -184,3 +184,13 @@ figcaption {
   background-color: var(--color-white);
   color: var(--accent-primary);
 }
+
+.btn-1.inverse{
+  color: var(--accent-primary);
+  background-color: var(--color-white);
+}
+
+.btn-1.inverse:hover {
+  background-color: var(--accent-primary);
+  color: var(--color-white);
+}
