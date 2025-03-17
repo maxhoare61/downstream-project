@@ -142,7 +142,7 @@ h5 {
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--accent-primary);
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 figcaption {
@@ -183,4 +183,14 @@ figcaption {
 .btn-1:hover {
   background-color: var(--color-white);
   color: var(--accent-primary);
+}
+
+.btn-1.inverse{
+  color: var(--accent-primary);
+  background-color: rgba(100,100,100,0);
+}
+
+.btn-1.inverse:hover {
+  background-color: var(--accent-primary);
+  color: var(--color-white);
 }

@@ -1,5 +1,6 @@
 <script>
 	import WhatWeDo from "$lib/components/WhatWeDo.svelte";
+	import { base } from '$app/paths';
 </script>
 
 <div class="content-container">
@@ -22,7 +23,7 @@
 			</div>
 		</div>
 		<div class="section-right">
-			<img src="/about-us.jpg" alt="Impressionist painting of a mining site">
+			<img src="{base}/about-us.jpg" alt="Impressionist painting of a mining site">
 			<p class="caption">Our mission is to create a world where the public feels empowered to make decisions on issues affecting themselves and the environment (source: Imagen 3 AI)</p>
 		</div>
 	</div>

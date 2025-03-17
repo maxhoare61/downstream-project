@@ -46,20 +46,41 @@
   }
 
   let graphOverlay: HTMLButtonElement | null = null;
+  let counter = 0;
 
   function hideInstruct() {
-        const instructElement = graphOverlay?.querySelector(".instruct");
-        if (instructElement) {
-            instructElement.classList.remove("show");
-        }
+    setTimeout(() => {
+    const instructElement = graphOverlay?.querySelector(".instruct");
+    const instruct2Element = graphOverlay?.querySelector(".instruct.i2");
+    const instruct3Element = graphOverlay?.querySelector(".instruct.i3");
+      if (instructElement && instruct2Element && counter == 0) {
+        instructElement.classList.remove("show");
+        instruct2Element.classList.add("show");
+        counter += 1;
+      } else if (instruct2Element && instruct3Element && counter == 1) {
+        instruct2Element.classList.remove("show");
+        instruct3Element.classList.add("show");
+      } else if (instruct2Element && instruct3Element && counter == 2) {
+        instruct3Element.classList.remove("show");
+      }
+    }, 1000);
   }
-
 </script>
 
 <section class="hero-landing">
   <div class="hero-left">
-    <button class="graph-overlay" bind:this={graphOverlay} on:click={hideInstruct}>
-      <div class="instruct show">Use the mouse to interact with the navigation graph. <br> Click on a node to reveal it's sub-nodes.</div>
+    <button
+      class="graph-overlay"
+      bind:this={graphOverlay}
+      on:click={hideInstruct}
+    >
+      <div class="instruct show">
+        Use the mouse to interact with the navigation graph.
+      </div>
+      <div class="instruct i2">Click on a node to reveal sub-nodes.</div>
+      <div class="instruct i3">
+        Click on a subnode to navigate to that page.
+      </div>
       <InteractiveGraph2 />
     </button>
     <div class="diagram-backdrop"></div>
@@ -71,7 +92,7 @@
         <span class="glow">{words[currentWordIndex]}</span>
       </div>
       <p class="lead">{subtitle}</p>
-      <a href="{base}/about-us" class="btn-1">About us</a>
+      <a href="{base}/about-us" class="btn-1 inverse">About us</a>
     </div>
   </div>
 </section>
@@ -86,7 +107,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
     gap: 2rem; /* Space between columns */
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     width: 100%;
     min-height: clamp(520px, 80vh, 958px);
@@ -118,6 +139,7 @@
     aspect-ratio: 1/1;
     height: auto;
     border-radius: var(--box-corner-radius);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
 
@@ -134,21 +156,22 @@
     border-radius: var(--box-corner-radius);
   }
 
-  .instruct{
+  .instruct {
     position: absolute;
     text-align: center;
-    top: 10%;
+    top: 0%;
     width: 100%;
     z-index: 2;
-    color: grey;
+    color: black;
     pointer-events: none;
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition:
+      opacity 1s ease-out,
+      transform 1s ease-out;
     opacity: 0;
   }
 
-
-  .instruct.show{
-    opacity: 1;
+  .instruct.show {
+    opacity: 0.7;
     transform: translateY(60%);
   }
 
@@ -179,8 +202,8 @@
   }
   .glow {
     text-decoration: underline;
-    /*text-shadow: 0 0 10px var(--color-green), 0 0 20px var(--color-green), 0 0 30px var(--color-green);*/
   }
+
   .insight-banner {
     position: relative;
     display: flex;

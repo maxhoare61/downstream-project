@@ -7,14 +7,18 @@
 </script>
 
 <section id="hero">
+    <div class="animated-header">
     <div class="title t2">
         Reverse <br /> Carbon <br /> Footprint <br /> Calculator
     </div>
+    <div class="ah1">
     <AnimatedHeader />
+    </div> 
+</div>
 </section>
 <section id="calculator">
     <div class="content-container">
-        <div class="paragraph p1">
+        <div class="paragraph-1">
             <p class="lead">
                 The second article in the Carbon Emissions in Perspective series
                 follows on from ‘The Carbon Footprint Story’, by introducing the
@@ -24,7 +28,7 @@
                 polluters. 
             </p>
             <p class="lead">
-                This tool helps contextualize individual carbon
+                The Reverse Carbon Calculator is a tool to help contextualize individual carbon
                 footprints against the staggering scale of industrial emissions,
                 illustrating just how outsized corporate contributions are in
                 driving climate change. The goal is not to diminish personal
@@ -47,7 +51,7 @@
 <style>
     #hero {
         position: relative;
-        height: 120vh;
+        max-height: 120vh;
         width: 100%;
         max-width: 100vw;
         background-color: black;
@@ -57,18 +61,25 @@
         padding-bottom: 1rem;
     }
 
+    .paragraph-1 {
+		position: relative;
+		border-top: 1px solid var(--color-border);
+		padding: 4rem 0rem;
+		margin-top: 2rem;
+		width: clamp(320px, 50%, 548px);
+	}
+
     .title {
         position: absolute;
-        margin: 3rem 2rem;
-        padding: 1rem;
-        bottom: 2rem;
-        font-family: "Work Sans", sans-serif;
-        font-size: 9.375rem;
-        font-weight: 600;
-        line-height: 8rem;
-        overflow: hidden;
-        white-space: nowrap;
-        z-index: 1;
+		font-family: "Work Sans", sans-serif;
+		font-weight: 600;
+		text-align: left;
+		font-size: clamp(4rem, 15vw, 10rem);
+		line-height: clamp(3.5rem, 12vw, 8rem);
+		padding: clamp(10px, 5vw, 48px);
+		z-index: 2;
+		color: white;
+		white-space: nowrap;
     }
 
     .t2 {
@@ -76,18 +87,23 @@
         left: 15px;
     }
 
+    .animated-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+    .ah1 {
+		display: absolute;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		flex-grow: 1;
+	}
+
     #calculator {
         padding: 2rem 0rem;
         background-color: black;
         color: white;
-    }
-
-    .paragraph {
-        padding: 4rem 0rem;
-        width: 550px;
-    }
-
-    .paragraph.p1 {
-        border-top: 1px solid var(--color-border);
     }
 </style>

@@ -381,16 +381,16 @@
 	</section>
 </div>
 <section id="perspective">
-<figure class="sticky-text">
+<div class="sticky-text">
 	<img
 		src="{base}/smoke-stack-extended.jpg"
 		alt="Painting of a man's sillouette in smoke billowing from a smoke stack"
 		class="smokestack-image"
 	/>
-	<div class="perspective above">
+	<div class="perspective">
 		Putting Emissions <br /> Back in Perspective
 	</div>
-</figure>
+</div>
 	<div class="content-container">
 		<div class="makeover-paragraph">
 			<div class="paragraph-2 light">
@@ -428,8 +428,6 @@
 					companies’ emissions and climate plans.
 				</p>
 			</div>
-		</div>
-		<div class="content-box-2">
 			<div class="reverse-paragraph">
 				<h2>The Reverse Carbon Calculator</h2>
 				<div class="paragraph-2 light">
@@ -454,6 +452,17 @@
 						is the first step toward crafting a new, more effective
 						narrative for our planet’s future.
 					</p>
+					<figure>
+						<div
+							bind:this={container}
+							id="lottie-animation"
+						></div>
+						<figcaption class="caption-1">
+							Click on the chart to see your <br /> emissions in
+							perspective. Click again to <br /> show your individual emissions
+							breakdown.
+						</figcaption>
+					</figure>
 					<p>
 						To help explore this idea, Downstream project are
 						building a 'reverse carbon calculator', a calculator
@@ -462,20 +471,6 @@
 						actors in climate change.
 					</p>
 				</div>
-			</div>
-			<div class="pictures-2 chart">
-				<figure>
-					<div
-						bind:this={container}
-						id="lottie-animation"
-						style="width: 100%; height: 500px;"
-					></div>
-					<div class="caption-1">
-						Click on the chart to see your <br /> emissions in
-						perspective. Click again to <br /> show your individual emissions
-						breakdown.
-					</div>
-				</figure>
 			</div>
 		</div>
 	</div>
@@ -500,9 +495,9 @@
 		font-family: "Work Sans", sans-serif;
 		font-weight: 600;
 		text-align: left;
-		font-size: clamp(4rem, 15vw, 11rem);
-		line-height: clamp(3.5rem, 12vw, 9.5rem);
-		padding: clamp(10px, 5vw, 64px);
+		font-size: clamp(4rem, 15vw, 10rem);
+		line-height: clamp(3.5rem, 12vw, 8rem);
+		padding: clamp(10px, 5vw, 48px);
 		z-index: 2;
 		color: black;
 		white-space: nowrap;
@@ -525,6 +520,8 @@
 	#lottie-animation {
 		background-color: var(--color-background);
 		border-radius: var(--box-corner-radius);
+		width: clamp(50px, 40vw, 500px);
+		height: clamp(50px, 40vw, 500px);
 	}
 
 	#s-origins {
@@ -532,7 +529,6 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		width: 100%;
 	}
 
 	figure {
@@ -545,23 +541,12 @@
 	}
 
 	.smokestack-image {
-		min-width: 1470px;
-	}
-
-	.perspective.above {
-		position: absolute;
-		text-align: left;
-		line-height: 120px;
-		color: white;
-		overflow: hidden;
-		white-space: nowrap;
-		bottom: 0;
-		left: 0;
+		top:0;
+		width: 100%;
 	}
 
 	#s-origins h2 {
 		border-bottom: 1px solid var(--color-border);
-		width: 735px;
 		padding: 2rem 0rem;
 	}
 
@@ -623,6 +608,7 @@
 	}
 
 	#perspective {
+		padding-top:0;
 		background-color: var(--color-deep-green);
 		display: flex;
 		flex-direction: column;
@@ -661,14 +647,20 @@
 	}
 
 	.perspective {
+		position: absolute;
+		text-align: left;
 		font-family: "Work Sans", sans-serif;
 		font-style: "SemiBold";
-		font-size: 8.7rem;
 		letter-spacing: auto;
-		line-height: 120px;
 		font-weight: 600;
-		color: var(--color-aqua);
-		padding: 4rem 1rem;
+		color: white;
+		overflow: hidden;
+		white-space: nowrap;
+		bottom: 0;
+		left: 0;
+		font-size: clamp(3.3rem, 8.5vw, 10rem);
+		line-height: clamp(3rem, 8vw, 8rem);
+		padding: clamp(10px, 5vw, 64px);
 	}
 
 	.pictures-2.chart {

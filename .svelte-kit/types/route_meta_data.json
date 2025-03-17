@@ -8,6 +8,9 @@
 	"/articles/article-one": [
 		"src/routes/articles/article-one/+page.server.ts"
 	],
+	"/articles/article-three": [
+		"src/routes/articles/article-three/+page.server.ts"
+	],
 	"/articles/article-two": [
 		"src/routes/articles/article-two/+page.server.ts"
 	],

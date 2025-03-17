@@ -1,6 +1,5 @@
-import { i as ensure_array_like, f as bind_props, d as stringify } from "../../../chunks/index.js";
+import { Z as fallback, a0 as ensure_array_like, _ as bind_props, W as stringify } from "../../../chunks/index.js";
 import { b as base } from "../../../chunks/paths.js";
-import { f as fallback } from "../../../chunks/utils.js";
 import { a as attr } from "../../../chunks/attributes.js";
 import { e as escape_html } from "../../../chunks/escaping.js";
 import { P as ProjectCard } from "../../../chunks/ProjectCard.js";
@@ -37,6 +36,17 @@ function _page($$payload) {
     cat: "Article",
     title: "Reverse Carbon Footprint Calculator",
     description: "This article introduces the Reverse Carbon Calculator, a tool to help contextualize individual carbon emissions."
+  });
+  $$payload.out += `<!----></div></section> <section class="Project-Container svelte-1m3iaqs"><div class="project-grid svelte-1m3iaqs"><div class="text-container left svelte-1m3iaqs"><h3>Political Donations Revealed</h3> <p class="tile-type svelte-1m3iaqs">Project</p> <p class="svelte-1m3iaqs">A project to transform public data on politicians declared interests into a cohesive and
+					accessible narrative, revealing the often-financial ties between
+					elected officials and powerful interests.</p></div> `;
+  ProjectCard($$payload, {
+    imgUrl: `${stringify(base)}/political-donations.jpg`,
+    type: "column",
+    cat: "Article",
+    title: "Political Donations Revealed",
+    description: "This article aims to transform politicians declared interests into a cohesive and\n                accessible narrative.",
+    link: `${stringify(base)}/articles/article-three`
   });
   $$payload.out += `<!----></div></section></div>`;
 }

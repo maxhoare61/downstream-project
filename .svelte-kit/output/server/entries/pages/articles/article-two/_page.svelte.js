@@ -1,5 +1,6 @@
 import "clsx";
-import { c as pop, p as push } from "../../../../chunks/index.js";
+/* empty css                                                          */
+import { Q as pop, O as push } from "../../../../chunks/index.js";
 function AnimatedHeader2($$payload, $$props) {
   push();
   $$payload.out += `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="85vh" preserveAspectRatio="xMidYMid meet" viewBox="0 0 896 504"><defs><style>
@@ -2811,19 +2812,19 @@ function AnimatedHeader2($$payload, $$props) {
   pop();
 }
 function _page($$payload) {
-  $$payload.out += `<section id="hero" class="svelte-yrdrln"><div class="title t2 svelte-yrdrln">Reverse <br> Carbon <br> Footprint <br> Calculator</div> `;
+  $$payload.out += `<section id="hero" class="svelte-ci50gf"><div class="animated-header svelte-ci50gf"><div class="title t2 svelte-ci50gf">Reverse <br> Carbon <br> Footprint <br> Calculator</div> <div class="ah1 svelte-ci50gf">`;
   AnimatedHeader2($$payload);
-  $$payload.out += `<!----></section> <section id="calculator" class="svelte-yrdrln"><div class="content-container"><div class="paragraph p1 svelte-yrdrln"><p class="lead svelte-yrdrln">The second article in the Carbon Emissions in Perspective series
+  $$payload.out += `<!----></div></div></section> <section id="calculator" class="svelte-ci50gf"><div class="content-container"><div class="paragraph-1 svelte-ci50gf"><p class="lead svelte-ci50gf">The second article in the Carbon Emissions in Perspective series
                 follows on from ‘The Carbon Footprint Story’, by introducing the
                 Reverse Carbon Calculator. This instalment seeks to recalibrate
                 our perspective of personal emissions by providing an
                 interactive way to compare personal emissions to those of major
-                polluters.</p> <p class="lead svelte-yrdrln">This tool helps contextualize individual carbon
+                polluters.</p> <p class="lead svelte-ci50gf">The Reverse Carbon Calculator is a tool to help contextualize individual carbon
                 footprints against the staggering scale of industrial emissions,
                 illustrating just how outsized corporate contributions are in
                 driving climate change. The goal is not to diminish personal
                 responsibility but to counter the prevailing narrative that
-                small consumer choices alone will solve the crisis.</p> <p class="lead svelte-yrdrln">By visualizing emissions on a structural scale, readers can better
+                small consumer choices alone will solve the crisis.</p> <p class="lead svelte-ci50gf">By visualizing emissions on a structural scale, readers can better
                 grasp where their efforts—whether in activism, policy advocacy,
                 or industry reform—might have the greatest impact. The article
                 is a work in progress. As we continue developing this project,

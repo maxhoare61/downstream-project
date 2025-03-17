@@ -1,5 +1,6 @@
 <script>
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
 </script>
 
 <header class="header">
@@ -10,8 +11,16 @@
   </a>
   </div>
   <nav>
+      {#if $page.url.pathname !== `${base}/`}
+        <a class="btn-1" href="{base}/">Home</a>
+      {/if}
+      {#if $page.url.pathname !== `${base}/explore`}
       <a class="btn-1" href="{base}/explore">Explore</a>
+      {/if}
+      {#if $page.url.pathname !== `${base}/about-us`}
       <a class="btn-1" href="{base}/about-us">About us</a>
+      {/if}
+      
   </nav>
 </header>
 

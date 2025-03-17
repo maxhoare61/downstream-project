@@ -65,6 +65,13 @@
     justify-content: space-around;
   }
 
+  .project-text h5 {
+    display: flex;
+    flex-direction: column;
+    height: 4rem;
+    justify-content: flex-end;
+  }
+
   .project-card p {
     line-height: 1.75;
     text-align: justify;

@@ -1,4 +1,4 @@
-import { c as pop, p as push, d as stringify } from "../../../../chunks/index.js";
+import { Q as pop, O as push, W as stringify } from "../../../../chunks/index.js";
 import { b as base } from "../../../../chunks/paths.js";
 /* empty css                                                           */
 import "clsx";
@@ -15,9 +15,9 @@ function AnimatedHeader1($$payload, $$props) {
 }
 function _page($$payload, $$props) {
   push();
-  $$payload.out += `<section id="hero"><div class="animated-header svelte-1icl1ri"><div class="title t2 svelte-1icl1ri">The <br> Carbon <br> Footprint <br> Story</div> <div class="ah1 svelte-1icl1ri">`;
+  $$payload.out += `<section id="hero"><div class="animated-header svelte-az85dg"><div class="title t2 svelte-az85dg">The <br> Carbon <br> Footprint <br> Story</div> <div class="ah1 svelte-az85dg">`;
   AnimatedHeader1($$payload);
-  $$payload.out += `<!----></div></div> <div class="content-container svelte-1icl1ri"><div class="paragraph-1 svelte-1icl1ri"><p class="lead svelte-1icl1ri">The popularization of the term “carbon footprint” can be largely
+  $$payload.out += `<!----></div></div> <div class="content-container svelte-az85dg"><div class="paragraph-1 svelte-az85dg"><p class="lead svelte-az85dg">The popularization of the term “carbon footprint” can be largely
 				traced to campaigns from oil supermajors in the early 2000s.
 				Yet, the term has sustained itself as a centrepiece of modern
 				discussions on climate change. Why do we still frame climate
@@ -27,7 +27,7 @@ function _page($$payload, $$props) {
 				industry’s tactful shift away from climate denial and toward
 				‘deflection’ as a technique to fight climate action. Using
 				evidence, will show how this fuelled an aggressive campaign to
-				obscure the true causes global warming from the public eye.</p></div></div></section> <div class="content-container svelte-1icl1ri"><section id="s-origins" class="svelte-1icl1ri"><div class="makeover-paragraph svelte-1icl1ri"><h2 class="svelte-1icl1ri">Origins</h2> <div class="paragraph-2 svelte-1icl1ri"><p class="svelte-1icl1ri">In 2004, BP’s marketing underwent a remarkable
+				obscure the true causes global warming from the public eye.</p></div></div></section> <div class="content-container svelte-az85dg"><section id="s-origins" class="svelte-az85dg"><div class="makeover-paragraph svelte-az85dg"><h2 class="svelte-az85dg">Origins</h2> <div class="paragraph-2 svelte-az85dg"><p class="svelte-az85dg">In 2004, BP’s marketing underwent a remarkable
 					transformation. The oil titan re-styled its logo to a
 					green-and-yellow sunburst and adopted the tagline “Beyond
 					Petroleum”. As part of this campaign the company also
@@ -39,7 +39,7 @@ function _page($$payload, $$props) {
 					advertisements in major newspapers which prompted readers to
 					“Find out the size of your household’s carbon footprint,
 					learn how you can reduce it, and see how we’re reducing ours
-					at bp.com”.</p> <figure class="svelte-1icl1ri"><img${attr("src", `${stringify(base)}/bp-cf-ads.jpg`)} alt="BP's Advertising Campaign" class="campaign-image svelte-1icl1ri"> <figcaption>The original BP carbon campaign from 2005 (source: XXX)</figcaption></figure> <p class="svelte-1icl1ri">Framing climate change in these personal terms was a
+					at bp.com”.</p> <figure class="svelte-az85dg"><img${attr("src", `${stringify(base)}/bp-cf-ads.jpg`)} alt="BP's Advertising Campaign" class="campaign-image svelte-az85dg"> <figcaption>The original BP carbon campaign from 2005 (source: XXX)</figcaption></figure> <p class="svelte-az85dg">Framing climate change in these personal terms was a
 					deliberate strategy. As a company then marketing itself as
 					“Beyond Petroleum,” BP sought to position itself as part of
 					the climate solution while subtly shifting the locus of
@@ -53,7 +53,7 @@ function _page($$payload, $$props) {
 					interests. The shift from outright climate science denial to
 					“deflection”, the idea that the public should focus on their
 					own actions rather than corporate behaviour, went on to fuel
-					a campaign of deception that would span decades.</p> <figure class="svelte-1icl1ri"><img${attr("src", `${stringify(base)}/cfc-screenshot.jpg`)} alt="Early Carbon Footprint Calculator" class="campaign-image calc svelte-1icl1ri"> <figcaption>An early carbon footprint calculator (source: soft112)</figcaption></figure></div></div></section> <section id="s-makeover" class="svelte-1icl1ri"><div class="makeover-paragraph svelte-1icl1ri"><h2 class="svelte-1icl1ri">BPs Millenial Makeover</h2> <div class="paragraph-2 svelte-1icl1ri"><p class="svelte-1icl1ri">By the early 2000s, scientific consensus on climate change
+					a campaign of deception that would span decades.</p> <figure class="svelte-az85dg"><img${attr("src", `${stringify(base)}/cfc-screenshot.jpg`)} alt="Early Carbon Footprint Calculator" class="campaign-image calc svelte-az85dg"> <figcaption>An early carbon footprint calculator (source: soft112)</figcaption></figure></div></div></section> <section id="s-makeover" class="svelte-az85dg"><div class="makeover-paragraph svelte-az85dg"><h2 class="svelte-az85dg">BPs Millenial Makeover</h2> <div class="paragraph-2 svelte-az85dg"><p class="svelte-az85dg">By the early 2000s, scientific consensus on climate change
 					was solidifying, and public awareness of the issue was
 					growing. BP, one of the world’s largest oil companies,
 					increasingly faced what seemed to be an existential threat.
@@ -67,7 +67,7 @@ function _page($$payload, $$props) {
 					tactic contributed to a growing culture of whataboutism:
 					“Well, if you really care about climate change, why are you
 					still driving a car, or working or using technology or
-					travelling…”.</p> <p class="svelte-1icl1ri">This framing not only places the burden of responsibility on
+					travelling…”.</p> <p class="svelte-az85dg">This framing not only places the burden of responsibility on
 					consumers, but alleviates BP, positioning the company as a
 					helpful partner by providing tools and encouragement,
 					despite BP’s core business still being overwhelmingly in oil
@@ -80,7 +80,7 @@ function _page($$payload, $$props) {
 					greenwashing at play: the personal carbon footprint
 					initiative was less about BP reducing its own emissions and
 					more about influencing public narratives around who is
-					responsible for climate change.</p></div></div></section> <section id="s-makeover" class="svelte-1icl1ri"><div class="makeover-paragraph svelte-1icl1ri"><h2 class="svelte-1icl1ri">What Does the Data Say? Personal vs Corporate Emissions</h2> <div class="paragraph-2 svelte-1icl1ri"><p class="svelte-1icl1ri">If everyone is responsible for their carbon footprint, how
+					responsible for climate change.</p></div></div></section> <section id="s-makeover" class="svelte-az85dg"><div class="makeover-paragraph svelte-az85dg"><h2 class="svelte-az85dg">What Does the Data Say? Personal vs Corporate Emissions</h2> <div class="paragraph-2 svelte-az85dg"><p class="svelte-az85dg">If everyone is responsible for their carbon footprint, how
 					big are those footprints really? How do they compare to the
 					carbon pollution emitted by large fossil fuel companies? The
 					data overwhelmingly show that corporate and industrial
@@ -100,7 +100,7 @@ function _page($$payload, $$props) {
 					companies in the world’s energy sector. For perspective,
 					this percentage is greater the annual carbon output of
 					Oceania as a percentage of global annual emissions which was
-					1.1% of emissions in 2023.</p> <p class="svelte-1icl1ri">Meanwhile, the average individual’s emissions, even in
+					1.1% of emissions in 2023.</p> <p class="svelte-az85dg">Meanwhile, the average individual’s emissions, even in
 					high-income countries, are tiny by comparison to these
 					corporate footprints. In America – which has one of the
 					highest per-capita carbon footprints – the average person’s
@@ -121,7 +121,7 @@ function _page($$payload, $$props) {
 					like how electricity is generated, how goods are produced,
 					and what policies govern energy use determine the bulk of
 					emissions – are influenced by corporate and governmental
-					control far more than any average person.</p></div></div></section> <section id="s-makeover" class="svelte-1icl1ri"><div class="makeover-paragraph svelte-1icl1ri"><h2 class="svelte-1icl1ri">Bonus: Lessons from Covid?</h2> <div class="paragraph-2 svelte-1icl1ri"><p class="svelte-1icl1ri">It is telling that even when individual behaviour changed
+					control far more than any average person.</p></div></div></section> <section id="s-makeover" class="svelte-az85dg"><div class="makeover-paragraph svelte-az85dg"><h2 class="svelte-az85dg">Bonus: Lessons from Covid?</h2> <div class="paragraph-2 svelte-az85dg"><p class="svelte-az85dg">It is telling that even when individual behaviour changed
 					dramatically during the COVID-19 pandemic (with people
 					driving and flying far less), the drop in global CO₂
 					emissions was on the order of 6–8% for 2020, and atmospheric
@@ -144,7 +144,7 @@ function _page($$payload, $$props) {
 					campaign – the company was spotlighting the minuscule piece
 					of the emissions pie that individuals can directly control,
 					while obscuring its own and its industry’s enormous slice of
-					responsibility.</p></div></div></section> <section id="s-makeover" class="svelte-1icl1ri"><div class="makeover-paragraph svelte-1icl1ri"><h2 class="svelte-1icl1ri">Influence on Public Perception and Discourse</h2> <div class="paragraph-2 svelte-1icl1ri"><p class="svelte-1icl1ri">BP’s carbon footprint campaign and similar industry efforts
+					responsibility.</p></div></div></section> <section id="s-makeover" class="svelte-az85dg"><div class="makeover-paragraph svelte-az85dg"><h2 class="svelte-az85dg">Influence on Public Perception and Discourse</h2> <div class="paragraph-2 svelte-az85dg"><p class="svelte-az85dg">BP’s carbon footprint campaign and similar industry efforts
 					have had a discernible impact on public perceptions of
 					climate responsibility. The very fact that “carbon
 					footprint” entered everyday vocabulary in the 2000s is
@@ -171,8 +171,8 @@ function _page($$payload, $$props) {
 					comparatively muted. Indeed, Oreskes attributes that common
 					sentiment in part to the marketing campaigns by BP, Exxon
 					and others that relentlessly promoted personal carbon
-					footprints.</p> <figure class="svelte-1icl1ri"><img${attr("src", `${stringify(base)}/carbon-fp-trend.png`)} alt="Google searches including the term carbon footprint shot up in the early 2000s" class="campaign-image trend svelte-1icl1ri"> <figcaption>Google searches including the term carbon footprint shot
-						up in the early 2000s (source: Google Trends)</figcaption></figure> <p class="svelte-1icl1ri">However, there are signs that society’s view of an
+					footprints.</p> <figure class="svelte-az85dg"><img${attr("src", `${stringify(base)}/carbon-fp-trend.png`)} alt="Google searches including the term carbon footprint shot up in the early 2000s" class="campaign-image trend svelte-az85dg"> <figcaption>Google searches including the term carbon footprint shot
+						up in the early 2000s (source: Google Trends)</figcaption></figure> <p class="svelte-az85dg">However, there are signs that society’s view of an
 					individual-based approach to fighting climate change is
 					increasingly dim. Social scientists and climate
 					communicators have increasingly critiqued the over-emphasis
@@ -200,7 +200,7 @@ function _page($$payload, $$props) {
 					injecting personal carbon footprints into the climate
 					zeitgeist, it has not completely forestalled a growing
 					public recognition that the climate crisis is, at its core,
-					a systemic problem requiring systemic solutions.</p></div></div></section></div> <section id="perspective" class="svelte-1icl1ri"><figure class="sticky-text svelte-1icl1ri"><img${attr("src", `${stringify(base)}/smoke-stack-extended.jpg`)} alt="Painting of a man's sillouette in smoke billowing from a smoke stack" class="smokestack-image svelte-1icl1ri"> <div class="perspective above svelte-1icl1ri">Putting Emissions <br> Back in Perspective</div></figure> <div class="content-container svelte-1icl1ri"><div class="makeover-paragraph svelte-1icl1ri"><div class="paragraph-2 light svelte-1icl1ri"><p class="svelte-1icl1ri">Climate scientists like Michael Mann argue that while
+					a systemic problem requiring systemic solutions.</p></div></div></section></div> <section id="perspective" class="svelte-az85dg"><div class="sticky-text"><img${attr("src", `${stringify(base)}/smoke-stack-extended.jpg`)} alt="Painting of a man's sillouette in smoke billowing from a smoke stack" class="smokestack-image svelte-az85dg"> <div class="perspective svelte-az85dg">Putting Emissions <br> Back in Perspective</div></div> <div class="content-container svelte-az85dg"><div class="makeover-paragraph svelte-az85dg"><div class="paragraph-2 light svelte-az85dg"><p class="svelte-az85dg">Climate scientists like Michael Mann argue that while
 					individual actions are helpful, we must not allow the
 					narrative of personal responsibility to become a distraction
 					or moral smoke-screen that delays larger interventions.
@@ -230,7 +230,7 @@ function _page($$payload, $$props) {
 					liabilities for climate damages (a path being pursued
 					through various lawsuits), mandates for clean energy
 					adoption, and transparency tools that publicly track
-					companies’ emissions and climate plans.</p></div></div> <div class="content-box-2 svelte-1icl1ri"><div class="reverse-paragraph svelte-1icl1ri"><h2 class="svelte-1icl1ri">The Reverse Carbon Calculator</h2> <div class="paragraph-2 light svelte-1icl1ri"><p class="svelte-1icl1ri">We should aim for a more balanced climate discourse that
+					companies’ emissions and climate plans.</p></div> <div class="reverse-paragraph svelte-az85dg"><h2 class="svelte-az85dg">The Reverse Carbon Calculator</h2> <div class="paragraph-2 light svelte-az85dg"><p class="svelte-az85dg">We should aim for a more balanced climate discourse that
 						encourages individual “carbon footprint” reductions
 						(such as saving energy, diet shifts, and conscious
 						consumption) firmly contextualized in a broader push
@@ -238,20 +238,20 @@ function _page($$payload, $$props) {
 						emissions cuts. Rather than feeling personal guilt as
 						the primary response to climate change, individuals
 						should channel that concern into collective action and
-						demand accountability from the true heavy emitters.</p> <p class="svelte-1icl1ri">To conclude, while each of us should take steps to live
+						demand accountability from the true heavy emitters.</p> <p class="svelte-az85dg">To conclude, while each of us should take steps to live
 						more sustainably, the evidence is clear that systemic
 						change – driven by sound policy, corporate
 						responsibility, and societal pressure – is indispensable
 						for addressing a challenge as vast as climate change.
 						Recognizing the storytelling strategies that got us here
 						is the first step toward crafting a new, more effective
-						narrative for our planet’s future.</p> <p class="svelte-1icl1ri">To help explore this idea, Downstream project are
+						narrative for our planet’s future.</p> <figure class="svelte-az85dg"><div id="lottie-animation" class="svelte-az85dg"></div> <figcaption class="caption-1 svelte-az85dg">Click on the chart to see your <br> emissions in
+							perspective. Click again to <br> show your individual emissions
+							breakdown.</figcaption></figure> <p class="svelte-az85dg">To help explore this idea, Downstream project are
 						building a 'reverse carbon calculator', a calculator
 						aimed at showing our own emissions on the scale of large
 						emitters, to help crystallise the large role of these
-						actors in climate change.</p></div></div> <div class="pictures-2 chart svelte-1icl1ri"><figure class="svelte-1icl1ri"><div id="lottie-animation" style="width: 100%; height: 500px;" class="svelte-1icl1ri"></div> <div class="caption-1 svelte-1icl1ri">Click on the chart to see your <br> emissions in
-						perspective. Click again to <br> show your individual emissions
-						breakdown.</div></figure></div></div></div></section>`;
+						actors in climate change.</p></div></div></div></div></section>`;
   pop();
 }
 export {

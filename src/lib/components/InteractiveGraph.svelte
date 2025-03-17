@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
     import { goto } from "$app/navigation";
+    import { base } from "$app/paths";
     import * as d3 from "d3";
 
     let dragging = false;
@@ -44,11 +45,11 @@
     };
 
     let allNodes = [
-    { name: "The Carbon Footprint Story", shape: "pentagon", color: "#26b790", url: "/articles/article-one" },
-    { name: "Reverse Carbon Calculator", shape: "hexagon", color: "#DCFF4F", url: "/articles/article-two" },
-    { name: "Emissions in Perspective", shape: "triangle", color: "#26b790", url: "/explore" },
-    { name: "Political Donations Uncovered", shape: "square", color: "#26b790", url: "/explore" },
-    { name: "What is Downstream?", shape: "hexagon", color: "#26b790", url: "/about-us" },
+    { name: "The Carbon Footprint Story", shape: "pentagon", color: "#26b790", url: `${base}/articles/article-one` },
+    { name: "Reverse Carbon Calculator", shape: "hexagon", color: "#DCFF4F", url: `${base}/articles/article-two` },
+    { name: "Emissions in Perspective", shape: "triangle", color: "#26b790", url: `${base}/explore` },
+    { name: "Political Donations Uncovered", shape: "square", color: "#26b790", url: `${base}/explore` },
+    { name: "What is Downstream?", shape: "hexagon", color: "#26b790", url: `${base}/about-us` },
     ];
 
     let allLinks = [

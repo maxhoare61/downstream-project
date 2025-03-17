@@ -40,6 +40,28 @@
 			/>
 		</div>
 	</section>
+	<section class="Project-Container">
+		<div class="project-grid">
+			<div class="text-container left">
+				<h3>Political Donations Revealed</h3>
+				<p class="tile-type">Project</p>
+				<p>
+					A project to transform public data on politicians declared interests into a cohesive and
+					accessible narrative, revealing the often-financial ties between
+					elected officials and powerful interests.
+				</p>
+			</div>
+			<ProjectCard
+				imgUrl="{base}/political-donations.jpg"
+				type="column"
+				cat="Article"
+				title="Political Donations Revealed"
+				description="This article aims to transform politicians declared interests into a cohesive and
+                accessible narrative."
+				link="{base}/articles/article-three"
+			/>
+		</div>
+	</section>
 </div>
 
 <style>

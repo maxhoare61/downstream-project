@@ -1,6 +1,12 @@
 import "clsx";
 import { w as writable } from "./exports.js";
-import { n as noop } from "./utils.js";
+import { $ as noop } from "./index.js";
+function get(key, parse = JSON.parse) {
+  try {
+    return parse(sessionStorage[key]);
+  } catch {
+  }
+}
 const SNAPSHOT_KEY = "sveltekit:snapshot";
 const SCROLL_KEY = "sveltekit:scroll";
 function notifiable_store(value) {
@@ -52,12 +58,6 @@ if (is_legacy) {
   updated = new class Updated {
     current = false;
   }();
-}
-function get(key, parse = JSON.parse) {
-  try {
-    return parse(sessionStorage[key]);
-  } catch {
-  }
 }
 get(SCROLL_KEY) ?? {};
 get(SNAPSHOT_KEY) ?? {};
