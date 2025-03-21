@@ -5,7 +5,7 @@ import "clsx";
 import { a as attr } from "../../../../chunks/attributes.js";
 function AnimatedHeader1($$payload, $$props) {
   push();
-  $$payload.out += `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 896 504"><defs><style>
+  $$payload.out += `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="-20 0 920 517.5"><defs><style>
             @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
             text {
                 font-family: "Space Grotesk", sans-serif;
@@ -15,31 +15,35 @@ function AnimatedHeader1($$payload, $$props) {
 }
 function _page($$payload, $$props) {
   push();
-  $$payload.out += `<section id="hero"><div class="animated-header svelte-az85dg"><div class="title t2 svelte-az85dg">The <br> Carbon <br> Footprint <br> Story</div> <div class="ah1 svelte-az85dg">`;
+  $$payload.out += `<section id="hero"><div class="animated-header svelte-1ppkw6j"><div${attr("class", `title ${stringify("")} svelte-1ppkw6j`)}>The <br> Carbon <br> Footprint <br> Story</div> <div class="ah1 svelte-1ppkw6j">`;
   AnimatedHeader1($$payload);
-  $$payload.out += `<!----></div></div> <div class="content-container svelte-az85dg"><div class="paragraph-1 svelte-az85dg"><p class="lead svelte-az85dg">The popularization of the term “carbon footprint” can be largely
-				traced to campaigns from oil supermajors in the early 2000s.
-				Yet, the term has sustained itself as a centrepiece of modern
-				discussions on climate change. Why do we still frame climate
-				change in terms of individual emissions, when a simple google
-				search can reveal the staggering size of the corporate
-				contribution? In this article, we will explore the fossil-fuel
-				industry’s tactful shift away from climate denial and toward
-				‘deflection’ as a technique to fight climate action. Using
-				evidence, will show how this fuelled an aggressive campaign to
-				obscure the true causes global warming from the public eye.</p></div></div></section> <div class="content-container svelte-az85dg"><section id="s-origins" class="svelte-az85dg"><div class="makeover-paragraph svelte-az85dg"><h2 class="svelte-az85dg">Origins</h2> <div class="paragraph-2 svelte-az85dg"><p class="svelte-az85dg">In 2004, BP’s marketing underwent a remarkable
-					transformation. The oil titan re-styled its logo to a
-					green-and-yellow sunburst and adopted the tagline “Beyond
-					Petroleum”. As part of this campaign the company also
-					introduced a “carbon footprint calculator” on its website.
-					The concept was simple: people could go online, enter
-					details about their daily activities (driving, electricity
-					use, flights, etc.), and calculate their personal
-					contribution to global carbon emissions. BP launched print
-					advertisements in major newspapers which prompted readers to
-					“Find out the size of your household’s carbon footprint,
-					learn how you can reduce it, and see how we’re reducing ours
-					at bp.com”.</p> <figure class="svelte-az85dg"><img${attr("src", `${stringify(base)}/bp-cf-ads.jpg`)} alt="BP's Advertising Campaign" class="campaign-image svelte-az85dg"> <figcaption>The original BP carbon campaign from 2005 (source: XXX)</figcaption></figure> <p class="svelte-az85dg">Framing climate change in these personal terms was a
+  $$payload.out += `<!----></div></div> <div class="content-container svelte-1ppkw6j"><div class="twitter-tweet"><div${attr("class", `tweet-card bp ${stringify("")} svelte-1ppkw6j`)}><div class="creator-container svelte-1ppkw6j"><div class="tweet creator svelte-1ppkw6j">bp <br> <span class="handle svelte-1ppkw6j">@bp_plc</span></div></div> <div class="tweet content svelte-1ppkw6j"><div>The first step to reducing your emissions is to know
+						where you stand. Find out your <span class="hashtag svelte-1ppkw6j">#carbonfootprint</span> with our new calculator &amp; share your pledge today!</div></div> <div class="tweet info svelte-1ppkw6j">Comment / 419 Likes / <a class="tweet source svelte-1ppkw6j" href="https://x.com/andrwfhenderson/status/1187386101960454146" target="_blank">Source</a></div></div> <div${attr("class", `tweet-card ah ${stringify("")} svelte-1ppkw6j`)}><div class="creator-container svelte-1ppkw6j"><div class="tweet creator svelte-1ppkw6j">Andrew Henderson <br> <span class="handle svelte-1ppkw6j">@andrwfhenderson</span></div></div> <div class="tweet content svelte-1ppkw6j"><div><span class="hashtag svelte-1ppkw6j">@bp_plc</span> I pledge not to spill
+						4.9 million barrels of oil into the gulf of mexico</div></div> <div class="tweet info svelte-1ppkw6j">Comment / 57k Likes / <a class="tweet source svelte-1ppkw6j" href="https://x.com/andrwfhenderson/status/1187386101960454146" target="_blank">Source</a></div></div> <div${attr("class", `tweet-card jc ${stringify("")} svelte-1ppkw6j`)}><div class="creator-container svelte-1ppkw6j"><div class="tweet creator svelte-1ppkw6j">jodie c <span class="handle svelte-1ppkw6j">@jod_coll</span></div></div> <div class="tweet content svelte-1ppkw6j"><div>Listen, we are all to blame for the climate crisis. Some
+						of us drive to work, some of us forget to recycle, and
+						some of us own fossil fuel companies whose relentless
+						exploitation of the world’s oil, gas and coal reserves
+						can be directly linked to more than one-third of all
+						greenh-</div></div> <div class="tweet info svelte-1ppkw6j">Comment / 46k Likes / <a class="tweet source svelte-1ppkw6j" href="https://x.com/jodcoll/status/1424692518273392642" target="_blank">Source</a></div></div> <div${attr("class", `tweet-card shell ${stringify("")} svelte-1ppkw6j`)}><div class="creator-container svelte-1ppkw6j"><div class="tweet creator svelte-1ppkw6j">Shell <span class="handle svelte-1ppkw6j">@shell</span></div></div> <div class="tweet content svelte-1ppkw6j"><div>📊 What are you willing to change to help reduce
+						emissions? #EnergyDebate <br> 1) 💨 offset emissions <br> 2) ✈️ stop flying <br> 3) 🚗 buy electric vehicle <br> 4) ⚡️ renewable electricity</div></div> <div class="tweet info svelte-1ppkw6j">Comment / 869 Likes / <a class="tweet source svelte-1ppkw6j" href="https://x.com/Shell/status/1323184318735360001" target="_blank">Source</a></div></div> <div${attr("class", `tweet-card xlr ${stringify("")} svelte-1ppkw6j`)}><div class="creator-container svelte-1ppkw6j"><div class="tweet creator svelte-1ppkw6j">xlr8harder <span class="handle svelte-1ppkw6j">@xlr8harder</span></div></div> <div class="tweet content svelte-1ppkw6j"><div>deepseek doesn't want you to know that they only
+						achieved their cheap training run by increasing the
+						models water wastage by over 10x every query so deepseek
+						wastes as much water as 37 5-minute showers</div></div> <div class="tweet info svelte-1ppkw6j">Comment / 2k Likes / <a class="tweet source svelte-1ppkw6j" href="https://x.com/xlr8harder/status/1884544426170626112" target="_blank">Source</a></div></div></div> <div class="paragraph-1 svelte-1ppkw6j"><p class="lead svelte-1ppkw6j">Over the last two decades, the idea of individuals “carbon
+				footprint” has become a centrepiece of debates about climate
+				change. Why do we often frame this enormously complex problem,
+				whose causes are entrenched in all areas of society, in terms of
+				the simple decisions we make each day?</p></div></div></section> <div class="content-container svelte-1ppkw6j"><section id="s-origins" class="svelte-1ppkw6j"><div class="makeover-paragraph svelte-1ppkw6j"><h2 class="svelte-1ppkw6j">Tracing Roots</h2> <div class="paragraph-2 svelte-1ppkw6j"><p class="svelte-1ppkw6j">In 2004, BP’s marketing underwent a remarkable
+					transformation. The oil behemoth ditched it’s dated red
+					shield logo in favour of a new green-and-yellow flower and
+					adopted tagline “Beyond Petroleum”. As part of this campaign
+					the company also introduced a “carbon footprint calculator”
+					on its website. The concept was simple: people could go
+					online, enter details about their daily activities (driving,
+					electricity use, flights, etc.), and calculate their
+					personal annual carbon emissions. BP launched print
+					advertisements in major newspapers which prompted readers to <span class="italic svelte-1ppkw6j">“Find out the size of your household’s carbon
+						footprint, learn how you can reduce it, and see how
+						we’re reducing ours at bp.com”.</span></p> <figure class="svelte-1ppkw6j"><img${attr("src", `${stringify(base)}/bp-cf-ads.jpg`)} alt="BP's Advertising Campaign" class="campaign-image svelte-1ppkw6j"> <figcaption>The original BP carbon campaign from 2005 (source: XXX)</figcaption></figure> <p class="svelte-1ppkw6j">Framing climate change in these personal terms was a
 					deliberate strategy. As a company then marketing itself as
 					“Beyond Petroleum,” BP sought to position itself as part of
 					the climate solution while subtly shifting the locus of
@@ -51,9 +55,9 @@ function _page($$payload, $$props) {
 					effort. Climate scientist Michael E. Mann observes that this
 					move was part of a broader shift in tactics by fossil fuel
 					interests. The shift from outright climate science denial to
-					“deflection”, the idea that the public should focus on their
-					own actions rather than corporate behaviour, went on to fuel
-					a campaign of deception that would span decades.</p> <figure class="svelte-az85dg"><img${attr("src", `${stringify(base)}/cfc-screenshot.jpg`)} alt="Early Carbon Footprint Calculator" class="campaign-image calc svelte-az85dg"> <figcaption>An early carbon footprint calculator (source: soft112)</figcaption></figure></div></div></section> <section id="s-makeover" class="svelte-az85dg"><div class="makeover-paragraph svelte-az85dg"><h2 class="svelte-az85dg">BPs Millenial Makeover</h2> <div class="paragraph-2 svelte-az85dg"><p class="svelte-az85dg">By the early 2000s, scientific consensus on climate change
+					a technique called “deflection”, the idea that the public
+					should focus on their own actions rather than corporate
+					behaviour.</p> <figure class="svelte-1ppkw6j"><img${attr("src", `${stringify(base)}/cfc-screenshot.jpg`)} alt="Early Carbon Footprint Calculator" class="campaign-image calc svelte-1ppkw6j"> <figcaption>An early carbon footprint calculator (source: soft112)</figcaption></figure></div></div></section> <section id="s-makeover" class="svelte-1ppkw6j"><div class="makeover-paragraph svelte-1ppkw6j"><h2 class="svelte-1ppkw6j">BPs Millenial Makeover</h2> <div class="paragraph-2 svelte-1ppkw6j"><p class="svelte-1ppkw6j">By the early 2000s, scientific consensus on climate change
 					was solidifying, and public awareness of the issue was
 					growing. BP, one of the world’s largest oil companies,
 					increasingly faced what seemed to be an existential threat.
@@ -62,89 +66,105 @@ function _page($$payload, $$props) {
 					campaign was a centrepiece of this rebranding. By
 					encouraging individuals to measure their own emissions, BP’s
 					messaging implied that climate change is the result of
-					personal choices: “That’s right – you and me are to blame”.
-					As journalist Amy Westervelt points out, the genius of this
-					tactic contributed to a growing culture of whataboutism:
-					“Well, if you really care about climate change, why are you
-					still driving a car, or working or using technology or
-					travelling…”.</p> <p class="svelte-az85dg">This framing not only places the burden of responsibility on
-					consumers, but alleviates BP, positioning the company as a
-					helpful partner by providing tools and encouragement,
-					despite BP’s core business still being overwhelmingly in oil
-					and gas. In reality, BP never truly moved “beyond petroleum”
-					– in 2005, for example, BP produced about 4.0 million
-					barrels of oil per day, and fifteen years later it was still
-					about 3.8 million barrels; as of 2018, BP devoted only 2.3%
-					of its budget to renewable energy, with the rest sustaining
-					its fossil fuel operations. Such figures lay bare the
-					greenwashing at play: the personal carbon footprint
-					initiative was less about BP reducing its own emissions and
-					more about influencing public narratives around who is
-					responsible for climate change.</p></div></div></section> <section id="s-makeover" class="svelte-az85dg"><div class="makeover-paragraph svelte-az85dg"><h2 class="svelte-az85dg">What Does the Data Say? Personal vs Corporate Emissions</h2> <div class="paragraph-2 svelte-az85dg"><p class="svelte-az85dg">If everyone is responsible for their carbon footprint, how
+					personal choices: “That’s right, I'm doing my part - <span class="italic svelte-1ppkw6j">what about you?”</span>.</p> <p class="svelte-1ppkw6j">This framing not only places the burden of responsibility on
+					consumers but alleviates corporate polluters. Instead of
+					being seen as one of the worst perpetrators of environmental
+					havoc, they were trying to make a difference… by asking
+					everyday people to do the work for them. This positioned the
+					company as ‘doing their part’ by providing tools and
+					encouragement, despite their core business still being
+					overwhelmingly in high emissions activities.</p> <p class="svelte-1ppkw6j">In reality, BP never truly moved “beyond petroleum” – in
+					2005, for example, BP produced about 4.0 million barrels of
+					oil per day. Fifteen years after the ‘Beyond Petroleum’
+					campaign, it was still about 3.8 million barrels. As of
+					2018, BP devoted only 2.3% of its budget to renewable
+					energy, with the rest sustaining its fossil fuel operations.
+					Such figures lay bare the greenwashing at play: the personal
+					carbon footprint initiative was less about BP reducing its
+					own emissions and more about influencing public narratives
+					around who is responsible for climate change.</p></div></div></section> <section id="s-makeover" class="svelte-1ppkw6j"><div class="makeover-paragraph svelte-1ppkw6j"><h2 class="svelte-1ppkw6j">What Does the Data Say? Personal vs Corporate Emissions</h2> <div class="paragraph-2 svelte-1ppkw6j"><p class="svelte-1ppkw6j">If everyone is responsible for their carbon footprint, how
 					big are those footprints really? How do they compare to the
 					carbon pollution emitted by large fossil fuel companies? The
 					data overwhelmingly show that corporate and industrial
 					emissions dwarf even large numbers of households. According
-					to a 2017 Carbon Majors report, just 100 fossil fuel
-					producers (investor-owned and state-owned companies) have
-					been responsible for roughly 71% of global greenhouse gas
-					emissions since 1988. In fact, a relatively small group of
-					25 corporate and state entities account for over 50% of
-					industrial carbon emissions worldwide in that period. These
-					include companies like BP, Shell, ExxonMobil, Chevron, and
-					coal producers, alongside state oil enterprises. BP itself
-					is a notable contributor: analyses show that BP’s operations
-					and products were the source of about 1.5% of total global
-					industrial emissions from 1998–2015 – a remarkable fraction
-					for a single company, given that there are thousands of
-					companies in the world’s energy sector. For perspective,
-					this percentage is greater the annual carbon output of
-					Oceania as a percentage of global annual emissions which was
-					1.1% of emissions in 2023.</p> <p class="svelte-az85dg">Meanwhile, the average individual’s emissions, even in
-					high-income countries, are tiny by comparison to these
-					corporate footprints. In America – which has one of the
-					highest per-capita carbon footprints – the average person’s
-					activities produce about 15 tons of CO₂ per year.
-					Multiplying that by, 330 million Americans yields about 4.95
-					billion tons – which is significant. However, compare that
-					to 7.4 billion tonnes of Co-2 produced by just 5 entities
-					(Saudi Aramco, Coal India, CHN Energy, National Iranian Oil
-					Co., and Jinneng Group) in 2023. In other words, a small
-					fraction of people (often those investing in or leading
-					industries) have carbon footprints millions of times larger
-					than the average person, town or city population. This
-					underscores that climate change is not simply the result of
-					billions of people each negligently leaving lights on;
-					rather, it’s largely driven by industrial activity and
+					to a report by Carbon Majors, just 25 corporate and state
+					entities account for over 50% of industrial carbon emissions
+					worldwide in the period since 1988. These companies include
+					the likes of BP, Shell, ExxonMobil, Chevron, alongside state
+					oil enterprises. BP itself is a notable contributor:
+					analyses show that BP’s operations and products were the
+					source of about 1.5% of total global industrial emissions
+					from 1998–2015 – a remarkable fraction for a single company,
+					given that there are thousands of companies in the world’s
+					energy sector. For perspective, this percentage is greater
+					than the percentage of global annual emissions produced in
+					Oceania.</p> <p class="svelte-1ppkw6j">The emissions produced by the average individual pale in
+					comparison to those created by large corporations and state
+					entities. The average individual’s emissions, even in
+					high-income countries, are a fraction of a fraction of
+					corporate carbon footprints. In Australia – which has one of
+					the highest per-capita carbon footprints – the average
+					person’s activities produce about 15.4 tons of CO₂ per year.
+					Multiplying that by almost 27 million Australians yields
+					about 415.8 million tons – which is significant. However,
+					that is a meagre 5.6% of the 7.4 billion tonnes of Co2
+					produced by just 5 entities (Saudi Aramco, Coal India, CHN
+					Energy, National Iranian Oil Co., and Jinneng Group) in
+					2023. In other words, if everyone in Australia used no
+					electricity, gas or petrol, it would take 17 years to
+					recuperate the emissions produced by those 5 companies in a
+					single year. This underscores that climate change is not
+					simply the result of billions of people negligently leaving
+					lights on; rather, it’s driven by industrial activity and
 					energy production choices. As experts have pointed out, the
 					real leavers with the power to make change -systemic factors
 					like how electricity is generated, how goods are produced,
 					and what policies govern energy use determine the bulk of
 					emissions – are influenced by corporate and governmental
-					control far more than any average person.</p></div></div></section> <section id="s-makeover" class="svelte-az85dg"><div class="makeover-paragraph svelte-az85dg"><h2 class="svelte-az85dg">Bonus: Lessons from Covid?</h2> <div class="paragraph-2 svelte-az85dg"><p class="svelte-az85dg">It is telling that even when individual behaviour changed
-					dramatically during the COVID-19 pandemic (with people
-					driving and flying far less), the drop in global CO₂
-					emissions was on the order of 6–8% for 2020, and atmospheric
-					greenhouse gas concentrations continued to climb. This
+					control far more than any average person.</p></div></div></section> <section id="s-makeover" class="svelte-1ppkw6j"><div class="makeover-paragraph svelte-1ppkw6j"><h2 class="svelte-1ppkw6j">Bonus: Lessons from Covid-19</h2> <div class="paragraph-2 svelte-1ppkw6j"><p class="svelte-1ppkw6j">It is telling that even when individual behaviour changed
+					dramatically during the COVID-19 pandemic the drop in global
+					CO₂ emissions was on the order of 6–8% for 2020. This
 					temporary reduction – achieved by an unprecedented
 					curtailment of personal travel and consumption – was still
 					modest relative to the cuts needed to stabilize the climate.
-					It illustrates that even if millions of individuals reduce
-					their personal footprints, it barely dents the problem
-					unless the major industrial sources of emissions (power
-					plants, factories, deforestation, oil wells, etc.) are
-					addressed. Individual actions like recycling, bicycling to
-					work, or eating less meat can help to a degree and are worth
-					encouraging, but data-driven analyses consistently find that
-					the largest climate impacts come from systemic changes:
+					The chart below shows the quarterly national emissions data
+					for Australia, with the shaded area approximately covering
+					the time affected by the pandemic. While there is a
+					definitive slump in emissions evident during the pandemic,
+					it is hardly on the order implied by the mantra that our
+					“individual efforts make all the difference”. Moreover, the
+					decrease in emissions during the pandemic represented part
+					of a broader downward trend due to the decarbonisation of
+					the grid, evident in the gradual shrinking of the blue
+					‘electricity’ layer over time. All in all, the emissions
+					impact of this society wide change in behaviour was nominal.</p></div></div> <figure class="annual-emissions-chart svelte-1ppkw6j"><div class="annual-emissions-chart bg svelte-1ppkw6j"><img${attr("src", `${stringify(base)}/annual-emissions-chart.jpg`)} alt="Annual Emissions in Australia" class="emissions-chart-img svelte-1ppkw6j"></div> <figcaption>Australia's annual emissions has decreased over time without
+				real change in public behaviour (Source: National Greenhouse Gas
+				Inventory: Quarterly updates)</figcaption></figure> <div class="makeover-paragraph svelte-1ppkw6j"><div class="paragraph-2 svelte-1ppkw6j"><p class="svelte-1ppkw6j">This illustrates that the underlying causes of emissions
+					cannot be changed by the personal decisions we make on a
+					day-to-day basis. Even when millions of individuals can no
+					longer partake in many of emitting activities that companies
+					like BP encourage us to abstain from, there will always be a
+					lower threshold beyond which you simply cannot reduce your
+					emissions. This is because many emissions are the product of
+					systems outside of our control. For instance, say you stop
+					driving to work or taking flights. Now you will be using a
+					larger amount of power at home to support basic necessities
+					such as cooking and lighting, and the emissions intensity of
+					this power is determined by the generation mix in the grid.
+					To make this clear, between 2000 and 2023, the amount of CO₂
+					produced per unit of energy generated in Australia has
+					decreased by 47%. This enormous improvement, which affects
+					the carbon footprint of all Australians, had nothing to do
+					with individual decision-making. Rather, it was brought
+					about through placing pressure on those in power, targeted
+					policy, changing cultural attitudes and coordinated efforts
+					to add renewable generation to the grid. While individual
+					actions like recycling, or bicycling to work are worth
+					encouraging, data-driven analyses consistently find that the
+					largest climate impacts come from systemic changes:
 					transitioning power grids to renewable energy, halting
 					fossil fuel extraction, improving industrial efficiency, and
-					enforcing emissions limits on big polluters. In short, the
-					carbon math reveals a great irony in BP’s personal footprint
-					campaign – the company was spotlighting the minuscule piece
-					of the emissions pie that individuals can directly control,
-					while obscuring its own and its industry’s enormous slice of
-					responsibility.</p></div></div></section> <section id="s-makeover" class="svelte-az85dg"><div class="makeover-paragraph svelte-az85dg"><h2 class="svelte-az85dg">Influence on Public Perception and Discourse</h2> <div class="paragraph-2 svelte-az85dg"><p class="svelte-az85dg">BP’s carbon footprint campaign and similar industry efforts
+					enforcing emissions limits on big polluters.</p></div></div></section> <section id="s-makeover" class="svelte-1ppkw6j"><div class="makeover-paragraph svelte-1ppkw6j"><h2 class="svelte-1ppkw6j">Influence on Public Perception and Discourse</h2> <div class="paragraph-2 svelte-1ppkw6j"><p class="svelte-1ppkw6j">BP’s carbon footprint campaign and similar industry efforts
 					have had a discernible impact on public perceptions of
 					climate responsibility. The very fact that “carbon
 					footprint” entered everyday vocabulary in the 2000s is
@@ -171,36 +191,40 @@ function _page($$payload, $$props) {
 					comparatively muted. Indeed, Oreskes attributes that common
 					sentiment in part to the marketing campaigns by BP, Exxon
 					and others that relentlessly promoted personal carbon
-					footprints.</p> <figure class="svelte-az85dg"><img${attr("src", `${stringify(base)}/carbon-fp-trend.png`)} alt="Google searches including the term carbon footprint shot up in the early 2000s" class="campaign-image trend svelte-az85dg"> <figcaption>Google searches including the term carbon footprint shot
-						up in the early 2000s (source: Google Trends)</figcaption></figure> <p class="svelte-az85dg">However, there are signs that society’s view of an
+					footprints.</p> <figure class="svelte-1ppkw6j"><img${attr("src", `${stringify(base)}/carbon-fp-trend.png`)} alt="Google searches including the term carbon footprint shot up in the early 2000s" class="campaign-image trend svelte-1ppkw6j"> <figcaption>The number of Google searches including the term carbon
+						footprint shot up in the early 2000s (source: Google
+						Trends)</figcaption></figure> <p class="svelte-1ppkw6j">However, there are signs that society’s view of an
 					individual-based approach to fighting climate change is
 					increasingly dim. Social scientists and climate
 					communicators have increasingly critiqued the over-emphasis
 					on individual action as a form of “discursive manipulation”
-					that can delay collective solutions. Terms like “carbon
-					footprint sham” have been used by journalists to describe
-					how the public was sold a narrative of personal guilt while
-					big emitters continued business-as-usual. Environmental
-					organizations now often stress balancing personal steps with
-					systemic change – essentially re-educating the public that
-					one cannot simply shop or recycle their way out of the
-					climate crisis if policy and corporate practices remain
-					unchanged. Importantly, public opinion is evolving: surveys
-					indicate that people are increasingly aware of corporate
-					culpability for climate change. A national survey in the
-					United States (Yale, 2019) found that 57% of Americans
-					believe fossil fuel companies have either “a great deal” or
-					“a moderate amount” of responsibility for the damages caused
-					by global warming. A similar majority supported requiring
-					those companies to pay for a portion of climate damage
-					costs. This suggests a shift in perception – despite years
-					of “carbon footprint” messaging, more than half the public
-					now explicitly holds the industry accountable in substantial
-					measure. In essence, while BP’s campaign succeeded in
-					injecting personal carbon footprints into the climate
-					zeitgeist, it has not completely forestalled a growing
-					public recognition that the climate crisis is, at its core,
-					a systemic problem requiring systemic solutions.</p></div></div></section></div> <section id="perspective" class="svelte-az85dg"><div class="sticky-text"><img${attr("src", `${stringify(base)}/smoke-stack-extended.jpg`)} alt="Painting of a man's sillouette in smoke billowing from a smoke stack" class="smokestack-image svelte-az85dg"> <div class="perspective svelte-az85dg">Putting Emissions <br> Back in Perspective</div></div> <div class="content-container svelte-az85dg"><div class="makeover-paragraph svelte-az85dg"><div class="paragraph-2 light svelte-az85dg"><p class="svelte-az85dg">Climate scientists like Michael Mann argue that while
+					that can delay collective solutions. On social media, posts
+					such as the one featured at the start of the article reflect
+					the cultural shift. When a global company’s tweet
+					encouraging climate action gets ratio’d by a no name account
+					by a factor of 136, it is a sign that people no longer see
+					empty climate platitudes from corporations through the same
+					naive rose-tinted lens that they once did.</p> <p class="svelte-1ppkw6j">Environmental organizations now often stress balancing
+					personal steps with systemic change – essentially
+					re-educating the public that one cannot simply shop or
+					recycle their way out of the climate crisis if policy and
+					corporate practices remain unchanged. Importantly, public
+					opinion is evolving: surveys indicate that people are
+					increasingly aware of corporate culpability for climate
+					change. A national survey in the United States (Yale, 2019)
+					found that 57% of Americans believe fossil fuel companies
+					have either “a great deal” or “a moderate amount” of
+					responsibility for the damages caused by global warming. A
+					similar majority supported requiring those companies to pay
+					for a portion of climate damage costs. This suggests a shift
+					in perception – despite years of “carbon footprint”
+					messaging, more than half the public now explicitly holds
+					the industry accountable in substantial measure. In essence,
+					while BP’s campaign succeeded in injecting personal carbon
+					footprints into the climate zeitgeist, it has not completely
+					forestalled a growing public recognition that the climate
+					crisis is, at its core, a systemic problem requiring
+					systemic solutions.</p></div></div></section></div> <section id="perspective" class="svelte-1ppkw6j"><div class="sticky-text"><img${attr("src", `${stringify(base)}/smoke-stack-extended.jpg`)} alt="Painting of a man's sillouette in smoke billowing from a smoke stack" class="smokestack-image svelte-1ppkw6j"> <div class="perspective svelte-1ppkw6j">Putting Emissions <br> Back in Perspective</div></div> <div class="content-container svelte-1ppkw6j"><div class="makeover-paragraph svelte-1ppkw6j"><div class="paragraph-2 light svelte-1ppkw6j"><p class="svelte-1ppkw6j">Climate scientists like Michael Mann argue that while
 					individual actions are helpful, we must not allow the
 					narrative of personal responsibility to become a distraction
 					or moral smoke-screen that delays larger interventions.
@@ -230,7 +254,7 @@ function _page($$payload, $$props) {
 					liabilities for climate damages (a path being pursued
 					through various lawsuits), mandates for clean energy
 					adoption, and transparency tools that publicly track
-					companies’ emissions and climate plans.</p></div> <div class="reverse-paragraph svelte-az85dg"><h2 class="svelte-az85dg">The Reverse Carbon Calculator</h2> <div class="paragraph-2 light svelte-az85dg"><p class="svelte-az85dg">We should aim for a more balanced climate discourse that
+					companies’ emissions and climate plans.</p></div> <div class="reverse-paragraph svelte-1ppkw6j"><h2 class="svelte-1ppkw6j">The Reverse Carbon Calculator</h2> <div class="paragraph-2 light svelte-1ppkw6j"><p class="svelte-1ppkw6j">We should aim for a more balanced climate discourse that
 						encourages individual “carbon footprint” reductions
 						(such as saving energy, diet shifts, and conscious
 						consumption) firmly contextualized in a broader push
@@ -238,16 +262,16 @@ function _page($$payload, $$props) {
 						emissions cuts. Rather than feeling personal guilt as
 						the primary response to climate change, individuals
 						should channel that concern into collective action and
-						demand accountability from the true heavy emitters.</p> <p class="svelte-az85dg">To conclude, while each of us should take steps to live
+						demand accountability from the true heavy emitters.</p> <p class="svelte-1ppkw6j">To conclude, while each of us should take steps to live
 						more sustainably, the evidence is clear that systemic
 						change – driven by sound policy, corporate
 						responsibility, and societal pressure – is indispensable
 						for addressing a challenge as vast as climate change.
 						Recognizing the storytelling strategies that got us here
 						is the first step toward crafting a new, more effective
-						narrative for our planet’s future.</p> <figure class="svelte-az85dg"><div id="lottie-animation" class="svelte-az85dg"></div> <figcaption class="caption-1 svelte-az85dg">Click on the chart to see your <br> emissions in
-							perspective. Click again to <br> show your individual emissions
-							breakdown.</figcaption></figure> <p class="svelte-az85dg">To help explore this idea, Downstream project are
+						narrative for our planet’s future.</p> <figure class="svelte-1ppkw6j"><div id="lottie-animation" class="svelte-1ppkw6j"></div> <figcaption class="caption-1 svelte-1ppkw6j">Click on the chart to see your <br> emissions in
+							perspective. Click again to <br> show your individual
+							emissions breakdown.</figcaption></figure> <p class="svelte-1ppkw6j">To help explore this idea, Downstream project are
 						building a 'reverse carbon calculator', a calculator
 						aimed at showing our own emissions on the scale of large
 						emitters, to help crystallise the large role of these

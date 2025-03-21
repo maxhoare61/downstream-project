@@ -47,8 +47,12 @@
 
   let graphOverlay: HTMLButtonElement | null = null;
   let counter = 0;
+  let isHiding: boolean;
 
   function hideInstruct() {
+    if (isHiding || counter < 0) return; // Prevent the function from running if it's already in progress
+    isHiding = true; // Set the flag to true
+    console.log('set ishiding true')
     setTimeout(() => {
     const instructElement = graphOverlay?.querySelector(".instruct");
     const instruct2Element = graphOverlay?.querySelector(".instruct.i2");
@@ -60,10 +64,14 @@
       } else if (instruct2Element && instruct3Element && counter == 1) {
         instruct2Element.classList.remove("show");
         instruct3Element.classList.add("show");
+        counter += 1;
       } else if (instruct2Element && instruct3Element && counter == 2) {
         instruct3Element.classList.remove("show");
+        counter = -1;
       }
-    }, 1000);
+      isHiding = false;
+      console.log('set ishiding false')
+    }, 5000);
   }
 </script>
 
@@ -159,20 +167,21 @@
   .instruct {
     position: absolute;
     text-align: center;
-    top: 0%;
+    top: 15%;
     width: 100%;
     z-index: 2;
     color: black;
     pointer-events: none;
     transition:
-      opacity 1s ease-out,
-      transform 1s ease-out;
+      opacity 1.5s ease-out,
+      transform 1.5s ease-out;
     opacity: 0;
   }
 
   .instruct.show {
     opacity: 0.7;
-    transform: translateY(60%);
+    transform: translateY(50%);
+    background-color: white;
   }
 
   .hero-right {

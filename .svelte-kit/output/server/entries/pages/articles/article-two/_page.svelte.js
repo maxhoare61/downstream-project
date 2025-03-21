@@ -2812,19 +2812,19 @@ function AnimatedHeader2($$payload, $$props) {
   pop();
 }
 function _page($$payload) {
-  $$payload.out += `<section id="hero" class="svelte-ci50gf"><div class="animated-header svelte-ci50gf"><div class="title t2 svelte-ci50gf">Reverse <br> Carbon <br> Footprint <br> Calculator</div> <div class="ah1 svelte-ci50gf">`;
+  $$payload.out += `<section id="hero" class="svelte-vgcida"><div class="animated-header svelte-vgcida"><div class="title t2 svelte-vgcida">Reverse <br> Carbon <br> Footprint <br> Calculator</div> <div class="ah1 svelte-vgcida">`;
   AnimatedHeader2($$payload);
-  $$payload.out += `<!----></div></div></section> <section id="calculator" class="svelte-ci50gf"><div class="content-container"><div class="paragraph-1 svelte-ci50gf"><p class="lead svelte-ci50gf">The second article in the Carbon Emissions in Perspective series
+  $$payload.out += `<!----></div></div></section> <section id="calculator" class="svelte-vgcida"><div class="content-container"><div class="paragraph-1 svelte-vgcida"><p class="lead svelte-vgcida">The second article in the Carbon Emissions in Perspective series
                 follows on from ‘The Carbon Footprint Story’, by introducing the
                 Reverse Carbon Calculator. This instalment seeks to recalibrate
                 our perspective of personal emissions by providing an
                 interactive way to compare personal emissions to those of major
-                polluters.</p> <p class="lead svelte-ci50gf">The Reverse Carbon Calculator is a tool to help contextualize individual carbon
+                polluters.</p> <p class="lead svelte-vgcida">The Reverse Carbon Calculator is a tool to help contextualize individual carbon
                 footprints against the staggering scale of industrial emissions,
                 illustrating just how outsized corporate contributions are in
                 driving climate change. The goal is not to diminish personal
                 responsibility but to counter the prevailing narrative that
-                small consumer choices alone will solve the crisis.</p> <p class="lead svelte-ci50gf">By visualizing emissions on a structural scale, readers can better
+                small consumer choices alone will solve the crisis.</p> <p class="lead svelte-vgcida">By visualizing emissions on a structural scale, readers can better
                 grasp where their efforts—whether in activism, policy advocacy,
                 or industry reform—might have the greatest impact. The article
                 is a work in progress. As we continue developing this project,

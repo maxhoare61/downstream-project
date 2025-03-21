@@ -45,9 +45,9 @@ function Hero($$payload, $$props) {
   if (typeof window !== "undefined") {
     startUpdatingWords();
   }
-  $$payload.out += `<section class="hero-landing svelte-1aubci0"><div class="hero-left svelte-1aubci0"><button class="graph-overlay svelte-1aubci0"><div class="instruct show svelte-1aubci0">Use the mouse to interact with the navigation graph.</div> <div class="instruct i2 svelte-1aubci0">Click on a node to reveal sub-nodes.</div> <div class="instruct i3 svelte-1aubci0">Click on a subnode to navigate to that page.</div> `;
+  $$payload.out += `<section class="hero-landing svelte-meuhoz"><div class="hero-left svelte-meuhoz"><button class="graph-overlay svelte-meuhoz"><div class="instruct show svelte-meuhoz">Use the mouse to interact with the navigation graph.</div> <div class="instruct i2 svelte-meuhoz">Click on a node to reveal sub-nodes.</div> <div class="instruct i3 svelte-meuhoz">Click on a subnode to navigate to that page.</div> `;
   InteractiveGraph($$payload);
-  $$payload.out += `<!----></button> <div class="diagram-backdrop svelte-1aubci0"></div></div> <div class="hero-right svelte-1aubci0"><div class="hero-right-container svelte-1aubci0"><div class="hero svelte-1aubci0">Less spreadsheets,<br> more <span class="glow svelte-1aubci0">${escape_html(words[currentWordIndex])}</span></div> <p class="lead">${escape_html(subtitle)}</p> <a${attr("href", `${stringify(base)}/about-us`)} class="btn-1 inverse svelte-1aubci0">About us</a></div></div></section> <section class="insight-banner svelte-1aubci0"><div class="lead"><strong>Downstream</strong> ensures the important insights flow to you</div></section>`;
+  $$payload.out += `<!----></button> <div class="diagram-backdrop svelte-meuhoz"></div></div> <div class="hero-right svelte-meuhoz"><div class="hero-right-container svelte-meuhoz"><div class="hero svelte-meuhoz">Less spreadsheets,<br> more <span class="glow svelte-meuhoz">${escape_html(words[currentWordIndex])}</span></div> <p class="lead">${escape_html(subtitle)}</p> <a${attr("href", `${stringify(base)}/about-us`)} class="btn-1 inverse svelte-meuhoz">About us</a></div></div></section> <section class="insight-banner svelte-meuhoz"><div class="lead"><strong>Downstream</strong> ensures the important insights flow to you</div></section>`;
   bind_props($$props, { subtitle });
 }
 function Preamble($$payload, $$props) {
@@ -58,7 +58,7 @@ function Preamble($$payload, $$props) {
   let text2 = fallback($$props["text2"], "At Downstream, we believe public data should be truly public. We transform dense datasets into clear, interactive visuals and scrollable narratives. We handle the data cleaning, analysis, and visualisations - you explore the insights.");
   let heading3 = fallback($$props["heading3"], "Our Work");
   let text3 = fallback($$props["text3"], "We're starting small but focusing on what matters—making carbon emissions and political donation data accessible to everyone through interactive storytelling. These are the stories we care about, and we believe you should be able to understand them too.");
-  $$payload.out += `<section class="section svelte-17li86q"><div class="section-left svelte-17li86q"><div class="section-left-child svelte-17li86q"><h2>${escape_html(heading1)}</h2> <div class="p">${escape_html(text1)}</div></div> <div class="section-left-child svelte-17li86q"><h2>${escape_html(heading2)}</h2> <div class="p">${escape_html(text2)}</div></div> <div class="section-left-child svelte-17li86q"><h2>${escape_html(heading3)}</h2> <div class="p">${escape_html(text3)}</div></div></div> <div class="section-right svelte-17li86q"><div class="backdrop-right svelte-17li86q"><div class="lottie-container svelte-17li86q"></div></div></div></section>`;
+  $$payload.out += `<section class="section svelte-wxevlp"><div class="section-left svelte-wxevlp"><div class="section-left-child svelte-wxevlp"><h2>${escape_html(heading1)}</h2> <div class="p">${escape_html(text1)}</div></div> <div class="section-left-child svelte-wxevlp"><h2>${escape_html(heading2)}</h2> <div class="p">${escape_html(text2)}</div></div> <div class="section-left-child svelte-wxevlp"><h2>${escape_html(heading3)}</h2> <div class="p">${escape_html(text3)}</div></div></div> <div class="section-right svelte-wxevlp"><div class="backdrop-right svelte-wxevlp"><div class="lottie-container svelte-wxevlp"></div></div></div></section>`;
   bind_props($$props, {
     heading1,
     text1,
@@ -70,11 +70,11 @@ function Preamble($$payload, $$props) {
   pop();
 }
 function _page($$payload) {
-  $$payload.out += `<div class="river-image overlay svelte-1q71i4b"></div> <img${attr("src", `${stringify(base)}/carpentaria-karumba-queensland.jpg`)} alt="Scenic winding wiver" class="river-image svelte-1q71i4b"> <div class="content-container"><div class="hero-preamble svelte-1q71i4b">`;
+  $$payload.out += `<div class="river-image overlay svelte-vogx7h"></div> <img${attr("src", `${stringify(base)}/carpentaria-karumba-queensland.jpg`)} alt="Scenic winding wiver" class="river-image svelte-vogx7h"> <div class="content-container"><div class="hero-preamble svelte-vogx7h">`;
   Hero($$payload, {});
   $$payload.out += `<!----> `;
   Preamble($$payload, {});
-  $$payload.out += `<!----></div> <section class="projects svelte-1q71i4b"><h2 class="current-projects svelte-1q71i4b">Current Projects</h2> <div class="project-grid svelte-1q71i4b">`;
+  $$payload.out += `<!----></div> <section class="projects svelte-vogx7h"><h2 class="current-projects svelte-vogx7h">Current Projects</h2> <div class="project-grid svelte-vogx7h">`;
   ProjectCard($$payload, {
     link: `${stringify(base)}/articles/article-one`,
     imgUrl: `${stringify(base)}/smoke-stack-extended.jpg`,
@@ -95,9 +95,9 @@ function _page($$payload) {
   ProjectCard($$payload, {
     link: `${stringify(base)}/articles/article-two`,
     imgUrl: `${stringify(base)}/calculator-thumbnail.png`,
-    cat: "Project",
+    cat: "Article",
     title: "Reverse Carbon Footprint Calculator",
-    description: "A detailed investigation into ..."
+    description: "This article introduces the Reverse Carbon Calculator, a tool to help contextualize individual carbon emissions."
   });
   $$payload.out += `<!----></div></section></div>`;
 }

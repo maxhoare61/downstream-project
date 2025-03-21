@@ -2,15 +2,15 @@
   import Hero from "$lib/components/Hero.svelte";
   import Preamble from "$lib/components/Preamble.svelte";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
-  import { base } from '$app/paths';
+  import { base } from "$app/paths";
 </script>
 
-<div class="river-image overlay"> </div>
+<div class="river-image overlay"></div>
 <img
-      src="{base}/carpentaria-karumba-queensland.jpg"
-      alt="Scenic winding wiver"
-      class="river-image"
-    />
+  src="{base}/carpentaria-karumba-queensland.jpg"
+  alt="Scenic winding wiver"
+  class="river-image"
+/>
 <div class="content-container">
   <div class="hero-preamble">
     <Hero />
@@ -20,23 +20,34 @@
   <section class="projects">
     <h2 class="current-projects">Current Projects</h2>
     <div class="project-grid">
-      <ProjectCard link="{base}/articles/article-one" imgUrl="{base}/smoke-stack-extended.jpg" cat="Project" title="Carbon Emissions in Perspective" description="An in-depth analysis of carbon emissions across various industries and their impact on the environment." />
       <ProjectCard
-				imgUrl="{base}/political-donations.jpg"
-				type="column"
-				cat="Article"
-				title="Political Donations Revealed"
-				description="This article aims to transform politicians declared interests into a cohesive and
+        link="{base}/articles/article-one"
+        imgUrl="{base}/smoke-stack-extended.jpg"
+        cat="Project"
+        title="Carbon Emissions in Perspective"
+        description="An in-depth analysis of carbon emissions across various industries and their impact on the environment."
+      />
+      <ProjectCard
+        imgUrl="{base}/political-donations.jpg"
+        type="column"
+        cat="Article"
+        title="Political Donations Revealed"
+        description="This article aims to transform politicians declared interests into a cohesive and
                 accessible narrative."
-				link="{base}/articles/article-three"
+        link="{base}/articles/article-three"
+      />
+      <ProjectCard
+				link="{base}/articles/article-two"
+				imgUrl="{base}/calculator-thumbnail.png"
+				cat="Article"
+				title="Reverse Carbon Footprint Calculator"
+				description="This article introduces the Reverse Carbon Calculator, a tool to help contextualize individual carbon emissions."
 			/>
-      <ProjectCard link="{base}/articles/article-two" imgUrl="{base}/calculator-thumbnail.png" cat="Project" title="Reverse Carbon Footprint Calculator" description="A detailed investigation into ..." />
     </div>
   </section>
 </div>
 
 <style>
-
   .current-projects {
     margin-bottom: 2rem;
   }
@@ -49,8 +60,18 @@
     width: 100%;
     z-index: -1;
     opacity: 0.75;
-    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 78%);
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 1)),
+      to(rgba(0, 0, 0, 0))
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0) 78%
+    );
   }
 
   .projects {
@@ -67,12 +88,12 @@
 
   @media (max-width: 768px) {
     .project-grid {
-        grid-template-columns: 1fr; /* Single column */
-        grid-template-rows: auto; /* Allow natural row height */
-        gap: 1.5rem; /* Adjust spacing */
+      grid-template-columns: 1fr; /* Single column */
+      grid-template-rows: auto; /* Allow natural row height */
+      gap: 1.5rem; /* Adjust spacing */
     }
     .hero-preamble {
-    margin-top: 2rem;
+      margin-top: 2rem;
     }
     .projects {
       padding: 2rem;

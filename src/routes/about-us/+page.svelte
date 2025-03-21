@@ -8,14 +8,18 @@
 	<div class="top-section">
 		<div class="section-left">
 			<div class="lead">At Downstream, we believe public data should be truly public.</div>
-			<div class="body-text">
+			<div class="paragraph-2">
 				<p>
 					However, important insights often sit buried in fragmented government databases and
 					publications. Whilst the information is publicly available, extracting meaningful insights requires technical expertise,
 					time, and resources. That’s why at Downstream, we do the heavy lifting. We clean, investigate, and transform raw
 					government data into engaging, interactive stories that invite exploration and understanding. 
-					<br />
-					<br />
+				</p>
+				<figure class="figure">
+					<img src="{base}/about-us.jpg" alt="Impressionist painting of a mining site" class="img1">
+					<figcaption class="caption">Our mission is to create a world where the public feels empowered to make decisions on issues affecting themselves and the environment (source: Imagen 3 AI)</figcaption>
+				</figure>
+				<p>
 					We connect scattered datasets, highlight hidden patterns, and present information in ways that help
 					you understand the full picture. Our mission is to help the public use data to make informed decisions on important issues.
 					<br />
@@ -23,8 +27,6 @@
 			</div>
 		</div>
 		<div class="section-right">
-			<img src="{base}/about-us.jpg" alt="Impressionist painting of a mining site">
-			<p class="caption">Our mission is to create a world where the public feels empowered to make decisions on issues affecting themselves and the environment (source: Imagen 3 AI)</p>
 		</div>
 	</div>
 	<WhatWeDo />
@@ -45,21 +47,17 @@
 		gap: 2rem;
 	}
 
-	.body-text {
-		display: flex;
-		justify-content: left;
-		padding-bottom: 2rem;
-	}
-
 	.caption {
   		font-size: 0.8rem;
   		color: var(--color-border);
+		text-align: center;
+		width: 75%;
 	}
 
 	.top-section {
 		display: grid;
   		grid-template-columns: 1fr; /* Divides the section into two equal columns */
-  		gap: 2rem; /* Adds space between the text and image */
+  		gap: 2rem; 
 	}
 
 	@media (min-width: 768px) {
@@ -71,15 +69,33 @@
 	.section-left {
 		display: flex;
 		flex-direction: column;
+		text-align: justify;
 	}
 
 	.section-right {
 		padding: 0rem 2rem;
 		align-items: center; /* Vertically centers the content */
+		justify-content: center;
+		height: 100%;
+	}
+	
+	.paragraph-2 p {
+		margin-bottom: 2rem;
 	}
 
-	.section-right img {
-		width: 100%; /* Make image responsive */
+	.paragraph-2:last-child p {
+		margin-top: 2rem;
+	}
+
+	.figure {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.img1 {
+		max-width: 35vw; /* Make image responsive */
 		height: auto; /* Maintain aspect ratio */
 		border-radius: var(--box-corner-radius);
 	}

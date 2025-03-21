@@ -119,7 +119,6 @@
     flex-direction: row;
     justify-content: center;
     padding: clamp(10px, 1.25vw, 2rem);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .lottie-container {

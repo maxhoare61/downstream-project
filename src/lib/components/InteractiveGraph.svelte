@@ -60,13 +60,7 @@
         { source: "What is Downstream?", target: "About" },
     ];
 
-    let hoveredNode: {
-        name: string;
-        shape: string;
-        color: string;
-        x?: number;
-        y?: number;
-    } | null = null;
+    let hoveredNode: GraphNode | null = null;
 
     let nodeOpenedState: Record<string, boolean> = {
         Projects: false,
@@ -78,7 +72,6 @@
         if (!canvas) return;
 
         const pixelratio = window.devicePixelRatio;
-        console.log(pixelratio);
 
         const containerWidth = Math.min(692, Math.max(348, window.innerWidth * 0.3125));
         const containerHeight = Math.min(692, Math.max(348, window.innerWidth * 0.3125));
@@ -92,6 +85,15 @@
         if (ctx) {
             ctx.setTransform(pixelratio, 0, 0, pixelratio, 0, 0); // Reset transforms before applying scale
         }
+
+        ctx?.clearRect(0, 0, canvas.width, canvas.height);
+
+        simulation?.force("x", d3.forceX(containerWidth / 2))
+        .force("y", d3.forceY(containerHeight / 2))
+        .restart();
+
+        update();
+
     }
 
     onMount(() => {
@@ -102,12 +104,12 @@
 
         const width = Math.min(602, Math.max(348, window.innerWidth * 0.3125)),
             height = Math.min(602, Math.max(348, window.innerWidth * 0.3125)),
-            r = Math.min(18, Math.max(8, window.innerWidth * 0.01302083333));
+            r = Math.min(18, Math.max(8, window.innerWidth * 0.02302083333));
 
         simulation = d3
             .forceSimulation<GraphNode>(graph.nodes)
-            .force("x", d3.forceX(width / 2))
-            .force("y", d3.forceY(height / 2))
+            .force("x", d3.forceX(width*0.5).strength(0.2))
+            .force("y", d3.forceY(height*0.5).strength(0.2))
             .force("collide", d3.forceCollide(r + 5))
             .force("charge", d3.forceManyBody().strength(r * -90))
             .force(
@@ -117,11 +119,14 @@
                     .id((d) => d.name)
                     .links(graph.links), // Ensure links are set properly
             )
-            .alphaDecay(0.01
-            )
+            .alphaDecay(0.02)
             .alphaMin(0.01) // Allows the simulation to run longer before stopping
-            .velocityDecay(0.4)
+            .alpha(0.3)
             .on("tick", update);
+
+        setTimeout(() => {
+            simulation?.alpha(0.5).restart();
+        }, 500);
 
 
         // Set initial positions
@@ -169,11 +174,12 @@
         ctx.setLineDash([]);
 
         graph.nodes.forEach(drawNode);
+        graph.nodes.forEach(drawLabel);
     }
 
     function drawNode(d: GraphNode) {
         if (!ctx) return;
-        const r = Math.min(18, Math.max(8, window.innerWidth * 0.01302083333));
+        const r = Math.min(18, Math.max(8, window.innerWidth * 0.01802083333));
 
         const x = d.x ?? 0;
         const y = d.y ?? 0;
@@ -223,31 +229,75 @@
             ctx.fill();
             ctx.stroke();
         }
-
-        drawLabel(d);
     }
 
     function drawLabel(d: GraphNode) {
-        const r = Math.min(18, Math.max(8, window.innerWidth * 0.01302083333));
+        const windowwidth = window.innerWidth
+        const r = Math.min(18, Math.max(8, windowwidth * 0.02802083333));
         if (d.name === "Central") return;
         if (!ctx) return;
 
         const x = d.x ?? 0;
         const y = d.y ?? 0;
 
-        ctx.fillStyle = "#000";
-        ctx.font = "18px Bai Jamjuree";
+        let fontsize: number;
+        if(windowwidth < 748){
+            fontsize = 13;
+        }else{
+            fontsize = 15;
+        }
+
+        if(["Projects", "Stories", "About"].includes(d.name)){
+            ctx.fillStyle = "#000"
+        } else if(d === hoveredNode){ctx.fillStyle = "#000"}else{ctx.fillStyle = "#8c8c8c"}
+        //ctx.fillStyle = d === hoveredNode ? "#000" : "#8c8c8c";
+        ctx.font = `${fontsize}px Bai Jamjuree`;
         ctx.textAlign = "center";
-        ctx.fillText(d.name, x, y + r + 20);
+
+        const maxWidth = r * 5; // Maximum width for the text
+        const words = d.name.split(" ");
+        let line = "";
+        const lines = [];
+
+        for (let i = 0; i < words.length; i++) {
+            const testLine = line + words[i] + " ";
+            const metrics = ctx.measureText(testLine);
+            const testWidth = metrics.width;
+            if (testWidth > maxWidth && i > 0) {
+                lines.push(line);
+                line = words[i] + " ";
+            } else {
+                line = testLine;
+            }
+        }
+        lines.push(line);
+
+        for (let i = 0; i < lines.length; i++) {
+            ctx.fillText(lines[i], x, y + r + 20 + (i * fontsize));
+        }
+
     }
 
     function onMouseMove(event: MouseEvent) {
-        if (!draggingNode) return;
-        dragging = true;
-        const rect = canvas!.getBoundingClientRect();
+        if (!canvas || !simulation) return;
+
+        const r = Math.min(18, Math.max(8, window.innerWidth * 0.02802083333));
+
+        const rect = canvas.getBoundingClientRect();
         const dx = Math.abs(event.clientX - rect.left - startX); // Distance moved in X
         const dy = Math.abs(event.clientY - rect.top - startY); // Distance moved in Y
 
+        const x = Math.abs(event.clientX - rect.left); // Distance moved in X
+        const y = Math.abs(event.clientY - rect.top); // Distance moved in Y
+        const node = simulation.find(x, y, r * 2) as GraphNode | null;
+
+        if (node !== hoveredNode) {
+            hoveredNode = node;
+            update(); // Redraw the canvas to reflect the hovered state
+        }
+
+        if (!draggingNode) return;
+        dragging = true;
         if (dx > dragThreshold || dy > dragThreshold) {
             dragging = true; // Only set dragging to true if movement exceeds threshold
         }

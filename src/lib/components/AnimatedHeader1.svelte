@@ -15,7 +15,8 @@
 
     onMount(() => {
         updateSVGSize(); // Set initial size
-        window.addEventListener("resize", updateSVGSize);
+    });
+    /*     window.addEventListener("resize", updateSVGSize);
         if (paths) {
             let pathElements = paths.querySelectorAll("path");
             let startTime = Date.now(); // Track when animation starts
@@ -48,17 +49,18 @@
         const transform = path.getAttribute("transform");
         const match = transform?.match(/rotate\((-?\d+(\.\d+)?)/); // Extracts initial rotation
         return match ? parseFloat(match[1]) : 0;
-    }
+    } */
 </script>
 
 <svg
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg" 
     bind:this={paths}
      width="100%"
      height="100%"
      preserveAspectRatio="xMidYMid meet"
-     viewBox="0 0 896 504"
->
+     viewBox="-20 0 920 517.5"
+    >
+    <!-- originally 0 0 896 504 -->
     <defs>
         <style>
             @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
