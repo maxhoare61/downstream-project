@@ -25,6 +25,7 @@
 
     /* Colour Design elements */
     --color-background: #ede9e5;
+    --color-background-dark: #ded9d4;
     --color-border: #9B9B9B;
     --color-white: #FCFBFB;
     --accent-primary: var(--color-blue);
@@ -97,7 +98,7 @@
 
     /* Highlight Text */
     --highlight-font-family: 'Bai Jamjuree';
-    --highlight-font-style: normal;
+    --highlight-font-style: bold;
     --highlight-font-weight: 500;
     --highlight-font-size: 1rem;
     --highlight-line-height: 20px;
