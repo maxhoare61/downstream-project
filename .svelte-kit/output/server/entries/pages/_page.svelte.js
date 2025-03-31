@@ -58,7 +58,7 @@ function Preamble($$payload, $$props) {
   let text2 = fallback($$props["text2"], "At Downstream, we believe public data should be truly public. We transform dense datasets into clear, interactive visuals and scrollable narratives. We handle the data cleaning, analysis, and visualisations - you explore the insights.");
   let heading3 = fallback($$props["heading3"], "Our Work");
   let text3 = fallback($$props["text3"], "We're starting small but focusing on what matters—making carbon emissions and political donation data accessible to everyone through interactive storytelling. These are the stories we care about, and we believe you should be able to understand them too.");
-  $$payload.out += `<section class="section svelte-wxevlp"><div class="section-left svelte-wxevlp"><div class="section-left-child svelte-wxevlp"><h2>${escape_html(heading1)}</h2> <div class="p">${escape_html(text1)}</div></div> <div class="section-left-child svelte-wxevlp"><h2>${escape_html(heading2)}</h2> <div class="p">${escape_html(text2)}</div></div> <div class="section-left-child svelte-wxevlp"><h2>${escape_html(heading3)}</h2> <div class="p">${escape_html(text3)}</div></div></div> <div class="section-right svelte-wxevlp"><div class="backdrop-right svelte-wxevlp"><div class="lottie-container svelte-wxevlp"></div></div></div></section>`;
+  $$payload.out += `<section class="section svelte-tfzdcv"><div class="section-left svelte-tfzdcv"><div class="section-left-child svelte-tfzdcv"><h2>${escape_html(heading1)}</h2> <div class="p">${escape_html(text1)}</div></div> <div class="section-left-child svelte-tfzdcv"><h2>${escape_html(heading2)}</h2> <div class="p">${escape_html(text2)}</div></div> <div class="section-left-child svelte-tfzdcv"><h2>${escape_html(heading3)}</h2> <div class="p">${escape_html(text3)}</div></div></div> <div class="section-right svelte-tfzdcv"><div class="backdrop-right svelte-tfzdcv"><div class="lottie-container svelte-tfzdcv"></div></div></div></section>`;
   bind_props($$props, {
     heading1,
     text1,
@@ -70,11 +70,11 @@ function Preamble($$payload, $$props) {
   pop();
 }
 function _page($$payload) {
-  $$payload.out += `<div class="river-image overlay svelte-vogx7h"></div> <img${attr("src", `${stringify(base)}/carpentaria-karumba-queensland.jpg`)} alt="Scenic winding wiver" class="river-image svelte-vogx7h"> <div class="content-container"><div class="hero-preamble svelte-vogx7h">`;
+  $$payload.out += `<div class="river-image overlay svelte-1riqd68"></div> <img${attr("src", `${stringify(base)}/carpentaria-karumba-queensland.jpg`)} alt="Scenic winding wiver" class="river-image svelte-1riqd68"> <div class="content-container"><div class="hero-preamble svelte-1riqd68">`;
   Hero($$payload, {});
   $$payload.out += `<!----> `;
   Preamble($$payload, {});
-  $$payload.out += `<!----></div> <section class="projects svelte-vogx7h"><h2 class="current-projects svelte-vogx7h">Current Projects</h2> <div class="project-grid svelte-vogx7h">`;
+  $$payload.out += `<!----></div> <section class="projects svelte-1riqd68"><h2 class="current-projects svelte-1riqd68">Current Projects</h2> <div class="project-grid svelte-1riqd68">`;
   ProjectCard($$payload, {
     link: `${stringify(base)}/articles/article-one`,
     imgUrl: `${stringify(base)}/smoke-stack-extended.jpg`,

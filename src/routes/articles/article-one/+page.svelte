@@ -2,7 +2,6 @@
 	import { base } from "$app/paths";
 	import type { AnimationDirection, TextDocumentData } from "lottie-web";
 	import { onMount } from "svelte";
-	import ProjectCard from "$lib/components/ProjectCard.svelte";
 	import AnimatedHeader1 from "$lib/components/AnimatedHeader1.svelte";
 
 	let isTitleVisible = false;
@@ -16,7 +15,6 @@
 			const elementTop = titleElement.getBoundingClientRect().top;
 			const windowHeight = window.innerHeight;
 
-			console.log(elementTop, windowHeight * 0.75);
 			// Adjust the threshold as needed
 			if (elementTop < windowHeight * 0.75) {
 				isTitleVisible = true;
@@ -25,7 +23,7 @@
 
 		const handleScroll = () => {
 			// List of elements you want to handle
-			const elements = document.querySelectorAll(".tweet-card");
+			const elements = document.querySelectorAll(".fadein-scroll");
 
 			// Keeps track of elements that have been handled
 			const handledElements = new Set();
@@ -37,10 +35,8 @@
 				const windowHeight = window.innerHeight;
 
 				// Adjust the threshold as needed
-				if (elementTop < windowHeight * 0.75) {
-					setTimeout(() => {
-						element.classList.add("visible"); // Assuming 'visible' class controls the visibility or animation
-					}, 250 * index); // Staggered timeouts
+				if (elementTop < windowHeight * 0.5) {
+					element.classList.add("visible");
 
 					handledElements.add(element);
 
@@ -61,7 +57,7 @@
 	});
 
 	let container: Element | null = null;
-	let animationCompleted = false;
+	let scrollcontainer: Element | null = null;
 	let lottieAnimation: {
 		loadAnimation: any;
 		play?: (name?: string) => void;
@@ -91,7 +87,8 @@
 			const lottieModule = await import("lottie-web");
 			lottieAnimation = lottieModule.default; // Ensure we get the default export
 		}
-		if (lottieAnimation && container) {
+
+		if (lottieAnimation && container && scrollcontainer) {
 			// Ensure both are defined
 			const animation = lottieAnimation.loadAnimation({
 				container: container,
@@ -100,6 +97,7 @@
 				autoplay: false,
 				path: `${base}/perspective-v2.json`,
 			});
+
 			animation.setSpeed(0.6);
 
 			container.addEventListener("click", () => {
@@ -116,6 +114,91 @@
 					animation.setDirection(1);
 				}
 			});
+
+			const scrollanimation = lottieAnimation.loadAnimation({
+				container: scrollcontainer,
+				renderer: "svg",
+				loop: false,
+				autoplay: false,
+				path: `${base}/scopes.json`,
+			});
+
+			const handleScrollAnimation = () => {
+				if (!scrollcontainer || !scrollanimation) return;
+
+				const elements = document.querySelectorAll(".label-number"); // select elements to interact
+				const highlightElements =
+					document.querySelectorAll(".highlight-font");
+
+				const rect = scrollcontainer.getBoundingClientRect();
+				const viewportheight = window.innerHeight;
+
+				// Calculate visibility thresholds
+				const startAnimationWhenVisibleAt =
+					viewportheight - 0.9 * rect.height;
+				const endAnimationWhenVisibleAt = -100; // Top of the viewport
+
+				const n1threshold = 0.0479;
+				const n2threshold = 0.3908;
+				const n3threshold = 0.7403;
+
+				if (
+					rect.bottom >= endAnimationWhenVisibleAt &&
+					rect.top <= startAnimationWhenVisibleAt
+				) {
+					const effectiveHeight =
+						startAnimationWhenVisibleAt - endAnimationWhenVisibleAt;
+					const adjustedTop = rect.top - endAnimationWhenVisibleAt;
+					const progress =
+						1 -
+						Math.min(Math.max(adjustedTop / effectiveHeight, 0), 1);
+					elements.forEach((element, index) => {
+						// Remove highlight from all elements first
+						element.classList.add("darken");
+						highlightElements[index].classList.add("darken-2");
+
+						// Add 'highlight' class based on the progress and index
+						if (
+							progress >= n1threshold &&
+							progress < n2threshold &&
+							index === 0
+						) {
+							element.classList.remove("darken");
+							highlightElements[index].classList.remove(
+								"darken-2",
+							);
+							console.log("h1");
+						} else if (
+							progress >= n2threshold &&
+							progress < n3threshold &&
+							index === 1
+						) {
+							element.classList.remove("darken");
+							highlightElements[index].classList.remove(
+								"darken-2",
+							);
+						} else if (progress >= n3threshold && index === 2) {
+							element.classList.remove("darken");
+							highlightElements[index].classList.remove(
+								"darken-2",
+							);
+						}
+					});
+
+					const totalFrames = scrollanimation.totalFrames;
+					scrollanimation.goToAndStop(
+						Math.floor(totalFrames * progress),
+						true,
+					);
+				}
+			};
+
+			window.addEventListener("scroll", handleScrollAnimation);
+			handleScrollAnimation(); // Initialize on load to set the initial frame if already in view
+
+			return () => {
+				window.removeEventListener("scroll", handleScrollAnimation);
+			};
 		}
 	});
 </script>
@@ -131,7 +214,11 @@
 	</div>
 	<div class="content-container">
 		<div class="twitter-tweet">
-			<div class="tweet-card bp {isVisibleBp ? 'visible' : ''}">
+			<div
+				class="tweet-card fadein-scroll bp {isVisibleBp
+					? 'visible'
+					: ''}"
+			>
 				<div class="creator-container">
 					<div class="tweet creator">
 						bp <br /> <span class="handle">@bp_plc</span>
@@ -156,7 +243,11 @@
 					>
 				</div>
 			</div>
-			<div class="tweet-card ah {isVisibleAh ? 'visible' : ''}">
+			<div
+				class="tweet-card fadein-scroll ah {isVisibleAh
+					? 'visible'
+					: ''}"
+			>
 				<div class="creator-container">
 					<!-- <img
 						src="{base}/blank-pfp.jpg"
@@ -185,7 +276,11 @@
 					>
 				</div>
 			</div>
-			<div class="tweet-card jc {isVisibleBp ? 'visible' : ''}">
+			<div
+				class="tweet-card fadein-scroll jc {isVisibleBp
+					? 'visible'
+					: ''}"
+			>
 				<div class="creator-container">
 					<div class="tweet creator">
 						jodie c <span class="handle">@jod_coll</span>
@@ -198,7 +293,7 @@
 						some of us own fossil fuel companies whose relentless
 						exploitation of the world’s oil, gas and coal reserves
 						can be directly linked to more than one-third of all
-						greenh-
+						greenhouse gasses produced.
 					</div>
 				</div>
 				<div class="tweet info">
@@ -212,7 +307,11 @@
 					>
 				</div>
 			</div>
-			<div class="tweet-card shell {isVisibleBp ? 'visible' : ''}">
+			<div
+				class="tweet-card fadein-scroll shell {isVisibleBp
+					? 'visible'
+					: ''}"
+			>
 				<div class="creator-container">
 					<div class="tweet creator">
 						Shell <span class="handle">@shell</span>
@@ -239,39 +338,116 @@
 					>
 				</div>
 			</div>
-			<div class="tweet-card xlr {isVisibleBp ? 'visible' : ''}">
-				<div class="creator-container">
-					<div class="tweet creator">
-						xlr8harder <span class="handle">@xlr8harder</span>
-					</div>
-				</div>
-				<div class="tweet content">
-					<div>
-						deepseek doesn't want you to know that they only
-						achieved their cheap training run by increasing the
-						models water wastage by over 10x every query so deepseek
-						wastes as much water as 37 5-minute showers
-					</div>
-				</div>
-				<div class="tweet info">
-					Comment / 2k Likes /
-					<a
-						class="tweet source"
-						href="https://x.com/xlr8harder/status/1884544426170626112"
-						target="_blank"
-					>
-						Source</a
-					>
-				</div>
-			</div>
 		</div>
 		<div class="paragraph-1">
 			<p class="lead">
-				Over the last two decades, the idea of individuals “carbon
-				footprint” has become a centrepiece of debates about climate
+				The term ‘carbon footprint’ refers to emissions that are created
+				as a result of our personal actions. Over the last two decades,
+				this idea has played a central role in debates about climate
 				change. Why do we often frame this enormously complex problem,
 				whose causes are entrenched in all areas of society, in terms of
-				the simple decisions we make each day?
+				the simple decisions we make each day? In this article, I will
+				cover the main reasons behind the shift toward emphasising
+				individual contributions when talking about greenhouse gas
+				emissions, and propose a path forward for the role of individual
+				actions in fighting climate change.
+			</p>
+		</div>
+	</div>
+</section>
+<section id="s-origins">
+	<div class="makeover-paragraph">
+		<h2>Different Types of Emissions</h2>
+		<div class="paragraph-2">
+			<p>
+				To understand society's focus on individual carbon footprints,
+				it helps to know about the concepts of 'scope' emissions. These
+				are three categories that have become the accepted method for
+				categorising the different levels of responsibility an entity
+				has for emissions they produce. This system has found use in
+				assisting governments when labelling emissions for
+				sustainability policies and for corporations pursuing
+				decarbonization initiatives, and are defined as follows:
+			</p>
+			<p>
+				<span class="bold">Scope 1</span> refers to direct emissions created
+				by a company's assets being used for its purposes. For example, in
+				a mining company, these would include emissions from running large
+				trucks to transport rubble or from burning diesel to power heavy
+				machinery for excavation.
+			</p>
+			<p>
+				<span class="bold">Scope 2</span> emissions are those produced indirectly
+				through the purchase of electricity. For instance, a large corporation
+				creates Scope 2 emissions by using electricity in its head offices.
+			</p>
+			<p>
+				<span class="bold">Scope 3</span> emissions are those that would
+				not occur without the company's activities but are produced by assets
+				or sources that the company does not directly own or control. For
+				example, when you drive a Camry to work, the emissions you produce
+				are Toyota’s scope 3 emissions. The emissions produced by steelmakers
+				creating intermediate goods for use in a Camry are part of Toyota’s
+				scope 3 emissions.
+			</p>
+			<p>
+				To use an analogy, we can think of the emissions created in
+				different stages of the lifecycle of a product as water flowing
+				down a river.
+			</p>
+		</div>
+	</div>
+	<div class="scroll-animation-container outer-container">
+		<div class="labels label-left">
+			<div class="scope s1">
+				<div class="highlight-font darken-2">Scope 1</div>
+				<p class="tile-description">
+					Emissions released into the atmosphere as a direct result of
+					the activities at a company facility or using company
+					equipment.
+				</p>
+			</div>
+			<div class="scope s2">
+				<div class="highlight-font darken-2">Scope 2</div>
+				<p class="tile-description">
+					Emissions released outside company facilities to produce the
+					electricity that the company imported into the facility and
+					used.
+				</p>
+			</div>
+		</div>
+		<div class="scroll-animation-container">
+			<div
+				bind:this={scrollcontainer}
+				class="lottie-scroll-animation"
+			></div>
+			<div class="label-number n1 darken">1</div>
+			<div class="label-number n2 darken">2</div>
+			<div class="label-number n3 darken">3</div>
+		</div>
+		<div class="labels label-right">
+			<div class="scope s3">
+				<div class="highlight-font darken-2">Scope 3</div>
+				<p class="tile-description">
+					Scope 3 emissions are indirect emissions other than scope 2
+					emissions. They occur outside of company premises, but are
+					still as a result of your actions. A company may create
+					these both downstream (e.g through consumers using a
+					product) and upstream (e.g through manufacturing
+					intermediate products) in the supply chain of a companies
+					direct actions.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="makeover-paragraph">
+		<div class="paragraph-2">
+			<p>
+				This difference is crucial to understand when we attempt to
+				trace the true source of emissions. Now, we are ready to get
+				into which key players and events caused the idea of the carbon
+				footprint to go from virtually unknown to the centre of public
+				discourse in a matter of years.
 			</p>
 		</div>
 	</div>
@@ -279,24 +455,122 @@
 <div class="content-container">
 	<section id="s-origins">
 		<div class="makeover-paragraph">
-			<h2>Tracing Roots</h2>
+			<h2>1. Optics</h2>
 			<div class="paragraph-2">
 				<p>
 					In 2004, BP’s marketing underwent a remarkable
-					transformation. The oil behemoth ditched it’s dated red
-					shield logo in favour of a new green-and-yellow flower and
-					adopted tagline “Beyond Petroleum”. As part of this campaign
-					the company also introduced a “carbon footprint calculator”
-					on its website. The concept was simple: people could go
-					online, enter details about their daily activities (driving,
-					electricity use, flights, etc.), and calculate their
-					personal annual carbon emissions. BP launched print
-					advertisements in major newspapers which prompted readers to <span
-						class="italic"
+					transformation. The oil behemoth ditched its dated BP-crest
+					logo for a green flower, adopted the tagline “Beyond
+					Petroleum”, and featured adverts in major newspapers which
+					prompted readers to <span class="italic"
 						>“Find out the size of your household’s carbon
 						footprint, learn how you can reduce it, and see how
 						we’re reducing ours at bp.com”.</span
 					>
+					At the heart of this overhaul was BP’s “carbon footprint calculator”.
+					The concept was simple: people could go online, enter details
+					about their daily activities into the calculator (driving, electricity
+					use, flights, etc.), and it calculates their personal annual
+					carbon emissions for them. But why was BP, an almost 100-year-old
+					company, suddenly conducting a drastic rebrand?
+				</p>
+				<figure>
+					<img
+						src="{base}/BP-Logo-history.jpg"
+						alt="The progression of BPs logo since the 1960s"
+						class="campaign-image calc"
+					/>
+					<figcaption>
+						The progression of BP's logo since the 1960s (1000
+						Logos)
+					</figcaption>
+				</figure>
+				<p>
+					BP’s new look aimed to secure future public good-will for
+					the company by capitalising on the current social climate of
+					the western world. In the last two decades, BP had undergone
+					rapid growth on the back of a series of acquisitions,
+					including the fifth largest oil company in the US at the
+					time. BP had also been struggling with public relations on
+					multiple fronts. Public consensus on climate change was now
+					growing, causing the company to draw increased criticism
+					from potential customers. Additionally, successive scandals
+					at its facilities resulting from poor safety standards made
+					BP seem reckless and inhumane. As a company which was new
+					presence in many markets, BP capitalised on the opportunity
+					to reinvent itself with a new, green image. Oglivy & Mather,
+					the marketing agency behind the rebrand, described the
+					campaign as BP reinventing itself “as an energy company
+					people can have faith in”. The public reception wasn’t
+					perfect, inspiring scepticism in some groups due to BPs
+					misdoings being a recent memory. Here is an excerpt from a
+					2006 article from the NYT “Walking through an airport
+					earlier this week, I happened to spot a BP advertisement.
+					You know the kind I’m talking about: the letters BP in
+					lower-case type — making them somehow warmer and fuzzier —
+					above a yellow and green sun, and the words “beyond
+					petroleum.” Like most BP ads, indeed, like virtually all BP
+					marketing, it spoke to the company’s commitment to the
+					environment”. Despite the cynicism evident in the authors
+					tone, they capture the effect of BPs new marketing well. For
+					those without the time or resources to know the company’s
+					true character, BPs marketing would likely strike the
+					intended chord - signalling that they were the oil company
+					of the 21st century. The carbon footprint calculator, an
+					emblem of holding the public responsible for private
+					companies’ actions, was to be the flagship offering of this
+					new identity.
+				</p>
+				<figure>
+					<iframe
+						width="100%"
+						height="400"
+						src="https://www.youtube.com/embed/ywrZPypqSB4"
+						title="BP Ad: Carbon Footprint"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+				</figure>
+				<p>
+					From start to finish, BPs rebrand was a masterclass in
+					obfuscation. Whilst they boldly paraded around their image
+					as a friend of the environment, almost nothing about their
+					operations had changed. They had realised that public
+					opinion of their highly polluting activities, at least in
+					the short term, was a game of optics. If they could convince
+					the public that the biggest emitters cared about the
+					environment, and had it handled, then what reason did they
+					have to worry about it?
+				</p>
+				<p>
+					The carbon footprint calculator, which BP began
+					pushingthrough promotional material around this time, was
+					thecentrepiece of the campaign. By encouraging individuals
+					tomeasure their own emissions, BP’s messaging implied
+					thatclimate change was the result of personal choices.
+					Throughadverts and rebranding they silently pushed the
+					message“That’s right, I’m doing my part. Are you?”. They
+					were earlyto the party, too. BP's then chi'ef executive
+					Lorde Browne wasthe first oil executive to announce that
+					climate change wasa real issue (shocker), and that oil
+					companies had toaddress in a speech at Stanford in 1999.
+					While most otherpolluting companies were still firmly in the
+					category ofclimate denial, which had worked so far, BP was a
+					first moverof the greenwashing movement. Greenwashing is the
+					act ofcreating the image of being an environmentally
+					consciouscompany without intending to actually change your
+					harmfulactions, "washing" them using PR tactics. Because of
+					this, BP got toreap the rewards in the form of social
+					currency. Peoplewanted to buy messaging about a company
+					taking thethe action they wanted to see in the corporate
+					world. Thecarbon footprint calculator itself was especially
+					hard todiscredit, being an actual tool for people trying
+					todecrease their emissions. By allowing people to
+					quantifytheir personal contributions to climate change, they
+					werehelping people to set goals to make improvements and
+					measurethe results.
 				</p>
 				<figure>
 					<img
@@ -305,147 +579,133 @@
 						class="campaign-image"
 					/>
 					<figcaption>
-						The original BP carbon campaign from 2005 (source: XXX)
+						BP's 'green' campaign from 2005 (source: BP)
 					</figcaption>
 				</figure>
 				<p>
-					Framing climate change in these personal terms was a
-					deliberate strategy. As a company then marketing itself as
-					“Beyond Petroleum,” BP sought to position itself as part of
-					the climate solution while subtly shifting the locus of
-					responsibility to individual consumers. Environmental
-					historians and climate scholars note that although academics
-					had introduced broader “ecological footprint” metrics in the
-					1990s, the carbon footprint as a household concept entered
-					the popular lexicon largely due to this industry-driven PR
-					effort. Climate scientist Michael E. Mann observes that this
-					move was part of a broader shift in tactics by fossil fuel
-					interests. The shift from outright climate science denial to
-					a technique called “deflection”, the idea that the public
-					should focus on their own actions rather than corporate
-					behaviour.
+					Climate scientists observed that this move was part of a
+					broader shift in tactics by fossil fuel interests from
+					outright climate science denial to a technique called
+					“deflection”. Deflection is when an actor is seeking to
+					challenge a narrative in public discourse, and instead of
+					outright denying it, seems to agree, while serving up a
+					slightly altered version of events to an unassuming
+					audience. BP’s massive PR campaign not only places the
+					burden of responsibility on consumers, but alleviates
+					corporate polluters. Instead of being seen as one of the
+					worst perpetrators of environmental havoc, now they were
+					<span class="italic">“trying to make a difference”</span>.
+					This positioned the company as doing their part by providing
+					tools and encouragement, despite their core business still
+					being overwhelmingly in high emissions activities.
+				</p>
+				<figure>
+					<img
+						src="{base}/bp-boardroom.jpg"
+						alt="Chief scientist at BP presenting on the energy transition"
+						class="campaign-image calc"
+					/>
+					<figcaption>
+						BP's chief scientist presenting on the energy transition
+						in 2005 (Source: Kaihsu Tai)
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</section>
+	<section id="s-origins">
+		<div class="makeover-paragraph">
+			<h2>2. Consumer Behaviour</h2>
+			<div class="paragraph-2">
+				<p>
+					While the carbon footprint concept has its origins in
+					corporate deflection—exemplified by BP’s 2004 marketing
+					campaign—its persistence in public discourse is not purely
+					the result of manipulative corporate tactics. In fact, part
+					of what made the idea so enduring was its resonance with a
+					growing awareness that climate change demands not only
+					structural reform, but also widespread participation. The
+					appeal of individual carbon accounting lies in its offer of
+					agency: an accessible entry point for ordinary people to
+					engage with an otherwise overwhelming problem.
 				</p>
 				<figure>
 					<img
 						src="{base}/cfc-screenshot.jpg"
-						alt="Early Carbon Footprint Calculator"
+						alt="The progression of BPs logo since the 1960s"
 						class="campaign-image calc"
 					/>
 					<figcaption>
-						An early carbon footprint calculator (source: soft112)
+						A carbon footprint calculator from the 2000s (Source:)
 					</figcaption>
 				</figure>
-			</div>
-		</div>
-	</section>
-	<section id="s-makeover">
-		<div class="makeover-paragraph">
-			<h2>BPs Millenial Makeover</h2>
-			<div class="paragraph-2">
 				<p>
-					By the early 2000s, scientific consensus on climate change
-					was solidifying, and public awareness of the issue was
-					growing. BP, one of the world’s largest oil companies,
-					increasingly faced what seemed to be an existential threat.
-					In response, it undertook a major rebranding to portray
-					itself as environmentally conscious. The carbon footprint
-					campaign was a centrepiece of this rebranding. By
-					encouraging individuals to measure their own emissions, BP’s
-					messaging implied that climate change is the result of
-					personal choices: “That’s right, I'm doing my part - <span
-						class="italic"
-					>
-						what about you?”</span
-					>.
+					Although climate science is unequivocal that most emissions
+					stem from large industrial actors, research has shown that
+					individual and household-level behaviours can cumulatively
+					influence system-wide outcomes through market signals and
+					democratic pressure. Although hard to coordinate, a change
+					in consumer preferences can effectively signal to businesses
+					a desire for more eco-friendly products and services.
 				</p>
 				<p>
-					This framing not only places the burden of responsibility on
-					consumers but alleviates corporate polluters. Instead of
-					being seen as one of the worst perpetrators of environmental
-					havoc, they were trying to make a difference… by asking
-					everyday people to do the work for them. This positioned the
-					company as ‘doing their part’ by providing tools and
-					encouragement, despite their core business still being
-					overwhelmingly in high emissions activities.
+					The carbon footprint also helped to normalise environmental
+					thinking in everyday life. By placing emissions at the level
+					of personal consumption, it engaged a broad public in
+					climate discourse in a way few policy frameworks could. Over
+					the past two decades, pressure from environmentally
+					conscious consumers has become a recognised force in
+					corporate governance, particularly within ESG
+					(Environmental, Social, and Governance) frameworks. A 2020
+					review by Amel-Zadeh and Serafeim in Journal of Economic
+					Perspectives found that reputational concerns and investor
+					preferences—both shaped by public awareness—are now major
+					factors that can influence firms' bottom line.
 				</p>
 				<p>
-					In reality, BP never truly moved “beyond petroleum” – in
-					2005, for example, BP produced about 4.0 million barrels of
-					oil per day. Fifteen years after the ‘Beyond Petroleum’
-					campaign, it was still about 3.8 million barrels. As of
-					2018, BP devoted only 2.3% of its budget to renewable
-					energy, with the rest sustaining its fossil fuel operations.
-					Such figures lay bare the greenwashing at play: the personal
-					carbon footprint initiative was less about BP reducing its
-					own emissions and more about influencing public narratives
-					around who is responsible for climate change.
+					The carbon footprint was never a sufficient frame for
+					understanding climate change. But, in helping to cultivate a
+					culture of environmental accountability, it opened up a
+					space for discussions around consumer behaviour and
+					corporate responsibility. While individuals may not be able
+					to significantly reduce emissions through their actions,
+					they can lead by example, and influence others to think more
+					critically about what activities and organisations are most
+					responsible for climate change.
 				</p>
 			</div>
 		</div>
 	</section>
 	<section id="s-makeover">
 		<div class="makeover-paragraph">
-			<h2>What Does the Data Say? Personal vs Corporate Emissions</h2>
+			<h2>What does the Data Say?</h2>
 			<div class="paragraph-2">
 				<p>
 					If everyone is responsible for their carbon footprint, how
 					big are those footprints really? How do they compare to the
 					carbon pollution emitted by large fossil fuel companies? The
-					data overwhelmingly show that corporate and industrial
-					emissions dwarf even large numbers of households. According
-					to a report by Carbon Majors, just 25 corporate and state
-					entities account for over 50% of industrial carbon emissions
-					worldwide in the period since 1988. These companies include
-					the likes of BP, Shell, ExxonMobil, Chevron, alongside state
-					oil enterprises. BP itself is a notable contributor:
-					analyses show that BP’s operations and products were the
-					source of about 1.5% of total global industrial emissions
-					from 1998–2015 – a remarkable fraction for a single company,
-					given that there are thousands of companies in the world’s
-					energy sector. For perspective, this percentage is greater
-					than the percentage of global annual emissions produced in
-					Oceania.
-				</p>
-				<p>
-					The emissions produced by the average individual pale in
-					comparison to those created by large corporations and state
-					entities. The average individual’s emissions, even in
-					high-income countries, are a fraction of a fraction of
-					corporate carbon footprints. In Australia – which has one of
-					the highest per-capita carbon footprints – the average
+					data overwhelmingly show the emissions output of
+					individuals, even in high-income countries, are a fraction
+					of corporate carbon footprints. In Australia – which has one
+					of the highest per-capita carbon footprints – the average
 					person’s activities produce about 15.4 tons of CO₂ per year.
 					Multiplying that by almost 27 million Australians yields
-					about 415.8 million tons – which is significant. However,
-					that is a meagre 5.6% of the 7.4 billion tonnes of Co2
-					produced by just 5 entities (Saudi Aramco, Coal India, CHN
-					Energy, National Iranian Oil Co., and Jinneng Group) in
-					2023. In other words, if everyone in Australia used no
-					electricity, gas or petrol, it would take 17 years to
-					recuperate the emissions produced by those 5 companies in a
-					single year. This underscores that climate change is not
-					simply the result of billions of people negligently leaving
-					lights on; rather, it’s driven by industrial activity and
-					energy production choices. As experts have pointed out, the
-					real leavers with the power to make change -systemic factors
-					like how electricity is generated, how goods are produced,
-					and what policies govern energy use determine the bulk of
-					emissions – are influenced by corporate and governmental
-					control far more than any average person.
+					415.8 million tons – which is significant. Bewilderingly,
+					that is a only 5.6% of the 7.4 billion tonnes of CO₂
+					produced by just 5 entities in 2023. This underscores that
+					the increase in CO₂ concentrations in the atmosphere over
+					the last 40 years is driven by industrial activity and
+					energy production choices, not lifestyle choices. As experts
+					have pointed out, the real levers with the power to make
+					change – systemic factors like how electricity is generated,
+					how goods are produced, and what policies govern energy use
+					– are influenced by corporate and governmental control far
+					more than any average person.
 				</p>
-			</div>
-		</div>
-	</section>
-	<section id="s-makeover">
-		<div class="makeover-paragraph">
-			<h2>Bonus: Lessons from Covid-19</h2>
-			<div class="paragraph-2">
 				<p>
 					It is telling that even when individual behaviour changed
 					dramatically during the COVID-19 pandemic the drop in global
-					CO₂ emissions was on the order of 6–8% for 2020. This
-					temporary reduction – achieved by an unprecedented
-					curtailment of personal travel and consumption – was still
-					modest relative to the cuts needed to stabilize the climate.
+					CO₂ emissions was not significant – between 6-8% in 2020.
 					The chart below shows the quarterly national emissions data
 					for Australia, with the shaded area approximately covering
 					the time affected by the pandemic. While there is a
@@ -460,7 +720,7 @@
 				</p>
 			</div>
 		</div>
-		<figure class="annual-emissions-chart">
+		<figure class="annual-emissions-chart fadein-scroll">
 			<div class="annual-emissions-chart bg">
 				<img
 					src="{base}/annual-emissions-chart.jpg"
@@ -477,32 +737,64 @@
 		<div class="makeover-paragraph">
 			<div class="paragraph-2">
 				<p>
-					This illustrates that the underlying causes of emissions
-					cannot be changed by the personal decisions we make on a
-					day-to-day basis. Even when millions of individuals can no
-					longer partake in many of emitting activities that companies
-					like BP encourage us to abstain from, there will always be a
-					lower threshold beyond which you simply cannot reduce your
-					emissions. This is because many emissions are the product of
-					systems outside of our control. For instance, say you stop
-					driving to work or taking flights. Now you will be using a
-					larger amount of power at home to support basic necessities
-					such as cooking and lighting, and the emissions intensity of
-					this power is determined by the generation mix in the grid.
-					To make this clear, between 2000 and 2023, the amount of CO₂
-					produced per unit of energy generated in Australia has
+					This demonstrates that since a large portion our personal
+					carbon footprint is made up of emissions from third parties,
+					we are limited in how much we can can do to decrease our
+					emissions through personal action. This is because more
+					drastic change requires changes to systems such as the grid,
+					or the creation of infrastructure such as bike lanes.
+					Electric grids are known as natural monopolies because it is
+					inefficient to have multiple firms competing to supply the
+					same areas with power. Instead, a few, highly regulated
+					firms are typically given the task of supply power toa
+					specific area. This means the emissions intensity of your
+					power is not something you get to choose, outside of some
+					alterations you make to your house, it is by virtue of where
+					you live. For instance, between 2000 and 2023, the amount of
+					CO₂ produced per unit of energy produced in Australia has
 					decreased by 47%. This enormous improvement, which affects
 					the carbon footprint of all Australians, had nothing to do
 					with individual decision-making. Rather, it was brought
 					about through placing pressure on those in power, targeted
 					policy, changing cultural attitudes and coordinated efforts
-					to add renewable generation to the grid. While individual
-					actions like recycling, or bicycling to work are worth
-					encouraging, data-driven analyses consistently find that the
-					largest climate impacts come from systemic changes:
-					transitioning power grids to renewable energy, halting
-					fossil fuel extraction, improving industrial efficiency, and
-					enforcing emissions limits on big polluters.
+					to add renewable generation to the grid.
+				</p>
+				<p>
+					Another similarly essential industry for life in the 21st
+					century whose services are considered “emitting behaviours”
+					by carbon footprint calculators is air travel. Air travel
+					has such high barriers to entry that true competition is
+					hard to come by, and it is a hard-to-abate sector. This
+					means that, unlike some other industries, there are few
+					commercially viable solutions to allow planes to fly without
+					producing the amount of emissions they do currently. As a
+					result, consumers have little choice but to contribute to
+					emissions through participating in these systems, or lose
+					out on access to this important service required for modern
+					life, which is not realistic. It should be noted that the
+					point here is not to show that we cannot make change or set
+					a positive example for others by choosing to make
+					sustainable decisions. It is the expectation that our
+					personal decisions alone can make a tangible impact in
+					fighting climate change that is deeply misguided.
+				</p>
+				<p>
+					There are certain sets of emissions we do have control over.
+					Typically, these are Scope 1 emissions—the direct emissions
+					from sources you own or control. This includes things like
+					the fuel you burn in your personal vehicle, and emissions
+					from gas heaters in your home, or any other combustion that
+					happens under your direct ownership. These are the easiest
+					to influence directly, since they are directly produced
+					through your actions. Therefore, transitioning to electric
+					vehicles, improving home insulation, or switching from gas
+					to electric cooking can significantly reduce this category.
+					Albeit, these changes do require an initial investment, so
+					they may not always be an option. Other changes such as
+					using public transport, or riding a bike to work can be both
+					affordable and effective at reducing your personal impact,
+					and can give some degree of satisfaction that you are
+					contributing to limiting human impact on the environment.
 				</p>
 			</div>
 		</div>
@@ -565,7 +857,7 @@
 					encouraging climate action gets ratio’d by a no name account
 					by a factor of 136, it is a sign that people no longer see
 					empty climate platitudes from corporations through the same
-					naive rose-tinted lens that they once did.
+					rose-tinted lens that they once did.
 				</p>
 				<p>
 					Environmental organizations now often stress balancing
@@ -618,70 +910,31 @@
 					emphasizes collective action: voting for climate-conscious
 					leadership, enacting carbon pricing or emissions caps on
 					industry, and supporting systemic changes in energy,
-					transportation, and agriculture. In the same vein,
-					environmental sociologists point out that individuals
-					operate within infrastructures and choices shaped by
-					companies and governments. For instance, if a person in a
-					suburban area has a high carbon footprint from driving, it
-					may be because public transit is inadequate – a decision
-					made by policy and investment, not personal moral failure.
-					Professor Julia Steinberger, an ecological economist, notes
-					that assigning emissions to end consumers doesn’t mean those
-					consumers actually had the power to avoid them: “Who is
-					actually taking the damaging decision?” she asks – and in
-					the case of fossil fuels, the decisions (to extract oil, to
-					build fossil-powered infrastructure, to resist regulation)
-					are taken by companies like BP, not average citizens.
-					Reframing climate action in light of this insight means
-					placing far greater emphasis on holding corporate actors
-					accountable and changing systemic frameworks. This could
-					involve measures like carbon taxes on producers, legal
-					liabilities for climate damages (a path being pursued
-					through various lawsuits), mandates for clean energy
-					adoption, and transparency tools that publicly track
-					companies’ emissions and climate plans.
+					transportation, and agriculture. We should aim for a more
+					balanced climate discourse that encourages individual
+					“carbon footprint” reductions (such as saving energy, diet
+					shifts, and conscious consumption) firmly contextualized in
+					a broader push that must also include major corporate and
+					governmental emissions cuts. Rather than feeling personal
+					guilt as the primary response to climate change, individuals
+					should channel that concern into collective action and
+					demand accountability from the heavy emitters.
 				</p>
-			</div>
-			<div class="reverse-paragraph">
-				<h2>The Reverse Carbon Calculator</h2>
-				<div class="paragraph-2 light">
-					<p>
-						We should aim for a more balanced climate discourse that
-						encourages individual “carbon footprint” reductions
-						(such as saving energy, diet shifts, and conscious
-						consumption) firmly contextualized in a broader push
-						that must also include major corporate and governmental
-						emissions cuts. Rather than feeling personal guilt as
-						the primary response to climate change, individuals
-						should channel that concern into collective action and
-						demand accountability from the true heavy emitters.
-					</p>
-					<p>
-						To conclude, while each of us should take steps to live
-						more sustainably, the evidence is clear that systemic
-						change – driven by sound policy, corporate
-						responsibility, and societal pressure – is indispensable
-						for addressing a challenge as vast as climate change.
-						Recognizing the storytelling strategies that got us here
-						is the first step toward crafting a new, more effective
-						narrative for our planet’s future.
-					</p>
-					<figure>
-						<div bind:this={container} id="lottie-animation"></div>
-						<figcaption class="caption-1">
-							Click on the chart to see your <br /> emissions in
-							perspective. Click again to <br /> show your individual
-							emissions breakdown.
-						</figcaption>
-					</figure>
-					<p>
-						To help explore this idea, Downstream project are
-						building a 'reverse carbon calculator', a calculator
-						aimed at showing our own emissions on the scale of large
-						emitters, to help crystallise the large role of these
-						actors in climate change.
-					</p>
-				</div>
+				<figure>
+					<div bind:this={container} id="lottie-animation"></div>
+					<figcaption class="caption-1">
+						Click on the chart to see your <br /> emissions in
+						perspective. Click again to <br /> show your individual emissions
+						breakdown.
+					</figcaption>
+				</figure>
+				<p>
+					To help explore this idea, Downstream project are building a
+					'reverse carbon calculator', a calculator aimed at showing
+					our own emissions on the scale of large emitters, to help
+					crystallise the large role of these actors in climate
+					change.
+				</p>
 			</div>
 		</div>
 	</div>
@@ -699,7 +952,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
-		height: clamp(300px, 50vw, 700px);
+		height: clamp(250px, 50vw, 700px);
 		overflow: hidden;
 	}
 
@@ -731,13 +984,16 @@
 		flex-direction: column;
 		position: relative;
 		align-items: start;
-		background: #ded9d4;
+		background: var(--color-background-dark);
 		border-radius: 16px;
 		padding: 1.5rem;
 		margin-bottom: 20px;
 		width: clamp(320px, 41vw, 600px);
 		min-height: clamp(58px, 8vw, 160px);
 		justify-content: space-between;
+	}
+
+	.fadein-scroll {
 		transition:
 			opacity 1.5s ease,
 			transform 1.5s ease;
@@ -855,8 +1111,8 @@
 	}
 
 	.emissions-chart-img {
-		height: 100%;
-		width: auto;
+		height: auto;
+		width: 100%;
 	}
 
 	.italic {
@@ -864,6 +1120,10 @@
 		font-style: oblique;
 		font-size: 1.05rem;
 		line-height: 1.0625rem;
+	}
+
+	.bold {
+		font-weight: 700;
 	}
 
 	.smokestack-image {
@@ -927,9 +1187,102 @@
 		width: 100%;
 	}
 
-	#perspective h2 {
+	.scroll-animation-container {
+		display: flex;
+		border-radius: 2rem;
+		height: 100%;
+	}
+
+	.scroll-animation-container.outer-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-bottom: 6rem;
+	}
+
+	.highlight-font {
+		font-weight: 600;
+		font-size: 1.25rem;
+		width: 100%;
+		text-align: center;
+		border-radius: 0.75rem;
+		background-color: var(--color-blue);
 		color: white;
-		padding-bottom: 2rem;
+	}
+
+	.highlight-font.darken-2 {
+		background-color: var(--color-background);
+		color: var(--color-dark-text);
+	}
+
+	.lottie-scroll-animation {
+		display: flex;
+		border-radius: 2rem;
+		overflow: hidden;
+		width: clamp (380px, 65vw, 755px);
+	}
+
+	.scope {
+		background-color: white;
+		color: var(--color-dark-text);
+		padding: 1rem;
+		margin: 1.5rem;
+		border-radius: 1rem;
+		flex-direction: column;
+		width: clamp(160px, 16vw, 220px);
+		min-height: 100px;
+	}
+
+	.scope.s3 {
+		width: clamp(220px, 16vw, 220px);
+	}
+
+	.scope p {
+		color: var(--color-dark-text);
+		text-align: left;
+		padding: 0.75rem 0rem;
+	}
+
+	.labels {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.label-number {
+		position: absolute;
+		display: flex;
+		align-items: center; /* Centers the content vertically */
+		justify-content: center; /* Centers the content horizontally */
+		text-align: center;
+		width: 4rem;
+		height: 4rem;
+		font-size: 3rem;
+		font-weight: 500;
+		border-radius: 1rem;
+		z-index: 1;
+		color: white;
+		background-color: var(--color-background);
+		opacity: 0.85;
+	}
+
+	.label-number.darken {
+		color: grey;
+	}
+
+	.label-number.n1 {
+		top: 25%;
+		left: 30%;
+	}
+
+	.label-number.n2 {
+		top: 47%;
+		left: 50%;
+	}
+
+	.label-number.n3 {
+		top: 30%;
+		right: 3%;
 	}
 
 	#s-makeover {
@@ -946,14 +1299,6 @@
 		justify-content: center;
 		width: auto;
 		width: clamp(320px, 65%, 600px);
-	}
-
-	.reverse-paragraph {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		width: auto;
-		width: 100%;
 	}
 
 	.perspective {
@@ -976,6 +1321,12 @@
 	@media (max-width: 768px) {
 		.perspective {
 			white-space: wrap;
+		}
+		.scroll-animation-container.outer-container {
+			flex-direction: column;
+		}
+		.labels {
+			flex-direction: row;
 		}
 	}
 

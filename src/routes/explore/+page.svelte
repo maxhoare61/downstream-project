@@ -90,6 +90,11 @@
 		margin-bottom: 2rem;
 	}
 
+	.Project-Container:not(:last-child) {
+		border-bottom: 1px solid var(--color-border);
+		margin-bottom: 2rem;
+	}
+
 	.text-container {
 		display: flex;
 		flex-direction: column;
@@ -107,12 +112,8 @@
 		border-bottom: solid 1px var(--color-border);
 	}
 
-	.left {
-		padding-right: 3rem;
-	}
-
 	.text-container p {
-		max-width: 30vw;
+		max-width: 35vw;
 	}
 
 	/*.Project-Container:last-child {

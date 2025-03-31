@@ -1,5 +1,4 @@
 import { Z as fallback, _ as bind_props, W as stringify } from "./index.js";
-/* empty css                                          */
 import { a as attr } from "./attributes.js";
 import { e as escape_html } from "./escaping.js";
 function ProjectCard($$payload, $$props) {

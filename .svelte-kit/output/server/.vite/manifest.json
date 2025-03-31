@@ -25,10 +25,6 @@
       "_app/immutable/assets/ProjectCard.6q5e2BUs.css"
     ]
   },
-  "_ProjectCard.svelte_svelte_type_style_lang.js": {
-    "file": "_app/immutable/assets/ProjectCard.6q5e2BUs.css",
-    "src": "_ProjectCard.svelte_svelte_type_style_lang.js"
-  },
   "_attributes.js": {
     "file": "chunks/attributes.js",
     "name": "attributes",
@@ -135,7 +131,7 @@
       "_ProjectCard.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.vGgHeamw.css"
+      "_app/immutable/assets/_page.DHtinVs8.css"
     ]
   },
   "src/routes/about-us/+page.server.ts": {
@@ -175,8 +171,7 @@
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.BdYVBvKu.css",
-      "_app/immutable/assets/ProjectCard.6q5e2BUs.css"
+      "_app/immutable/assets/_page.hCAL9rof.css"
     ]
   },
   "src/routes/articles/article-three/+page.server.ts": {
@@ -236,7 +231,7 @@
       "_ProjectCard.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.ie_0gDHo.css"
+      "_app/immutable/assets/_page.D5K1VCfH.css"
     ]
   }
 }

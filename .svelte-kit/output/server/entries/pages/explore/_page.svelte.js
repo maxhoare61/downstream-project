@@ -19,7 +19,7 @@ function _page($$payload) {
   SubHeader($$payload, {
     links: [{ href: "#", text: "Carbon Emissions" }]
   });
-  $$payload.out += `<!----> <section class="Project-Container svelte-1m3iaqs"><div class="project-grid svelte-1m3iaqs"><div class="text-container left svelte-1m3iaqs"><h3>Carbon Emissions in Perspective</h3> <p class="tile-type svelte-1m3iaqs">Project</p> <p class="svelte-1m3iaqs">A project to shed light on how data is often misrepresented
+  $$payload.out += `<!----> <section class="Project-Container svelte-1tqbwuy"><div class="project-grid svelte-1tqbwuy"><div class="text-container left svelte-1tqbwuy"><h3>Carbon Emissions in Perspective</h3> <p class="tile-type svelte-1tqbwuy">Project</p> <p class="svelte-1tqbwuy">A project to shed light on how data is often misrepresented
 					to paint consumers as the cause of emissions.</p></div> `;
   ProjectCard($$payload, {
     imgUrl: `${stringify(base)}/smoke-stack-extended.jpg`,
@@ -29,7 +29,7 @@ function _page($$payload) {
     description: "In this article we cover the idea of the 'carbon footprint' and how it has shaped the public's perception of climate change.",
     link: `${stringify(base)}/articles/article-one`
   });
-  $$payload.out += `<!----></div> <div class="project-grid svelte-1m3iaqs">`;
+  $$payload.out += `<!----></div> <div class="project-grid svelte-1tqbwuy">`;
   ProjectCard($$payload, {
     link: `${stringify(base)}/articles/article-two`,
     imgUrl: `${stringify(base)}/calculator-thumbnail.png`,
@@ -37,7 +37,7 @@ function _page($$payload) {
     title: "Reverse Carbon Footprint Calculator",
     description: "This article introduces the Reverse Carbon Calculator, a tool to help contextualize individual carbon emissions."
   });
-  $$payload.out += `<!----></div></section> <section class="Project-Container svelte-1m3iaqs"><div class="project-grid svelte-1m3iaqs"><div class="text-container left svelte-1m3iaqs"><h3>Political Donations Revealed</h3> <p class="tile-type svelte-1m3iaqs">Project</p> <p class="svelte-1m3iaqs">A project to transform public data on politicians declared interests into a cohesive and
+  $$payload.out += `<!----></div></section> <section class="Project-Container svelte-1tqbwuy"><div class="project-grid svelte-1tqbwuy"><div class="text-container left svelte-1tqbwuy"><h3>Political Donations Revealed</h3> <p class="tile-type svelte-1tqbwuy">Project</p> <p class="svelte-1tqbwuy">A project to transform public data on politicians declared interests into a cohesive and
 					accessible narrative, revealing the often-financial ties between
 					elected officials and powerful interests.</p></div> `;
   ProjectCard($$payload, {

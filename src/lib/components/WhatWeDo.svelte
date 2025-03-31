@@ -11,28 +11,28 @@
         <div class="item">
           <h3 class="item-title">01 Compile and Clean the Data</h3>
           <p class="item-description">
-            We gather data from various sources and ensure it is clean and ready for analysis. This step is crucial to ensure the accuracy and reliability of the insights we provide.
+            We identify an are where data fails to communicate a clear narrative. We then gather data from various sources such as pdfs, sparse databases and APIs.
           </p>
         </div>
 
         <div class="item">
           <h3 class="item-title">02 Analysis</h3>
           <p class="item-description">
-            Meticulously analyse the data to uncover patterns, trends, and insights that can drive informed decision-making.
+            We meticulously analyse the data to uncover patterns, trends, and insights that can be used to inform our articles.
           </p>
         </div>
 
         <div class="item">
-          <h3 class="item-title">03 Create Engaging Visuals</h3>
+          <h3 class="item-title">03 Create Visuals</h3>
           <p class="item-description">
-            We transform complex data into visually appealing and easy-to-understand graphics, making it easier for stakeholders to grasp the insights.
+            We transform complex data into easy-to-understand graphics, making it easier for stakeholders to grasp the insights.
           </p>
         </div>
 
         <div class="item">
           <h3 class="item-title">04 Deliver the Insights</h3>
           <p class="item-description">
-            We present the insights in a clear and concise manner, ensuring that our clients can take actionable steps based on the data.
+            We present the insights in a clear and concise manner.
           </p>
         </div>
       </div>

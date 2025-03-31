@@ -85,7 +85,7 @@
     display: flex;
     flex-direction: column;
     align-items: left;
-    justify-content: center;
+    justify-content: space-between;
     text-align: left;
   }
 
@@ -94,10 +94,13 @@
     flex-direction: column;
     min-height: clamp(400px, 60vh, 920px);
     align-items: left;
-    justify-content: center;
     gap: clamp(1rem, 2.5vw, 1.5rem);
     text-align: left;
     width: clamp(136px, 42.153vw, 602px);
+  }
+
+  .section-left-child:last-child {
+    min-height: clamp(200px, 30vh, 920px);
   }
 
   .section-right {
