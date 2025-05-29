@@ -105,6 +105,7 @@ h2 {
   font-size: clamp(1.5rem , 5vw, 2.5rem);
   font-weight: var(--h2-font-weight);
   line-height: var(--h2-line-height);
+  padding: 1.5rem 0.2rem;
 }
 
 h3 {
@@ -137,6 +138,7 @@ h5 {
   font-style: var(--lead-font-style);;
   font-size: clamp(1.2rem, 1.16666vw ,1.4rem);
   font-weight: var(--lead-font-weight);
+  line-height: auto;
 }
 
 .tile-type {
