@@ -66,6 +66,7 @@
     --h1-font-weight: 500;
     --h1-font-size: 3rem;
     --h1-line-height: 4.5rem;
+    --h1-padding: 1rem;
 
     /* H2 Text */
     --h2-font-family: 'Bai Jamjuree';
@@ -129,4 +130,7 @@
     --logo-font-weight: 700;
     --logo-font-size: 1.25rem;
     --logo-line-height: 1.25;
+
+    /* Page Title Text */
+    --page-title-top-spacing: 2rem;
 }
