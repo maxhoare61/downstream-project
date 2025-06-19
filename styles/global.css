@@ -51,8 +51,7 @@ body {
 }
 
 .content-container {
-  margin-right: clamp(10px, 5vw, 64px);
-  margin-left: clamp(10px, 5vw, 64px);
+  margin: 0 clamp(10px, 5vw, 64px);
 }
 
 .logo {
@@ -106,7 +105,6 @@ h2 {
   font-size: clamp(1.5rem , 5vw, 2.5rem);
   font-weight: var(--h2-font-weight);
   line-height: var(--h2-line-height);
-  padding: 1.5rem 0.2rem;
 }
 
 h3 {

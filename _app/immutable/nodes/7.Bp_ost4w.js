@@ -1,43 +1,7 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
-		<link href="../_app/immutable/assets/0.Dma13lMt.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/7.BcT4pNnZ.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/Calculator.hivzNpHG.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.BcM82eXo.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/4_nG9Kc7.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/BYxxizct.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/B02hRyMT.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/DbZbNL31.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/BTuFXsNS.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.DOrpjnG4.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/C1FmrZbK.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/jBmf_VcD.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/BWdHyLB0.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/CFjSGZkU.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/HeyynTyy.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/Ch8quJ6v.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/DvwAc8yX.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/BWbD3FP6.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/DnecGYoD.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.DzKr_QXH.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/n0ky70q5.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/DL4uofwM.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/lblAmNP4.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/7.Bp_ost4w.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/CPtIMJkP.js"><!--[--><link rel="stylesheet" href="../styles/tokens.css"> <link rel="stylesheet" href="../styles/global.css"><!--]-->
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents"><!--[--><!--[--><!----><header class="header svelte-bw6erp"><div class="logo svelte-bw6erp"><a href="../" class="logo-link"><img src="../mocklogo1.png" alt="logo" class="logo-image svelte-bw6erp"> <div>Downstream<br>Project</div></a></div> <nav class="svelte-bw6erp"><!--[--><a class="btn-1 svelte-bw6erp" href="../">Home</a><!--]--> <!--[--><a class="btn-1 svelte-bw6erp" href="../explore">Explore</a><!--]--> <!--[--><a class="btn-1 svelte-bw6erp" href="../about-us">About us</a><!--]--></nav></header><!----> <!----><!----><section id="hero" class="svelte-vgcida"><div class="animated-header svelte-vgcida"><div class="title t2 svelte-vgcida">Reverse <br> Carbon <br> Footprint <br> Calculator</div> <div class="ah1 svelte-vgcida"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="85vh" preserveAspectRatio="xMidYMid meet" viewBox="0 0 896 504"><defs><style>
-            @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+import{a as L,n as w,t as x}from"../chunks/HeyynTyy.js";import"../chunks/n0ky70q5.js";import{g as A,i as T,j as t,k as v,l as p,m as u,n as s,o as C,T as S,V as B}from"../chunks/BYxxizct.js";import"../chunks/DbZbNL31.js";import"../chunks/CPtIMJkP.js";import{b as f}from"../chunks/DnecGYoD.js";import{i as _}from"../chunks/lblAmNP4.js";import{o as $}from"../chunks/BTuFXsNS.js";var j=w(`<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="85vh" preserveAspectRatio="xMidYMid meet" viewBox="0 0 896 504"><defs><style>@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
             text {
                 font-family: "Space Grotesk", sans-serif;
-            }
-        </style><linearGradient id="shapeGradient" gradientTransform="rotate(0)"><stop offset="0%" stop-color="#a8c0ff"></stop><stop offset="100%" stop-color="#3f2b96"></stop></linearGradient></defs><rect width="100%" height="100%" fill="#000000"></rect><g><filter id="blur-filter"><feGaussianBlur in="SourceGraphic" stdDeviation="5"></feGaussianBlur></filter><path fill="url(#shapeGradient)" opacity="1" transform="translate(0, 0) rotate(226.79010526315702, 0, 0) scale(1)" fill-rule="evenodd" clip-rule="evenodd" d="M3.628 4
+            }</style><linearGradient id="shapeGradient" gradientTransform="rotate(0)"><stop offset="0%" stop-color="#a8c0ff"></stop><stop offset="100%" stop-color="#3f2b96"></stop></linearGradient></defs><rect width="100%" height="100%" fill="#000000"></rect><g><filter id="blur-filter"><feGaussianBlur in="SourceGraphic" stdDeviation="5"></feGaussianBlur></filter><path fill="url(#shapeGradient)" opacity="1" transform="translate(0, 0) rotate(226.79010526315702, 0, 0) scale(1)" fill-rule="evenodd" clip-rule="evenodd" d="M3.628 4
         L0 0.37
         L0.37 0
         L4 3.628
@@ -2837,7 +2801,7 @@
         L884 494.7808531921848
         L884.7808531921848 494
         L892.4416561317275 501.6565821114769
-        Z"></path></g></svg><!----></div></div></section> <section id="calculator" class="svelte-vgcida"><div class="content-container"><div class="paragraph-1 svelte-vgcida"><p class="lead svelte-vgcida">The third article in the Carbon Emissions in Perspective series
+        Z"></path></g></svg>`);function k(c,o){A(o,!1);let e=C();function i(){if(t(e)){const a=window.innerWidth,l=a/16*9;t(e).setAttribute("width",`${a}`),t(e).setAttribute("height",`${l}`)}}$(()=>{if(i(),window.addEventListener("resize",i),t(e)){let a=t(e).querySelectorAll("path"),l=Date.now();a.forEach((d,R)=>{let y=n(d);const h=d.getBBox(),G=h.x,M=h.y;setInterval(()=>{let Z=(Date.now()-l)/26e3,g=200+(h.height-4)/26,b=(y+Z*g)%360;d.setAttribute("transform",`rotate(${b}, ${G}, ${M})`)},10)})}});function n(a){const l=a.getAttribute("transform"),d=l==null?void 0:l.match(/rotate\((-?\d+(\.\d+)?)/);return d?parseFloat(d[1]):0}_();var r=j(),m=v(p(r),2);f(m,a=>u(e,a),()=>t(e)),s(r),f(r,a=>u(e,a),()=>t(e)),L(c,r),T()}var z=x(`<section id="hero" class="svelte-vgcida"><div class="animated-header svelte-vgcida"><div class="title t2 svelte-vgcida">Reverse <br> Carbon <br> Footprint <br> Calculator</div> <div class="ah1 svelte-vgcida"><!></div></div></section> <section id="calculator" class="svelte-vgcida"><div class="content-container"><div class="paragraph-1 svelte-vgcida"><p class="lead svelte-vgcida">The third article in the Carbon Emissions in Perspective series
                 follows on by introducing the Reverse Carbon Calculator. 
                 This instalment seeks to recalibrate
                 our perspective of personal emissions by providing an
@@ -2852,29 +2816,4 @@
                 or industry reform—might have the greatest impact. The article
                 is a work in progress. As we continue developing this project,
                 our aim is to equip readers with not just data, but a renewed
-                sense of agency in how they engage with climate solutions.</p></div></div></section><!----><!----> <footer class="footer svelte-j6upov"><div class="logo"><img src="../mocklogo1.png" alt="logo" class="logo-image"> <div>Downstream<br>Project</div></div> <div class="footer-text svelte-j6upov"><p>2025 Downstream Project</p></div></footer><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
-			
-			<script>
-				{
-					__sveltekit_b5h795 = {
-						base: new URL("..", location).pathname.slice(0, -1)
-					};
-
-					const element = document.currentScript.parentElement;
-
-					Promise.all([
-						import("../_app/immutable/entry/start.BcM82eXo.js"),
-						import("../_app/immutable/entry/app.DOrpjnG4.js")
-					]).then(([kit, app]) => {
-						kit.start(app, element, {
-							node_ids: [0, 7],
-							data: [null,{"type":"data","data":null,"uses":{}}],
-							form: null,
-							error: null
-						});
-					});
-				}
-			</script>
-		</div>
-	</body>
-</html>
+                sense of agency in how they engage with climate solutions.</p></div></div></section>`,1);function W(c){var o=z(),e=S(o),i=p(e),n=v(p(i),2),r=p(n);k(r,{}),s(n),s(i),s(e),B(2),L(c,o)}export{W as component};
