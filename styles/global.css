@@ -143,13 +143,13 @@ h5 {
   font-style: var(--lead-font-style);;
   font-size: clamp(1.2rem, 1.16666vw ,1.4rem);
   font-weight: var(--lead-font-weight);
-  line-height: auto;
+  line-height: var(--lead-line-height);
 }
 
 .tile-type {
   font-family: var(--h4-font-family);
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -167,10 +167,8 @@ figcaption {
 .tile-description {
   font-family: var(--caption-font-family);
   font-style: var(--caption-font-style);;
-  font-size: 1rem;
-  font-weight: var(--caption-font-weight);
+  font-size: 1.1rem;
   line-height: var(--caption-line-height);
-  color: var(--color-border)
 }
 
 .btn-1 {
