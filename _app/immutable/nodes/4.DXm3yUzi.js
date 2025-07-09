@@ -1,12 +1,11 @@
-import{_ as C}from"../chunks/C1FmrZbK.js";import{a as H,t as L}from"../chunks/DGqtx0UH.js";import"../chunks/BzWc-8pQ.js";import{g as W,T as D,V as $,i as N,m as R,l as e,n as t,k as i,W as B,o as V,j as z}from"../chunks/5lW7ABz8.js";import{s as u}from"../chunks/D0lOji1P.js";import{s as O}from"../chunks/Bjzgw3R-.js";import{i as F}from"../chunks/0IwTZHX3.js";import{o as q}from"../chunks/tLbPkKgv.js";import{b as m}from"../chunks/C8i9Mslu.js";import{A as G}from"../chunks/Laa9MhVm.js";var J=L(`<section id="hero"><div class="animated-header svelte-q6hi1k"><div class="title-container svelte-q6hi1k"><div>The oil <br> marketing <br> campaign that <br> put an end <br> to climate denial</div></div> <div class="ah1 svelte-q6hi1k"><!></div></div></section> <div class="content-container svelte-q6hi1k"><div class="paragraph-1 svelte-q6hi1k"><p class="lead svelte-q6hi1k">Two decades ago, you would have been forgiven for thinking BP stood
+import{_ as H}from"../chunks/C1FmrZbK.js";import{a as C,t as L}from"../chunks/DGqtx0UH.js";import"../chunks/BzWc-8pQ.js";import{g as W,T as D,V as $,i as N,m as R,l as e,n as t,k as i,W as B,o as V,j as z}from"../chunks/5lW7ABz8.js";import{s as u}from"../chunks/D0lOji1P.js";import{s as O}from"../chunks/Bjzgw3R-.js";import{i as F}from"../chunks/0IwTZHX3.js";import{o as q}from"../chunks/tLbPkKgv.js";import{b as m}from"../chunks/CoYF7R12.js";import{A as G}from"../chunks/Laa9MhVm.js";var J=L(`<section id="hero"><div class="animated-header svelte-q6hi1k"><div class="title-container svelte-q6hi1k"><div>The oil <br> marketing <br> campaign that <br> put an end <br> to climate denial</div></div> <div class="ah1 svelte-q6hi1k"><!></div></div></section> <div class="content-container svelte-q6hi1k"><div class="paragraph-1 svelte-q6hi1k"><p class="lead svelte-q6hi1k">Two decades ago, you would have been forgiven for thinking BP stood
 			for “Botanical Planting”. Such was the effect of their 2000s
 			marketing makeover, that used flashy modern graphics to recast the
-			business as a crusader for climate action. A few short years later,
-			this green veneer was shattered, as three record breaking
-			environmental disasters and numerous deaths would occur at BPs
-			facilities. This unique case reveals the truth that we are often
-			willing to overlook rational suspicion and accept misinformation
-			when it matches our worldview.</p></div></div> <section id="s-origins" class="svelte-q6hi1k"><div class="makeover-paragraph svelte-q6hi1k"><div class="paragraph-2 svelte-q6hi1k"><p class="svelte-q6hi1k">In the 15 years leading to 2000, climate change went mainstream.
+			business as a crusader for climate action. However, the illusion
+			would not last. A string of environmental disasters in the late
+			2000s, including the largest marine oil spill in history, would
+			shatter BP’s green veneer and expose the brutal contradiction at the
+			heart of its rebrand.</p></div></div> <section id="s-origins" class="svelte-q6hi1k"><div class="makeover-paragraph svelte-q6hi1k"><div class="paragraph-2 svelte-q6hi1k"><p class="svelte-q6hi1k">In the 15 years leading to 2000, climate change went mainstream.
 				Support from huge celebrities (Leo Dicaprio and Sting each set
 				up environmental foundations during this time) gave the movement
 				culture cache, and the topic quickly penetrated the Overton
@@ -84,16 +83,16 @@ import{_ as C}from"../chunks/C1FmrZbK.js";import{a as H,t as L}from"../chunks/DG
 				wilderness. The final moments of BP’s “Beyond Petroleum” alter
 				ego were marked by the Deepwater Horizon drilling platform
 				explosion in 2010, resulting in the largest marine oil spill in
-				human history.</p> <p class="svelte-q6hi1k">The failure of BP’s campaign offers insight into the
-				power of strategic narrative when cultural and
-				scientific understanding of an issue are yet to align. By presenting itself as a company that
-				had moved "Beyond Petroleum," BP captured the
-				aspirations of a public increasingly aware of climate risks, yet
-				uncertain about how change would materialise. Instead of
-				challenging the public’s assumptions, BP affirmed them. In
-				doing so, they constructed a powerful illusion that deferred
-				scrutiny and allowed harmful practices to continue beneath a
-				carefully manicured exterior. This story emphasises the importance of
-				spreading genuine knowledge rather than superficial moral rhetoric. While BP
-				misled the public, the public was, in part, willing to be
-				misled.</p></div></div></section>`,1);function se(P,_){W(_,!1);let p=V(!1);q(()=>{const d=document.querySelector(".title");if(d){const n=d.getBoundingClientRect().top,s=window.innerHeight;n<s*.75&&R(p,!0)}const a=()=>{const n=document.querySelectorAll(".fadein-scroll"),s=new Set;n.forEach((o,U)=>{if(s.has(o))return;const M=o.getBoundingClientRect().top,S=window.innerHeight;M<S*.5&&(o.classList.add("visible"),s.add(o),s.size===n.length&&window.removeEventListener("scroll",a))})};return window.addEventListener("scroll",a),a(),()=>{window.removeEventListener("scroll",a)}}),q(async()=>{typeof window<"u"&&(await C(()=>import("../chunks/CvEQ06TD.js").then(a=>a.l),[],import.meta.url)).default}),F();var g=J(),r=D(g),f=e(r),l=e(f),T=e(l);t(l);var v=i(l,2),A=e(v);G(A,{}),t(v),t(f),t(r);var w=i(r,4),y=e(w),b=e(y),c=i(e(b),2),x=i(e(c),4);u(x,"src",`${m??""}/colchart-climateawareness.png`),t(c);var h=i(c,4),E=e(h);u(E,"src",`${m??""}/BP_baby_ad.gif`),B(2),t(h);var k=i(h,8),I=i(e(k),4);u(I,"src",`${m??""}/six-americas.png`),t(k),B(10),t(b),t(y),t(w),$(()=>O(T,`title ${(z(p)?"visible":"")??""} svelte-q6hi1k`)),H(P,g),N()}export{se as component};
+				human history.</p> <p class="svelte-q6hi1k">The failure of BP’s campaign offers insight into the power of
+				strategic narrative when cultural and scientific understanding
+				of an issue are yet to align. By presenting itself as a company
+				that had moved "Beyond Petroleum," BP captured the aspirations
+				of a public increasingly aware of climate risks, yet uncertain
+				about how change would materialise. Instead of challenging the
+				public’s assumptions, BP affirmed them. In doing so, they
+				constructed a powerful illusion that deferred scrutiny and
+				allowed harmful practices to continue beneath a carefully
+				manicured exterior. This story emphasises the importance of
+				spreading genuine knowledge rather than superficial moral
+				rhetoric. While BP misled the public, the public was, in part,
+				willing to be misled.</p></div></div></section>`,1);function se(P,_){W(_,!1);let p=V(!1);q(()=>{const d=document.querySelector(".title");if(d){const n=d.getBoundingClientRect().top,s=window.innerHeight;n<s*.75&&R(p,!0)}const a=()=>{const n=document.querySelectorAll(".fadein-scroll"),s=new Set;n.forEach((o,U)=>{if(s.has(o))return;const M=o.getBoundingClientRect().top,S=window.innerHeight;M<S*.5&&(o.classList.add("visible"),s.add(o),s.size===n.length&&window.removeEventListener("scroll",a))})};return window.addEventListener("scroll",a),a(),()=>{window.removeEventListener("scroll",a)}}),q(async()=>{typeof window<"u"&&(await H(()=>import("../chunks/CvEQ06TD.js").then(a=>a.l),[],import.meta.url)).default}),F();var g=J(),r=D(g),f=e(r),l=e(f),T=e(l);t(l);var v=i(l,2),A=e(v);G(A,{}),t(v),t(f),t(r);var w=i(r,4),y=e(w),b=e(y),c=i(e(b),2),x=i(e(c),4);u(x,"src",`${m??""}/colchart-climateawareness.png`),t(c);var h=i(c,4),E=e(h);u(E,"src",`${m??""}/BP_baby_ad.gif`),B(2),t(h);var k=i(h,8),I=i(e(k),4);u(I,"src",`${m??""}/six-americas.png`),t(k),B(10),t(b),t(y),t(w),$(()=>O(T,`title ${(z(p)?"visible":"")??""} svelte-q6hi1k`)),C(P,g),N()}export{se as component};
