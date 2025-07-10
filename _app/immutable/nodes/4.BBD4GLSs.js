@@ -1,4 +1,4 @@
-import{_ as q}from"../chunks/C1FmrZbK.js";import{a as L,t as C}from"../chunks/DGqtx0UH.js";import"../chunks/BzWc-8pQ.js";import{g as W,T as D,V as $,i as R,m as V,l as e,n as t,k as i,W as P,o as z,j as N}from"../chunks/5lW7ABz8.js";import{s as m}from"../chunks/D0lOji1P.js";import{s as O}from"../chunks/Bjzgw3R-.js";import{i as F}from"../chunks/0IwTZHX3.js";import{o as k}from"../chunks/tLbPkKgv.js";import{b as u}from"../chunks/D27Lx4A6.js";import{A as J}from"../chunks/Laa9MhVm.js";var j=C(`<section id="hero"><div class="animated-header svelte-ynmhwm"><div class="title-container svelte-ynmhwm"><h1>The <br> Aesthetics <br> of Inaction: <br> BP's Story</h1></div> <div class="ah1 svelte-ynmhwm"><!></div></div></section> <div class="content-container svelte-ynmhwm"><div class="paragraph-1 svelte-ynmhwm"><p class="lead svelte-ynmhwm">Two decades ago, you would have been forgiven for thinking BP stood
+import{_ as q}from"../chunks/C1FmrZbK.js";import{a as L,t as C}from"../chunks/DGqtx0UH.js";import"../chunks/BzWc-8pQ.js";import{g as W,T as D,V as $,i as R,m as V,l as e,n as t,k as i,W as P,o as z,j as N}from"../chunks/5lW7ABz8.js";import{s as m}from"../chunks/D0lOji1P.js";import{s as O}from"../chunks/Bjzgw3R-.js";import{i as F}from"../chunks/0IwTZHX3.js";import{o as k}from"../chunks/tLbPkKgv.js";import{b as u}from"../chunks/DV6mkC4w.js";import{A as J}from"../chunks/Laa9MhVm.js";var j=C(`<section id="hero"><div class="animated-header svelte-ynmhwm"><div class="title-container svelte-ynmhwm"><h1>The <br> Aesthetics <br> of Inaction: <br> BP's Story</h1></div> <div class="ah1 svelte-ynmhwm"><!></div></div></section> <div class="content-container svelte-ynmhwm"><div class="paragraph-1 svelte-ynmhwm"><p class="lead svelte-ynmhwm">Two decades ago, you would have been forgiven for thinking BP stood
 			for “Botanical Planting”. Such was the impression left by their
 			2000s marketing makeover, which used flashy modern graphics to
 			recast the business as a crusader for climate action. However, the
@@ -10,15 +10,14 @@ import{_ as q}from"../chunks/C1FmrZbK.js";import{a as L,t as C}from"../chunks/DG
 				up environmental foundations during this time) gave the movement
 				culture cache, and the topic quickly penetrated the Overton
 				window. In the 90s, Michael Jacksons music video for “Earth
-				Song”, with its dramatic imagery of wind machines blowing
-				Jackson's hair and clothes, had a cultural moment. Public
-				awareness led extreme weather events to be associated with the
-				greenhouse effect, further elevating its profile in public
-				discussion. Extreme droughts across the US in 1988, and a
-				record-breaking El Niño in 1998 aroused fear that natural
-				disasters were being influenced by “man-made” factors. By the
-				turn of the millennium, fear of an impending climate crises was
-				reaching all time highs.</p> <figure class="bar-chart svelte-ynmhwm"><figcaption class="caption lead svelte-ynmhwm">Most people heard about climate change for the first time in
+				Song” had a cultural moment, with its dramatic imagery of wind
+				machines blowing Jackson's hair and clothes. Public awareness
+				led extreme weather events to be associated with the greenhouse
+				effect, further elevating its profile in public discussion.
+				Extreme droughts across the US in 1988, and a record-breaking El
+				Niño in 1998 aroused fear that natural disasters were being
+				influenced by “man-made” factors. By the turn of the millennium,
+				fear of an impending climate crises was reaching all time highs.</p> <figure class="bar-chart svelte-ynmhwm"><figcaption class="caption lead svelte-ynmhwm">Most people heard about climate change for the first time in
 					the 15 years leading up to 2000.</figcaption> <figcaption class="caption subcaption svelte-ynmhwm">Findings from polling on the question "Are you aware of the
 					greenhouse effect?" (or similar). Collated by Nisbet and
 					Myers (2007)</figcaption> <img alt="Bar chart of climate awareness increasing in the 2000s" class="bar-chart-img svelte-ynmhwm"></figure> <p class="svelte-ynmhwm">Around this time, petrol titan BP suddenly, radically, reworked
