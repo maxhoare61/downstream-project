@@ -1,7 +1,7 @@
 /* NORMALISING */
 html {
   box-sizing: border-box;
-  font-size: clamp(15px, 1.4vw, 18px);
+  font-size: clamp(14px, 1.4vw, 16px);
   line-height: auto;
 }
 
