@@ -1,4 +1,4 @@
-import{_ as M}from"../chunks/C1FmrZbK.js";import{a as H,t as R}from"../chunks/DGqtx0UH.js";import"../chunks/BzWc-8pQ.js";import{g as D,T as O,V as L,i as N,m as W,l as e,n as t,k as i,W as P,o as F,j as q}from"../chunks/5lW7ABz8.js";import{s as g}from"../chunks/D0lOji1P.js";import{s as G}from"../chunks/Bjzgw3R-.js";import{i as J}from"../chunks/0IwTZHX3.js";import{o as z}from"../chunks/tLbPkKgv.js";import{b as p}from"../chunks/DHyUvT58.js";import{A as $}from"../chunks/Laa9MhVm.js";var V=R(`<section id="hero"><div class="animated-header svelte-8ygzyh"><div class="title-container svelte-8ygzyh"><h1>The <br> Aesthetics <br> of Inaction: <br> BP's Story</h1></div> <div class="ah1 svelte-8ygzyh"><!></div></div></section> <div class="content-container svelte-8ygzyh"><div class="paragraph-1 svelte-8ygzyh"><p class="lead svelte-8ygzyh">BPs green rebrand in the 2000s represented the company's shift
+import{_ as M}from"../chunks/C1FmrZbK.js";import{a as H,t as R}from"../chunks/DGqtx0UH.js";import"../chunks/BzWc-8pQ.js";import{g as D,T as O,V as L,i as N,m as W,l as e,n as t,k as i,W as P,o as F,j as q}from"../chunks/5lW7ABz8.js";import{s as g}from"../chunks/D0lOji1P.js";import{s as G}from"../chunks/Bjzgw3R-.js";import{i as J}from"../chunks/0IwTZHX3.js";import{o as z}from"../chunks/tLbPkKgv.js";import{b as p}from"../chunks/BMRDEfV3.js";import{A as $}from"../chunks/Laa9MhVm.js";var V=R(`<section id="hero"><div class="animated-header svelte-8ygzyh"><div class="title-container svelte-8ygzyh"><h1>The <br> Aesthetics <br> of Inaction: <br> BP's Story</h1></div> <div class="ah1 svelte-8ygzyh"><!></div></div></section> <div class="content-container svelte-8ygzyh"><div class="paragraph-1 svelte-8ygzyh"><p class="lead svelte-8ygzyh">BPs green rebrand in the 2000s represented the company's shift
 			"Beyond Petroleum". The campaign garnered buy-in from consumers
 			eager for irresponsible corporations to take the lead on the climate
 			issue. A few years later, this green veneer would be shattered.
@@ -72,7 +72,7 @@ import{_ as M}from"../chunks/C1FmrZbK.js";import{a as H,t as R}from"../chunks/DG
 				negligence concealed through exuberant pro-environment
 				marketing. Whilst initially contained, these oversights soon
 				began to compound, culminating in a series of dramatic incidents
-				that would shake the firms green identity its core.</p> <p class="svelte-8ygzyh">In 2005, a distillation tower at the Texas City oil refinery was
+				that would shake the firms green identity to its core.</p> <p class="svelte-8ygzyh">In 2005, a distillation tower at the Texas City oil refinery was
 				restarted after planned maintanence. What the operators hadn't
 				realised is that the tower had failed to be fitted with
 				necessary drainage equipment. Overfilled beyond its limits, the
