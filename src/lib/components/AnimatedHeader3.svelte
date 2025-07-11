@@ -67,8 +67,8 @@
             }
         </style>
         <linearGradient id="shapeGradient" gradientTransform="rotate(0)">
-            <stop offset="0%" stop-color="#4E0BE0" />
-            <stop offset="100%" stop-color="#FFBEBA" />
+            <stop offset="0%" stop-color="#090979" />
+            <stop offset="100%" stop-color="#996D92" />
             </linearGradient>
     </defs>
     <rect width="100%" height="100%" fill="#000000" />

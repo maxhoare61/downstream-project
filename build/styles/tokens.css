@@ -25,7 +25,7 @@
 
     /* Colour Design elements */
     --color-background: #ede9e5;
-    --color-background-dark: #ded9d4;
+    --color-background-dark: #d1cac3;
     --color-border: #9B9B9B;
     --color-white: #FCFBFB;
     --accent-primary: var(--color-blue);
@@ -66,6 +66,7 @@
     --h1-font-weight: 500;
     --h1-font-size: 3rem;
     --h1-line-height: 4.5rem;
+    --h1-padding: 1rem;
 
     /* H2 Text */
     --h2-font-family: 'Bai Jamjuree';
@@ -113,8 +114,8 @@
     /* Lead Text */
     --lead-font-family: 'DM Sans';
     --lead-font-style: normal;
-    --lead-font-weight: 200;
-    --lead-line-height: 1.75rem;
+    --lead-font-weight: 300;
+    --lead-line-height: 2rem;
 
     /* Caption Text */
     --caption-font-family: 'DM Sans';
@@ -129,4 +130,7 @@
     --logo-font-weight: 700;
     --logo-font-size: 1.25rem;
     --logo-line-height: 1.25;
+
+    /* Page Title Text */
+    --page-title-top-spacing: 2rem;
 }

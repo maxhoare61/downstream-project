@@ -1,8 +1,8 @@
 <script lang="ts">
   export let heading1 = "The Problem";
-  export let text1 = "Public data isn’t always publicly accessible. Key insights from government data are often  scattered across PDFs,  spreadsheets, and fragmented databases. While technically publicly available, understanding it requires expertise, and a lot of time.";
+  export let text1 = "Important data isn’t always publicly accessible. Key data from the stories that matter to us are often scattered across PDFs, spreadsheets, and fragmented databases. While technically publicly available, understanding it requires expertise, and a lot of time.";
   export let heading2 = "Our Approach";
-  export let text2 = "At Downstream, we believe public data should be truly public. We transform dense datasets into clear, interactive visuals and scrollable narratives. We handle the data cleaning, analysis, and visualisations - you explore the insights.";
+  export let text2 = "At Downstream, we believe data should be truly public. We transform dense datasets into clear, interactive visuals and scrollable narratives. We handle the data cleaning, analysis, and visualisations - you explore the insights.";
   export let heading3 = "Our Work";
   export let text3 = "We're starting small but focusing on what matters—making carbon emissions and political donation data accessible to everyone through interactive storytelling. These are the stories we care about, and we believe you should be able to understand them too.";
   

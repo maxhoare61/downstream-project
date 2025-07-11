@@ -2814,9 +2814,9 @@ function AnimatedHeader2($$payload, $$props) {
 function _page($$payload) {
   $$payload.out += `<section id="hero" class="svelte-vgcida"><div class="animated-header svelte-vgcida"><div class="title t2 svelte-vgcida">Reverse <br> Carbon <br> Footprint <br> Calculator</div> <div class="ah1 svelte-vgcida">`;
   AnimatedHeader2($$payload);
-  $$payload.out += `<!----></div></div></section> <section id="calculator" class="svelte-vgcida"><div class="content-container"><div class="paragraph-1 svelte-vgcida"><p class="lead svelte-vgcida">The second article in the Carbon Emissions in Perspective series
-                follows on from ‘The Carbon Footprint Story’, by introducing the
-                Reverse Carbon Calculator. This instalment seeks to recalibrate
+  $$payload.out += `<!----></div></div></section> <section id="calculator" class="svelte-vgcida"><div class="content-container"><div class="paragraph-1 svelte-vgcida"><p class="lead svelte-vgcida">The third article in the Carbon Emissions in Perspective series
+                follows on by introducing the Reverse Carbon Calculator. 
+                This instalment seeks to recalibrate
                 our perspective of personal emissions by providing an
                 interactive way to compare personal emissions to those of major
                 polluters.</p> <p class="lead svelte-vgcida">The Reverse Carbon Calculator is a tool to help contextualize individual carbon

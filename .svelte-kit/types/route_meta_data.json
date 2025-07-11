@@ -5,6 +5,12 @@
 	"/about-us": [
 		"src/routes/about-us/+page.server.ts"
 	],
+	"/articles/article-five": [
+		"src/routes/articles/article-five/+page.server.ts"
+	],
+	"/articles/article-four": [
+		"src/routes/articles/article-four/+page.server.ts"
+	],
 	"/articles/article-one": [
 		"src/routes/articles/article-one/+page.server.ts"
 	],

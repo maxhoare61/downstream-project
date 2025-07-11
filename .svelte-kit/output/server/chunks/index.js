@@ -1072,7 +1072,7 @@ function ensure_array_like(array_like_or_iterator) {
   return [];
 }
 export {
-  noop as $,
+  ensure_array_like as $,
   create_text as A,
   BLOCK_EFFECT as B,
   CLEAN as C,
@@ -1101,7 +1101,7 @@ export {
   fallback as Z,
   bind_props as _,
   active_reaction as a,
-  ensure_array_like as a0,
+  noop as a0,
   DERIVED as b,
   increment_write_version as c,
   derived_sources as d,

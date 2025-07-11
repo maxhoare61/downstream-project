@@ -1,7 +1,7 @@
 /* NORMALISING */
 html {
   box-sizing: border-box;
-  font-size: clamp(12px, 1.2vw, 16px);;
+  font-size: clamp(14px, 1.2vw, 16px);;
 }
 
 *,
@@ -43,6 +43,7 @@ body {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
   line-height: var(--body-line-height);
+  font-weight: var(--body-font-weight);
   color: var(--color-black-text);
   background-color: var(--color-background);
   padding: 0;
@@ -50,8 +51,7 @@ body {
 }
 
 .content-container {
-  margin-right: clamp(10px, 5vw, 64px);
-  margin-left: clamp(10px, 5vw, 64px);
+  margin: 0 clamp(10px, 5vw, 64px);
 }
 
 .logo {
@@ -95,13 +95,14 @@ h1 {
   font-style: var(--h1-font-style);;
   font-size: var(--h1-font-size);
   font-weight: var(--h1-font-weight);
+  padding: var(--h1-padding) 0;
 }
 
 h2 {
   color: var(--color-dark-text);
   font-family: var(--h2-font-family);
   font-style: var(--h2-font-style);;
-  font-size: clamp(1.5rem , 5vw, 3rem);
+  font-size: clamp(1.5rem , 5vw, 2.5rem);
   font-weight: var(--h2-font-weight);
   line-height: var(--h2-line-height);
 }
@@ -113,6 +114,7 @@ h3 {
   font-size: var(--h3-font-size);
   font-weight: var(--h3-font-weight);
   line-height: var(--h3-line-height);
+  padding: var(--h1-padding) 0;
 }
 
 h4 {
@@ -120,6 +122,7 @@ h4 {
   font-style: var(--h4-font-style);;
   font-size: var(--h4-font-size);
   font-weight: var(--h4-font-weight);
+  line-height: normal;
 }
 
 h5 {
@@ -131,17 +134,22 @@ h5 {
   padding-bottom: 0.5rem;
 }
 
+.page-title {
+  padding-top: var(--page-title-top-spacing);
+}
+
 .lead {
   font-family: var(--lead-font-family);
   font-style: var(--lead-font-style);;
   font-size: clamp(1.2rem, 1.16666vw ,1.4rem);
   font-weight: var(--lead-font-weight);
+  line-height: var(--lead-line-height);
 }
 
 .tile-type {
+  font-family: var(--h4-font-family);
   font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--accent-primary);
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -159,10 +167,8 @@ figcaption {
 .tile-description {
   font-family: var(--caption-font-family);
   font-style: var(--caption-font-style);;
-  font-size: 1rem;
-  font-weight: var(--caption-font-weight);
+  font-size: 1.1rem;
   line-height: var(--caption-line-height);
-  color: var(--color-border)
 }
 
 .btn-1 {

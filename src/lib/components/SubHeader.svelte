@@ -7,7 +7,6 @@
     import { base } from '$app/paths';
 </script>
 
-<h1>Explore Our Projects</h1>
 <div class="sub-header-container">
     <nav>
         <a class="all" href="{base}/">All</a>
@@ -18,13 +17,7 @@
 </div>
 
 <style>
-
-h1{
-    margin-top: 8rem;
-}
 .sub-header-container{
-    margin-top: 3rem;
-    margin-bottom: 1rem;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -38,12 +31,14 @@ h1{
     grid-template-columns: repeat(4, 25%); 
     gap: 2rem; /* Space between grid items */
     justify-content: start;
-    min-width: 50%;
+    align-items: center;
+    min-width: 75%;
     text-align: center;
+    line-height: 1.25;
 }
 
 nav a:hover {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .all{
@@ -51,7 +46,7 @@ nav a:hover {
 }
 
 .all:hover {
-    font-weight: 700;
+    font-weight: 500;
 }
 </style>
 

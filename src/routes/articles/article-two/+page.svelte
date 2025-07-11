@@ -20,9 +20,9 @@
     <div class="content-container">
         <div class="paragraph-1">
             <p class="lead">
-                The second article in the Carbon Emissions in Perspective series
-                follows on from ‘The Carbon Footprint Story’, by introducing the
-                Reverse Carbon Calculator. This instalment seeks to recalibrate
+                The third article in the Carbon Emissions in Perspective series
+                follows on by introducing the Reverse Carbon Calculator. 
+                This instalment seeks to recalibrate
                 our perspective of personal emissions by providing an
                 interactive way to compare personal emissions to those of major
                 polluters. 

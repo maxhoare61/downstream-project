@@ -1,10 +1,10 @@
-import { Q as pop, O as push, Z as fallback, _ as bind_props, W as stringify } from "../../chunks/index.js";
+import { Q as pop, O as push, Z as fallback, _ as bind_props, W as stringify, $ as ensure_array_like } from "../../chunks/index.js";
 import { b as base } from "../../chunks/paths.js";
 import { a as attr } from "../../chunks/attributes.js";
 import "../../chunks/client.js";
 import "d3";
 import { e as escape_html } from "../../chunks/escaping.js";
-import { P as ProjectCard } from "../../chunks/ProjectCard.js";
+import { A as ArticleCard, a as articlesData } from "../../chunks/articles.js";
 function InteractiveGraph($$payload, $$props) {
   push();
   let width = 600;
@@ -53,9 +53,9 @@ function Hero($$payload, $$props) {
 function Preamble($$payload, $$props) {
   push();
   let heading1 = fallback($$props["heading1"], "The Problem");
-  let text1 = fallback($$props["text1"], "Public data isn’t always publicly accessible. Key insights from government data are often  scattered across PDFs,  spreadsheets, and fragmented databases. While technically publicly available, understanding it requires expertise, and a lot of time.");
+  let text1 = fallback($$props["text1"], "Important data isn’t always publicly accessible. Key data from the stories that matter to us are often scattered across PDFs, spreadsheets, and fragmented databases. While technically publicly available, understanding it requires expertise, and a lot of time.");
   let heading2 = fallback($$props["heading2"], "Our Approach");
-  let text2 = fallback($$props["text2"], "At Downstream, we believe public data should be truly public. We transform dense datasets into clear, interactive visuals and scrollable narratives. We handle the data cleaning, analysis, and visualisations - you explore the insights.");
+  let text2 = fallback($$props["text2"], "At Downstream, we believe data should be truly public. We transform dense datasets into clear, interactive visuals and scrollable narratives. We handle the data cleaning, analysis, and visualisations - you explore the insights.");
   let heading3 = fallback($$props["heading3"], "Our Work");
   let text3 = fallback($$props["text3"], "We're starting small but focusing on what matters—making carbon emissions and political donation data accessible to everyone through interactive storytelling. These are the stories we care about, and we believe you should be able to understand them too.");
   $$payload.out += `<section class="section svelte-tfzdcv"><div class="section-left svelte-tfzdcv"><div class="section-left-child svelte-tfzdcv"><h2>${escape_html(heading1)}</h2> <div class="p">${escape_html(text1)}</div></div> <div class="section-left-child svelte-tfzdcv"><h2>${escape_html(heading2)}</h2> <div class="p">${escape_html(text2)}</div></div> <div class="section-left-child svelte-tfzdcv"><h2>${escape_html(heading3)}</h2> <div class="p">${escape_html(text3)}</div></div></div> <div class="section-right svelte-tfzdcv"><div class="backdrop-right svelte-tfzdcv"><div class="lottie-container svelte-tfzdcv"></div></div></div></section>`;
@@ -70,36 +70,31 @@ function Preamble($$payload, $$props) {
   pop();
 }
 function _page($$payload) {
-  $$payload.out += `<div class="river-image overlay svelte-1riqd68"></div> <img${attr("src", `${stringify(base)}/carpentaria-karumba-queensland.jpg`)} alt="Scenic winding wiver" class="river-image svelte-1riqd68"> <div class="content-container"><div class="hero-preamble svelte-1riqd68">`;
+  const projects = articlesData;
+  const each_array = ensure_array_like(projects);
+  $$payload.out += `<div class="content-container"><div class="hero-preamble svelte-1brpf11">`;
   Hero($$payload, {});
   $$payload.out += `<!----> `;
   Preamble($$payload, {});
-  $$payload.out += `<!----></div> <section class="projects svelte-1riqd68"><h2 class="current-projects svelte-1riqd68">Current Projects</h2> <div class="project-grid svelte-1riqd68">`;
-  ProjectCard($$payload, {
-    link: `${stringify(base)}/articles/article-one`,
-    imgUrl: `${stringify(base)}/smoke-stack-extended.jpg`,
-    cat: "Project",
-    title: "Carbon Emissions in Perspective",
-    description: "An in-depth analysis of carbon emissions across various industries and their impact on the environment."
-  });
-  $$payload.out += `<!----> `;
-  ProjectCard($$payload, {
-    imgUrl: `${stringify(base)}/political-donations.jpg`,
-    type: "column",
-    cat: "Article",
-    title: "Political Donations Revealed",
-    description: "This article aims to transform politicians declared interests into a cohesive and\n                accessible narrative.",
-    link: `${stringify(base)}/articles/article-three`
-  });
-  $$payload.out += `<!----> `;
-  ProjectCard($$payload, {
-    link: `${stringify(base)}/articles/article-two`,
-    imgUrl: `${stringify(base)}/calculator-thumbnail.png`,
-    cat: "Article",
-    title: "Reverse Carbon Footprint Calculator",
-    description: "This article introduces the Reverse Carbon Calculator, a tool to help contextualize individual carbon emissions."
-  });
-  $$payload.out += `<!----></div></section></div>`;
+  $$payload.out += `<!----></div> <section class="project-section svelte-1brpf11"><div class="project-header"><div class="display-text svelte-1brpf11"><h4 class="svelte-1brpf11">Current Projects</h4></div></div> <div class="article-grid svelte-1brpf11"><!--[-->`;
+  for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
+    let {
+      project,
+      projectDescription,
+      projectLink,
+      imgUrl
+    } = each_array[$$index];
+    ArticleCard($$payload, {
+      title: project,
+      description: projectDescription,
+      cat: "Project",
+      imgUrl: `${base}${imgUrl}`,
+      type: "column",
+      link: projectLink,
+      project
+    });
+  }
+  $$payload.out += `<!--]--></div></section></div>`;
 }
 export {
   _page as default

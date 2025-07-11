@@ -1,122 +1,112 @@
-<script>
+<script lang="ts">
 	import SubHeader from "$lib/components/SubHeader.svelte";
-	import ProjectCard from "$lib/components/ProjectCard.svelte";
+	import ArticleCard from "$lib/components/ArticleCard.svelte";
 	import { base } from "$app/paths";
+	import articlesData from "$lib/data/articles.json";
+
+	// Define types for TypeScript
+	interface Article {
+		title: string;
+		description: string;
+		cat: string;
+		project: string;
+		imgUrl: string;
+		type: string;
+		link: string;
+	}
+
+	interface Project {
+		project: string;
+		projectDescription: string;
+		articles: Article[];
+	}
+
+	const projects: Project[] = articlesData;
 </script>
 
 <div class="content-container">
-	<SubHeader
-		links={[
-			{ href: "#", text: "Carbon Emissions" }
-		]}
-	/>
-
-	<section class="Project-Container">
-		<div class="project-grid">
-			<div class="text-container left">
-				<h3>Carbon Emissions in Perspective</h3>
-				<p class="tile-type">Project</p>
-				<p>
-					A project to shed light on how data is often misrepresented
-					to paint consumers as the cause of emissions.
-				</p>
+	<h1 class="page-title">Explore Projects</h1>
+	<SubHeader links={[
+		{ href: '#', text: 'Emissions in Perspective' }
+	]} />
+	{#each projects as { project, projectDescription, articles }, i}
+		<section class="project-section">
+			<div class="project-header">
+				<div class="display-text">
+					<p class="tile-type">Project</p>
+					<h4>{project}</h4>
+					<p class="lead project-description">{projectDescription}</p>
+				</div>
 			</div>
-			<ProjectCard
-				imgUrl="{base}/smoke-stack-extended.jpg"
-				type="column"
-				cat="Article"
-				title="The Carbon Footprint Story"
-				description="In this article we cover the idea of the 'carbon footprint' and how it has shaped the public's perception of climate change."
-				link="{base}/articles/article-one"
-			/>
-		</div>
-		<div class="project-grid">
-			<ProjectCard
-				link="{base}/articles/article-two"
-				imgUrl="{base}/calculator-thumbnail.png"
-				cat="Article"
-				title="Reverse Carbon Footprint Calculator"
-				description="This article introduces the Reverse Carbon Calculator, a tool to help contextualize individual carbon emissions."
-			/>
-		</div>
-	</section>
-	<section class="Project-Container">
-		<div class="project-grid">
-			<div class="text-container left">
-				<h3>Political Donations Revealed</h3>
-				<p class="tile-type">Project</p>
-				<p>
-					A project to transform public data on politicians declared interests into a cohesive and
-					accessible narrative, revealing the often-financial ties between
-					elected officials and powerful interests.
-				</p>
+			<div class="article-grid">
+				{#each articles as article}
+						<ArticleCard
+							title={article.title}
+							description={article.description}
+							cat={article.cat}
+							imgUrl="{base}{article.imgUrl}"
+							type={article.type}
+							link="{base}{article.link}"
+							project={article.project}
+						/>
+				{/each}
 			</div>
-			<ProjectCard
-				imgUrl="{base}/political-donations.jpg"
-				type="column"
-				cat="Article"
-				title="Political Donations Revealed"
-				description="This article aims to transform politicians declared interests into a cohesive and
-                accessible narrative."
-				link="{base}/articles/article-three"
-			/>
-		</div>
-	</section>
+		</section>
+	{/each}
 </div>
 
 <style>
-	.Project-Container {
-		padding: 6rem 0rem;
-		min-height: 50vh;
-		gap: 4rem;
-	}
-
-	.project-grid {
+	.article-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
-		align-items: stretch;
-		gap: 2rem;
+		grid-template-columns: repeat(3, 1fr); /* Strict two-column layout */
+		gap: 3rem;
 	}
-
-	@media (max-width: 768px) {
-		.project-grid {
-			grid-template-columns: 1fr; /* Single column */
-			grid-template-rows: auto; /* Allow natural row height */
-			gap: 1.5rem; /* Adjust spacing */
-		}
+	.project-section {
+		padding-bottom: 4rem;
 	}
-
-	.project-grid:not(:last-child) {
-		margin-bottom: 2rem;
-	}
-
-	.Project-Container:not(:last-child) {
-		border-bottom: 1px solid var(--color-border);
-		margin-bottom: 2rem;
-	}
-
-	.text-container {
+	.project-header {
 		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		height: clamp(100px, 25vh, 600px);
+	}
+	.display-text {
+		display: flex;
+		padding-top: 2rem;
 		flex-direction: column;
-		justify-content: space-evenly;
-		gap: 0.25rem;
-		padding: 3rem;
-		background-color: white;
-		border-radius: var(--box-corner-radius);
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		align-items: left;
+		text-align: left;
+		min-width: clamp(18rem, 33vw, 25rem);
+	}
+
+	.project-section:not(:last-child) {
+		border-bottom: 1px solid var(--color-border, #e0e0e0); /* Thin line, fallback color */
+	}
+
+	.lead.project-description {
+		padding: 0.5rem 0;
+		font-family: 'Bai Jamjuree';
+		font-size: 1.2rem;
+		font-weight: 400;
+		line-height: 1.8rem;
+	}
+
+	h4 {
+		font-weight: 500;
+		font-size: 2rem;
+		color: var(--color-dark-text);
+		line-height: normal;
 	}
 
 	.tile-type {
-		padding-bottom: 0.75rem;
-		margin-bottom: 0.75rem;
-		border-bottom: solid 1px var(--color-border);
+		color: var(--color-blue);
+		font-size: 1.2rem;
 	}
 
-	.text-container p {
-		max-width: 35vw;
-	}
-
-	/*.Project-Container:last-child {
-		border-top: 1px solid var(--color-border);
-	}*/
+	@media (max-width: 768px) {
+		.article-grid {
+			grid-template-columns: 1fr; /* Stack to one column on mobile */
+			gap: 1.5rem;
+		}
+    }
 </style>
