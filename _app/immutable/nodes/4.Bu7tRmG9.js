@@ -1,28 +1,30 @@
-import{_ as O}from"../chunks/C1FmrZbK.js";import{a as L,t as N}from"../chunks/DGqtx0UH.js";import"../chunks/BzWc-8pQ.js";import{g as z,T as F,V as W,i as $,m as q,l as e,n as t,k as i,W as m,o as G,j as J}from"../chunks/5lW7ABz8.js";import{s as r}from"../chunks/D0lOji1P.js";import{s as V}from"../chunks/Bjzgw3R-.js";import{i as j}from"../chunks/0IwTZHX3.js";import{o as A}from"../chunks/tLbPkKgv.js";import{b as l}from"../chunks/BY0HxWVj.js";import{A as U}from"../chunks/Laa9MhVm.js";var Q=N(`<section id="hero"><div class="animated-header svelte-w06wel"><div class="title-container svelte-w06wel"><h1>The <br> Aesthetics <br> of Inaction: <br> BP's Story</h1></div> <div class="ah1 svelte-w06wel"><!></div></div></section> <div class="content-container svelte-w06wel"><div class="paragraph-1 svelte-w06wel"><p class="lead svelte-w06wel">BPs 2000s marketing campaign, aptly titled "Beyond Petroleum",
+import{_ as O}from"../chunks/C1FmrZbK.js";import{a as L,t as N}from"../chunks/DGqtx0UH.js";import"../chunks/BzWc-8pQ.js";import{g as z,T as F,V as W,i as $,m as q,l as e,n as t,k as a,W as g,o as G,j as J}from"../chunks/5lW7ABz8.js";import{s as r}from"../chunks/D0lOji1P.js";import{s as V}from"../chunks/Bjzgw3R-.js";import{i as j}from"../chunks/0IwTZHX3.js";import{o as A}from"../chunks/tLbPkKgv.js";import{b as l}from"../chunks/DvBkmvfx.js";import{A as U}from"../chunks/Laa9MhVm.js";var Q=N(`<section id="hero"><div class="animated-header svelte-w06wel"><div class="title-container svelte-w06wel"><h1>The <br> Aesthetics <br> of Inaction: <br> BP's Story</h1></div> <div class="ah1 svelte-w06wel"><!></div></div></section> <div class="content-container svelte-w06wel"><div class="paragraph-1 svelte-w06wel"><p class="lead svelte-w06wel">BPs 2000s marketing campaign, aptly titled "Beyond Petroleum",
 			reframed the company as an environmental activist to the tune of
 			$200 million. It garnered buy-in from consumers eager for
-			irresponsible corporations to take the lead on solving climate change. A
-			few years later, this green veneer would be shattered, after three
-			record breaking environmental disasters and numerous fatalities at
-			BP facilities left people wondering how they ever fell for it.</p></div></div> <section id="s-origins" class="svelte-w06wel"><div class="makeover-paragraph svelte-w06wel"><div class="paragraph-2 svelte-w06wel"><p class="svelte-w06wel">In the 15 years leading to 2000, climate change went mainstream.
+			irresponsible corporations to take the lead on solving climate
+			change. A few years later, this green veneer would be shattered,
+			after three record breaking environmental disasters and numerous
+			fatalities at BP facilities left people wondering how they ever fell
+			for it.</p></div></div> <section id="s-origins" class="svelte-w06wel"><div class="makeover-paragraph svelte-w06wel"><div class="paragraph-2 svelte-w06wel"><p class="svelte-w06wel">In the 15 years leading to 2000, climate change went mainstream.
 				Support from huge celebrities (Leo Dicaprio and Sting each set
 				up environmental foundations during this time) gave the movement
 				culture cache, and the topic quickly penetrated the Overton
 				window. In the '90s, Michael Jacksons music video for “Earth
 				Song” had a cultural moment, with its dramatic imagery of wind
-				machines blowing his hair and clothes. Public awareness of the issue
-				led extreme weather events to be associated with the greenhouse
-				effect, further elevating its profile in public discussion.
-				Droughts across the US in 1988, and a record-breaking El Niño in
-				1998 aroused fear that natural disasters were being influenced
-				by “man-made” factors. By the turn of the millennium, fear of an
-				impending climate crisis was reaching all time highs.</p> <figure class="bar-chart svelte-w06wel"><figcaption class="caption lead svelte-w06wel">Most people heard about climate change for the first time in
+				machines blowing his hair and clothes. Public awareness of the
+				issue led extreme weather events to be associated with the
+				greenhouse effect, further elevating its profile in public
+				discussion. Droughts across the US in 1988, and a
+				record-breaking El Niño in 1998 aroused fear that natural
+				disasters were being influenced by “man-made” factors. By the
+				turn of the millennium, fear of an impending climate crisis was
+				reaching all time highs.</p> <figure class="bar-chart svelte-w06wel"><figcaption class="caption lead svelte-w06wel">Most people heard about climate change for the first time in
 					the 15 years leading up to 2000.</figcaption> <figcaption class="caption subcaption svelte-w06wel">Findings from polling on the question "Are you aware of the
 					greenhouse effect?" (or similar). Collated by Nisbet and
 					Myers (2007)</figcaption> <img alt="Bar chart of climate awareness increasing in the 2000s" class="bar-chart-img svelte-w06wel"></figure> <p class="svelte-w06wel">Around this time, petrol titan BP suddenly, radically, reworked
 				their vibe. Their visual brand transformed into a cacophony of
-				green and yellow hues and demure lowercase font. They parted with
-				the staunch, blocky aesthetic of the oil industry, and
+				green and yellow hues and demure lowercase font. They parted
+				with the staunch, blocky aesthetic of the oil industry, and
 				replaced their tagline - 'British Petroleum' - with 'Beyond
 				Petroleum'. Their theatrical new branding conveyed one idea with
 				crystal clarity: BP wasn't like the other oil companies. Ads
@@ -30,13 +32,14 @@ import{_ as O}from"../chunks/C1FmrZbK.js";import{a as L,t as N}from"../chunks/DG
 				babies drive past several derelict gas stations in search of
 				somewhere to fill up their car. No prizes for guessing which one
 				they end up choosing.</p> <figure class="svelte-w06wel"><img alt="BP video ad"> <figcaption>BP's "Babies" TV ad was aired in 2007.</figcaption></figure> <div class="old_logo_container svelte-w06wel"><figure class="svelte-w06wel"><img class="old_logo svelte-w06wel" alt="BPs old logo prior to rebrand"> <figcaption>BP's logo prior to 1997 had none of the floral
-						connotations of the logo that would replace it.</figcaption></figure></div> <p class="svelte-w06wel">BPs campaign was responding to the growing sentiment that fossil
-				fuel companies were primely responsible for the greenhouse
-				effect. However, while customers were pressuring the company to
-				reduce emissions, shareholders were wary of green changes that
-				would harm profits. The default response for most oil brands was
-				to stall; deny the science, rebuke claims that they were causing
-				pollution and hold out until people forgot all about it.</p> <p class="svelte-w06wel">BP realised that this strategy was deeply flawed. Denying their
+						connotations of the logo that would replace it.</figcaption></figure></div> <p class="svelte-w06wel">BPs campaign was talking to the growing segment of the
+				population that saw fossil fuel companies as directly
+				accountable for the greenhouse effect. However, while customers
+				were pressuring the company to reduce emissions, shareholders
+				were wary of green changes that would harm profits. The default
+				response for most oil brands was to stall; deny the science,
+				rebuke claims that they were causing pollution and hold out
+				until people forgot all about it.</p> <p class="svelte-w06wel">BP realised that this strategy was deeply flawed. Denying their
 				role in climate change would only harm their popularity with
 				climate conscious customers, who would be key to turning the
 				tide of public opinion in their direction. Instead, they would
@@ -110,4 +113,4 @@ import{_ as O}from"../chunks/C1FmrZbK.js";import{a as L,t as N}from"../chunks/DG
 				2005.</p> <p class="svelte-w06wel">10) National Commission on the BP Deepwater Horizon Oil Spill
 				and Offshore Drilling. (2011). Deep Water: The Gulf Oil Disaster
 				and the Future of Offshore Drilling. U.S. Government Printing
-				Office.</p></div></div></section>`,1);function re(T,S){z(S,!1);let g=G(!1);A(()=>{const w=document.querySelector(".title");if(w){const n=w.getBoundingClientRect().top,s=window.innerHeight;n<s*.75&&q(g,!0)}const a=()=>{const n=document.querySelectorAll(".fadein-scroll"),s=new Set;n.forEach((o,Y)=>{if(s.has(o))return;const R=o.getBoundingClientRect().top,D=window.innerHeight;R<D*.5&&(o.classList.add("visible"),s.add(o),s.size===n.length&&window.removeEventListener("scroll",a))})};return window.addEventListener("scroll",a),a(),()=>{window.removeEventListener("scroll",a)}}),A(async()=>{typeof window<"u"&&(await O(()=>import("../chunks/CvEQ06TD.js").then(a=>a.l),[],import.meta.url)).default}),j();var f=Q(),c=F(f),v=e(c),d=e(v),E=e(d);t(d);var y=i(d,2),x=e(y);U(x,{}),t(y),t(v),t(c);var b=i(c,4),B=e(b),P=e(B),h=i(e(P),2),I=i(e(h),4);r(I,"src",`${l??""}/colchart-climateawareness.png`),t(h);var p=i(h,4),C=e(p);r(C,"src",`${l??""}/BP_baby_ad.gif`),m(2),t(p);var u=i(p,2),_=e(u),H=e(_);r(H,"src",`${l??""}/bp_old_logo.jpg`),m(2),t(_),t(u);var k=i(u,8),M=i(e(k),4);r(M,"src",`${l??""}/six-americas.png`),t(k),m(34),t(P),t(B),t(b),W(()=>V(E,`title ${(J(g)?"visible":"")??""} svelte-w06wel`)),L(T,f),$()}export{re as component};
+				Office.</p></div></div></section>`,1);function re(T,S){z(S,!1);let m=G(!1);A(()=>{const w=document.querySelector(".title");if(w){const n=w.getBoundingClientRect().top,s=window.innerHeight;n<s*.75&&q(m,!0)}const i=()=>{const n=document.querySelectorAll(".fadein-scroll"),s=new Set;n.forEach((o,Y)=>{if(s.has(o))return;const R=o.getBoundingClientRect().top,D=window.innerHeight;R<D*.5&&(o.classList.add("visible"),s.add(o),s.size===n.length&&window.removeEventListener("scroll",i))})};return window.addEventListener("scroll",i),i(),()=>{window.removeEventListener("scroll",i)}}),A(async()=>{typeof window<"u"&&(await O(()=>import("../chunks/CvEQ06TD.js").then(i=>i.l),[],import.meta.url)).default}),j();var f=Q(),c=F(f),v=e(c),d=e(v),E=e(d);t(d);var y=a(d,2),x=e(y);U(x,{}),t(y),t(v),t(c);var b=a(c,4),B=e(b),P=e(B),h=a(e(P),2),I=a(e(h),4);r(I,"src",`${l??""}/colchart-climateawareness.png`),t(h);var p=a(h,4),C=e(p);r(C,"src",`${l??""}/BP_baby_ad.gif`),g(2),t(p);var u=a(p,2),k=e(u),H=e(k);r(H,"src",`${l??""}/bp_old_logo.jpg`),g(2),t(k),t(u);var _=a(u,8),M=a(e(_),4);r(M,"src",`${l??""}/six-americas.png`),t(_),g(34),t(P),t(B),t(b),W(()=>V(E,`title ${(J(m)?"visible":"")??""} svelte-w06wel`)),L(T,f),$()}export{re as component};
