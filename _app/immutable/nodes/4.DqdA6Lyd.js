@@ -1,4 +1,4 @@
-import{_ as O}from"../chunks/C1FmrZbK.js";import{a as L,t as N}from"../chunks/DGqtx0UH.js";import"../chunks/BzWc-8pQ.js";import{g as z,T as F,V as W,i as $,m as q,l as e,n as t,k as i,W as g,o as G,j as J}from"../chunks/5lW7ABz8.js";import{s as r}from"../chunks/D0lOji1P.js";import{s as V}from"../chunks/Bjzgw3R-.js";import{i as j}from"../chunks/0IwTZHX3.js";import{o as A}from"../chunks/tLbPkKgv.js";import{b as l}from"../chunks/Cd8jfcmW.js";import{A as U}from"../chunks/Laa9MhVm.js";var Q=N(`<section id="hero"><div class="animated-header svelte-w06wel"><div class="title-container svelte-w06wel"><h1>The <br> Aesthetics <br> of Inaction: <br> BP's Story</h1></div> <div class="ah1 svelte-w06wel"><!></div></div></section> <div class="content-container svelte-w06wel"><div class="paragraph-1 svelte-w06wel"><p class="lead svelte-w06wel">BPs 2000s marketing campaign, aptly titled "Beyond Petroleum",
+import{_ as O}from"../chunks/C1FmrZbK.js";import{a as L,t as N}from"../chunks/DGqtx0UH.js";import"../chunks/BzWc-8pQ.js";import{g as z,T as F,V as W,i as $,m as q,l as e,n as t,k as i,W as g,o as G,j as J}from"../chunks/5lW7ABz8.js";import{s as r}from"../chunks/D0lOji1P.js";import{s as V}from"../chunks/Bjzgw3R-.js";import{i as j}from"../chunks/0IwTZHX3.js";import{o as A}from"../chunks/tLbPkKgv.js";import{b as l}from"../chunks/KsjCZ4gt.js";import{A as U}from"../chunks/Laa9MhVm.js";var Q=N(`<section id="hero"><div class="animated-header svelte-w06wel"><div class="title-container svelte-w06wel"><h1>The <br> Aesthetics <br> of Inaction: <br> BP's Story</h1></div> <div class="ah1 svelte-w06wel"><!></div></div></section> <div class="content-container svelte-w06wel"><div class="paragraph-1 svelte-w06wel"><p class="lead svelte-w06wel">BPs 2000s marketing campaign, aptly titled "Beyond Petroleum",
 			reframed the company as an environmental activist to the tune of
 			$200 million. It garnered buy-in from consumers eager for
 			irresponsible corporations to take the lead on solving climate
@@ -22,16 +22,16 @@ import{_ as O}from"../chunks/C1FmrZbK.js";import{a as L,t as N}from"../chunks/DG
 					the 15 years leading up to 2000.</figcaption> <figcaption class="caption subcaption svelte-w06wel">Findings from polling on the question "Are you aware of the
 					greenhouse effect?" (or similar). Collated by Nisbet and
 					Myers (2007)</figcaption> <img alt="Bar chart of climate awareness increasing in the 2000s" class="bar-chart-img svelte-w06wel"></figure> <p class="svelte-w06wel">Around this time, petrol titan BP suddenly, radically, reworked
-				their vibe. Their visual brand transformed into a kaleidoscope of
-				green and yellow hues. They parted
-				with the staunch, blocky aesthetic of the oil industry, and
-				replaced their tagline - 'British Petroleum' - with 'Beyond
-				Petroleum'. Their theatrical new branding conveyed one idea with
-				crystal clarity: BP wasn't like the other oil companies. Ads
-				like the one below, which shows a car full of
-				babies drive past several derelict gas stations in search of
-				somewhere to fill up their car, reaffirmed this idea. No prizes for guessing which station
-				they end up choosing.</p> <figure class="svelte-w06wel"><img alt="BP video ad"> <figcaption>BP's "Babies" TV ad was aired in 2007.</figcaption></figure> <div class="old_logo_container svelte-w06wel"><figure class="svelte-w06wel"><img class="old_logo svelte-w06wel" alt="BPs old logo prior to rebrand"> <figcaption>BP's logo prior to 1997 had none of the floral
+				their vibe. Their visual brand transformed into a kaleidoscope
+				of green and yellow hues. They parted with the staunch, blocky
+				aesthetic of the oil industry, and replaced their tagline -
+				'British Petroleum' - with 'Beyond Petroleum'. Their theatrical
+				new branding conveyed one idea with crystal clarity: BP wasn't
+				like the other oil companies. Ads like the one below, which
+				shows a car full of babies drive past several derelict gas
+				stations in search of somewhere to fill up their car, reaffirmed
+				this idea. No prizes for guessing which station they end up
+				choosing.</p> <figure class="svelte-w06wel"><img alt="BP video ad"> <figcaption>BP's "Babies" TV ad was aired in 2007.</figcaption></figure> <div class="old_logo_container svelte-w06wel"><figure class="svelte-w06wel"><img class="old_logo svelte-w06wel" alt="BPs old logo prior to rebrand"> <figcaption>BP's logo prior to 1997 had none of the floral
 						connotations of the logo that would replace it.</figcaption></figure></div> <p class="svelte-w06wel">BPs campaign was talking to the growing segment of the
 				population that saw fossil fuel companies as directly
 				accountable for the greenhouse effect. However, while customers
@@ -72,10 +72,10 @@ import{_ as O}from"../chunks/C1FmrZbK.js";import{a as L,t as N}from"../chunks/DG
 				their façade betrayed a darker reality in their operations.
 				Behind the scenes, BP had quietly been laser-focused on reducing
 				overhead. The resulting strategy was one of blatant cost cutting
-				negligence concealed through exuberant pro-environment
-				marketing. Whilst initially contained, these oversights soon
-				began to compound, culminating in a series of dramatic incidents
-				that would shake the firms green identity to its core.</p> <p class="svelte-w06wel">In 2005, a distillation tower at the Texas City oil refinery was
+				negligence concealed by a pro-environment veneer. Whilst initially
+				contained, these oversights soon began to compound, culminating
+				in a series of dramatic incidents that would shake the firms
+				green identity to its core.</p> <p class="svelte-w06wel">In 2005, a distillation tower at the Texas City oil refinery was
 				restarted after planned maintanence. What the operators hadn't
 				realised is that the tower had failed to be fitted with
 				necessary drainage equipment. Overfilled beyond its limits, the
@@ -113,4 +113,4 @@ import{_ as O}from"../chunks/C1FmrZbK.js";import{a as L,t as N}from"../chunks/DG
 				2005.</p> <p class="svelte-w06wel">10) National Commission on the BP Deepwater Horizon Oil Spill
 				and Offshore Drilling. (2011). Deep Water: The Gulf Oil Disaster
 				and the Future of Offshore Drilling. U.S. Government Printing
-				Office.</p></div></div></section>`,1);function re(T,S){z(S,!1);let m=G(!1);A(()=>{const w=document.querySelector(".title");if(w){const n=w.getBoundingClientRect().top,s=window.innerHeight;n<s*.75&&q(m,!0)}const a=()=>{const n=document.querySelectorAll(".fadein-scroll"),s=new Set;n.forEach((o,Y)=>{if(s.has(o))return;const R=o.getBoundingClientRect().top,D=window.innerHeight;R<D*.5&&(o.classList.add("visible"),s.add(o),s.size===n.length&&window.removeEventListener("scroll",a))})};return window.addEventListener("scroll",a),a(),()=>{window.removeEventListener("scroll",a)}}),A(async()=>{typeof window<"u"&&(await O(()=>import("../chunks/CvEQ06TD.js").then(a=>a.l),[],import.meta.url)).default}),j();var f=Q(),c=F(f),v=e(c),d=e(v),E=e(d);t(d);var y=i(d,2),x=e(y);U(x,{}),t(y),t(v),t(c);var b=i(c,4),B=e(b),P=e(B),h=i(e(P),2),I=i(e(h),4);r(I,"src",`${l??""}/colchart-climateawareness.png`),t(h);var p=i(h,4),C=e(p);r(C,"src",`${l??""}/BP_baby_ad.gif`),g(2),t(p);var u=i(p,2),k=e(u),H=e(k);r(H,"src",`${l??""}/bp_old_logo.jpg`),g(2),t(k),t(u);var _=i(u,8),M=i(e(_),4);r(M,"src",`${l??""}/six-americas.png`),t(_),g(34),t(P),t(B),t(b),W(()=>V(E,`title ${(J(m)?"visible":"")??""} svelte-w06wel`)),L(T,f),$()}export{re as component};
+				Office.</p></div></div></section>`,1);function re(T,S){z(S,!1);let m=G(!1);A(()=>{const w=document.querySelector(".title");if(w){const n=w.getBoundingClientRect().top,s=window.innerHeight;n<s*.75&&q(m,!0)}const a=()=>{const n=document.querySelectorAll(".fadein-scroll"),s=new Set;n.forEach((o,Y)=>{if(s.has(o))return;const R=o.getBoundingClientRect().top,D=window.innerHeight;R<D*.5&&(o.classList.add("visible"),s.add(o),s.size===n.length&&window.removeEventListener("scroll",a))})};return window.addEventListener("scroll",a),a(),()=>{window.removeEventListener("scroll",a)}}),A(async()=>{typeof window<"u"&&(await O(()=>import("../chunks/CvEQ06TD.js").then(a=>a.l),[],import.meta.url)).default}),j();var f=Q(),c=F(f),v=e(c),d=e(v),E=e(d);t(d);var y=i(d,2),I=e(y);U(I,{}),t(y),t(v),t(c);var b=i(c,4),B=e(b),P=e(B),h=i(e(P),2),x=i(e(h),4);r(x,"src",`${l??""}/colchart-climateawareness.png`),t(h);var p=i(h,4),C=e(p);r(C,"src",`${l??""}/BP_baby_ad.gif`),g(2),t(p);var u=i(p,2),k=e(u),H=e(k);r(H,"src",`${l??""}/bp_old_logo.jpg`),g(2),t(k),t(u);var _=i(u,8),M=i(e(_),4);r(M,"src",`${l??""}/six-americas.png`),t(_),g(34),t(P),t(B),t(b),W(()=>V(E,`title ${(J(m)?"visible":"")??""} svelte-w06wel`)),L(T,f),$()}export{re as component};
