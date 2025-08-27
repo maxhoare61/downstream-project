@@ -35,20 +35,22 @@
   <section class="project-section">
     <div class="project-header">
       <div class="display-text">
-        <h4>Current Projects</h4>
+        <h4>More articles</h4>
       </div>
     </div>
     <div class="article-grid">
-      {#each projects as { project, projectDescription, projectLink, imgUrl }}
-        <ArticleCard
-          title={project}
-          description={projectDescription}
-          cat="Project"
-          imgUrl={`${base}${imgUrl}`}
-          type="column"
-          link={projectLink}
-          {project}
-        />
+      {#each projects as { articles }}
+        {#each articles as article}
+          <ArticleCard
+            title={article.title}
+            description={article.description}
+            cat={article.cat}
+            imgUrl="{base}{article.imgUrl}"
+            type={article.type}
+            link="{base}{article.link}"
+            project={article.project}
+          />
+        {/each}
       {/each}
     </div>
   </section>

@@ -77,9 +77,9 @@ function AnnualEmissionsChart($$payload, $$props) {
 }
 function _page($$payload, $$props) {
   push();
-  $$payload.out += `<section id="hero"><div class="animated-header svelte-17ayhh9"><div${attr("class", `title ${stringify("")} svelte-17ayhh9`)}>Understanding <br> the scale of<br> Emissions</div> <div class="ah1 svelte-17ayhh9">`;
+  $$payload.out += `<section id="hero"><div class="animated-header svelte-chqjuc"><div${attr("class", `title ${stringify("")} svelte-chqjuc`)}>Understanding <br> the scale of<br> Emissions</div> <div class="ah1 svelte-chqjuc">`;
   AnimatedHeader3($$payload);
-  $$payload.out += `<!----></div></div> <div class="content-container svelte-17ayhh9"><div class="paragraph-1 svelte-17ayhh9"><p class="lead svelte-17ayhh9">One reason that misconceptions about climate change gain traction is that 
+  $$payload.out += `<!----></div></div> <div class="content-container svelte-chqjuc"><div class="paragraph-1 svelte-chqjuc"><p class="lead svelte-chqjuc">One reason that misconceptions about climate change gain traction is that 
 				it is hard to understand the units we 
 				use to measure it. What does one tonne of CO2 look like? 
 				How about a million tonnes of CO2? Studies have shown
@@ -88,7 +88,7 @@ function _page($$payload, $$props) {
 				create genuine impetus for action in circles that are uninformed
 				about the climate crisis, we need to start describing climate
 				change in units that anyone can digest. This article attempts to
-				to show that this approach has the potential to lay bare the seriousness of the climate crisis.</p></div></div></section> <section id="s-origins" class="svelte-17ayhh9"><div class="makeover-paragraph svelte-17ayhh9"><h2 class="svelte-17ayhh9">What Does the Data Say?</h2> <div class="paragraph-2 svelte-17ayhh9"><p class="svelte-17ayhh9">On average, each Australian produces 13 tonnes of CO₂ per year
+				to show that this approach has the potential to lay bare the seriousness of the climate crisis.</p></div></div></section> <section id="s-origins" class="svelte-chqjuc"><div class="makeover-paragraph svelte-chqjuc"><h2 class="svelte-chqjuc">What Does the Data Say?</h2> <div class="paragraph-2 svelte-chqjuc"><p class="svelte-chqjuc">On average, each Australian produces 13 tonnes of CO₂ per year
 				through direct emissions (7.5 tonnes) and electricity use (5.5
 				tonnes), one of the highest in the developed world. To
 				understand what this means, let’s look at what it takes to
@@ -96,8 +96,8 @@ function _page($$payload, $$props) {
 				hours (or about 106 days) to emit 1 tonne of CO₂. Driving in a
 				Toyota Camry, you could emit 1 tonne of CO₂ by driving ~5,050
 				kilometres, roughly the distance of a round trip from Sydney to
-				Perth.</p></div></div> <figure class="svelte-17ayhh9"><div id="infograph-1" class="svelte-17ayhh9"><img${attr("src", `${stringify(base)}/infograph-1tco2.jpg`)} alt="Infographic" class="campaign-image svelte-17ayhh9"></div> <figcaption>Simple measurements showing ways to produce 1 tonne of CO2 (source:
-			UtilitySmarts)</figcaption></figure> <div class="makeover-paragraph svelte-17ayhh9"><div class="paragraph-2 svelte-17ayhh9"><p class="svelte-17ayhh9">However, these 13 tonnes of CO2 represent a tiny fraction of the
+				Perth.</p></div></div> <figure class="svelte-chqjuc"><div id="infograph-1" class="svelte-chqjuc"><img${attr("src", `${stringify(base)}/infograph-1tco2.jpg`)} alt="Infographic" class="campaign-image svelte-chqjuc"></div> <figcaption>Simple measurements showing ways to produce 1 tonne of CO2 (source:
+			UtilitySmarts)</figcaption></figure> <div class="makeover-paragraph svelte-chqjuc"><div class="paragraph-2 svelte-chqjuc"><p class="svelte-chqjuc">However, these 13 tonnes of CO2 represent a tiny fraction of the
 				33 million tonnes of CO₂ produced by AGL’s facilities last year
 				alone. Assuming AGLs emissions are evenly spread over the year,
 				how long do you think it takes for AGL to produce emissions
@@ -106,11 +106,11 @@ function _page($$payload, $$props) {
 				Australian’s annual emissions worth of CO2 of every 12.37
 				seconds or 2,553,398 times each year. The chart below shows the
 				surprisingly short time it takes Australia’s three largest
-				emitters to produce the annual emissions of a single Australian.</p></div></div> <figure id="d3-chart" class="svelte-17ayhh9">`;
+				emitters to produce the annual emissions of a single Australian.</p></div></div> <figure id="d3-chart" class="svelte-chqjuc">`;
   AnnualEmissionsChart($$payload);
   $$payload.out += `<!----> <figcaption>The time it takes for Australia's largest emitters to produce
 			emissions equal to the amount the average Australian produces in one
-			year (source: WorldBank)</figcaption></figure> <div class="makeover-paragraph svelte-17ayhh9"><div class="paragraph-2 svelte-17ayhh9"><p class="svelte-17ayhh9">Since we are interested in the usefulness of carbon footprint
+			year (source: WorldBank)</figcaption></figure> <div class="makeover-paragraph svelte-chqjuc"><div class="paragraph-2 svelte-chqjuc"><p class="svelte-chqjuc">Since we are interested in the usefulness of carbon footprint
 				calculators in tackling climate change, it is worth delving into
 				the relative impact of our lifestyle choices. Based on our
 				analysis, the average person can reduce their annual emissions
@@ -123,7 +123,7 @@ function _page($$payload, $$props) {
 				while from our individual perspective we may feel we are
 				creating significant emissions, the reality is often that they
 				are a drop in the ocean compared to those produced by
-				corporations.</p> <p class="svelte-17ayhh9">Another helpful way to understand the scale of corporate
+				corporations.</p> <p class="svelte-chqjuc">Another helpful way to understand the scale of corporate
 				emissions is in terms of the emissions you are expected to
 				produce in your lifetime. Through showing separate cases for
 				low, medium and high personal emissions, we aim to visualise how
@@ -134,11 +134,11 @@ function _page($$payload, $$props) {
 				following a plant-based diet. The high case represents an
 				individual who completely neglects to make environmentally
 				conscious decisions, and the medium case is the average personal
-				emissions output in Australia.</p></div></div> <figure id="d3-chart-lifetime" class="svelte-17ayhh9">`;
+				emissions output in Australia.</p></div></div> <figure id="d3-chart-lifetime" class="svelte-chqjuc">`;
   LifetimeEmissionsChart($$payload);
   $$payload.out += `<!----> <figcaption>The time it takes for Australia's largest emitters to produce
 			emissions equal to the amount the average Australian produces in
-			their lifetime (source: WorldBank)</figcaption></figure> <div class="makeover-paragraph svelte-17ayhh9"><div class="paragraph-2 svelte-17ayhh9"><p class="svelte-17ayhh9">It may be disheartening to those who choose to forego simple
+			their lifetime (source: WorldBank)</figcaption></figure> <div class="makeover-paragraph svelte-chqjuc"><div class="paragraph-2 svelte-chqjuc"><p class="svelte-chqjuc">It may be disheartening to those who choose to forego simple
 				pleasures for the benefit of the planet to know that the
 				cumulative impact of these choices over their lifetime, compared
 				with the average individual’s lifetime emissions, is produced by
@@ -149,7 +149,7 @@ function _page($$payload, $$props) {
 				and 107 companies in Australia achieve this feat at least once
 				each day. Importantly, these are not the indirect emissions
 				created when consumers use products from these companies, they
-				are the direct emissions caused by their daily operations.</p></div> <h2 class="svelte-17ayhh9">Conclusions</h2> <div class="paragraph-2 svelte-17ayhh9"><p class="svelte-17ayhh9">While lifestyle changes can still provide market signals to
+				are the direct emissions caused by their daily operations.</p></div> <h2 class="svelte-chqjuc">Conclusions</h2> <div class="paragraph-2 svelte-chqjuc"><p class="svelte-chqjuc">While lifestyle changes can still provide market signals to
 				corporations, there are clear limits to this strategy. However,
 				not all hope is lost. Recognising this, we can refocus efforts
 				on reforming the industries and institutions that shape the

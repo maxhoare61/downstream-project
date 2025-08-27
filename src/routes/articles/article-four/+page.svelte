@@ -371,7 +371,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
-		height: clamp(250px, 50vw, 700px);
+		height: clamp(180px, 50vw, 700px);
 		overflow: hidden;
 	}
 
@@ -382,9 +382,9 @@
 		font-family: "Work Sans", sans-serif;
 		font-weight: 600;
 		text-align: center;
-		font-size: clamp(4rem, 15vw, 10rem);
-		line-height: clamp(3.5rem, 12vw, 9rem);
-		padding: clamp(12px, 7vw, 5rem);
+		font-size: clamp(3.3rem, 11vw, 10rem);
+		line-height: clamp(3.1rem, 12vw, 9rem);
+		padding: clamp(12px, 5vw, 5rem);
 		z-index: 2;
 		color: white;
 		white-space: nowrap;
@@ -392,7 +392,6 @@
 			opacity 1s ease,
 			transform 1s ease;
 		opacity: 0;
-		transform: translateX(-20px);
 		max-height: 100vh;
 		justify-content: end;
 		letter-spacing: normal;

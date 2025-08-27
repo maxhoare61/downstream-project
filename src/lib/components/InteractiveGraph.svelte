@@ -45,18 +45,16 @@
     };
 
     let allNodes = [
-    { name: "The Carbon Footprint Story", shape: "pentagon", color: "#26b790", url: `${base}/articles/article-one` },
-    { name: "Reverse Carbon Calculator", shape: "hexagon", color: "#DCFF4F", url: `${base}/articles/article-two` },
+    { name: "The Scale of Emissions", shape: "pentagon", color: "#26b790", url: `${base}/articles/article-four` },
+    { name: "Aesthetics of Inaction", shape: "hexagon", color: "#DCFF4F", url: `${base}/articles/article-five` },
     { name: "Emissions in Perspective", shape: "triangle", color: "#26b790", url: `${base}/explore` },
-    { name: "Political Donations Uncovered", shape: "square", color: "#26b790", url: `${base}/explore` },
     { name: "What is Downstream?", shape: "hexagon", color: "#26b790", url: `${base}/about-us` },
     ];
 
     let allLinks = [
-        { source: "The Carbon Footprint Story", target: "Stories" },
-        { source: "Reverse Carbon Calculator", target: "Stories" },
+        { source: "The Scale of Emissions", target: "Stories" },
+        { source: "Aesthetics of Inaction", target: "Stories" },
         { source: "Emissions in Perspective", target: "Projects" },
-        { source: "Political Donations Uncovered", target: "Projects" },
         { source: "What is Downstream?", target: "About" },
     ];
 

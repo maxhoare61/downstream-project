@@ -14,6 +14,9 @@
 	"/articles/article-one": [
 		"src/routes/articles/article-one/+page.server.ts"
 	],
+	"/articles/article-six": [
+		"src/routes/articles/article-six/+page.server.ts"
+	],
 	"/articles/article-three": [
 		"src/routes/articles/article-three/+page.server.ts"
 	],

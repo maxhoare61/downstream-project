@@ -36,7 +36,7 @@
       "_escaping.js"
     ],
     "css": [
-      "_app/immutable/assets/articles.D5ueGfT5.css"
+      "_app/immutable/assets/articles.BePfibe-.css"
     ]
   },
   "_attributes.js": {
@@ -122,7 +122,7 @@
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.Dma13lMt.css"
+      "_app/immutable/assets/_layout.BK7bSLeA.css"
     ]
   },
   "src/routes/+page.server.ts": {
@@ -165,7 +165,7 @@
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.DXYfeaQh.css"
+      "_app/immutable/assets/_page.D340-bcr.css"
     ]
   },
   "src/routes/articles/article-five/+page.server.ts": {
@@ -186,7 +186,7 @@
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.BNIZdrl6.css"
+      "_app/immutable/assets/_page.Bi-j4iTf.css"
     ]
   },
   "src/routes/articles/article-four/+page.server.ts": {
@@ -207,7 +207,7 @@
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.D9gLgo7O.css"
+      "_app/immutable/assets/_page.CDzRIAeZ.css"
     ]
   },
   "src/routes/articles/article-one/+page.server.ts": {
@@ -229,6 +229,26 @@
     ],
     "css": [
       "_app/immutable/assets/_page.JR_axwjq.css"
+    ]
+  },
+  "src/routes/articles/article-six/+page.server.ts": {
+    "file": "entries/pages/articles/article-six/_page.server.ts.js",
+    "name": "entries/pages/articles/article-six/_page.server.ts",
+    "src": "src/routes/articles/article-six/+page.server.ts",
+    "isEntry": true
+  },
+  "src/routes/articles/article-six/+page.svelte": {
+    "file": "entries/pages/articles/article-six/_page.svelte.js",
+    "name": "entries/pages/articles/article-six/_page.svelte",
+    "src": "src/routes/articles/article-six/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_paths.js",
+      "_attributes.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.D4botiGO.css"
     ]
   },
   "src/routes/articles/article-three/+page.server.ts": {
@@ -288,7 +308,7 @@
       "_articles.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.HV-I3DLU.css"
+      "_app/immutable/assets/_page.D8OfGUKD.css"
     ]
   }
 }

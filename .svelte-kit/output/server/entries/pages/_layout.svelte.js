@@ -52,7 +52,7 @@ function Header($$payload, $$props) {
   pop();
 }
 function Footer($$payload) {
-  $$payload.out += `<footer class="footer svelte-j6upov"><div class="logo"><img${attr("src", `${stringify(base)}/mocklogo1.png`)} alt="logo" class="logo-image"> <div>Downstream<br>Project</div></div> <div class="footer-text svelte-j6upov"><p>2025 Downstream Project</p></div></footer>`;
+  $$payload.out += `<footer class="footer svelte-1isf7km"><div class="logo"><img${attr("src", `${stringify(base)}/mocklogo1.png`)} alt="logo" class="logo-image"> <div>Downstream<br>Project</div></div> <div class="footer-text svelte-1isf7km"><a href="https://www.linkedin.com/company/downstream-project/" target="_blank" rel="noopener">Downstream LinkedIn</a></div></footer>`;
 }
 function _layout($$payload, $$props) {
   head($$payload, ($$payload2) => {

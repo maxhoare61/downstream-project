@@ -9,7 +9,7 @@
 <section id="hero">
     <div class="animated-header">
         <div class="title t2">
-            Dirty <br /> Donations
+            More data sharing can be a good thing with Open Finance
         </div>
         <div class="ah1">
             <AnimatedHeader />

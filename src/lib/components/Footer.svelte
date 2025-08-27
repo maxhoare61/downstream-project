@@ -8,7 +8,7 @@
     <div>Downstream<br>Project</div>
   </div>
   <div class="footer-text">
-    <p>2025 Downstream Project</p>
+    <a href="https://www.linkedin.com/company/downstream-project/" target="_blank" rel="noopener">Downstream LinkedIn</a>
   </div>
 </footer>
 
@@ -24,11 +24,18 @@
     min-height: var(--spacing-7);
   }
   .footer-text {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    margin-right: 139px;
-    color: var(--accent-secondary);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--accent-secondary);
+  }
+  @media (max-width: 768px) {
+    .footer-text {
+      justify-content: flex-end;
+      padding-right: 1rem; /* Optional: add some right padding */
+    }
   }
 </style>

@@ -20,14 +20,18 @@ function _page($$payload) {
   $$payload.out += `<div class="content-container"><h1 class="page-title">Explore Projects</h1> `;
   SubHeader($$payload, {
     links: [
-      { href: "#", text: "Emissions in Perspective" }
+      { href: "#project-0", text: "Ideas in Finance" },
+      {
+        href: "#project-1",
+        text: "Emissions in Perspective"
+      }
     ]
   });
   $$payload.out += `<!----> <!--[-->`;
   for (let i = 0, $$length = each_array.length; i < $$length; i++) {
     let { project, projectDescription, articles } = each_array[i];
     const each_array_1 = ensure_array_like(articles);
-    $$payload.out += `<section class="project-section svelte-180eipi"><div class="project-header svelte-180eipi"><div class="display-text svelte-180eipi"><p class="tile-type svelte-180eipi">Project</p> <h4 class="svelte-180eipi">${escape_html(project)}</h4> <p class="lead project-description svelte-180eipi">${escape_html(projectDescription)}</p></div></div> <div class="article-grid svelte-180eipi"><!--[-->`;
+    $$payload.out += `<section class="project-section svelte-1vwr8fa"${attr("id", "project-" + i)}><div class="project-header svelte-1vwr8fa"><div class="display-text svelte-1vwr8fa"><p class="tile-type svelte-1vwr8fa">Project</p> <h4 class="svelte-1vwr8fa">${escape_html(project)}</h4> <p class="lead project-description svelte-1vwr8fa">${escape_html(projectDescription)}</p></div></div> <div class="article-grid svelte-1vwr8fa"><!--[-->`;
     for (let $$index = 0, $$length2 = each_array_1.length; $$index < $$length2; $$index++) {
       let article = each_array_1[$$index];
       ArticleCard($$payload, {

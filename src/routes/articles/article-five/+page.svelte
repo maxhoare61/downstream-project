@@ -218,14 +218,14 @@
 <div class="content-container">
 	<div class="paragraph-1">
 		<p class="lead">
-			BPs green rebrand in the 2000s represented the company's shift
-			"Beyond Petroleum". The campaign garnered buy-in from consumers
-			eager for irresponsible corporations to take the lead on the climate
-			issue. A few years later, this green veneer would be shattered.
-			After three record breaking environmental disasters and numerous
-			fatalities at BP facilities, many were left wondering how they ever
-			fell for it, and whether other companies were using similar tactics
-			to decieve them.
+			BPs 2000s marketing campaign, aptly titled "Beyond Petroleum",
+			reframed the company as an environmental activist to the tune of
+			$200 million. It garnered buy-in from consumers eager for
+			irresponsible corporations to take the lead on solving climate
+			change. A few years later, this green veneer would be shattered,
+			after three record breaking environmental disasters and numerous
+			fatalities at BP facilities left people wondering how they ever fell
+			for it.
 		</p>
 	</div>
 </div>
@@ -237,15 +237,16 @@
 				Support from huge celebrities (Leo Dicaprio and Sting each set
 				up environmental foundations during this time) gave the movement
 				culture cache, and the topic quickly penetrated the Overton
-				window. In the 90s, Michael Jacksons music video for “Earth
+				window. In the '90s, Michael Jacksons music video for “Earth
 				Song” had a cultural moment, with its dramatic imagery of wind
-				machines blowing Jackson's hair and clothes. Public awareness
-				led extreme weather events to be associated with the greenhouse
-				effect, further elevating its profile in public discussion.
-				Droughts across the US in 1988, and a record-breaking El Niño in
-				1998 aroused fear that natural disasters were being influenced
-				by “man-made” factors. By the turn of the millennium, fear of an
-				impending climate crises was reaching all time highs.
+				machines blowing his hair and clothes. Public awareness of the
+				issue led extreme weather events to be associated with the
+				greenhouse effect, further elevating its profile in public
+				discussion. Droughts across the US in 1988, and a
+				record-breaking El Niño in 1998 aroused fear that natural
+				disasters were being influenced by “man-made” factors. By the
+				turn of the millennium, fear of an impending climate crisis was
+				reaching all time highs.
 			</p>
 			<figure class="bar-chart">
 				<figcaption class="caption lead">
@@ -265,29 +266,43 @@
 			</figure>
 			<p>
 				Around this time, petrol titan BP suddenly, radically, reworked
-				their vibe. Their visual brand transformed into a cacophony of
-				green and yellow hues and soft, lowercase font. They parted with
-				the staunch, blocky aesthetic style of their oil peers, and
-				replaced their tagline - 'British Petroleum' - with 'Beyond
-				Petroleum'. Their theatrical new branding conveyed one idea with
-				crystal clarity: BP wasn't like the other oil companies. Ads
-				like the one below reaffirmed this. In this specific ad, some
-				babies drive past several derelict gas stations in search of
-				somewhere to fill up their car. No prizes for guessing which one
-				they end up choosing.
+				their vibe. Their visual brand transformed into a kaleidoscope
+				of green and yellow hues. They parted with the staunch, blocky
+				aesthetic of the oil industry, and replaced their tagline -
+				'British Petroleum' - with 'Beyond Petroleum'. Their theatrical
+				new branding conveyed one idea with crystal clarity: BP wasn't
+				like the other oil companies. Ads like the one below, which
+				shows a car full of babies drive past several derelict gas
+				stations in search of somewhere to fill up their car, reaffirmed
+				this idea. No prizes for guessing which station they end up
+				choosing.
 			</p>
 			<figure>
 				<img src="{base}/BP_baby_ad.gif" alt="BP video ad" />
 				<figcaption>BP's "Babies" TV ad was aired in 2007.</figcaption>
 			</figure>
+			<div class="old_logo_container">
+				<figure>
+					<img
+						class="old_logo"
+						src="{base}/bp_old_logo.jpg"
+						alt="BPs old logo prior to rebrand"
+					/>
+					<figcaption>
+						BP's logo prior to 1997 had none of the floral
+						connotations of the logo that would replace it.
+					</figcaption>
+				</figure>
+			</div>
 			<p>
-				BPs campaign was responding to the growing sentiment that fossil
-				fuel companies were primely responsible for the greenhouse
-				effect. However, while customers were pressuring the company to
-				reduce emissions, shareholders were wary of green changes that
-				would harm profits. The default response for most oil brands was
-				to stall; deny the science, rebuke claims that they were causing
-				pollution and hold out until people forgot all about it.
+				BPs campaign was talking to the growing segment of the
+				population that saw fossil fuel companies as directly
+				accountable for the greenhouse effect. However, while customers
+				were pressuring the company to reduce emissions, shareholders
+				were wary of green changes that would harm profits. The default
+				response for most oil brands was to stall; deny the science,
+				rebuke claims that they were causing pollution and hold out
+				until people forgot all about it.
 			</p>
 			<p>
 				BP realised that this strategy was deeply flawed. Denying their
@@ -314,7 +329,7 @@
 					change without having a clear understanding of the science.
 				</figcaption>
 				<figcaption class="caption subcaption">
-					George Mason's "Six Americas" study (2008) found that
+					Leiserowitz's "Six Americas" study (2008) found that
 					consumers were motivated to see action on climate change,
 					but lacked understanding of what causes and solutions would
 					look like.
@@ -341,15 +356,16 @@
 				viewed BP as “the most environmentally friendly oil company”.
 			</p>
 			<h2>Beyond the theatrics</h2>
+			<p></p>
 			<p>
 				While BP had become a dark horse of the green marketing world,
 				their façade betrayed a darker reality in their operations.
 				Behind the scenes, BP had quietly been laser-focused on reducing
 				overhead. The resulting strategy was one of blatant cost cutting
-				negligence concealed through exuberant pro-environment
-				marketing. Whilst initially contained, these oversights soon
-				began to compound, culminating in a series of dramatic incidents
-				that would shake the firms green identity to its core.
+				negligence concealed by a pro-environment veneer. Whilst initially
+				contained, these oversights soon began to compound, culminating
+				in a series of dramatic incidents that would shake the firms
+				green identity to its core.
 			</p>
 			<p>
 				In 2005, a distillation tower at the Texas City oil refinery was
@@ -374,10 +390,7 @@
 				public’s assumptions, BP affirmed them. In doing so, they
 				constructed a powerful illusion that deferred scrutiny and
 				allowed harmful practices to continue beneath a carefully
-				manicured exterior. This story emphasises the importance of
-				spreading genuine knowledge rather than superficial moral
-				rhetoric. While BP misled the public, the public was, in part,
-				willing to be misled.
+				manicured exterior.
 			</p>
 			<h3 class="references">References</h3>
 			<p>
@@ -488,6 +501,17 @@
 		padding: 2rem 0rem;
 	}
 
+	.old_logo {
+		width: 75%;
+	}
+
+	.old_logo_container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+
 	.ah1 {
 		display: absolute;
 		display: flex;
@@ -592,6 +616,6 @@
 	}
 
 	.caption.subcaption {
-		font-size: 1.15rem;
+		font-size: 1.1rem;
 	}
 </style>

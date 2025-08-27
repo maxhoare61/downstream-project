@@ -76,23 +76,24 @@ function _page($$payload) {
   Hero($$payload, {});
   $$payload.out += `<!----> `;
   Preamble($$payload, {});
-  $$payload.out += `<!----></div> <section class="project-section svelte-1brpf11"><div class="project-header"><div class="display-text svelte-1brpf11"><h4 class="svelte-1brpf11">Current Projects</h4></div></div> <div class="article-grid svelte-1brpf11"><!--[-->`;
-  for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
-    let {
-      project,
-      projectDescription,
-      projectLink,
-      imgUrl
-    } = each_array[$$index];
-    ArticleCard($$payload, {
-      title: project,
-      description: projectDescription,
-      cat: "Project",
-      imgUrl: `${base}${imgUrl}`,
-      type: "column",
-      link: projectLink,
-      project
-    });
+  $$payload.out += `<!----></div> <section class="project-section svelte-1brpf11"><div class="project-header"><div class="display-text svelte-1brpf11"><h4 class="svelte-1brpf11">More articles</h4></div></div> <div class="article-grid svelte-1brpf11"><!--[-->`;
+  for (let $$index_1 = 0, $$length = each_array.length; $$index_1 < $$length; $$index_1++) {
+    let { articles } = each_array[$$index_1];
+    const each_array_1 = ensure_array_like(articles);
+    $$payload.out += `<!--[-->`;
+    for (let $$index = 0, $$length2 = each_array_1.length; $$index < $$length2; $$index++) {
+      let article = each_array_1[$$index];
+      ArticleCard($$payload, {
+        title: article.title,
+        description: article.description,
+        cat: article.cat,
+        imgUrl: `${stringify(base)}${stringify(article.imgUrl)}`,
+        type: article.type,
+        link: `${stringify(base)}${stringify(article.link)}`,
+        project: article.project
+      });
+    }
+    $$payload.out += `<!--]-->`;
   }
   $$payload.out += `<!--]--></div></section></div>`;
 }

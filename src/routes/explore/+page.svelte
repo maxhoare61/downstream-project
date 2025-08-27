@@ -27,10 +27,11 @@
 <div class="content-container">
 	<h1 class="page-title">Explore Projects</h1>
 	<SubHeader links={[
-		{ href: '#', text: 'Emissions in Perspective' }
+		{ href: '#project-0', text: 'Ideas in Finance' },
+		{ href: '#project-1', text: 'Emissions in Perspective' }
 	]} />
 	{#each projects as { project, projectDescription, articles }, i}
-		<section class="project-section">
+		<section class="project-section" id={"project-" + i}>
 			<div class="project-header">
 				<div class="display-text">
 					<p class="tile-type">Project</p>
@@ -66,9 +67,9 @@
 	}
 	.project-header {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
-		height: clamp(100px, 25vh, 600px);
+		height: auto;
 	}
 	.display-text {
 		display: flex;
@@ -84,11 +85,12 @@
 	}
 
 	.lead.project-description {
-		padding: 0.5rem 0;
+		padding: 0.8rem 0;
 		font-family: 'Bai Jamjuree';
 		font-size: 1.2rem;
 		font-weight: 400;
 		line-height: 1.8rem;
+		height: 100%;
 	}
 
 	h4 {
@@ -103,10 +105,36 @@
 		font-size: 1.2rem;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1100px) and (min-width: 500px) {
+		.project-section {
+			display: flex;
+			flex-direction: column;
+		}
 		.article-grid {
-			grid-template-columns: 1fr; /* Stack to one column on mobile */
+			grid-template-columns: repeat(2, 1fr);
 			gap: 1.5rem;
+		}
+		.lead.project-description {
+			line-height: 2.2rem;
+			padding: 1rem 0;
+		}
+		.project-header {
+        height: auto;
+    	}
+    }
+
+	@media (max-width: 500px) {
+		.project-header {
+			flex-direction: column;
+			height: auto;
+		}
+		.article-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+		.lead.project-description {
+			line-height: 2.2rem;
+			padding: 1rem 0;
 		}
     }
 </style>

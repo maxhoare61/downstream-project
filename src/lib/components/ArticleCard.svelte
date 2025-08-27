@@ -30,7 +30,6 @@
     justify-content: space-between;
     background-color: white;
     border-radius: var(--box-corner-radius);
-    height: 34rem;
     width: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
@@ -40,9 +39,9 @@
     position: relative;
     display: flex;
     background-size: cover; /* Ensures the image covers the entire div */
-    background-position: center; /* Centers the image in the div */
+    background-position: top; /* Centers the image in the div */
     border-radius: calc(var(--box-corner-radius) / 1.5);
-    min-height: clamp(180px, 16vw, 230px); /* Dynamic height */
+    min-height: clamp(180px, 16vw, 200px); /* Dynamic height */
     min-width: auto; 
     flex-grow: 1;
     gap: clamp(1rem, 2vw, 2rem); 
