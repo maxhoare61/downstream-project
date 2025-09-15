@@ -14,67 +14,62 @@ function AnimatedHeader4($$payload, $$props) {
 }
 function _page($$payload, $$props) {
   push();
-  $$payload.out += `<section id="hero"><div class="animated-header svelte-2cpiel"><div class="title-container svelte-2cpiel"><h1${attr("class", `title ${stringify("")} svelte-2cpiel`)}>The Promise <br> of Open Finance</h1></div> <div class="ah1 svelte-2cpiel">`;
+  $$payload.out += `<section id="hero"><div class="animated-header svelte-1tbwxqx"><div class="title-container svelte-1tbwxqx"><h1${attr("class", `title ${stringify("")} svelte-1tbwxqx`)}>The Promise <br> of Open Finance</h1></div> <div class="ah1 svelte-1tbwxqx">`;
   AnimatedHeader4($$payload);
-  $$payload.out += `<!----></div></div></section> <section id="s-origins" class="svelte-2cpiel"><div class="makeover-paragraph svelte-2cpiel"><div class="paragraph-2 svelte-2cpiel"><p class="svelte-2cpiel">The four-pillar oligopoly in Australia’s banking sector has
-				become increasingly concentrated, with the major banks now
-				accounting for a quarter of the ASX50’s total market value. But,
-				with great market concentration comes great pricing power, and a
-				worse deal for everyday banking customers. Australian retail
-				banks are now the most profitable globally, and some
-				fear that they are abusing their power to increase revenue by
-				raising costs for customers. Despite clear evidence that
-				these high levels of market concentration can be harmful for
-				society, more direct remedies to introduce competition (e.g.
-				demergers) consistently fail to gain political traction. As a
-				nation with a mature digital finance ecosystem, however,
-				Australia’s vast stores of financial data may present a new,
-				alternative path to fostering a more competitive banking
-				landscape, through a set of policies known as Open Finance.</p> <figure class="bar-chart svelte-2cpiel"><figcaption class="caption lead svelte-2cpiel">With the popularity of cash on the decline, digital finance
-					ecosystems generate vast data that could be used by
-					financial service firms to benefit consumers.</figcaption> <figcaption class="caption subcaption svelte-2cpiel">The chart shows the decline of cash payments (volume) by
-					country between 2010 and 2020. Now, the vast data generated
-					by online payments can be used by new financial service
-					providers to compete with major players and drive down rates
-					for consumers.</figcaption> <img${attr("src", `${stringify(base)}/DS-graph-51.png`)} alt="The decline of cash payments (volume) by
-					country between 2010 and 2020" class="bar-chart-img svelte-2cpiel"> <figcaption>Source: Mckinsey &amp; Company, 2020</figcaption></figure> <h2 class="svelte-2cpiel">What is Open Finance?</h2> <p class="svelte-2cpiel">Open Finance is a system of data sharing where individuals can
-				compel institutions holding their personal data to share it with
-				financial services firms through secure data portals (or APIs).
-				The allure of Open Finance comes from its potential to lower the
-				legal and technological barriers that have held back customers
-				from accessing their information, prevented them from easily
-				sharing it with third parties, and thus deterred them from
-				switching to different financial institutions.</p> <p class="svelte-2cpiel">Through a secure and centralised system of financial data,
-				consumers may choose to share information with “FinTech” firms
-				who could use it to provide novel, personalised financial
-				services. For instance, businesses offering insights into
-				individuals’ financial standing or helping them to find a loan
-				suited to their specific financial needs. Additionally, by
-				making a variety of data points on an individual readily
-				available, Open Finance can make it easier for loan providers to
-				verify groups who may perform poorly in typical credit checks.
-				For instance, students and gig economy workers.</p> <figure class="bar-chart svelte-2cpiel"><figcaption class="caption lead svelte-2cpiel">Open Finance helps consumers reclaim ownership of their data
-					and use it to their benefit.</figcaption> <figcaption class="caption subcaption svelte-2cpiel">The flow chart shows the basic process underlying Open
-					Finance. It begins with you and the companies that hold your
-					data. Open finance policies give you the right to compel
-					these companies to share your data with other organisations.
-					This is done through secure APIs, or in other words, secure
-					data portals. Data sharing in this form opens opportunities
-					for people to manage their money in new ways, which reduces
-					the inefficiency of a concentrated banking market through
-					introducing competition.</figcaption> <img${attr("src", `${stringify(base)}/DS-graph-53.png`)} alt="Conceptual diagram of Open Finance" class="bar-chart-img long svelte-2cpiel"></figure> <p class="svelte-2cpiel">While public awareness of Open Finance remains modest, policy
+  $$payload.out += `<!----></div></div></section> <section id="s-origins" class="svelte-1tbwxqx"><div class="makeover-paragraph svelte-1tbwxqx"><div class="paragraph-2 svelte-1tbwxqx"><p class="svelte-1tbwxqx">In 2025 the four-pillar oligopoly in Australia’s banking sector
+				is more entrenched than ever. Today, the big four banks make up
+				~25% of the market value of Australia’s 50 largest companies.
+				Their enormity allows them to crowd out smaller companies and
+				price services above their fair value. Despite these downsides
+				and more, attempts to remedy the situation have so far failed. To
+				abate the impact of insufficient competition on everyday
+				Australians, which is already taking a toll, it is pertinent for
+				policymakers to consider methods that are likely to be
+				implemented in the short term. Fortunately, Australian’s
+				penchant for digital finance tools may present an alternative,
+				market-driven solution to improve competition in retail banking,
+				through a set of policies known as <i>Open Finance</i>.</p> <h2 class="svelte-1tbwxqx">What is Open Finance?</h2> <p class="svelte-1tbwxqx">Open Finance is a policy framework which enables consumers to
+				easily share their data with financial services firms through
+				secure portals. This is a departure from the current paradigm
+				where businesses who hold your personal data have control over
+				it. Open Finance can create a more competitive banking industry,
+				by lowering the legal and technological barriers that have held
+				back customers from accessing their information, prevented them
+				from easily sharing it with third parties, and thus deterred
+				them from switching to different financial institutions.</p> <figure class="bar-chart svelte-1tbwxqx"><figcaption class="caption lead svelte-1tbwxqx">As cash payments decline, digital finance ecosystems may be
+					the key to reintroducing competition into Australia's
+					entrenched finance industry.</figcaption> <figcaption class="caption subcaption svelte-1tbwxqx">The chart shows the proportion of cash payments as a
+					percentage of total payments volume, between 2010 and 2020
+					across major economies.</figcaption> <img${attr("src", `${stringify(base)}/DS-graph-51.png`)} alt="The decline of cash payments (volume) by
+					country between 2010 and 2020" class="bar-chart-img svelte-1tbwxqx"> <figcaption>Source: Mckinsey &amp; Company, 2020</figcaption></figure> <p class="svelte-1tbwxqx">Through a secure and centralised system of financial data,
+				consumers may choose to share information with third party
+				“FinTech” firms who could use it to provide novel, personalised
+				financial services. For instance, businesses could offer
+				customers insights into their financial standing, or help them
+				to find a loan suited to their specific financial needs.
+				Additionally, by making a variety of data points on an
+				individual readily available, Open Finance makes it easier for
+				loan providers to verify groups with atypical credit profiles
+				who may struggle to pass standard credit checks. For instance,
+				students or gig economy workers.</p> <figure class="bar-chart svelte-1tbwxqx"><figcaption class="caption lead svelte-1tbwxqx">Open Finance helps consumers reclaim ownership of their data
+					and use it to their benefit.</figcaption> <figcaption class="caption subcaption svelte-1tbwxqx">Traditionally, financial service providers (your bank) had
+					total control over your data. Open finance gives you the
+					ability to share this data with other organisations in a
+					secure fashion. This creates opportunities to access new
+					financial services and providers easily, encouraging banks
+					to provide a more competitive deal for their customers.</figcaption> <img${attr("src", `${stringify(base)}/DS-graph-53.png`)} alt="Conceptual diagram of Open Finance" class="bar-chart-img long svelte-1tbwxqx"></figure> <p class="svelte-1tbwxqx">While public awareness of Open Finance remains modest, policy
 				development has continued to accelerate around the world since
 				2015. As of November 2024, 95 countries have taken concrete
 				steps toward implementing Open Finance frameworks, ranging from
 				early-stage consultations and pilot programs to fully
 				operational regimes. Over the coming years, many of these
-				initiatives will transition into live systems.</p> <h2 class="svelte-2cpiel">Policy Strategy</h2> <p class="svelte-2cpiel">Governments’ Open Finance policy approaches can differ based on
+				initiatives will transition into live systems.</p> <h2 class="svelte-1tbwxqx">Policy Strategy</h2> <p class="svelte-1tbwxqx">Governments’ Open Finance policy approaches can differ based on
 				the specific objectives they have for the banking sector in
 				their country. Key differences between countries policy include
 				the scope of data types being shared, which organisations
 				participate, if participation is mandatory, and the degree of
 				government involvement in implementation. There are three main
-				policy configurations that have been adopted so far.</p> <h5>Informal economies with high digital finance tool penetration</h5> <p class="svelte-2cpiel">Countries such as Brazil, Nigeria, and India are using Open
+				policy configurations that have been adopted so far.</p> <h5>Informal economies with high digital finance tool penetration</h5> <p class="svelte-1tbwxqx">Countries such as Brazil, Nigeria, and India are using Open
 				Finance to build on existing digital infrastructure and expand
 				access to the formal financial system for previously unbanked
 				populations. While digital payments and mobile finance are
@@ -86,7 +81,7 @@ function _page($$payload, $$props) {
 				only supports economic activity by allowing more people to
 				borrow and invest, but also improves data quality and broadens
 				the tax base.</p> <h5>Developed economies with concentrated domestic finance
-				industries</h5> <p class="svelte-2cpiel">Consumer data rights and antitrust concerns characterise the
+				industries</h5> <p class="svelte-1tbwxqx">Consumer data rights and antitrust concerns characterise the
 				policy goals for Open Finance in developed economies with high
 				formal participation. Developed countries with concentrated
 				domestic financial industries, such as Australia, the UK, and
@@ -99,7 +94,7 @@ function _page($$payload, $$props) {
 				users provide their username and password to a third party to
 				access their data. The UK continues to be a leader in Open
 				Finance, with one of the most robust policy frameworks globally,
-				and over 13.3 million active users in 2025.</p> <h5>Developed economies with competitive domestic finance industries</h5> <p class="svelte-2cpiel">Other developed countries have fiercely competitive domestic
+				and over 13.3 million active users in 2025.</p> <h5>Developed economies with competitive domestic finance industries</h5> <p class="svelte-1tbwxqx">Other developed countries have fiercely competitive domestic
 				finance industries and favour a less interventionalist policy
 				approach. These include Hong Kong, Singapore, and the USA. So
 				far, these governments have pursued partially or wholly
@@ -115,14 +110,11 @@ function _page($$payload, $$props) {
 				disproportionate amount of market share in the Open Finance
 				ecosystem, which will need to be addressed in subsequent policy
 				reform to ensure data sharing can function in an effective
-				manner.</p> <figure class="bar-chart svelte-2cpiel"><figcaption class="caption lead svelte-2cpiel">Developed economies use Open Finance as a tool for
+				manner.</p> <figure class="bar-chart svelte-1tbwxqx"><figcaption class="caption lead svelte-1tbwxqx">Developed economies use Open Finance as a tool for
 					stimulating competition and improving data security in the
-					finance industry.</figcaption> <figcaption class="caption subcaption svelte-2cpiel">The x-axis of the chart is a composite measure of Open
-					Finance policy progress, how strongly it compels banks to
-					enter in Open Finance arrangements with customers and the
-					scope of data types they share. The size of each bubble is
-					an illustrative measure of absolute population uptake, while
-					the y-axis is the rate of consumer uptake in the population.</figcaption> <img${attr("src", `${stringify(base)}/DS-graph-52.png`)} alt="Policy progress and uptake of Open Finance in developed economies" class="bar-chart-img svelte-2cpiel"></figure> <h5>Risks</h5> <p class="svelte-2cpiel">In the last five years, data breaches have become larger, more
+					finance industry.</figcaption> <figcaption class="caption subcaption svelte-1tbwxqx">The chart below visualises Open Finance policy progress and
+					adoption rate of Open Finance as a percentage of the
+					population for each country shown.</figcaption> <img${attr("src", `${stringify(base)}/DS-graph-52.png`)} alt="Policy progress and uptake of Open Finance in developed economies" class="bar-chart-img svelte-1tbwxqx"></figure> <h5>Risks</h5> <p class="svelte-1tbwxqx">In the last five years, data breaches have become larger, more
 				frequent, and more costly. Open Finance systems risk becoming a
 				target of such attacks without sufficient security standards
 				governing both data transmission and infrastructure. As Open
@@ -145,11 +137,11 @@ function _page($$payload, $$props) {
 				against these risks, it is likely both consumers and
 				institutions will be hesitant to participate, slowing the flow
 				of intended benefits, such as greater competition and
-				innovation.</p> <h2 class="svelte-2cpiel">Conclusion</h2> <p class="svelte-2cpiel">Open Finance is a promising policy tool with a range of enticing
+				innovation.</p> <h2 class="svelte-1tbwxqx">Conclusion</h2> <p class="svelte-1tbwxqx">Open Finance is a promising policy tool with a range of enticing
 				benefits for consumers and financial institutions alike. By
 				enabling secure data sharing, it can lower barriers to entry for
 				new entrants, foster competition, and improve the quality of
-				financial services.</p> <p class="svelte-2cpiel">However, there is no “one size fits all” solution to Open
+				financial services.</p> <p class="svelte-1tbwxqx">However, there is no “one size fits all” solution to Open
 				Finance policy. The best policy approach for a country depends
 				on the structure and concentration of the existing financial
 				landscape, industry objectives and consumer interest. So far,
@@ -157,34 +149,34 @@ function _page($$payload, $$props) {
 				been characterised by fast and early policy implementation,
 				strong pre-existing digital finance infrastructure, and the
 				policy flexibility to enable and meet the needs of their
-				population.</p> <h3 class="references svelte-2cpiel">References</h3> <p class="svelte-2cpiel">ASX. (2024). Top 50 by Market Cap. Australian Securities
+				population.</p> <h3 class="references svelte-1tbwxqx">References</h3> <p class="svelte-1tbwxqx">ASX. (2024). Top 50 by Market Cap. Australian Securities
 				Exchange.
-				https://www.asx.com.au/markets/trade-our-cash-market/equity-market-prices/top-50-market-cap</p> <p class="svelte-2cpiel">Awrey, D., &amp; Macey, J. (2022). The Promise and Perils of Open
+				https://www.asx.com.au/markets/trade-our-cash-market/equity-market-prices/top-50-market-cap</p> <p class="svelte-1tbwxqx">Awrey, D., &amp; Macey, J. (2022). The Promise and Perils of Open
 				Finance. Yale Journal on Regulation, 40(1).
-				https://doi.org/10.2139/ssrn.4045640</p> <p class="svelte-2cpiel">Ben-Shahar, O. (2019). Data Pollution. Journal of Legal
-				Analysis, 11, 104–159. https://doi.org/10.1093/jla/laz005</p> <p class="svelte-2cpiel">Cambridge Centre for Alternative Finance. (2024). The Global
+				https://doi.org/10.2139/ssrn.4045640</p> <p class="svelte-1tbwxqx">Ben-Shahar, O. (2019). Data Pollution. Journal of Legal
+				Analysis, 11, 104–159. https://doi.org/10.1093/jla/laz005</p> <p class="svelte-1tbwxqx">Cambridge Centre for Alternative Finance. (2024). The Global
 				State of Open Banking and Open Finance Report. In University of
 				Cambridge Judge Business School. Cambridge Centre for
 				Alternative Finance (CCAF).
-				https://www.jbs.cam.ac.uk/faculty-research/centres/alternative-finance/publications/the-global-state-of-open-banking-and-open-finance-report/</p> <p class="svelte-2cpiel">Cambridge Centre for Alternative Finance. (2025). The APAC State
+				https://www.jbs.cam.ac.uk/faculty-research/centres/alternative-finance/publications/the-global-state-of-open-banking-and-open-finance-report/</p> <p class="svelte-1tbwxqx">Cambridge Centre for Alternative Finance. (2025). The APAC State
 				of Open Banking and Open Finance Report. In University of
 				Cambridge Judge Business School. Cambridge Centre for
 				Alternative Finance (CCAF).
-				https://www.jbs.cam.ac.uk/faculty-research/centres/alternative-finance/publications/the-apac-state-of-open-banking-and-open-finance/</p> <p class="svelte-2cpiel">McKinsey &amp; Company. (2020). The 2020 McKinsey Global Payments
-				Report (p. 6). McKinsey &amp; Company.</p> <p class="svelte-2cpiel">Mizen, R. (2025, August 14). Ahead of Jim Chalmers’ economic
+				https://www.jbs.cam.ac.uk/faculty-research/centres/alternative-finance/publications/the-apac-state-of-open-banking-and-open-finance/</p> <p class="svelte-1tbwxqx">McKinsey &amp; Company. (2020). The 2020 McKinsey Global Payments
+				Report (p. 6). McKinsey &amp; Company.</p> <p class="svelte-1tbwxqx">Mizen, R. (2025, August 14). Ahead of Jim Chalmers’ economic
 				roundtable, RBA economists explain why Australia is $3000 poorer
 				per person. Australian Financial Review.
-				https://www.afr.com/politics/federal/why-australia-is-3000-poorer-per-person-according-to-rba-economists-20250814-p5mmyf</p> <p class="svelte-2cpiel">Nizan Geslevich Packin. (2020). Show Me the (Data About the)
+				https://www.afr.com/politics/federal/why-australia-is-3000-poorer-per-person-according-to-rba-economists-20250814-p5mmyf</p> <p class="svelte-1tbwxqx">Nizan Geslevich Packin. (2020). Show Me the (Data About the)
 				Money! Utah Law Digital Commons.
-				https://dc.law.utah.edu/ulr/vol2020/iss5/4/</p> <p class="svelte-2cpiel">OECD. (2023a). Open finance policy considerations. In OECD
+				https://dc.law.utah.edu/ulr/vol2020/iss5/4/</p> <p class="svelte-1tbwxqx">OECD. (2023a). Open finance policy considerations. In OECD
 				Website. OECD.
-				https://www.oecd.org/en/publications/open-finance-policy-considerations_19ef3608-en.html</p> <p class="svelte-2cpiel">OECD. (2023b). Shifting from open banking to open finance:
+				https://www.oecd.org/en/publications/open-finance-policy-considerations_19ef3608-en.html</p> <p class="svelte-1tbwxqx">OECD. (2023b). Shifting from open banking to open finance:
 				Results from the 2022 OECD survey on data sharing frameworks. In
 				OECD Website. OECD.
-				https://www.oecd.org/en/publications/shifting-from-open-banking-to-open-finance_9f881c0c-en.html</p> <p class="svelte-2cpiel">The Australian Banking Association, Accenture. (2024). Consumer
+				https://www.oecd.org/en/publications/shifting-from-open-banking-to-open-finance_9f881c0c-en.html</p> <p class="svelte-1tbwxqx">The Australian Banking Association, Accenture. (2024). Consumer
 				Data Right Strategic Review. In Australian Banking Association
 				Website. Australian Banking Association.
-				https://www.ausbanking.org.au/report/consumer-data-right-strategic-review-july-2024/</p> <p class="svelte-2cpiel">The Australian Government the Treasury. (2023). Government
+				https://www.ausbanking.org.au/report/consumer-data-right-strategic-review-july-2024/</p> <p class="svelte-1tbwxqx">The Australian Government the Treasury. (2023). Government
 				statement in response to the Statutory Review of the Consumer
 				Data Right. In Consumer Data Right. The Australian Government
 				the Treasury. https://www.cdr.gov.au/rollout</p></div></div></section>`;

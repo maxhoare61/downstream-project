@@ -132,7 +132,7 @@ h5 {
   font-size: clamp(1.5rem, 1.16666vw ,1.75rem);
   font-weight: var(--h5-font-weight);
   line-height: var(--h5-line-height);
-  padding-bottom: 0.5rem;
+  padding-top: 0.7rem;
 }
 
 .page-title {

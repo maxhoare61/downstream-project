@@ -132,32 +132,42 @@
 	<div class="makeover-paragraph">
 		<div class="paragraph-2">
 			<p>
-				The four-pillar oligopoly in Australia’s banking sector has
-				become increasingly concentrated. In August 2025, major banks
-				accounted for a quarter of the ASX50’s total market value. With
-				great market concentration comes great pricing power, and risk
-				of a worse deal for everyday banking customers. Despite clear
-				evidence that highly concentrated industries are harming
-				Australian society, more direct remedies to introduce
-				competition have failed to drive necessary change. As a nation
-				with a mature digital finance ecosystem, however, Australia’s
-				vast stores of financial data may present another path to
-				fostering a more competitive banking landscape, through a set of
-				policies known as Open Finance.
+				In 2025 the four-pillar oligopoly in Australia’s banking sector
+				is more entrenched than ever. Today, the big four banks make up
+				~25% of the market value of Australia’s 50 largest companies.
+				Their enormity allows them to crowd out smaller companies and
+				price services above their fair value. Despite these downsides
+				and more, attempts to remedy the situation have so far failed. To
+				abate the impact of insufficient competition on everyday
+				Australians, which is already taking a toll, it is pertinent for
+				policymakers to consider methods that are likely to be
+				implemented in the short term. Fortunately, Australian’s
+				penchant for digital finance tools may present an alternative,
+				market-driven solution to improve competition in retail banking,
+				through a set of policies known as <i>Open Finance</i>.
+			</p>
+			<h2>What is Open Finance?</h2>
+			<p>
+				Open Finance is a policy framework which enables consumers to
+				easily share their data with financial services firms through
+				secure portals. This is a departure from the current paradigm
+				where businesses who hold your personal data have control over
+				it. Open Finance can create a more competitive banking industry,
+				by lowering the legal and technological barriers that have held
+				back customers from accessing their information, prevented them
+				from easily sharing it with third parties, and thus deterred
+				them from switching to different financial institutions.
 			</p>
 			<figure class="bar-chart">
 				<figcaption class="caption lead">
 					As cash payments decline, digital finance ecosystems may be
-					able to reintroduce compeititon into Australia's entrenched
-					finance industry.
+					the key to reintroducing competition into Australia's
+					entrenched finance industry.
 				</figcaption>
 				<figcaption class="caption subcaption">
-					The chart shows the proportion of cash payments collapsing
-					between 2010 and 2020 across major economies. This shift has
-					unlocked vast streams of transaction data, which, if opened
-					up to new entrants through Open Finance, could challenge
-					incumbents and deliver cheaper, more tailored services to
-					consumers.
+					The chart shows the proportion of cash payments as a
+					percentage of total payments volume, between 2010 and 2020
+					across major economies.
 				</figcaption>
 				<img
 					src="{base}/DS-graph-51.png"
@@ -167,29 +177,18 @@
 				/>
 				<figcaption>Source: Mckinsey & Company, 2020</figcaption>
 			</figure>
-			<h2>What is Open Finance?</h2>
-			<p>
-				Open Finance is a system of data sharing where individuals can
-				compel institutions holding their personal data to share it with
-				financial services firms through secure data portals (or APIs).
-				The allure of Open Finance comes from its potential to lower the
-				legal and technological barriers that have held back customers
-				from accessing their information, prevented them from easily
-				sharing it with third parties, and thus deterred them from
-				switching to different financial institutions.
-			</p>
 			<p>
 				Through a secure and centralised system of financial data,
-				consumers may choose to share information with “FinTech” firms
-				who could use it to provide novel, personalised financial
-				services. For instance, businesses could offer customers
-				insights into their financial standing, or help them to find a
-				loan suited to their specific financial needs. Additionally, by
-				making a variety of data points on an individual readily
-				available, Open Finance makes it easier for loan providers to
-				verify groups with atypical credit profiles who may struggle to
-				pass standard credit checks. For instance, students or gig
-				economy workers.
+				consumers may choose to share information with third party
+				“FinTech” firms who could use it to provide novel, personalised
+				financial services. For instance, businesses could offer
+				customers insights into their financial standing, or help them
+				to find a loan suited to their specific financial needs.
+				Additionally, by making a variety of data points on an
+				individual readily available, Open Finance makes it easier for
+				loan providers to verify groups with atypical credit profiles
+				who may struggle to pass standard credit checks. For instance,
+				students or gig economy workers.
 			</p>
 			<figure class="bar-chart">
 				<figcaption class="caption lead">
@@ -197,15 +196,12 @@
 					and use it to their benefit.
 				</figcaption>
 				<figcaption class="caption subcaption">
-					The flow chart shows the basic process underlying Open
-					Finance. It begins with you and the companies that hold your
-					data. Open finance policies give you the right to compel
-					these companies to share your data with other organisations.
-					This is done through secure APIs, or in other words, secure
-					data portals. Data sharing in this form opens opportunities
-					for people to manage their money in new ways, which reduces
-					the inefficiency of a concentrated banking market through
-					introducing competition.
+					Traditionally, financial service providers (your bank) had
+					total control over your data. Open finance gives you the
+					ability to share this data with other organisations in a
+					secure fashion. This creates opportunities to access new
+					financial services and providers easily, encouraging banks
+					to provide a more competitive deal for their customers.
 				</figcaption>
 				<img
 					src="{base}/DS-graph-53.png"
@@ -298,12 +294,9 @@
 					finance industry.
 				</figcaption>
 				<figcaption class="caption subcaption">
-					The x-axis of the chart is a composite measure of Open
-					Finance policy progress, how strongly it compels banks to
-					enter in Open Finance arrangements with customers and the
-					scope of data types they share. The size of each bubble is
-					an illustrative measure of absolute population uptake, while
-					the y-axis is the rate of consumer uptake in the population.
+					The chart below visualises Open Finance policy progress and
+					adoption rate of Open Finance as a percentage of the
+					population for each country shown.
 				</figcaption>
 				<img
 					src="{base}/DS-graph-52.png"
@@ -444,8 +437,8 @@
 		font-family: "Work Sans", sans-serif;
 		font-weight: 600;
 		text-align: center;
-		font-size: clamp(3rem, 9vw, 6rem);
-		line-height: clamp(3.1rem, 12vw, 6rem);
+		font-size: clamp(3rem, 9vw, 8rem);
+		line-height: clamp(3.1rem, 12vw, 8rem);
 		padding: clamp(12px, 5vw, 5rem);
 		z-index: 2;
 		color: white;
@@ -474,17 +467,6 @@
 		text-align: left;
 		border-bottom: 1px solid var(--color-border);
 		padding: 2rem 0rem;
-	}
-
-	.old_logo {
-		width: 75%;
-	}
-
-	.old_logo_container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
 	}
 
 	.ah1 {
@@ -557,7 +539,8 @@
 	}
 
 	.paragraph-2 p {
-		margin-bottom: 2rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
 	}
 
 	.makeover-paragraph {

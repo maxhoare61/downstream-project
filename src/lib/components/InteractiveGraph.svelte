@@ -34,7 +34,7 @@
         nodes: [
             { name: "Central", shape: "circle", color: "#000" },
             { name: "Projects", shape: "circle", color: "#26b790" },
-            { name: "Stories", shape: "triangle", color: "#013725" },
+            { name: "Stories", shape: "triangle", color: "#5CBDAF" },
             { name: "About", shape: "square", color: "#DCFF4F" },
         ] as GraphNode[],
         links: [
@@ -47,15 +47,19 @@
     let allNodes = [
     { name: "The Scale of Emissions", shape: "pentagon", color: "#26b790", url: `${base}/articles/article-four` },
     { name: "Aesthetics of Inaction", shape: "hexagon", color: "#DCFF4F", url: `${base}/articles/article-five` },
-    { name: "Emissions in Perspective", shape: "triangle", color: "#26b790", url: `${base}/explore` },
-    { name: "What is Downstream?", shape: "hexagon", color: "#26b790", url: `${base}/about-us` },
+    { name: "Open Finance", shape: "pentagon", color: "#26b790", url: `${base}/articles/article-six` },
+    { name: "Emissions in Perspective", shape: "triangle", color: "#DCFF4F", url: `${base}/explore#project-1` },
+    { name: "Ideas in Finance", shape: "triangle", color: "#5CBDAF", url: `${base}/explore#project-0` },
+    { name: "What is DP?", shape: "hexagon", color: "#26b790", url: `${base}/about-us` },
     ];
 
     let allLinks = [
         { source: "The Scale of Emissions", target: "Stories" },
         { source: "Aesthetics of Inaction", target: "Stories" },
+        { source: "Open Finance", target: "Stories" },
         { source: "Emissions in Perspective", target: "Projects" },
-        { source: "What is Downstream?", target: "About" },
+        { source: "Ideas in Finance", target: "Projects" },
+        { source: "What is DP?", target: "About" },
     ];
 
     let hoveredNode: GraphNode | null = null;
@@ -187,8 +191,9 @@
         ctx.strokeStyle = "#000";
         ctx.lineWidth = 2;
 
+        ctx.beginPath();
+
         if (d.shape === "circle") {
-            ctx.beginPath();
             ctx.arc(x, y, r, 0, Math.PI * 2);
             ctx.fill();
             ctx.stroke();
@@ -196,12 +201,7 @@
             ctx.rect(x - r, y - r, r * 2, r * 2);
             ctx.fill();
             ctx.stroke();
-        } else if (d.shape === "square") {
-            ctx.rect(x - r, y - r, r * 2, r * 2);
-            ctx.fill();
-            ctx.stroke();
         } else if (d.shape === "triangle") {
-            ctx.beginPath();
             ctx.moveTo(x, y - r);
             ctx.lineTo(x + r, y + r);
             ctx.lineTo(x - r, y + r);
@@ -209,7 +209,6 @@
             ctx.fill();
             ctx.stroke();
         } else if (d.shape === "pentagon") {
-            ctx.beginPath();
             for (let i = 0; i < 5; i++) {
                 const angle = (Math.PI * 2 * i) / 5;
                 ctx.lineTo(x + r * Math.cos(angle), y + r * Math.sin(angle));
@@ -218,7 +217,6 @@
             ctx.fill();
             ctx.stroke();
         } else if (d.shape === "hexagon") {
-            ctx.beginPath();
             for (let i = 0; i < 6; i++) {
                 const angle = (Math.PI * 2 * i) / 6;
                 ctx.lineTo(x + r * Math.cos(angle), y + r * Math.sin(angle));

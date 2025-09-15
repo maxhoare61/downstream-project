@@ -71,7 +71,7 @@
       }
       isHiding = false;
       console.log('set ishiding false')
-    }, 5000);
+    }, 1500);
   }
 </script>
 

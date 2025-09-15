@@ -26,6 +26,7 @@
  * ```
  */
 declare module '$env/static/private' {
+	export const NODE_ENV: string;
 	export const TERM_PROGRAM: string;
 	export const NODE: string;
 	export const INIT_CWD: string;
@@ -34,6 +35,7 @@ declare module '$env/static/private' {
 	export const HOMEBREW_REPOSITORY: string;
 	export const TMPDIR: string;
 	export const npm_config_global_prefix: string;
+	export const VSCODE_PYTHON_AUTOACTIVATE_GUARD: string;
 	export const TERM_PROGRAM_VERSION: string;
 	export const ZDOTDIR: string;
 	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
@@ -84,7 +86,6 @@ declare module '$env/static/private' {
 	export const npm_node_execpath: string;
 	export const npm_config_prefix: string;
 	export const COLORTERM: string;
-	export const NODE_ENV: string;
 }
 
 /**
@@ -116,6 +117,7 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+		NODE_ENV: string;
 		TERM_PROGRAM: string;
 		NODE: string;
 		INIT_CWD: string;
@@ -124,6 +126,7 @@ declare module '$env/dynamic/private' {
 		HOMEBREW_REPOSITORY: string;
 		TMPDIR: string;
 		npm_config_global_prefix: string;
+		VSCODE_PYTHON_AUTOACTIVATE_GUARD: string;
 		TERM_PROGRAM_VERSION: string;
 		ZDOTDIR: string;
 		ORIGINAL_XDG_CURRENT_DESKTOP: string;
@@ -174,7 +177,6 @@ declare module '$env/dynamic/private' {
 		npm_node_execpath: string;
 		npm_config_prefix: string;
 		COLORTERM: string;
-		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
 	}

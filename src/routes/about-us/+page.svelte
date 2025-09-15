@@ -24,20 +24,6 @@
 				picture. Our mission is to help the public use data to make
 				informed decisions on issues they care about.
 			</p>
-			<div class="fig-container-abtus">
-				<figure class="figure-dessert">
-					<img
-						src="{base}/about-us.jpg"
-						alt="Impressionist painting of a mining site"
-						class="img1"
-					/>
-					<figcaption class="caption">
-						Our mission is to create a world where the public feels
-						empowered to make decisions on issues affecting
-						themselves and the environment (source: Imagen 3 AI)
-					</figcaption>
-				</figure>
-			</div>
 		</div>
 	</div>
 </div>
