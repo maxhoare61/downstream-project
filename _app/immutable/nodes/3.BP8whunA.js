@@ -1,4 +1,4 @@
-import{a as i,t as a}from"../chunks/D4PfDTrR.js";import"../chunks/D952mxQ2.js";import"../chunks/iVt8LGRO.js";var s=a(`<div class="content-container svelte-1hyx28l"><h1 class="title svelte-1hyx28l">About Us</h1> <div class="top-section svelte-1hyx28l"><div class="paragraph-2 svelte-1hyx28l"><p class="svelte-1hyx28l">At Downstream project, we believe critical information on
+import{a as i,t as a}from"../chunks/D4PfDTrR.js";import"../chunks/D952mxQ2.js";import"../chunks/DkeZyuLB.js";var s=a(`<div class="content-container svelte-1hyx28l"><h1 class="title svelte-1hyx28l">About Us</h1> <div class="top-section svelte-1hyx28l"><div class="paragraph-2 svelte-1hyx28l"><p class="svelte-1hyx28l">At Downstream project, we believe critical information on
 				important issues should be accessible. However, these insights
 				often sit buried in fragmented government databases and
 				publications. Whilst the information is publicly available,
