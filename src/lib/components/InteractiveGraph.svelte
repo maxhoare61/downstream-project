@@ -45,9 +45,9 @@
     };
 
     let allNodes = [
-    { name: "The Scale of Emissions", shape: "pentagon", color: "#26b790", url: `${base}/articles/article-four` },
-    { name: "Aesthetics of Inaction", shape: "hexagon", color: "#DCFF4F", url: `${base}/articles/article-five` },
-    { name: "Open Finance", shape: "pentagon", color: "#26b790", url: `${base}/articles/article-six` },
+    { name: "The Scale of Emissions", shape: "pentagon", color: "#26b790", url: `${base}/publications/art_04` },
+    //{ name: "Aesthetics of Inaction", shape: "hexagon", color: "#DCFF4F", url: `${base}/publications/art_05` },
+    { name: "Open Finance", shape: "pentagon", color: "#26b790", url: `${base}/publications/art_06` },
     { name: "Emissions in Perspective", shape: "triangle", color: "#DCFF4F", url: `${base}/explore#project-1` },
     { name: "Ideas in Finance", shape: "triangle", color: "#5CBDAF", url: `${base}/explore#project-0` },
     { name: "What is DP?", shape: "hexagon", color: "#26b790", url: `${base}/about-us` },
@@ -55,7 +55,7 @@
 
     let allLinks = [
         { source: "The Scale of Emissions", target: "Stories" },
-        { source: "Aesthetics of Inaction", target: "Stories" },
+        //{ source: "Aesthetics of Inaction", target: "Stories" },
         { source: "Open Finance", target: "Stories" },
         { source: "Emissions in Perspective", target: "Projects" },
         { source: "Ideas in Finance", target: "Projects" },

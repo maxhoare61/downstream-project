@@ -19,13 +19,13 @@ export const server_loads = [];
 export const dictionary = {
 		"/": [2],
 		"/about-us": [3],
-		"/articles/article-five": [4],
-		"/articles/article-four": [5],
-		"/articles/article-one": [6],
-		"/articles/article-six": [7],
-		"/articles/article-three": [8],
-		"/articles/article-two": [9],
-		"/explore": [10]
+		"/explore": [4],
+		"/publications/art_01": [5],
+		"/publications/art_04": [6],
+		"/publications/art_05": [7],
+		"/publications/art_06": [8],
+		"/publications/article-three": [9],
+		"/publications/article-two": [10]
 	};
 
 export const hooks = {

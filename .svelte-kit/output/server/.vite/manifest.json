@@ -163,127 +163,6 @@
       "_app/immutable/assets/_page.A-kBdGtK.css"
     ]
   },
-  "src/routes/articles/article-five/+page.server.ts": {
-    "file": "entries/pages/articles/article-five/_page.server.ts.js",
-    "name": "entries/pages/articles/article-five/_page.server.ts",
-    "src": "src/routes/articles/article-five/+page.server.ts",
-    "isEntry": true
-  },
-  "src/routes/articles/article-five/+page.svelte": {
-    "file": "entries/pages/articles/article-five/_page.svelte.js",
-    "name": "entries/pages/articles/article-five/_page.svelte",
-    "src": "src/routes/articles/article-five/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index.js",
-      "_paths.js",
-      "_AnimatedHeader1.js",
-      "_attributes.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.Bi-j4iTf.css"
-    ]
-  },
-  "src/routes/articles/article-four/+page.server.ts": {
-    "file": "entries/pages/articles/article-four/_page.server.ts.js",
-    "name": "entries/pages/articles/article-four/_page.server.ts",
-    "src": "src/routes/articles/article-four/+page.server.ts",
-    "isEntry": true
-  },
-  "src/routes/articles/article-four/+page.svelte": {
-    "file": "entries/pages/articles/article-four/_page.svelte.js",
-    "name": "entries/pages/articles/article-four/_page.svelte",
-    "src": "src/routes/articles/article-four/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index.js",
-      "_paths.js",
-      "_AnimatedHeader3.js",
-      "_attributes.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.CDzRIAeZ.css"
-    ]
-  },
-  "src/routes/articles/article-one/+page.server.ts": {
-    "file": "entries/pages/articles/article-one/_page.server.ts.js",
-    "name": "entries/pages/articles/article-one/_page.server.ts",
-    "src": "src/routes/articles/article-one/+page.server.ts",
-    "isEntry": true
-  },
-  "src/routes/articles/article-one/+page.svelte": {
-    "file": "entries/pages/articles/article-one/_page.svelte.js",
-    "name": "entries/pages/articles/article-one/_page.svelte",
-    "src": "src/routes/articles/article-one/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index.js",
-      "_paths.js",
-      "_AnimatedHeader1.js",
-      "_attributes.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.JR_axwjq.css"
-    ]
-  },
-  "src/routes/articles/article-six/+page.server.ts": {
-    "file": "entries/pages/articles/article-six/_page.server.ts.js",
-    "name": "entries/pages/articles/article-six/_page.server.ts",
-    "src": "src/routes/articles/article-six/+page.server.ts",
-    "isEntry": true
-  },
-  "src/routes/articles/article-six/+page.svelte": {
-    "file": "entries/pages/articles/article-six/_page.svelte.js",
-    "name": "entries/pages/articles/article-six/_page.svelte",
-    "src": "src/routes/articles/article-six/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index.js",
-      "_paths.js",
-      "_attributes.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.Bk1Y6CRr.css"
-    ]
-  },
-  "src/routes/articles/article-three/+page.server.ts": {
-    "file": "entries/pages/articles/article-three/_page.server.ts.js",
-    "name": "entries/pages/articles/article-three/_page.server.ts",
-    "src": "src/routes/articles/article-three/+page.server.ts",
-    "isEntry": true
-  },
-  "src/routes/articles/article-three/+page.svelte": {
-    "file": "entries/pages/articles/article-three/_page.svelte.js",
-    "name": "entries/pages/articles/article-three/_page.svelte",
-    "src": "src/routes/articles/article-three/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_AnimatedHeader3.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.M1Xkhm5j.css",
-      "_app/immutable/assets/Calculator.hivzNpHG.css"
-    ]
-  },
-  "src/routes/articles/article-two/+page.server.ts": {
-    "file": "entries/pages/articles/article-two/_page.server.ts.js",
-    "name": "entries/pages/articles/article-two/_page.server.ts",
-    "src": "src/routes/articles/article-two/+page.server.ts",
-    "isEntry": true
-  },
-  "src/routes/articles/article-two/+page.svelte": {
-    "file": "entries/pages/articles/article-two/_page.svelte.js",
-    "name": "entries/pages/articles/article-two/_page.svelte",
-    "src": "src/routes/articles/article-two/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.BcT4pNnZ.css",
-      "_app/immutable/assets/Calculator.hivzNpHG.css"
-    ]
-  },
   "src/routes/explore/+page.server.ts": {
     "file": "entries/pages/explore/_page.server.ts.js",
     "name": "entries/pages/explore/_page.server.ts",
@@ -304,6 +183,127 @@
     ],
     "css": [
       "_app/immutable/assets/_page.D8OfGUKD.css"
+    ]
+  },
+  "src/routes/publications/art_01/+page.server.ts": {
+    "file": "entries/pages/publications/art_01/_page.server.ts.js",
+    "name": "entries/pages/publications/art_01/_page.server.ts",
+    "src": "src/routes/publications/art_01/+page.server.ts",
+    "isEntry": true
+  },
+  "src/routes/publications/art_01/+page.svelte": {
+    "file": "entries/pages/publications/art_01/_page.svelte.js",
+    "name": "entries/pages/publications/art_01/_page.svelte",
+    "src": "src/routes/publications/art_01/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_paths.js",
+      "_AnimatedHeader1.js",
+      "_attributes.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.CDQAeKrV.css"
+    ]
+  },
+  "src/routes/publications/art_04/+page.server.ts": {
+    "file": "entries/pages/publications/art_04/_page.server.ts.js",
+    "name": "entries/pages/publications/art_04/_page.server.ts",
+    "src": "src/routes/publications/art_04/+page.server.ts",
+    "isEntry": true
+  },
+  "src/routes/publications/art_04/+page.svelte": {
+    "file": "entries/pages/publications/art_04/_page.svelte.js",
+    "name": "entries/pages/publications/art_04/_page.svelte",
+    "src": "src/routes/publications/art_04/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_paths.js",
+      "_AnimatedHeader3.js",
+      "_attributes.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.s53K-Zau.css"
+    ]
+  },
+  "src/routes/publications/art_05/+page.server.ts": {
+    "file": "entries/pages/publications/art_05/_page.server.ts.js",
+    "name": "entries/pages/publications/art_05/_page.server.ts",
+    "src": "src/routes/publications/art_05/+page.server.ts",
+    "isEntry": true
+  },
+  "src/routes/publications/art_05/+page.svelte": {
+    "file": "entries/pages/publications/art_05/_page.svelte.js",
+    "name": "entries/pages/publications/art_05/_page.svelte",
+    "src": "src/routes/publications/art_05/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_paths.js",
+      "_AnimatedHeader1.js",
+      "_attributes.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.Wy91ArZU.css"
+    ]
+  },
+  "src/routes/publications/art_06/+page.server.ts": {
+    "file": "entries/pages/publications/art_06/_page.server.ts.js",
+    "name": "entries/pages/publications/art_06/_page.server.ts",
+    "src": "src/routes/publications/art_06/+page.server.ts",
+    "isEntry": true
+  },
+  "src/routes/publications/art_06/+page.svelte": {
+    "file": "entries/pages/publications/art_06/_page.svelte.js",
+    "name": "entries/pages/publications/art_06/_page.svelte",
+    "src": "src/routes/publications/art_06/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_paths.js",
+      "_attributes.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.Ch6E7zT1.css"
+    ]
+  },
+  "src/routes/publications/article-three/+page.server.ts": {
+    "file": "entries/pages/publications/article-three/_page.server.ts.js",
+    "name": "entries/pages/publications/article-three/_page.server.ts",
+    "src": "src/routes/publications/article-three/+page.server.ts",
+    "isEntry": true
+  },
+  "src/routes/publications/article-three/+page.svelte": {
+    "file": "entries/pages/publications/article-three/_page.svelte.js",
+    "name": "entries/pages/publications/article-three/_page.svelte",
+    "src": "src/routes/publications/article-three/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_AnimatedHeader3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.M1Xkhm5j.css",
+      "_app/immutable/assets/Calculator.hivzNpHG.css"
+    ]
+  },
+  "src/routes/publications/article-two/+page.server.ts": {
+    "file": "entries/pages/publications/article-two/_page.server.ts.js",
+    "name": "entries/pages/publications/article-two/_page.server.ts",
+    "src": "src/routes/publications/article-two/+page.server.ts",
+    "isEntry": true
+  },
+  "src/routes/publications/article-two/+page.svelte": {
+    "file": "entries/pages/publications/article-two/_page.svelte.js",
+    "name": "entries/pages/publications/article-two/_page.svelte",
+    "src": "src/routes/publications/article-two/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.BcT4pNnZ.css",
+      "_app/immutable/assets/Calculator.hivzNpHG.css"
     ]
   }
 }

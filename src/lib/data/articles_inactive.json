@@ -12,7 +12,16 @@
         "project": "Carbon Emissions",
         "imgUrl": "/smoke-stack-extended.jpg",
         "type": "column",
-        "link": "/articles/article-one"
+        "link": "/publications/art_01"
+      },
+      {
+        "title": "The Aesthetics of Inaction: BP's Story",
+        "description": "In the 2000s BP launched a peculiar marketing campaign that was drastically out of step with its oil peers. However, their new look was not all that it seemed.",
+        "cat": "Article • July 4, 2025",
+        "project": "Carbon Emissions",
+        "imgUrl": "/article_five.jpg",
+        "type": "column",
+        "link": "/publications/art_05"
       }
     ]
   },
@@ -29,7 +38,7 @@
         "project": "Political Donations Revealed",
         "imgUrl": "/political-donations.jpg",
         "type": "column",
-        "link": "/articles/article-three"
+        "link": "/publications/art_03"
       }
     ]
   }

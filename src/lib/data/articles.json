@@ -12,7 +12,7 @@
         "project": "Ideas in Finance",
         "imgUrl": "/OpenFinance_thumnail_crop.jpg",
         "type": "column",
-        "link": "/articles/article-six"
+        "link": "/publications/art_06"
       }
     ]
   },
@@ -23,22 +23,13 @@
     "imgUrl": "/smoke-stack-extended.jpg",
     "articles": [
       {
-        "title": "The Aesthetics of Inaction: BP's Story",
-        "description": "In the 2000s BP launched a peculiar marketing campaign that was drastically out of step with its oil peers. However, their new look was not all that it seemed.",
-        "cat": "Article • July 4, 2025",
-        "project": "Carbon Emissions",
-        "imgUrl": "/article_five.jpg",
-        "type": "column",
-        "link": "/articles/article-five"
-      },
-      {
         "title": "Understanding the Scale of Emissions",
         "description": "The units we use to describe climate change are wholly unrelatable. This article explains emissions using units of measurement that anyone can understand.",
         "cat": "Article • June 20, 2025",
         "project": "Carbon Emissions",
         "imgUrl": "/smoke-stack-extended.jpg",
         "type": "column",
-        "link": "/articles/article-four"
+        "link": "/publications/art_04"
       }
     ]
   }
