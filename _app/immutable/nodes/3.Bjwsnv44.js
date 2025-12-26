@@ -1,4 +1,4 @@
-import{a as s,t as a}from"../chunks/D4PfDTrR.js";import"../chunks/D952mxQ2.js";import"../chunks/DtWNj1SS.js";var n=a(`<div class="content-container svelte-v8qyn5"><h1 class="title svelte-v8qyn5">About Us</h1> <div class="top-section svelte-v8qyn5"><div class="paragraph-2 svelte-v8qyn5"><p class="svelte-v8qyn5">Downstream Project is an independent research platform focused
+import{a as s,t as a}from"../chunks/D4PfDTrR.js";import"../chunks/D952mxQ2.js";import"../chunks/Cp0VuHRY.js";var n=a(`<div class="content-container svelte-v8qyn5"><h1 class="title svelte-v8qyn5">About Us</h1> <div class="top-section svelte-v8qyn5"><div class="paragraph-2 svelte-v8qyn5"><p class="svelte-v8qyn5">Downstream Project is an independent research platform focused
 				on transforming messy, fragmented public data into clear,
 				coherent narratives. Our mission is to help the public use data
 				to make informed decisions on issues they care about.</p> <p class="svelte-v8qyn5">Governments and public institutions publish vast amounts of data
