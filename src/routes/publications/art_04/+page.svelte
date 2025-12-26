@@ -246,29 +246,12 @@
 				through direct emissions (7.5 tonnes) and electricity use (5.5
 				tonnes), one of the highest in the developed world. To
 				understand what this means, let’s look at what it takes to
-				produce 1 tonne of CO2. Burning a gas stove it would take 2,551
+				produce 1 tonne of CO₂. Burning a gas stove it would take 2,551
 				hours (or about 106 days) to emit 1 tonne of CO₂. Driving in a
 				Toyota Camry, you could emit 1 tonne of CO₂ by driving ~5,050
 				kilometres, roughly the distance of a round trip from Sydney to
 				Perth.
 			</p>
-		</div>
-	</div>
-	<figure>
-		<div id="infograph-1">
-			<img
-				src="{base}/infograph-1tco2.jpg"
-				alt="Infographic"
-				class="campaign-image"
-			/>
-		</div>
-		<figcaption>
-			Simple measurements showing ways to produce 1 tonne of CO2 (source:
-			UtilitySmarts)
-		</figcaption>
-	</figure>
-	<div class="makeover-paragraph">
-		<div class="paragraph-2">
 			<p>
 				However, these 13 tonnes of CO2 represent a tiny fraction of the
 				33 million tonnes of CO₂ produced by AGL’s facilities last year

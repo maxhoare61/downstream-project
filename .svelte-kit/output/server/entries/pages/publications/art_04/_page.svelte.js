@@ -1,5 +1,4 @@
 import { Q as pop, O as push, W as stringify } from "../../../../chunks/index.js";
-import { b as base } from "../../../../chunks/paths.js";
 import { A as AnimatedHeader3 } from "../../../../chunks/AnimatedHeader3.js";
 import "clsx";
 import * as d3 from "d3";
@@ -93,12 +92,11 @@ function _page($$payload, $$props) {
 				through direct emissions (7.5 tonnes) and electricity use (5.5
 				tonnes), one of the highest in the developed world. To
 				understand what this means, let’s look at what it takes to
-				produce 1 tonne of CO2. Burning a gas stove it would take 2,551
+				produce 1 tonne of CO₂. Burning a gas stove it would take 2,551
 				hours (or about 106 days) to emit 1 tonne of CO₂. Driving in a
 				Toyota Camry, you could emit 1 tonne of CO₂ by driving ~5,050
 				kilometres, roughly the distance of a round trip from Sydney to
-				Perth.</p></div></div> <figure class="svelte-39cqq2"><div id="infograph-1" class="svelte-39cqq2"><img${attr("src", `${stringify(base)}/infograph-1tco2.jpg`)} alt="Infographic" class="campaign-image svelte-39cqq2"></div> <figcaption>Simple measurements showing ways to produce 1 tonne of CO2 (source:
-			UtilitySmarts)</figcaption></figure> <div class="makeover-paragraph svelte-39cqq2"><div class="paragraph-2 svelte-39cqq2"><p class="svelte-39cqq2">However, these 13 tonnes of CO2 represent a tiny fraction of the
+				Perth.</p> <p class="svelte-39cqq2">However, these 13 tonnes of CO2 represent a tiny fraction of the
 				33 million tonnes of CO₂ produced by AGL’s facilities last year
 				alone. Assuming AGLs emissions are evenly spread over the year,
 				how long do you think it takes for AGL to produce emissions

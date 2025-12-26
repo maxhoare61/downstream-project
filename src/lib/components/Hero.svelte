@@ -3,48 +3,6 @@
   import InteractiveGraph2 from "./InteractiveGraph.svelte";
   export let subtitle = "Because public data deserves public understanding.";
 
-  let words = [
-    "stories.",
-    "insights.",
-    "knowledge.",
-    "understanding.",
-    "thoughtful.",
-  ];
-  let currentWordIndex = 0;
-  let intervalId;
-
-  // Function to update the word
-  function updateWord() {
-    currentWordIndex = (currentWordIndex + 1) % words.length;
-  }
-
-  // Function to calculate the next interval based on an upside-down quadratic function
-  function getNextInterval(t: number): number {
-    const a = 0.001; // Coefficient for the quadratic function
-    const b = -0.5; // Coefficient for the linear term
-    const c = 90; // Initial interval in milliseconds
-    return Math.max(a * t * t + b * t + c, 0);
-  }
-
-  // Function to start the word update process
-  function startUpdatingWords() {
-    let t = 0;
-    function update() {
-      updateWord();
-      t += getNextInterval(t);
-      if (t < 1500) {
-        // Stop after 1.5 seconds
-        intervalId = setTimeout(update, getNextInterval(t));
-      }
-    }
-    update();
-  }
-
-  // Start the word update process if in the browser
-  if (typeof window !== "undefined") {
-    startUpdatingWords();
-  }
-
   let graphOverlay: HTMLButtonElement | null = null;
   let counter = 0;
   let isHiding: boolean;
@@ -96,8 +54,8 @@
   <div class="hero-right">
     <div class="hero-right-container">
       <div class="hero">
-        Less spreadsheets,<br /> more
-        <span class="glow">{words[currentWordIndex]}</span>
+        Less ones and <br />zeroes, more 
+        <span class="glow">insight.</span>
       </div>
       <p class="lead">{subtitle}</p>
       <a href="{base}/about-us" class="btn-1 inverse">About us</a>

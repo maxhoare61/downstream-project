@@ -8,21 +8,41 @@
 	<div class="top-section">
 		<div class="paragraph-2">
 			<p>
-				At Downstream project, we believe critical information on
-				important issues should be accessible. However, these insights
-				often sit buried in fragmented government databases and
-				publications. Whilst the information is publicly available,
-				extracting meaningful insights requires technical expertise,
-				time, and resources. That’s why at Downstream, we do the heavy
-				lifting. We clean, investigate, and transform raw government
-				data into engaging, interactive stories that invite exploration
-				and understanding.
+				Downstream Project is an independent research platform focused
+				on transforming messy, fragmented public data into clear,
+				coherent narratives. Our mission is to help the public use data
+				to make informed decisions on issues they care about.
 			</p>
 			<p>
-				We connect scattered datasets, highlight hidden patterns, and
-				present information in ways that help you understand the full
-				picture. Our mission is to help the public use data to make
-				informed decisions on issues they care about.
+				Governments and public institutions publish vast amounts of data
+				to promote transparency and accountability. In theory, this data
+				should help citizens, businesses, and policymakers make better
+				decisions. In practice, this is not always the case. At
+				Downstream Project, we noticed this recurring problem through
+				our time at university, where dishevelled government databases
+				would consistently stall research.
+			</p>
+			<p>
+				Critical government data is scattered across PDFs, spreadsheets,
+				and fragmented databases. Important context is buried in
+				technical language. Key relationships are obscured by large
+				datasets which require time and expertise to analyse. While disclosure
+				continues to improve, this is only part of the information
+				transparency equation. We began this project to see if
+				we could help public audiences directly access insights
+				from from raw government data, downstream.
+			</p>
+			<p>
+				Our work begins with handling and analysing data, but extends to
+				organising, interpreting, and contextualising findings to create
+				truly accessible insights. We believe data only becomes useful
+				when people can see how it connects to real outcomes. That means
+				going beyond charts and tables. It means explaining what the
+				numbers imply for policy, institutions, and everyday decisions.
+				It also means framing analysis within the economic, political,
+				and cultural contexts that give it meaning. We dissect complex
+				datasets, identify what matters, and present findings in a way
+				that invites exploration.
 			</p>
 		</div>
 	</div>
@@ -37,42 +57,13 @@
 		gap: 2rem;
 	}
 
-	.caption {
-		font-size: 0.8rem;
-		color: var(--color-border);
-		text-align: center;
-		width: 75%;
-	}
-
 	.top-section {
 		display: flex;
+		padding: 2rem 0;
 	}
 
 	.paragraph-2 p {
-		margin-bottom: 2rem;
-	}
-
-	.paragraph-2:last-child p {
-		margin-top: 2rem;
-	}
-
-	.figure-dessert {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: clamp(280px, 35vw, 420px);
-		padding: 1rem 0;
-	}
-
-	.fig-container-abtus {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-	}
-
-	.img1 {
-		height: auto; /* Maintain aspect ratio */
-		border-radius: var(--box-corner-radius);
+		margin: 1rem 0;
+		width: 50%;
 	}
 </style>

@@ -1,10 +1,10 @@
 <script lang="ts">
   export let heading1 = "The Problem";
-  export let text1 = "Important data isn’t always publicly accessible. Key data from the stories that matter to us are often scattered across PDFs, spreadsheets, and fragmented databases. While technically publicly available, understanding it requires expertise, and a lot of time.";
-  export let heading2 = "Our Approach";
-  export let text2 = "At Downstream, we believe data should be truly public. We transform dense datasets into clear, interactive visuals and scrollable narratives. We handle the data cleaning, analysis, and visualisations - you explore the insights.";
-  export let heading3 = "Our Work";
-  export let text3 = "We're starting small but focusing on what matters—making carbon emissions and political donation data accessible to everyone through interactive storytelling. These are the stories we care about, and we believe you should be able to understand them too.";
+  export let text1 = "The government and public institutions publish data to ensure transparency and foster good decision-making in society. Yet, such data is often scattered across PDFs, spreadsheets, and fragmented databases. While data disclosure is a good first step, access alone does not promote understanding.";
+  export let heading2 = "Our Mission";
+  export let text2 = "Downstream Project is an independent research platform focused on transforming messy, fragmented public data into clear, coherent narratives. We want to make it as easy as possible to gain insight on the issues that matter to you.";
+  export let heading3 = "Our Approach";
+  export let text3 = "Building something coherent from messy data begins with analysis, but it doesn’t end there. We go beyond the numbers, leveraging deep expertise to explain their practical significance. By presenting findings in the economic, political, and cultural contexts that give them their importance, we aim to promote understanding that goes beyond theory, supporting decision-making for everyday people.";
   
   import { onMount } from 'svelte';
   import { gsap } from "gsap";
@@ -68,17 +68,19 @@
 
 <style>
   .section{
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     width: 100%;
     height: 200vh;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     padding-top: 2rem;
     padding-bottom: 1rem;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    justify-content: space-around;
     gap: clamp(1rem, 2.5vw, 2rem);
+    padding: 0 7%;
   }
 
   .section-left {
@@ -86,28 +88,32 @@
     flex-direction: column;
     align-items: left;
     justify-content: space-between;
+    height: 100%;
     text-align: left;
   }
 
   .section-left-child {
     display: flex;
     flex-direction: column;
-    min-height: clamp(400px, 60vh, 920px);
-    align-items: left;
+    flex: 0 0 calc(100% / 3);
+    min-height: 0;
+    align-items: flex-start;
+    justify-content: center;
     gap: clamp(1rem, 2.5vw, 1.5rem);
     text-align: left;
-    width: clamp(136px, 42.153vw, 602px);
-  }
-
-  .section-left-child:last-child {
-    min-height: clamp(200px, 30vh, 920px);
+    max-width: clamp(136px, 35vw, 602px);
   }
 
   .section-right {
-    padding: clamp(0, 0.83333vw, 2rem);
-    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    flex: 1;
+    min-width: 0;
     flex-direction: row;
-    justify-content: center;
+    flex: 1;
+    min-width: 0;
+    padding-top: 3rem;
   }
 
   .backdrop-right {
@@ -122,6 +128,8 @@
     flex-direction: row;
     justify-content: center;
     padding: clamp(10px, 1.25vw, 2rem);
+    margin: 0 auto;
+    align-self: center;
   }
 
   .lottie-container {
