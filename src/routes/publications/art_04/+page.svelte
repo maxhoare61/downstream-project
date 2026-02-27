@@ -224,15 +224,15 @@
 			<p class="lead">
 				One reason that misconceptions about climate change gain
 				traction is that it is hard to understand the units we use to
-				measure it. What does one tonne of carbon dioxide look like? How about a
-				million tonnes of carbon dioxide? Studies have shown that people are
-				surprisingly bad at grasping numbers on the scale of climate
-				change, especially when they involve invisible gasses. To create
-				genuine impetus for action in circles that are uninformed about
-				the climate crisis, we need to start describing climate change
-				in units that anyone can digest. This article attempts to to
-				show that this approach has the potential to lay bare the
-				seriousness of the climate crisis.
+				measure it. What does one tonne of carbon dioxide look like? How
+				about a million tonnes of carbon dioxide? Studies have shown
+				that people are surprisingly bad at grasping numbers on the
+				scale of climate change, especially when they involve invisible
+				gasses. To create genuine impetus for action in circles that are
+				uninformed about the climate crisis, we need to start describing
+				climate change in units that anyone can digest. This article
+				attempts to to show that this approach has the potential to lay
+				bare the seriousness of the climate crisis.
 			</p>
 		</div>
 	</div>
@@ -267,12 +267,17 @@
 		</div>
 	</div>
 	<figure id="d3-chart">
-		<AnnualEmissionsChart />
-		<figcaption>
+		<figcaption class="caption lead">
+			Seconds for largest emitters to produce an Australian's annual emissions output
+		</figcaption>
+		<figcaption class="caption subcaption">
 			The time it takes for Australia's largest emitters to produce
 			emissions equal to the amount the average Australian produces in one
-			year (source: WorldBank)
+			year (source WorldBank)
 		</figcaption>
+		<div class="chart-frame">
+			<AnnualEmissionsChart />
+		</div>
 	</figure>
 	<div class="makeover-paragraph">
 		<div class="paragraph-2">
@@ -309,12 +314,17 @@
 		</div>
 	</div>
 	<figure id="d3-chart-lifetime">
-		<LifetimeEmissionsChart />
-		<figcaption>
+		<figcaption class="caption lead">
+			Minutes for largest emitters to produce an Australian's lifetime emissions output
+		</figcaption>
+		<figcaption class="caption subcaption">
 			The time it takes for Australia's largest emitters to produce
 			emissions equal to the amount the average Australian produces in
 			their lifetime (source: WorldBank)
 		</figcaption>
+		<div class="chart-frame">
+			<LifetimeEmissionsChart />
+		</div>
 	</figure>
 	<div class="makeover-paragraph">
 		<div class="paragraph-2">
@@ -405,37 +415,76 @@
 		flex-grow: 1;
 	}
 
-	#lottie-animation {
-		background-color: white;
-		border-radius: var(--box-corner-radius);
-		width: clamp(50px, 40vw, 500px);
-		height: clamp(50px, 40vw, 500px);
-	}
-
-	#d3-chart {
+	/*#d3-chart {
 		background-color: white;
 		border-radius: var(--box-corner-radius);
 		width: clamp(275px, 50vw, 750px);
-		height: clamp(200px, 40vw, 500px);
+		aspect-ratio: 16/9;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	}*/
+
+	figure {
+		display: grid;
+		grid-template-rows: auto auto 1fr; /* captions first, chart gets remaining */
+		/*gap: 0.4rem;  optional, replaces manual padding-top */
+		overflow: hidden;
+		padding: 2rem;
+		background-color: white;
+		border-radius: var(--box-corner-radius);
+	}
+
+	.chart-frame {
+		position: relative;
+		width: 100%;
+		aspect-ratio: var(--chart-ar, 18/9); /* default */
+		min-height: 0;
+		overflow: visible; /* tooltip */
+		align-self: center; /* keep it centered in leftover space */
+		justify-self: stretch;
 	}
 
 	#d3-chart-lifetime {
-		background-color: white;
-		border-radius: var(--box-corner-radius);
-		width: clamp(290px, 60vw, 770px);
-		height: clamp(350px, 50vw, 1000px);
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		width: clamp(324px, 62vw, 750px);
+		--chart-ar: 14/7
 	}
 
-	#infograph-1 {
-		padding: 1.5rem;
-		background-color: white;
-		border-radius: 3rem;
+	#d3-chart {
+		width: clamp(324px, 62vw, 750px);
+		--chart-ar: 18/9
+	}
+
+	.caption.lead {
+		padding: 0;
+		font-weight: 500;
+		font-size: 1.5rem;
+	}
+
+	@media (max-width: 640px) {
+		figure { padding: 1rem; }
+
+		#d3-chart { --chart-ar: 5/3; }
+		#d3-chart-lifetime { --chart-ar: 0.9; } /* your portrait-ish choice */
+
+		.caption.lead { font-size: 1.2rem;}
+		.caption.subcaption { font-size: 1rem; }
+	}
+
+	figcaption {
+		padding-top: 0.8rem;
+		width: 100%;
+	}
+
+	.caption {
+		color: var(--color-dark-text);
+		text-align: left;
+		width: 100%;
+		line-height: 1.2;
+	}
+
+	.caption.subcaption {
+		font-size: 1.2rem;
 	}
 
 	#s-origins {
@@ -445,35 +494,9 @@
 		justify-content: center;
 	}
 
-	figure {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		padding-top: clamp(16px, 4.1vw, 3rem);
-		padding-bottom: clamp(16px, 4.1vw, 3rem);
-		max-width: clamp(350px, 70vw, 800px);
-	}
-
-	.italic {
-		font-style: oblique;
-	}
-
 	#s-origins h2 {
 		border-bottom: 1px solid var(--color-border);
 		padding: 2rem 0rem;
-	}
-
-	.campaign-image {
-		height: auto; /* Maintains the aspect ratio */
-		border-radius: var(--box-corner-radius);
-		width: clamp(260px, 61.9047vw, 520px);
-	}
-
-	.campaign-image.calc {
-		stroke: white;
-		stroke-width: 3px;
 	}
 
 	.lead {
@@ -490,7 +513,6 @@
 
 	.paragraph-2 {
 		padding-top: clamp(16px, 4.1vw, 3rem);
-		padding-bottom: clamp(16px, 4.1vw, 3rem);
 	}
 
 	.paragraph-2 p {

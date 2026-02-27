@@ -136,16 +136,17 @@
 			</p>
 			<p>
 				Weak business competitiveness is stalling Australia's economic
-				productivity, and Open Finance may be able to help. Decreasing
-				competition between businesses has shaved almost $80 billion off
-				GDP since the 2000s, according to a report by the RBA, a trend
-				epitomised by the “big four” retail banks. Without sufficient
-				competitive pressure, banks are less innovative, less
-				resource-efficient and less accountable for their actions, all
-				of which hurts consumers. Open Finance, a market-based policy
-				approach, may be the key to unwinding the competitive slump in Australian
-				banking. It is a win-win for policymakers and businesses that is
-				already driving better retail banking around the globe.
+				productivity. Improving data sharing between financial
+				institutions may be able to help. Decreased competition between
+				businesses shaved up to $80 billion off GDP since 2000,
+				according to a report by the RBA. This trend is embodied by the
+				“big four” banks who, without competitive pressure, have less
+				incentive to be innovative, resource-efficient or accountable,
+				hurting consumers and the economy. Open Finance, a market-based
+				policy approach to reinvigorating market competition, may be the
+				key to unwinding the competitive slump in Australian banking. It
+				is a win-win for policymakers and businesses that is already
+				driving better retail banking around the globe.
 			</p>
 			<h2>What is Open Finance?</h2>
 			<p>

@@ -1102,6 +1102,7 @@ export {
   bind_props as _,
   active_reaction as a,
   noop as a0,
+  current_component as a1,
   DERIVED as b,
   increment_write_version as c,
   derived_sources as d,
